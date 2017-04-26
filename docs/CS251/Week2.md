@@ -16,7 +16,6 @@ Outline: <a id="index"></a>
     * [Or](#or)
     * [Conditional](#conditional)
   * [Exercises](#exercises)
-  * [Argument Validity](#validity)
 
 
 ### Semantics and Principle of Bivalence <a id="semantics"></a>
@@ -172,6 +171,7 @@ be in Paris.
 
 [Back to Top](#index)
 <br>
+
 ----------------------------
 # Exercises <a id="exercises"></a>
 Translations:
@@ -188,8 +188,6 @@ Translations:
 -------------
 
 
-Argument Validity
-===========
 
 &nbsp;
 &nbsp;
