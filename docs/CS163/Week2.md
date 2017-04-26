@@ -239,7 +239,7 @@ Practice with Linear Linked Lists <a id="exercises"></a>
 
   >Given a linear linked list $a$ print $a$ in orderse order.
   >
-  >Example: $a$ = (3->2->4->5)
+  >Example: $a$ = 3->2->4->5
   >Output of print($a$): 5->4->2->3
 
 #### Compare two Lists
