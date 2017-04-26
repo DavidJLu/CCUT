@@ -24,5 +24,6 @@ CS251
 
 These pages are under constant construction, so check back often for updates.
 
----------------
+
+-----
 <Sub>I'm hosted with GitHub Pages and created in Markdown with KaTeX math rendering.

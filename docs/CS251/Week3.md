@@ -30,9 +30,11 @@ An argument is a line of reasoning that takes us from some assumptions to a conc
   > If you do not take an umbrella, you will get soaked.
   > So, you should take an umbrella
 
-More precisely, an argument is a set of sentences of which one is called the *conclusion* and the others are called the *premises*.
+More precisely, an argument is a set of sentences of which one is called the **conclusion** and the others are called the **premises**. The conclusion is often indicated by the words *therefore*, *so*, *hence*, and *thus* while premises are sometimes indicated by *since* and *because*
 
 Often arguments in natural language omit some premises which are obvious or implied by context. The argument above omits the premise that you don't want to get soaked. We call these *enthymematic* arguments.
+
+As an addition to our vocabulary of propositional logic, we use the symbol $\therefore$ to mean therefore.
 
 ### Exercises:
 Identify the conclusion of these arguments.
@@ -54,11 +56,49 @@ We can put this another way: `An argument is valid if and only if the truth of t
 
 And a third way: `An argument is valid if and only if whenever the premises are true, the conclusion is also true.`
 
-These three fairly precise definitions for validity are `equivalent`.
+These three definitions say the same thing.
+
+### Exercises
+Which of the following arguments are valid? Which are invalid?
+
+1.
+  >1. Socrates is a man.
+  >2. All men are carrots.
+  >$\therefore$ Socrates is a carrot.
+
+2.  
+  >1. Abe Lincoln was either born in Illinois or he was once president.
+  >2. Abe Lincoln was never president.
+  >$\therefore$ Abe Lincoln was born in Illinois.
+
+3.  
+  >1. If I pull the trigger, Abe Lincoln will die.
+  >2. I do not pull the trigger.
+  >$\therefore$ Abe Lincoln will not die.
+
+4.
+  >1. Abe Lincoln was either from France or from Luxemborg.
+  >2. Abe Lincoln was not from Luxemborg.
+  >$\therefore$ Abe Lincoln was from France.
+
+5.  
+  >1. If the world were to end today, then I would not need to get up tomorrow morning.
+  >2. I will need to get up tomorrow morning.
+  >$\therefore$ The world will not end today.
+
+6.
+  >1. Joe is now 19 years old.
+  >2. Joe is now 87 years old.
+  >$\therefore$ Bob is now 20 years old.
 
 [Back to the Top](#index)
 
 # Methods <a id="methods"></a>
+Recall that one main reason to study logic is to be more precise. So can we be more precise than reading English arguments and trying to decide whether they are valid or not?
+
+Yes, formal logic attempts to provide precise methods for determining whether an argument is valid or not. In this section, we will look at two methods for determining validity. These methods can also be used to determine some other properties we are interested in.
+
+The two methods fall into the categories of truth tables and natural deduction. There are other methods (axiomatic logic) but these two are easier to use and understand.
 
 [Back to the Top](#index)
 
