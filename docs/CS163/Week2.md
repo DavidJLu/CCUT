@@ -3,7 +3,7 @@ CS163 at CCUT Week 2: Linear Linked Lists
 David Lu
 4/25/17
 
-![Links](/watchLinks.jpg)
+![Links](watchLinks.jpg)
 
 ## Data Structures
 In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently.
