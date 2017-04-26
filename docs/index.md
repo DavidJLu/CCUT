@@ -1,4 +1,4 @@
-PSU CS Lectures at CCUT
+PSU CS Guest Lectures at CCUT
 =====
 Instructor: David Lu
 Dates: April 17$^{th}$ -- May 12$^{th}$ 2017
