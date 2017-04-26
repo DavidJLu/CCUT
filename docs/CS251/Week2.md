@@ -1,6 +1,8 @@
 # CS251 at CCUT Week 2: Propositional Logic
 4/24/17
 
+![Open Logic Text](openlogic.png)
+
 Last week we briefly reviewed the vocabulary and syntax of propositional logic (PL), and we discussed some motivations for studying it.
 
 This week, we will think about the semantics (or meanings) of the PL, and practice a bit of translation between English and PL.
