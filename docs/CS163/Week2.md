@@ -183,15 +183,27 @@ An operation we may be interested in doing on lists is to find whether an item i
 Another operation we may be interested in performing on lists is to sort it. We called this *sort*.
 
 [Back to Index](#index)
-
-
--------------------------------------
 <br>
-# Creating a random list to practice with in C++m <a id="practice"></a>
+
+
+Practice Programming <a id="practice"></a>
+========================
+If you want to learn how to program, you must practice. Programming is a skill, not something that can just be memorized. Like any skill, you must practice to get good.
+
+There are many websites that have environments set up so that you can practice programming.
+
+Here are two examples that you can try:
+[Codefights](https://www.pdx.edu/cecs/changchun-partnership-22-programs)
+[HackerRank](https://www.hackerrank.com/)
+
+
+## Populating a random list to practice with in C++
+Alternatively, you can program from scratch and practice.
+
 There are some useful functions in the C++ standard library to generate random numbers.
-We will need to include two libraries: ctime and cstdlib
-We need ctime to "seed" the peudo random number generator.
-And cstdlib contains a pseudo random number generator function.
+We will need to include two libraries: ctime and cstdlib.
+
+We need the ctime library to "seed" the peudo random number generator. The cstdlib library contains a pseudo random number generator function.
 
 ```C++
   #include <ctime>
