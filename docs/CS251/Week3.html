@@ -9,392 +9,238 @@
 
     <style>
     atom-text-editor {
-  background-color: #263238;
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .wrap-guide {
-  background-color: #2b3940;
-}.markdown-preview-enhanced pre .indent-guide {
-  color: #2b3940;
+  background-color: #1d1f21;
+  color: #c5c8c6;
 }.markdown-preview-enhanced pre .invisible-character {
-  color: #373b41;
-}.markdown-preview-enhanced pre .cursor-line {
-  background-color: #212b30;
+  color: rgba(197, 200, 198, 0.2);
+}.markdown-preview-enhanced pre .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}.markdown-preview-enhanced pre .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
 }.markdown-preview-enhanced pre .gutter {
-  background-color: #263238;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
-  background-color: #212b30;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
-  color: #B2CCD6;
+  background-color: #292c2f;
+}.markdown-preview-enhanced pre .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}.markdown-preview-enhanced pre .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after,.markdown-preview-enhanced pre .fold-marker:after {
+  color: #fba0e3;
 }.markdown-preview-enhanced pre .invisible {
-  color: #EEFFFF;
+  color: #c5c8c6;
 }.markdown-preview-enhanced pre .cursor {
-  color: #009688;
-  border-width: 2px;
+  border-color: white;
 }.markdown-preview-enhanced pre .selection .region {
-  background-color: #3b4d56;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
-  background-color: transparent;
-  border: 1px solid #B2CCD6;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
-  border: 1px solid white;
+  background-color: #444;
+}.markdown-preview-enhanced pre .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}.markdown-preview-enhanced pre .mpe-syntax--source.mpe-syntax--gfm {
+  color: #999;
+}.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
+  color: #eee;
+}.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--link {
+  color: #555;
+}.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--variable.mpe-syntax--list,.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--support.mpe-syntax--quote {
+  color: #555;
+}.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--link .mpe-syntax--entity {
+  color: #ddd;
+}.markdown-preview-enhanced pre .mpe-syntax--gfm .mpe-syntax--raw {
+  color: #aaa;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--paragraph {
+  color: #999;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--heading {
+  color: #eee;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--raw {
+  color: #aaa;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--link {
+  color: #555;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--link .mpe-syntax--string {
+  color: #555;
+}.markdown-preview-enhanced pre .mpe-syntax--markdown .mpe-syntax--link .mpe-syntax--string.mpe-syntax--title {
+  color: #ddd;
 }
 .mpe-syntax--comment {
-  color: #4f6875;
+  color: #7C7C7C;
 }
-.mpe-syntax--keyword {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
-  color: #B2CCD6;
-}
-.mpe-syntax--keyword.mpe-syntax--operator {
-  color: #89DDF3;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
-  color: #82AAFF;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
-  color: #FFCB6B;
-}
-.mpe-syntax--storage {
-  color: #C792EA;
-}
-.mpe-syntax--constant {
-  color: #F07178;
-}
-.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
-  color: #C3E88D;
-}
-.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--variable.mpe-syntax--interpolation {
-  color: #eb434c;
-}
-.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
-  color: #F78C6A;
-}
-.mpe-syntax--variable.mpe-syntax--language {
-  color: #FF5370;
-}
-.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
-  color: #FFCB6B;
-}
-.mpe-syntax--invalid.mpe-syntax--illegal {
-  background-color: #F07178;
-  color: #263238;
-}
-.mpe-syntax--string {
-  color: #C3E88D;
-}
-.mpe-syntax--string.mpe-syntax--regexp {
-  color: #89DDF3;
-}
-.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
-  color: #FFCB6B;
-}
-.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
-  color: #F07178;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
-  color: #82AAFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
-  color: #FFE082;
-  font-weight: bold;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--terminator {
-  color: #89DDF3;
-}
-.mpe-syntax--support.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--support.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
-  color: #B2CCD6;
-}
-.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
-  color: #82AAFF;
+.mpe-syntax--entity {
+  color: #FFD2A7;
 }
 .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #EEFFFF;
+  text-decoration: underline;
+  color: #FFFFB6;
 }
 .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
-  color: #C3E88D;
+  color: #9B5C2E;
 }
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
-  color: #C792EA;
+.mpe-syntax--keyword {
+  color: #96CBFE;
 }
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
-  color: #C792EA;
+.mpe-syntax--keyword.mpe-syntax--control {
+  color: #96CBFE;
 }
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
-  color: #FFCB6B;
+.mpe-syntax--keyword.mpe-syntax--operator {
+  color: #EDEDED;
 }
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
-  color: #82AAFF;
+.mpe-syntax--storage {
+  color: #CFCB90;
 }
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
-  color: #F07178;
+.mpe-syntax--storage.mpe-syntax--modifier {
+  color: #96CBFE;
+}
+.mpe-syntax--constant {
+  color: #99CC99;
+}
+.mpe-syntax--constant.mpe-syntax--numeric {
+  color: #FF73FD;
+}
+.mpe-syntax--variable {
+  color: #C6C5FE;
+}
+.mpe-syntax--invalid.mpe-syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.mpe-syntax--string .mpe-syntax--source,
+.mpe-syntax--string .mpe-syntax--meta.mpe-syntax--embedded.mpe-syntax--line {
+  color: #EDEDED;
+}
+.mpe-syntax--string .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
+  color: #00A0A0;
+}
+.mpe-syntax--string .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded .mpe-syntax--source {
+  color: #00A0A0;
+}
+.mpe-syntax--string {
+  color: #A8FF60;
+}
+.mpe-syntax--string .mpe-syntax--constant {
+  color: #00A0A0;
+}
+.mpe-syntax--string.mpe-syntax--regexp {
+  color: #E9C062;
+}
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--character-class {
+  color: #B18A3D;
+}
+.mpe-syntax--string .mpe-syntax--variable {
+  color: #8A9A95;
+}
+.mpe-syntax--support {
+  color: #FFFFB6;
+}
+.mpe-syntax--support.mpe-syntax--function {
+  color: #DAD085;
+}
+.mpe-syntax--support.mpe-syntax--constant {
+  color: #FFD2A7;
+}
+.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name.mpe-syntax--css {
+  color: #EDEDED;
+}
+.mpe-syntax--source .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag,
+.mpe-syntax--source .mpe-syntax--punctuation.mpe-syntax--tag {
+  color: #96CBFE;
+}
+.mpe-syntax--source .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  color: #C6C5FE;
 }
 .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
-  color: #FFCB6B;
+  color: #C6C5FE;
 }
-.mpe-syntax--meta.mpe-syntax--class {
-  color: #FFE082;
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag.mpe-syntax--namespace,
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--namespace {
+  color: #E18964;
 }
-.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
-  color: #89DDF3;
+.mpe-syntax--meta.mpe-syntax--preprocessor.mpe-syntax--c {
+  color: #8996A8;
 }
-.mpe-syntax--meta.mpe-syntax--link {
-  color: #FFCB6B;
+.mpe-syntax--meta.mpe-syntax--preprocessor.mpe-syntax--c .mpe-syntax--keyword {
+  color: #AFC4DB;
 }
-.mpe-syntax--meta.mpe-syntax--require {
-  color: #82AAFF;
+.mpe-syntax--meta.mpe-syntax--cast {
+  color: #676767;
 }
-.mpe-syntax--meta.mpe-syntax--selector {
-  color: #C792EA;
+.mpe-syntax--meta.mpe-syntax--sgml.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--doctype,
+.mpe-syntax--meta.mpe-syntax--sgml.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--doctype .mpe-syntax--entity,
+.mpe-syntax--meta.mpe-syntax--sgml.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--doctype .mpe-syntax--string,
+.mpe-syntax--meta.mpe-syntax--xml-processing,
+.mpe-syntax--meta.mpe-syntax--xml-processing .mpe-syntax--entity,
+.mpe-syntax--meta.mpe-syntax--xml-processing .mpe-syntax--string {
+  color: #494949;
+}
+.mpe-syntax--meta.mpe-syntax--tag .mpe-syntax--entity,
+.mpe-syntax--meta.mpe-syntax--tag > .mpe-syntax--punctuation,
+.mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--inline .mpe-syntax--entity {
+  color: #C6C5FE;
+}
+.mpe-syntax--meta.mpe-syntax--tag .mpe-syntax--name,
+.mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--inline .mpe-syntax--name,
+.mpe-syntax--meta.mpe-syntax--tag > .mpe-syntax--punctuation {
+  color: #96CBFE;
+}
+.mpe-syntax--meta.mpe-syntax--selector.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.mpe-syntax--meta.mpe-syntax--selector.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--tag.mpe-syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.mpe-syntax--meta.mpe-syntax--selector.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--id {
+  color: #8B98AB;
+}
+.mpe-syntax--meta.mpe-syntax--selector.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--class {
+  color: #62B1FE;
+}
+.mpe-syntax--meta.mpe-syntax--property-group .mpe-syntax--support.mpe-syntax--constant.mpe-syntax--property-value.mpe-syntax--css,
+.mpe-syntax--meta.mpe-syntax--property-value .mpe-syntax--support.mpe-syntax--constant.mpe-syntax--property-value.mpe-syntax--css {
+  color: #F9EE98;
+}
+.mpe-syntax--meta.mpe-syntax--preprocessor.mpe-syntax--at-rule .mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--at-rule {
+  color: #8693A5;
+}
+.mpe-syntax--meta.mpe-syntax--property-value .mpe-syntax--support.mpe-syntax--constant.mpe-syntax--named-color.mpe-syntax--css,
+.mpe-syntax--meta.mpe-syntax--property-value .mpe-syntax--constant {
+  color: #87C38A;
+}
+.mpe-syntax--meta.mpe-syntax--constructor.mpe-syntax--argument.mpe-syntax--css {
+  color: #8F9D6A;
+}
+.mpe-syntax--meta.mpe-syntax--diff,
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
 }
 .mpe-syntax--meta.mpe-syntax--separator {
-  background-color: #373b41;
-  color: #EEFFFF;
+  color: #60A633;
+  background-color: #242424;
 }
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
-  color: #89DDF3;
+.mpe-syntax--meta.mpe-syntax--line.mpe-syntax--entry.mpe-syntax--logfile,
+.mpe-syntax--meta.mpe-syntax--line.mpe-syntax--exit.mpe-syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
 }
-.mpe-syntax--none {
-  color: #EEFFFF;
-}
-.mpe-syntax--markup.mpe-syntax--bold {
-  color: #FFCB6B;
-  font-weight: bold;
-}
-.mpe-syntax--markup.mpe-syntax--changed {
-  color: #C792EA;
-}
-.mpe-syntax--markup.mpe-syntax--deleted {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
-  color: #82AAFF;
-}
-.mpe-syntax--markup.mpe-syntax--inserted {
-  color: #C3E88D;
-}
-.mpe-syntax--markup.mpe-syntax--list {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--quote {
-  color: #FFCB6B;
-}
-.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
-  color: #C3E88D;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
-  -webkit-font-smoothing: auto;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
-  color: #C3E88D;
-}.markdown-preview-enhanced pre[mini] .scroll-view {
-  padding-left: 1px;
-}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
-  z-index: inherit;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #009688;
-  box-sizing: border-box;
-  background-color: rgba(238, 255, 255, 0.1);
-  box-shadow: inset 0 -1px 0 #009688;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
-  color: #89DDF3;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
-  color: #73d1c8;
-}
-.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
-  color: #FFE082;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
-  color: #F78C6A;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
-  color: #B2CCD6;
-}
-.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
-  color: #C792EA;
-}
-.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
-  color: #89DDF3;
-}
-.mpe-syntax--js .mpe-syntax--constant {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #FFCB6B;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
-  color: #82AAFF;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
-  color: #F07178;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C792EA;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
-  color: currentColor;
-}
-.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
-  color: #C792EA;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
-  color: #82AAFF;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
-  color: #C792EA;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
-  color: #82AAFF;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
-  color: #7986CB;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
-  color: #FF5370;
-}
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
-  color: #C792EA;
-}
-.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
-  color: #89DDF3;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
-  color: currentColor;
+.mpe-syntax--meta.mpe-syntax--line.mpe-syntax--error.mpe-syntax--logfile {
+  background-color: #751012;
 }
 .markdown-preview-enhanced {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #EEFFFF;
-  background-color: #263238;
+  color: #c5c8c6;
+  background-color: #1d1f21;
   overflow: initial;
   margin: 10px 13px 10px 13px;
   padding: 2em;
@@ -428,13 +274,13 @@
   font-size: 2.25em;
   font-weight: 300;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #43484c;
 }
 .markdown-preview-enhanced h2 {
   font-size: 1.75em;
   font-weight: 400;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #43484c;
 }
 .markdown-preview-enhanced h3 {
   font-size: 1.5em;
@@ -463,17 +309,17 @@
   font-size: 1em;
 }
 .markdown-preview-enhanced h6 {
-  color: #9cffff;
+  color: #9ba09d;
 }
 .markdown-preview-enhanced h1,
 .markdown-preview-enhanced h2 {
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #43484c;
 }
 .markdown-preview-enhanced strong {
   color: #ffffff;
 }
 .markdown-preview-enhanced del {
-  color: #9cffff;
+  color: #9ba09d;
 }
 .markdown-preview-enhanced a:not([href]) {
   color: inherit;
@@ -537,8 +383,8 @@
   margin: 16px 0;
   font-size: inherit;
   padding: 0 15px;
-  color: #9cffff;
-  border-left: 4px solid #475d69;
+  color: #9ba09d;
+  border-left: 4px solid #43484c;
 }
 .markdown-preview-enhanced blockquote > :first-child {
   margin-top: 0;
@@ -549,7 +395,7 @@
 .markdown-preview-enhanced hr {
   height: 4px;
   margin: 32px 0;
-  background-color: #475d69;
+  background-color: #43484c;
   border: 0 none;
 }
 .markdown-preview-enhanced table {
@@ -568,7 +414,7 @@
 }
 .markdown-preview-enhanced table td,
 .markdown-preview-enhanced table th {
-  border: 1px solid #475d69;
+  border: 1px solid #43484c;
   padding: 6px 13px;
 }
 .markdown-preview-enhanced dl {
@@ -589,7 +435,7 @@
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 0.85em !important;
   color: #ffffff;
-  background-color: #364850;
+  background-color: #303337;
   border-radius: 3px;
   padding: 0.2em 0;
 }
@@ -617,9 +463,9 @@
   overflow: auto;
   font-size: 0.85em !important;
   line-height: 1.45;
-  color: #EEFFFF;
-  background-color: #2e3d44 !important;
-  border: #475d69;
+  color: #c5c8c6;
+  background-color: #27292c !important;
+  border: #43484c;
   border-radius: 3px;
 }
 .markdown-preview-enhanced .highlight pre {
@@ -663,10 +509,10 @@
 }
 .markdown-preview-enhanced kbd {
   color: #ffffff;
-  border: 1px solid #475d69;
-  border-bottom: 2px solid #3b4d56;
+  border: 1px solid #43484c;
+  border-bottom: 2px solid #35393c;
   padding: 2px 4px;
-  background-color: #364850;
+  background-color: #303337;
   border-radius: 3px;
 }
 .markdown-preview-enhanced .pagebreak,
@@ -677,7 +523,7 @@
   .markdown-preview-enhanced {
     width: 980px;
     margin: 10px auto;
-    background: #263238;
+    background: #1d1f21;
   }
 }
 @media screen and (max-width: 400px) {
@@ -689,7 +535,7 @@
 }
 @media print {
   .markdown-preview-enhanced {
-    background-color: #263238;
+    background-color: #1d1f21;
     /*table,*/
   }
   .markdown-preview-enhanced h1,
@@ -702,7 +548,7 @@
     page-break-after: avoid;
   }
   .markdown-preview-enhanced blockquote {
-    color: #9cffff;
+    color: #9ba09d;
   }
   .markdown-preview-enhanced pre {
     page-break-inside: avoid;
@@ -813,7 +659,7 @@
 }
 [data-presentation-preview-mode] .preview-slides .slide {
   position: relative;
-  background-color: #263238;
+  background-color: #1d1f21;
   padding: 2em !important;
   margin-bottom: 12px;
   text-align: left !important;
@@ -907,7 +753,7 @@
   </head>
   <body class="markdown-preview-enhanced   ">
 
-  <h1 id="cs251-at-ccut-week-3-arguments">CS251 at CCUT Week 3: Arguments</h1>
+  <h1 id="cs251-at-ccut-week-3-arguments-in-propositional-logic">CS251 at CCUT Week 3: Arguments in Propositional Logic</h1>
 <p>4/26/17</p>
 <p><img src="keyboard.jpg" alt="keyboard"></p>
 <p>Outline: <a id="index"></a></p>
@@ -935,14 +781,31 @@
 </ul></p></li>
 </ul>
 <h1 id="argument-validity-a-idvaliditya">Argument Validity <a id="validity"></a></h1>
-<p>Logic is in the business of evaluating arguments. We study logic to discover (or build) methods for precisely sorting good from bad arguments.</p>
+<p>Logic is in the business of evaluating arguments. We study logic to discover (or build) methods for precisely sorting good from bad arguments. There are a number of other related concepts that will be useful to discuss as well. We will take these in turn.</p>
 <p>An argument is a line of reasoning that takes us from some assumptions to a conclusion. Take for instance the following argument:</p>
 <blockquote>
 <p>It is raining heavily.<br>
 If you do not take an umbrella, you will get soaked.<br>
 So, you should take an umbrella</p>
 </blockquote>
-<p>More precisely, an argument is a set of sentences of which one is called the <em>conclusion</em> and the others are called the <em>premises</em>. Often arguments in natural language omit some premises which are obvious or implied by context. The argument above omits the premise that you don’t want to get soaked.</p>
+<p>More precisely, an argument is a set of sentences of which one is called the <em>conclusion</em> and the others are called the <em>premises</em>.</p>
+<p>Often arguments in natural language omit some premises which are obvious or implied by context. The argument above omits the premise that you don’t want to get soaked. We call these <em>enthymematic</em> arguments.</p>
+<h3 id="exercises">Exercises:</h3>
+<p>Identify the conclusion of these arguments.</p>
+<ol>
+<li><p>It is sunny. So I should take my sunglasses.</p></li>
+<li><p>It must have been sunny. I did wear my sunglasses, after all.</p></li>
+<li><p>No one but you has had their hands in the cookie-jar. And the scene of the crime is littered with cookie-crumbs. You’re the culprit!</p></li>
+<li><p>Miss Scarlett and Professor Plum were in the study at the time of the murder. Reverend Green had the candlestick in the ballroom, and we know that there is no blood on his hands. Hence Colonel Mustard did it in the kitchen with the lead-piping. Recall, after all, that the gun had not been fired.</p></li>
+</ol>
+<h2 id="validity">Validity</h2>
+<p>We define validity to be a property of an argument.</p>
+<blockquote>
+<p>An argument is valid if and only if it is impossible for the premises to be true while the conclusion false.</p>
+</blockquote>
+<p>We can put this another way: <code>An argument is valid if and only if the truth of the premises guarantees the truth of the conclusion.</code></p>
+<p>And a third way: <code>An argument is valid if and only if whenever the premises are true, the conclusion is also true.</code></p>
+<p>These three fairly precise definitions for validity are <code>equivalent</code>.</p>
 <p><a href="#index">Back to the Top</a></p>
 <h1 id="methods-a-idmethodsa">Methods <a id="methods"></a></h1>
 <p><a href="#index">Back to the Top</a></p>
