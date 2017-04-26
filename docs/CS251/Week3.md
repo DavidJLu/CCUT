@@ -1,4 +1,4 @@
-### CS251 at CCUT Week 3: Arguments
+# CS251 at CCUT Week 3: Arguments
 4/26/17
 
 Outline: <a id="index"></a>

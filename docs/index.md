@@ -12,8 +12,10 @@ CS163
 CS251
 ----
   * [Week2](CS251/Week2.html) (updated 4/26/17)
-  * [Week3](CS251/Week3.html) (updated 4/26/17)
-
+  <!---
+  [comment]: <> * [Week3](CS251/Week3.html) (updated 4/26/17)
+  --->
+  
 These pages are under constant construction, so check back often for updates.
 
 ---------------

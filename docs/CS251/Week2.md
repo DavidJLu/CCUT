@@ -1,5 +1,5 @@
 # CS251 at CCUT Week 2: Propositional Logic
-4/25/17
+4/24/17
 
 Last week we briefly reviewed the vocabulary and syntax of propositional logic (PL), and we discussed some motivations for studying it.
 
