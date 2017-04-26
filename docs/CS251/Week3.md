@@ -36,16 +36,16 @@ Often arguments in natural language omit some premises which are obvious or impl
 
 As an addition to our vocabulary of propositional logic, we use the symbol $\therefore$ to mean therefore.
 
-### Exercises:
+### Test yourself:
 Identify the conclusion of these arguments.
 
-1. It is sunny. So I should take my sunglasses.
+>1. It is sunny. So I should take my sunglasses.
 
-2. It must have been sunny. I did wear my sunglasses, after all.
+>2. It must have been sunny. I did wear my sunglasses, after all.
 
-3. No one but you has had their hands in the cookie-jar. And the scene of the crime is littered with cookie-crumbs. You’re the culprit!
+>3. No one but you has had their hands in the cookie-jar. And the scene of the crime is littered with cookie-crumbs. You’re the culprit!
 
-4. Miss Scarlett and Professor Plum were in the study at the time of the murder. Reverend Green had the candlestick in the ballroom, and we know that there is no blood on his hands. Hence Colonel Mustard did it in the kitchen with the lead-piping. Recall, after all, that the gun had not been fired.
+>4. Miss Scarlett and Professor Plum were in the study at the time of the murder. Reverend Green had the candlestick in the ballroom, and we know that there is no blood on his hands. Hence Colonel Mustard did it in the kitchen with the lead-piping. Recall, after all, that the gun had not been fired.
 
 ## Validity
 We define validity to be a property of an argument.
@@ -58,38 +58,59 @@ And a third way: `An argument is valid if and only if whenever the premises are 
 
 These three definitions say the same thing.
 
-### Exercises
-Which of the following arguments are valid? Which are invalid?
+### Test yourself
+Can you figure out which of the following arguments are valid? Which are invalid?
 
-1.
+A.
   >1. Socrates is a man.
   >2. All men are carrots.
   >$\therefore$ Socrates is a carrot.
 
-2.  
+B.  
   >1. Abe Lincoln was either born in Illinois or he was once president.
   >2. Abe Lincoln was never president.
   >$\therefore$ Abe Lincoln was born in Illinois.
 
-3.  
+C.  
   >1. If I pull the trigger, Abe Lincoln will die.
   >2. I do not pull the trigger.
   >$\therefore$ Abe Lincoln will not die.
 
-4.
+D.
   >1. Abe Lincoln was either from France or from Luxemborg.
   >2. Abe Lincoln was not from Luxemborg.
   >$\therefore$ Abe Lincoln was from France.
 
-5.  
+E.  
   >1. If the world were to end today, then I would not need to get up tomorrow morning.
   >2. I will need to get up tomorrow morning.
   >$\therefore$ The world will not end today.
 
-6.
+F.
   >1. Joe is now 19 years old.
   >2. Joe is now 87 years old.
   >$\therefore$ Bob is now 20 years old.
+
+  ----
+
+#### Could there be:
+
+In each case: if so, give an example; if not, explain why not.
+
+>1. A valid argument that has one false premise and one true
+premise?
+
+>2. A valid argument that has only false premises?
+
+>3. A valid argument with only false premises and a false conclusion?
+
+>4. A sound argument with a false conclusion?
+
+>5. An invalid argument that can be made valid by the addition of a new premise?
+
+>6. A valid argument that can be made invalid by the addition of a new premise?
+
+
 
 [Back to the Top](#index)
 
