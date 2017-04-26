@@ -1,6 +1,8 @@
 # CS251 at CCUT Week 3: Arguments
 4/26/17
 
+![keyboard](keyboard.jpg)
+
 Outline: <a id="index"></a>
   * [Arguments and Validity](#validity)
   * [Methods](#methods)
