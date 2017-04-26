@@ -5,6 +5,7 @@
 
 Outline: <a id="index"></a>
   * [Arguments and Validity](#validity)
+    * [Soundness](#sound)
   * [Methods](#methods)
     * [Truth Tables](#truthtables)
     * [Natural Deduction](#natural)
@@ -61,6 +62,8 @@ And a third way: `An argument is valid if and only if whenever the premises are 
 
 These three definitions say the same thing.
 
+
+
 ### Test yourself
 Can you figure out which of the following arguments are valid? Which are invalid?
 
@@ -94,8 +97,17 @@ F.
   >2. Joe is now 87 years old.
   >$\therefore$ Bob is now 20 years old.
 
-  ----
+<br>
 
+
+## Soundness <a id="sound"></a>
+We are often interested in more than whether an argument is valid. We also want to know whether we should believe the conclusion is true. If an argument is valid **and** the premises are true, then we say that the argument is **sound**
+
+>An argument is sound if and only if it is valid and the premises are true.
+
+It follows from the definition that the conclusion of a sound argument is true.
+
+<br>
 #### Could there be:
 
 In each case: if so, give an example; if not, explain why not.
