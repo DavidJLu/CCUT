@@ -15,4 +15,5 @@ CS251
 
 These pages are under constant construction, so check back often for updates.
 
-I'm hosted with GitHub Pages.
+---------------
+<Sub>I'm hosted with GitHub Pages.
