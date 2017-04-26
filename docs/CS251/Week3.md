@@ -45,6 +45,17 @@ Identify the conclusion of these arguments.
 
 4. Miss Scarlett and Professor Plum were in the study at the time of the murder. Reverend Green had the candlestick in the ballroom, and we know that there is no blood on his hands. Hence Colonel Mustard did it in the kitchen with the lead-piping. Recall, after all, that the gun had not been fired.
 
+## Validity
+We define validity to be a property of an argument.
+
+> An argument is valid if and only if it is impossible for the premises to be true while the conclusion false.
+
+We can put this another way: `An argument is valid if and only if the truth of the premises guarantees the truth of the conclusion.`
+
+And a third way: `An argument is valid if and only if whenever the premises are true, the conclusion is also true.`
+
+These three fairly precise definitions for validity are `equivalent`.
+
 [Back to the Top](#index)
 
 # Methods <a id="methods"></a>

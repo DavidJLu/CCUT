@@ -11,12 +11,15 @@ CS163
 ----
   * Week 1
   * [Week 2](CS163/Week2.html) (updated 4/26/17)
+  * Week 3
+  * Week 4
 
 CS251
 ----
   * Week 1
   * [Week 2](CS251/Week2.html) (updated 4/26/17)
   * [Week 3](CS251/Week3.html) (updated 4/26/17)
+  * Week 4
 
 
 These pages are under constant construction, so check back often for updates.

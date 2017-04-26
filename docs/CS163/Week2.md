@@ -140,8 +140,8 @@ Recursion is a tool a programmer can use to invoke a function call on itself.
 
 Recursive programming is directly related to mathematical induction.
 In recursive programming we need two things:
-  * A **base case**
-  * A recursive case
+  * **A base case**
+  * **A recursive case**
 
 Consider the pseudocode to add an item at the end of a linear linked list.
 
