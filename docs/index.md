@@ -1,3 +1,5 @@
+ <link rel="shortcut icon" type="image/x-icon" href="wiki.ico">
+
 PSU CS Guest Lectures at CCUT
 =====
 Instructor: David Lu
