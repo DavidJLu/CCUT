@@ -1,0 +1,10 @@
+\select@language {english}
+\contentsline {section}{Displaying Text}{3}
+\contentsline {subsection}{Paragraphs of Text and Formatting}{4}
+\contentsline {subsection}{Bullet Points and Numbered Lists}{5}
+\contentsline {subsection}{Verbatim}{6}
+\contentsline {section}{Displaying Information}{7}
+\contentsline {subsection}{Table}{8}
+\contentsline {subsection}{Figure}{9}
+\contentsline {subsection}{Theorem}{10}
+\contentsline {section}{Citations}{11}
