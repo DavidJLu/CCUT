@@ -1,7 +1,7 @@
 PSU CS Guest Lectures at CCUT
 =====
 Instructor: David Lu
-Dates: April 17$^{th}$ -- May 12$^{th}$ 2017
+Dates: 4/17/17 - 5/12/17
 
 ![circuitboard](pcb.jpg)
 
