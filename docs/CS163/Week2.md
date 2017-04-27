@@ -237,7 +237,7 @@ Practice with Linear Linked Lists <a id="exercises"></a>
 
 #### Print a list in reverse
 
-  >Given a linear linked list $a$ print $a$ in orderse order.
+  >Given a linear linked list $a$ print $a$ in reverse order.
   >
   >Example: $a$ = 3->2->4->5
   >Output of print($a$): 5->4->2->3
