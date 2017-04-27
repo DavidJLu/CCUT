@@ -159,7 +159,7 @@ Examples
   1. For Jean to be in Paris, it is necessary that Jean be in France.
   1. It is a necessary condition on Jean’s being in Paris that she
   be in France.
-  1. For Jean to be in France, it is sucient that Jean be in Paris.
+  1. For Jean to be in France, it is sufficient that Jean be in Paris.
   1. It is a sucient condition on Jean’s being in France that she
 be in Paris.
 
