@@ -212,7 +212,7 @@ Translations:
 
   1. $M$
     $M$ is the atomic proposition "Mary is in Barcelona."
-  --------  
+  --------
   2. $A \lor \neg A$
     $A$ - "Those fruits are apples."
 -----

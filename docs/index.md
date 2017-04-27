@@ -12,7 +12,7 @@ Location: Changchun, China
 CS163
 ----
   * Week 1
-  * [Week 2](CS163/Week2.html) (updated 4/26/17)
+  * [Week 2](CS163/Linear Linked Lists.html) (updated 4/26/17)
   * Week 3
   * Week 4
 

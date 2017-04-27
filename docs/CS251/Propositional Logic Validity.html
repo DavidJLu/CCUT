@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>index</title>
+    <title>Propositional Logic Validity</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -907,30 +907,197 @@
   </head>
   <body class="markdown-preview-enhanced   ">
 
-  <p><link rel="shortcut icon" type="image/x-icon" href="wiki.ico"></p>
-<h1 id="psu-cs-guest-lectures-at-ccut">PSU CS Guest Lectures at CCUT</h1>
-<p>Instructor: David Lu<br>
-Dates: 4/17/17 - 5/12/17<br>
-Location: Changchun, China<br>
-<a href="https://www.pdx.edu/cecs/changchun-partnership-22-programs">MCECS Special Program: Chanchun 2+2 Partnership</a></p>
-<p><img src="binary.jpg" alt="binary"></p>
-<h2 id="cs163">CS163</h2>
+  <h1 id="cs251-at-ccut-week-3-arguments-in-propositional-logic">CS251 at CCUT Week 3: Arguments in Propositional Logic</h1>
+<p>4/26/17</p>
+<p><img src="keyboard.jpg" alt="keyboard"></p>
+<p>Outline: <a id="index"></a></p>
 <ul>
-<li><p>Week 1</p></li>
-<li><p>[Week 2](CS163/Linear Linked Lists.html) (updated 4/26/17)</p></li>
-<li><p>Week 3</p></li>
-<li><p>Week 4</p></li>
-</ul>
-<h2 id="cs251">CS251</h2>
+<li><p><a href="#validity">Arguments and Validity</a>
 <ul>
-<li><p>Week 1</p></li>
-<li><p><a href="CS251/Week2.html">Week 2</a> (updated 4/26/17)</p></li>
-<li><p><a href="CS251/Week3.html">Week 3</a> (updated 4/26/17)</p></li>
-<li><p>Week 4</p></li>
+<li><p><a href="#sound">Soundness</a></p></li>
+</ul></p></li>
+<li><p><a href="#methods">Methods</a>
+<ul>
+<li><p><a href="#truthtables">Truth Tables</a></p></li>
+<li><p><a href="#natural">Natural Deduction</a></p></li>
+</ul></p></li>
+<li><p><a href="#forms">Sentence Forms</a>
+<ul>
+<li><p><a href="#taut">Tautology</a></p></li>
+<li><p><a href="#contra">Contradiction</a></p></li>
+<li><p><a href="#contingent">Contingency</a></p></li>
+</ul></p></li>
+<li><p><a href="#equiv">Equivalence</a>
+<ul>
+<li><p><a href="#inequiv">Inequivalence</a></p></li>
+</ul></p></li>
+<li><p><a href="#sets">Sets of Sentences</a>
+<ul>
+<li><p><a href="#consistent">Consistency</a></p></li>
+<li><p><a href="#inconsistent">Inconsistency</a></p></li>
+</ul></p></li>
 </ul>
-<p>These pages are under constant construction, so check back often for updates.</p>
-<hr>
-<p><sub>I’m hosted with GitHub Pages and created in Markdown with KaTeX math rendering.</sub></p>
+<p>Many examples and exercises on this page are sourced from <em>forall x: Calgary Remix An Introduction to Formal Logic</em> By P. D. Magnus and Tim Button with additions by J. Robert Loftis and remixed and revised by Aaron Thomas-Bolduc and Richard Zach under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 license</a>.</p>
+<h1 id="argument-validity-a-idvaliditya">Argument Validity <a id="validity"></a></h1>
+<p>Logic is in the business of evaluating arguments. We study logic to discover (or build) methods for precisely sorting good from bad arguments. There are a number of other related concepts that will be useful to discuss as well. We will take these in turn.</p>
+<p>An argument is a line of reasoning that takes us from some assumptions to a conclusion. Take for instance the following argument:</p>
+<blockquote>
+<p>It is raining heavily.<br>
+If you do not take an umbrella, you will get soaked.<br>
+So, you should take an umbrella</p>
+</blockquote>
+<p>More precisely, an argument is a set of sentences of which one is called the <strong>conclusion</strong> and the others are called the <strong>premises</strong>. The conclusion is often indicated by the words <em>therefore</em>, <em>so</em>, <em>hence</em>, and <em>thus</em> while premises are sometimes indicated by <em>since</em> and <em>because</em></p>
+<p>Often arguments in natural language omit some premises which are obvious or implied by context. The argument above omits the premise that you don’t want to get soaked. We call these <em>enthymematic</em> arguments.</p>
+<p>As an addition to our vocabulary of propositional logic, we use the symbol <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> to mean therefore.</p>
+<h3 id="test-yourself">Test yourself:</h3>
+<p>Identify the conclusion of these arguments.</p>
+<blockquote>
+<ol>
+<li><p>It is sunny. So I should take my sunglasses.</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>It must have been sunny. I did wear my sunglasses, after all.</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li><p>No one but you has had their hands in the cookie-jar. And the scene of the crime is littered with cookie-crumbs. You’re the culprit!</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li><p>Miss Scarlett and Professor Plum were in the study at the time of the murder. Reverend Green had the candlestick in the ballroom, and we know that there is no blood on his hands. Hence Colonel Mustard did it in the kitchen with the lead-piping. Recall, after all, that the gun had not been fired.</p></li>
+</ol>
+</blockquote>
+<h2 id="validity">Validity</h2>
+<p>We define validity to be a property of an argument.</p>
+<blockquote>
+<p>An argument is valid if and only if it is impossible for the premises to be true while the conclusion false.</p>
+</blockquote>
+<p>We can put this another way: <code>An argument is valid if and only if the truth of the premises guarantees the truth of the conclusion.</code></p>
+<p>And a third way: <code>An argument is valid if and only if whenever the premises are true, the conclusion is also true.</code></p>
+<p>These three definitions say the same thing.</p>
+<h3 id="test-yourself-1">Test yourself</h3>
+<p>Can you figure out which of the following arguments are valid? Which are invalid?</p>
+<p>A.</p>
+<blockquote>
+<ol>
+<li><p>Socrates is a man.</p></li>
+<li><p>All men are carrots.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> Socrates is a carrot.</p></li>
+</ol>
+</blockquote>
+<p>B.</p>
+<blockquote>
+<ol>
+<li><p>Abe Lincoln was either born in Illinois or he was once president.</p></li>
+<li><p>Abe Lincoln was never president.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> Abe Lincoln was born in Illinois.</p></li>
+</ol>
+</blockquote>
+<p>C.</p>
+<blockquote>
+<ol>
+<li><p>If I pull the trigger, Abe Lincoln will die.</p></li>
+<li><p>I do not pull the trigger.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> Abe Lincoln will not die.</p></li>
+</ol>
+</blockquote>
+<p>D.</p>
+<blockquote>
+<ol>
+<li><p>Abe Lincoln was either from France or from Luxemborg.</p></li>
+<li><p>Abe Lincoln was not from Luxemborg.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> Abe Lincoln was from France.</p></li>
+</ol>
+</blockquote>
+<p>E.</p>
+<blockquote>
+<ol>
+<li><p>If the world were to end today, then I would not need to get up tomorrow morning.</p></li>
+<li><p>I will need to get up tomorrow morning.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> The world will not end today.</p></li>
+</ol>
+</blockquote>
+<p>F.</p>
+<blockquote>
+<ol>
+<li><p>Joe is now 19 years old.</p></li>
+<li><p>Joe is now 87 years old.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∴</mo></mrow><annotation encoding="application/x-tex">\therefore</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">∴</span></span></span></span> Bob is now 20 years old.</p></li>
+</ol>
+</blockquote>
+<p><br></p>
+<h2 id="soundness-a-idsounda">Soundness <a id="sound"></a></h2>
+<p>We are often interested in more than whether an argument is valid. We also want to know whether we should believe the conclusion is true. If an argument is valid <strong>and</strong> the premises are true, then we say that the argument is <strong>sound</strong></p>
+<blockquote>
+<p>An argument is sound if and only if it is valid and the premises are true.</p>
+</blockquote>
+<p>It follows from the definition that the conclusion of a sound argument is true.</p>
+<p><br></p>
+<h4 id="could-there-be">Could there be:</h4>
+<p>In each case: if so, give an example; if not, explain why not.</p>
+<blockquote>
+<ol>
+<li><p>A valid argument that has one false premise and one true<br>
+premise?</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li><p>A valid argument that has only false premises?</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li><p>A valid argument with only false premises and a false conclusion?</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li><p>A sound argument with a false conclusion?</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li><p>An invalid argument that can be made valid by the addition of a new premise?</p></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li><p>A valid argument that can be made invalid by the addition of a new premise?</p></li>
+</ol>
+</blockquote>
+<p><a href="#index">Back to the Top</a></p>
+<h1 id="methods-a-idmethodsa">Methods <a id="methods"></a></h1>
+<p>Recall that one main reason to study logic is to be more precise. So can we be more precise than reading English arguments and trying to decide whether they are valid or not?</p>
+<p>Yes, formal logic attempts to provide precise methods for determining whether an argument is valid or not. In this section, we will look at two methods for determining validity. These methods can also be used to determine some other properties we are interested in.</p>
+<p>The two methods fall into the categories of truth tables and natural deduction. There are other methods (axiomatic logic) but these two are easier to use and understand.</p>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="truth-tables-a-idtruthtablesa">Truth Tables <a id="truthtables"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="natural-deduction-a-idnaturala">Natural Deduction <a id="natural"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h1 id="sentence-forms-a-idsentencea">Sentence Forms <a id="sentence"></a></h1>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="tautology-a-idtauta">Tautology <a id="taut"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="contradiction-a-idcontraa">Contradiction <a id="contra"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="contingency-a-idcontingenta">Contingency <a id="contingent"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h1 id="equivalence-a-idequiva">Equivalence <a id="equiv"></a></h1>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="inequivalence-a-idinequiva">Inequivalence <a id="inequiv"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h1 id="sets-of-sentences-a-idseta">Sets of Sentences <a id="set"></a></h1>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="consistency-a-idconsistenta">Consistency <a id="consistent"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
+<h2 id="inconsistency-a-idinconsistenta">Inconsistency <a id="inconsistent"></a></h2>
+<p><a href="#index">Back to the Top</a></p>
 
 
   </body>
