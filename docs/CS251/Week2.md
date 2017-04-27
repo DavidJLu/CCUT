@@ -154,14 +154,19 @@ Examples
 |F |F |T |
 
 Examples
-  1. If Jean is in Paris, then Jean is in France.
-  1. Jean is in France only if Jean is in Paris.
-  1. For Jean to be in Paris, it is necessary that Jean be in France.
-  1. It is a necessary condition on Jean’s being in Paris that she
+  >1. If Jean is in Paris, then Jean is in France.
+
+  >1. Jean is in France only if Jean is in Paris.
+
+  >1. For Jean to be in Paris, it is necessary that Jean be in France.
+
+  >1. It is a necessary condition on Jean’s being in Paris that she
   be in France.
-  1. For Jean to be in France, it is sufficient that Jean be in Paris.
-  1. It is a sufficient condition on Jean’s being in France that she
-be in Paris.
+
+  >1. For Jean to be in France, it is sufficient that Jean be in Paris.
+
+  >1. It is a sufficient condition on Jean’s being in France that she be in Paris
+
 
 ### Do you understand the conditional?
 **Puzzle**: Each card has a letter (consonant or vowel) on one side, and a number (odd or even) on the other.
