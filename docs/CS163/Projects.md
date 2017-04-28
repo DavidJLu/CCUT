@@ -23,7 +23,7 @@ For most courses there are typically 5 assignments through the 10 week term. So 
 
   * CS201 Computer Systems Programming
     * [HW1: Typing Speed Game](Projects/Typing_Speed_Game.html)
-    * [HW3: Decryption](Decryption.html)
+    * [HW3: Decryption](Projects/Decryption.html)
 
   * CS 202
     *
