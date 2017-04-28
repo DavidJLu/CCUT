@@ -26,7 +26,7 @@ CS251
 [Example PSU Programming Assignments](Projects.html)
 
 
-These pages are under constant construction, so check back often for updates.
+![Construction](construction.png) These pages are under constant construction, so check back often for updates.
 
 
 -----
