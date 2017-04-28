@@ -30,5 +30,6 @@ For many PSU CS programming courses there are typically 5 assignments through th
 
   * CS 311
     * [HW1: DFA Analyzer](Projects/DFA_Analyzer.html)
+    * [HW2: Simple Grammar Analyzer](Projects/Simple_Grammar_Analyzer.html)
   -----
   <sub> These assignments are edited and compiled from publically available course webpages.
