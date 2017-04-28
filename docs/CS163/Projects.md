@@ -32,4 +32,4 @@ Many PSU CS programming courses typically post 5 assignments through the 10 week
     * [HW1: DFA Analyzer](Projects/DFA_Analyzer.html)
     * [HW2: Simple Grammar Analyzer](Projects/Simple_Grammar_Analyzer.html)
   -----
-  <sub> These assignments are lightly edited and curated from publically available course webpages.
+  <sub> These assignments are lightly edited and curated from publically available PSU course webpages.
