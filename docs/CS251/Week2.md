@@ -3,7 +3,7 @@
 
 ![Open Logic Text](openlogic.png)
 
-You can download *Sets, Logic, Computation* at the [Open Logic Project](http://openlogicproject.org/download/)
+*Sets, Logic, Computation* is an open source textbook which you can download at the [Open Logic Project](http://openlogicproject.org/download/)
 
 --------
 
