@@ -23,6 +23,8 @@ CS251
   * [Week 3](CS251/Week3.html) (updated 4/26/17)
   * Week 4
 
+[Example PSU Programming Assignments](Projects.html)
+
 
 These pages are under constant construction, so check back often for updates.
 
