@@ -38,7 +38,7 @@ So the formula $A \rightarrow (B \lor C)$ is well-formed.
 
 On the other hand, the semantics of a language refers to the meanings.
 
-In the propositional logic, the semantics for a sentence will be its truth value. For this class, we will consider just two truth values: true and false. And we will assume the principle of bivalance
+In the propositional logic, the meaning of a sentence is its truth conditions. For this class, we will consider just two truth values: true and false. And we will assume the principle of bivalance
 
 >Principle of Bivalence: Each sentence of our language must be either true or false, not both, not neither.
 
