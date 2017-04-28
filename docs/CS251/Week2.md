@@ -3,6 +3,10 @@
 
 ![Open Logic Text](openlogic.png)
 
+You can download *Sets, Logic, Computation* at the [Open Logic Project](http://openlogicproject.org/download/)
+
+--------
+
 Last week we briefly reviewed the vocabulary and syntax of propositional logic (PL), and we discussed some motivations for studying it.
 
 This week, we will think about the semantics (or meanings) of the PL, and practice a bit of translation between English and PL.
