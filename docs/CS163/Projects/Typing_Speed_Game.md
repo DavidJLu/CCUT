@@ -5,7 +5,7 @@ CS201: Homework \#1 - Typing Speed Game
 
 Typing Speed Game
 -----
-Adapted from Professor Harry Porter's Fall 2015 CS201 course: [External link](http://web.cecs.pdx.edu/~harry/cs201/HW1.pdf)
+From Professor Harry Porter's Fall 2015 CS201 course: [External link](http://web.cecs.pdx.edu/~harry/cs201/HW1.pdf)
 
 >Implement a game that tests the player's typing speed in the C programming language. The game randomly chooses words from an array of null-terminated strings containing "The, "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog". Each word must appear exactly once during a game round. If the user incorrectly types a word, the program should prompt the user to retype the incorrect word.
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Typing_Speed_Game</title>
+    <title>DFA_Analyzer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -907,34 +907,24 @@
   </head>
   <body class="markdown-preview-enhanced   ">
 
-  <h1 id="cs201-homework-1-typing-speed-game">CS201: Homework #1 - Typing Speed Game</h1>
-<p><img src="fox.png" alt="Fox"></p>
-<h2 id="typing-speed-game">Typing Speed Game</h2>
-<p>From Professor Harry Porter’s Fall 2015 CS201 course: <a href="http://web.cecs.pdx.edu/~harry/cs201/HW1.pdf">External link</a></p>
-<blockquote>
-<p>Implement a game that tests the player’s typing speed in the C programming language. The game randomly chooses words from an array of null-terminated strings containing &quot;The, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;the&quot;, &quot;lazy&quot;, &quot;dog&quot;. Each word must appear exactly once during a game round. If the user incorrectly types a word, the program should prompt the user to retype the incorrect word.</p>
-</blockquote>
-<blockquote>
-<p>At the end of each game round, the program should display the total amount of time it took the user to complete the round and how many  mistakes they made.</p>
-</blockquote>
-<p><br></p>
-<h3 id="details-and-requirements">Details and Requirements:</h3>
-<p>Random permutations of words should be generated via calls to <code>srand()</code> and <code>rand()</code>.</p>
-<p>Each permutation of the words must be possible.</p>
-<p>Ensure that your random permutation is generated using a minimal number of <code>rand()</code> calls.</p>
-<p>Timing should begin when the random permutation is first given to the user.</p>
-<p>Timing should end when the user correctly inputs the permutation correctly.</p>
-<h5 id="specific-to-linux">Specific to Linux:</h5>
-<blockquote>
-<p>At PSU, this assignment is to be implemented and run on the department’s linux system. So there are some additional requirements.</p>
-</blockquote>
-<p>Consult the linux man pages for more information on <code>rand()</code>, <code>/srand()</code>, <code>gettimeofday()</code>, <code>timersub()</code>, <code>printf()/scanf()</code>, <code>strlen()</code>, <code>strncmp()</code> etc.</p>
-<p>Seed <code>srand()</code> using the <code>usec</code> field from a call to <code>gettimeofday()</code></p>
-<p>Use timer macro <code>timersub()</code> for handling operations on struct timevals<br>
-<code>(/usr/include/sys/time.h)</code>.</p>
-<p><br></p>
-<h3 id="example-execution">Example Execution:</h3>
-<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>%&nbsp;./typing_speed_game</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>This&nbsp;is&nbsp;a&nbsp;game&nbsp;that&nbsp;tests&nbsp;typing&nbsp;speed</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>Type&nbsp;the&nbsp;following&nbsp;words:</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>word&nbsp;#1&nbsp;is&nbsp;fox:&nbsp;foxy</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>Incorrect.&nbsp;Try&nbsp;again.</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>word&nbsp;#1&nbsp;is&nbsp;fox:&nbsp;fo</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>Incorrect.&nbsp;Try&nbsp;again.</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>word&nbsp;#1&nbsp;is&nbsp;fox:&nbsp;fox</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#2&nbsp;is&nbsp;The:&nbsp;The</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#3&nbsp;is&nbsp;brown:&nbsp;brown</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#4&nbsp;is&nbsp;lazy:&nbsp;lazy</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#5&nbsp;is&nbsp;jumped:&nbsp;jumped</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#6&nbsp;is&nbsp;over:&nbsp;over</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#7&nbsp;is&nbsp;quick:&nbsp;quick</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#8&nbsp;is&nbsp;dog:&nbsp;dog</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>&nbsp;word&nbsp;#9&nbsp;is&nbsp;the:&nbsp;the</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>Result:</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>Your&nbsp;time&nbsp;is:&nbsp;15.24s</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>You&nbsp;made&nbsp;2&nbsp;mistakes.</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>%</span></span></span></div></pre>
+  <h1 id="cs311-homework-1-dfa-analyzer">CS311: Homework #1 - DFA Analyzer</h1>
+<p><img src="DFA.png" alt="DFA"></p>
+<p>From Professor Daniel Leblanc’s Fall 2015 CS311 course: <a href="http://web.cecs.pdx.edu/~dleblanc/cs311/project1.pdf">External link</a></p>
+<h2 id="dfa-analyzer">DFA Analyzer</h2>
+<h3 id="overview">Overview</h3>
+<p>The goal of this project is to write a program that will take a DFA and a string as input, and determine if the DFA will accept the provided string. You may use any programming language you find convenient.</p>
+<p>The actual amount of code required for this project should be fairly small. I suggest taking this project as an opportunity to either learn a new programming language or use a language you haven’t used in a while.</p>
+<p>Please note that you will be graded on your ability to solve the problem and the quality of your solution. Bad coding practices will result in a loss of points.</p>
+<h3 id="1-encoding-a-dfa20">1 Encoding a DFA[20]</h3>
+<p>For the first part of this project you need to design a method for representing a DFA as a text file. The program you write later will need to read this file and be able to test strings against the DFA. Once you have designed a method you need to encode several DFAs that will later be used to test your program.</p>
+<h3 id="2-reading-the-dfa15">2 Reading the DFA[15]</h3>
+<p>Write a program that can take as input any text file encoded using the format you describe in step one. The program then needs to represent that DFA internally, in such a way that you will be able to check strings against the DFA. Your choice of programming language is likely to heavily influence the internal representation. Things like vectors and strings in C++ or libraries such as Java’s Hashmap are all perfectly acceptable for this assignment. If there is any doubt about a library you’d like to use, please contact me. You may assume that the text file is in the format you specify. Extensive error checking on the file contents is not required.</p>
+<h3 id="3-processing-a-string15">3 Processing a String[15]</h3>
+<p>Expand your program to take a string as input and test if the string is in the language recognized by the DFA. If the string contains symbols that are not elements of the Alphabet of the DFA, you may reject as soon as they are encountered.</p>
+<h3 id="4-testing20">4 Testing[20]</h3>
+<p>Thoroughly test your program with a wide variety of DFAs and inputs. There are a significant number of interesting corner cases that must be checked to get full credit. Make sure to perform your tests in such a way that the results can be included at the end of your writeup.</p>
+<h3 id="5-writeup30">5 Writeup[30]</h3>
+<p>Your writeup should be one to two pages in length and should include a section describing your approach to each of the parts of the project. Be sure to describe any assumptions you made and any restrictions you placed on the DFAs and inputs. Also include explanations of why you made the design decisions you did and why your testing strategy is acceptable.</p>
 
 
   </body>

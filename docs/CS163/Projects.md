@@ -9,7 +9,7 @@ Examples
 ------
 Here is a list of programming projects that are similar to those assigned to computer science students at Portland State University.
 
-For most courses there are typically 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
+For many PSU CS programming courses there are typically 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
 
 
   * CS161: Introduction to Programming and Problem Solving
@@ -27,5 +27,8 @@ For most courses there are typically 5 assignments through the 10 week term. So 
 
   * CS 202
     *
+
+  * CS 311
+    * [HW1: DFA Analyzer](Projects/DFA_Analyzer.html)
   -----
   <sub> These assignments are edited and compiled from publically available course webpages.

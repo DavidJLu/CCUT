@@ -3,7 +3,7 @@ CS201: Homework #3 - Decryption
 
 ![Encrypted](encrypted.jpg)
 
-Adapted from Professor Harry Porter's Fall 2015 CS201 course: [External link](http://web.cecs.pdx.edu/~harry/cs201/HW3.pdf)
+From Professor Harry Porter's Fall 2015 CS201 course: [External link](http://web.cecs.pdx.edu/~harry/cs201/HW3.pdf)
 
 Decryption Algorithm
 --------
