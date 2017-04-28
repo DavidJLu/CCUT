@@ -5,7 +5,7 @@ PSU CS Guest Lectures at CCUT
 Instructor: David Lu
 Dates: 4/17/17 - 5/12/17
 Location: Changchun, China
-[MCECS Special Program: Chanchun 2+2 Partnership](https://www.pdx.edu/cecs/changchun-partnership-22-programs)
+[MCECS Special Programs: Chanchun 2+2 Partnership](https://www.pdx.edu/cecs/changchun-partnership-22-programs)
 
 ![binary](binary.jpg)
 
@@ -23,11 +23,11 @@ CS251
   * [Week 3](CS251/Week3.html) (updated 4/26/17)
   * Week 4
 
-[Example PSU Programming Assignments](Projects.html)
-
-
-![Construction](construction.png) These pages are under constant construction, so check back often for updates.
-
+<br>
+### [Example PSU CS Programming Assignments](Projects.html)
+The best way to learn to program is by practice!
 
 -----
+These pages are under constant construction, so check back often for updates.
+
 <Sub>I'm hosted with GitHub Pages and created in Markdown with KaTeX math rendering.
