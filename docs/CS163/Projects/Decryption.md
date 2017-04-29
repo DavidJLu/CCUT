@@ -8,11 +8,11 @@ From Professor Harry Porter's Fall 2015 CS201 course: [External link](http://web
 Decryption Algorithm
 --------
 
-For each student we have encrypted a file containing a secret message. Your task is to create a program to decrypt the file and discover the secret message.
+>For each student we have encrypted a file containing a secret message. Your task is to create a program to decrypt the file and discover the secret message.
+>
+>We are using a different encryption algorithm for each student so each student will create a unique decryption program. The encryption / decryption algorithm is based on the first 3 letters of your last name.
 
-We are using a different encryption algorithm for each student so each student will create a unique decryption program. The encryption / decryption algorithm is based on the first 3 letters of your last name.
-
-The Decryption Algorithm
+#### The Decryption Algorithm
 In this assignment, you are to implement the decryption algorithm associated with your username. The key to your decryption algorithm is the first three letters of your last name. We are getting your name from the PSU registration system. [ Vu, Hanh $\rightarrow$ vuh ]
 
 There are 3 stages to the decryption scheme. The first letter of your key determines the first stage. The second letter of your key determines the second stage. The third letter of your key determines the third stage.
