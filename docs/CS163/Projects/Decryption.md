@@ -20,6 +20,7 @@ There are 3 stages to the decryption scheme. The first letter of your key determ
 ###### First stage
 
 For every 4 bytes of the file `<c0,c1,c2,c3>`, implement the following based on the first letter of your key:
+
 'a' to ‘d’: Swap bytes `c0` and `c3`.
 ‘e’ to ‘h’: Swap bytes `c1` and `c2`.
 ‘i’ to ‘l’: Swap bytes `c0` and `c2`.
@@ -28,8 +29,8 @@ For every 4 bytes of the file `<c0,c1,c2,c3>`, implement the following based on 
 ‘u’ to ‘z’: Swap bytes `c0` and `c1`.
 
 ###### Second stage
-For every byte of the file with bits `<b7,b6,b5,b4,b3,b2,b1,b0>`, implement the following based on the second letter
-of your key:
+For every byte of the file with bits `<b7,b6,b5,b4,b3,b2,b1,b0>`, implement the following based on the second letter of your key:
+
 ‘a’ to ‘d’: Swap bits `b7` and `b1`, Swap bits `b6` and `b0`.
 ‘e’ to ‘h’: Swap bits `b5` and `b3`, Swap bits `b4` and `b2`.
 ‘i’ to ‘l’: Swap bits `b7` and `b3`, Swap bits `b6` and `b2`.
@@ -38,7 +39,8 @@ of your key:
 ‘u’ to ‘z’: Swap bits `b3` and `b1`, Swap bits `b2` and `b0`.
 
 ###### Third stage
-For every 4 bytes of the file <c0,c1,c2,c3>, implement the following based on the third letter of your key, <k3>:
+For every 4 bytes of the file `<c0,c1,c2,c3>`, implement the following based on the third letter of your key, `<k3>`:
+
 ‘a’ to ‘d’: `XOR` bytes `c0` and `c3` with `k3`.
 ‘e’ to ‘h’: `XOR` bytes `c1` and `c2` with `k3`.
 ‘i’ to ‘l’: `XOR` bytes `c0` and `c2` with `k3`.
@@ -46,6 +48,7 @@ For every 4 bytes of the file <c0,c1,c2,c3>, implement the following based on th
 ‘q’ to ‘t’: `XOR` bytes `c2` and `c3` with `k3`.
 ‘u’ to ‘z’: `XOR` bytes `c1` and `c0` with `k3`.
 
+-----------------
 #### Additional Program Specifications
 If the file size is not evenly divisible by 4 then, for the bytes at the end of the file that are not in a complete 4 byte block, the first and third stages are not to be applied.
 
