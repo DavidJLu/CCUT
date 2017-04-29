@@ -9,7 +9,7 @@ DFA Analyzer
 ----
 
 ### Overview
-The goal of this project is to write a program that will take a DFA and a string as input, and determine if the DFA will accept the provided string. You may use any programming language you find convenient.
+>The goal of this project is to write a program that will take a DFA and a string as input, and determine if the DFA will accept the provided string. You may use any programming language you find convenient.
 
 The actual amount of code required for this project should be fairly small. I suggest taking this project as an opportunity to either learn a new programming language or use a language you haven’t used in a while.
 

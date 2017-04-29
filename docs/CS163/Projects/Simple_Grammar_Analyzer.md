@@ -9,10 +9,7 @@ Simple Grammar Analyzer
 -----
 
 Overview
-In this project you will be writing a program to read in a grammar and a string and determine
-if the grammar can generate that string. Unlike with project 1 where any DFA was a possible
-input, you will only need to be able to deal with specific grammars. You may use any programming
-language you choose.
+>In this project you will be writing a program to read in a grammar and a string and determine if the grammar can generate that string. Unlike with project 1 where any DFA was a possible input, you will only need to be able to deal with specific grammars. You may use any programming language you choose.
 
 Your submission should contain your completed working code and a 1-2 page, not including sample inputs/outputs, writeup describing your work. The writeup must be submitted as a PDF.
 

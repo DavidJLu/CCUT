@@ -911,36 +911,38 @@
 <p><img src="encrypted.jpg" alt="Encrypted"></p>
 <p>From Professor Harry Porter’s Fall 2015 CS201 course: <a href="http://web.cecs.pdx.edu/~harry/cs201/HW3.pdf">External link</a></p>
 <h2 id="decryption-algorithm">Decryption Algorithm</h2>
+<blockquote>
 <p>For each student we have encrypted a file containing a secret message. Your task is to create a program to decrypt the file and discover the secret message.</p>
 <p>We are using a different encryption algorithm for each student so each student will create a unique decryption program. The encryption / decryption algorithm is based on the first 3 letters of your last name.</p>
-<p>The Decryption Algorithm<br>
-In this assignment, you are to implement the decryption algorithm associated with your username. The key to your decryption algorithm is the first three letters of your last name. We are getting your name from the PSU registration system. [ Vu, Hanh <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> vuh ]</p>
+</blockquote>
+<h4 id="the-decryption-algorithm">The Decryption Algorithm</h4>
+<p>In this assignment, you are to implement the decryption algorithm associated with your username. The key to your decryption algorithm is the first three letters of your last name. We are getting your name from the PSU registration system. [ Vu, Hanh <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> vuh ]</p>
 <p>There are 3 stages to the decryption scheme. The first letter of your key determines the first stage. The second letter of your key determines the second stage. The third letter of your key determines the third stage.</p>
 <h6 id="first-stage">First stage</h6>
-<p>For every 4 bytes of the file <code>&lt;c0,c1,c2,c3&gt;</code>, implement the following based on the first letter of your key:<br>
-‘a’ to ‘d’: Swap bytes <code>c0</code> and <code>c3</code>.<br>
+<p>For every 4 bytes of the file <code>&lt;c0,c1,c2,c3&gt;</code>, implement the following based on the first letter of your key:</p>
+<p>‘a’ to ‘d’: Swap bytes <code>c0</code> and <code>c3</code>.<br>
 ‘e’ to ‘h’: Swap bytes <code>c1</code> and <code>c2</code>.<br>
 ‘i’ to ‘l’: Swap bytes <code>c0</code> and <code>c2</code>.<br>
 ‘m’ to ‘p’: Swap bytes <code>c1</code> and <code>c3</code>.<br>
 ‘q’ to ‘t’: Swap bytes <code>c2</code> and <code>c3</code>.<br>
 ‘u’ to ‘z’: Swap bytes <code>c0</code> and <code>c1</code>.</p>
 <h6 id="second-stage">Second stage</h6>
-<p>For every byte of the file with bits <code>&lt;b7,b6,b5,b4,b3,b2,b1,b0&gt;</code>, implement the following based on the second letter<br>
-of your key:<br>
-‘a’ to ‘d’: Swap bits <code>b7</code> and <code>b1</code>, Swap bits <code>b6</code> and <code>b0</code>.<br>
+<p>For every byte of the file with bits <code>&lt;b7,b6,b5,b4,b3,b2,b1,b0&gt;</code>, implement the following based on the second letter of your key:</p>
+<p>‘a’ to ‘d’: Swap bits <code>b7</code> and <code>b1</code>, Swap bits <code>b6</code> and <code>b0</code>.<br>
 ‘e’ to ‘h’: Swap bits <code>b5</code> and <code>b3</code>, Swap bits <code>b4</code> and <code>b2</code>.<br>
 ‘i’ to ‘l’: Swap bits <code>b7</code> and <code>b3</code>, Swap bits <code>b6</code> and <code>b2</code>.<br>
 ‘m’ to ‘p’: Swap bits <code>b5</code> and <code>b1</code>, Swap bits <code>b4</code> and <code>b0</code>.<br>
 ‘q’ to ‘t’: Swap bits <code>b7</code> and <code>b5</code>, Swap bits <code>b6</code> and <code>b4</code>.<br>
 ‘u’ to ‘z’: Swap bits <code>b3</code> and <code>b1</code>, Swap bits <code>b2</code> and <code>b0</code>.</p>
 <h6 id="third-stage">Third stage</h6>
-<p>For every 4 bytes of the file &lt;c0,c1,c2,c3&gt;, implement the following based on the third letter of your key, <k3>:<br>
-‘a’ to ‘d’: <code>XOR</code> bytes <code>c0</code> and <code>c3</code> with <code>k3</code>.<br>
+<p>For every 4 bytes of the file <code>&lt;c0,c1,c2,c3&gt;</code>, implement the following based on the third letter of your key, <code>&lt;k3&gt;</code>:</p>
+<p>‘a’ to ‘d’: <code>XOR</code> bytes <code>c0</code> and <code>c3</code> with <code>k3</code>.<br>
 ‘e’ to ‘h’: <code>XOR</code> bytes <code>c1</code> and <code>c2</code> with <code>k3</code>.<br>
 ‘i’ to ‘l’: <code>XOR</code> bytes <code>c0</code> and <code>c2</code> with <code>k3</code>.<br>
 ‘m’ to ‘p’: <code>XOR</code> bytes <code>c1</code> and <code>c3</code> with <code>k3</code>.<br>
 ‘q’ to ‘t’: <code>XOR</code> bytes <code>c2</code> and <code>c3</code> with <code>k3</code>.<br>
-‘u’ to ‘z’: <code>XOR</code> bytes <code>c1</code> and <code>c0</code> with <code>k3</code>.</k3></p>
+‘u’ to ‘z’: <code>XOR</code> bytes <code>c1</code> and <code>c0</code> with <code>k3</code>.</p>
+<hr>
 <h4 id="additional-program-specifications">Additional Program Specifications</h4>
 <p>If the file size is not evenly divisible by 4 then, for the bytes at the end of the file that are not in a complete 4 byte block, the first and third stages are not to be applied.</p>
 <p>Your program should take <em>exactly</em> one command line argument: the name of the file to decrypt. It should print the decrypted contents to <code>stdout</code>.</p>
