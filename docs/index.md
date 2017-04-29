@@ -24,7 +24,7 @@ CS251
   * Week 4
 
 <br>
-### [Example PSU CS Programming Assignments](CS163/Projects.html)
+### [Example PSU CS Programming Assignments](Projects.html)
 The best way to learn to program is by practice!
 
 -----
