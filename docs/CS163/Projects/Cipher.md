@@ -20,6 +20,10 @@ Your cipher should generate a mapping for each plaintext character to a unique t
 
 Your algorithm for generating this mapping must be deterministic. That is, given the same key, the encoding generated should be the same every time. This will allow your program to encode a message with a key and properly decode the encoding with the same key.
 
+>You should consider how to generate unique two digit numbers for each character. That is, you should consider how to tell if a number generated has already been mapped to a character.
+>
+>You should also consider how to "wrap around" so you only generate two digit numbers.
+
 #### Program details
 Your mapping should be stored in an appropriately sized array of ints. For instance, if your array is called `cipherMap`, then perhaps `cipherMap[0]` is the two digit `int` that maps to the letter `a`, `cipherMap[25]` is the two digit `int` that maps to the letter `z`, and `cipherMap[26]` is the two digit `int` that maps to the digit `0`. You may or may not want to encode a space. It is up to you what conventions you pick for your mapping, but you must use an array.
 
