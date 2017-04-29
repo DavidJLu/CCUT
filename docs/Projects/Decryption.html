@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Decryption</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <style>
+    atom-text-editor {
+  background-color: #263238;
+  color: #EEFFFF;
+}.markdown-preview-enhanced pre .wrap-guide {
+  background-color: #2b3940;
+}.markdown-preview-enhanced pre .indent-guide {
+  color: #2b3940;
+}.markdown-preview-enhanced pre .invisible-character {
+  color: #373b41;
+}.markdown-preview-enhanced pre .cursor-line {
+  background-color: #212b30;
+}.markdown-preview-enhanced pre .gutter {
+  background-color: #263238;
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
+  background-color: #212b30;
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
+  color: #B2CCD6;
+}.markdown-preview-enhanced pre .invisible {
+  color: #EEFFFF;
+}.markdown-preview-enhanced pre .cursor {
+  color: #009688;
+  border-width: 2px;
+}.markdown-preview-enhanced pre .selection .region {
+  background-color: #3b4d56;
+}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid #B2CCD6;
+}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
+  border: 1px solid white;
+}
+.mpe-syntax--comment {
+  color: #4f6875;
+}
+.mpe-syntax--keyword {
+  color: #C792EA;
+}
+.mpe-syntax--keyword.mpe-syntax--control {
+  color: #C792EA;
+}
+.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
+  color: #B2CCD6;
+}
+.mpe-syntax--keyword.mpe-syntax--operator {
+  color: #89DDF3;
+}
+.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #82AAFF;
+}
+.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
+  color: #FFCB6B;
+}
+.mpe-syntax--storage {
+  color: #C792EA;
+}
+.mpe-syntax--constant {
+  color: #F07178;
+}
+.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
+  color: #89DDF3;
+}
+.mpe-syntax--constant.mpe-syntax--numeric {
+  color: #F78C6A;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
+  color: #89DDF3;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
+  color: #C3E88D;
+}
+.mpe-syntax--variable {
+  color: #EEFFFF;
+}
+.mpe-syntax--variable.mpe-syntax--interpolation {
+  color: #eb434c;
+}
+.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #F78C6A;
+}
+.mpe-syntax--variable.mpe-syntax--language {
+  color: #FF5370;
+}
+.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
+  color: #FFCB6B;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  background-color: #F07178;
+  color: #263238;
+}
+.mpe-syntax--string {
+  color: #C3E88D;
+}
+.mpe-syntax--string.mpe-syntax--regexp {
+  color: #89DDF3;
+}
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
+  color: #FFCB6B;
+}
+.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
+  color: #F07178;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #4f6875;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
+  color: #EEFFFF;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
+  color: #82AAFF;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
+  color: #FFE082;
+  font-weight: bold;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #89DDF3;
+}
+.mpe-syntax--support.mpe-syntax--class {
+  color: #FFCB6B;
+}
+.mpe-syntax--support.mpe-syntax--function {
+  color: #82AAFF;
+}
+.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
+  color: #82AAFF;
+}
+.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
+  color: #B2CCD6;
+}
+.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
+  color: #FFCB6B;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #82AAFF;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #EEFFFF;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
+  color: #C3E88D;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
+  color: #C792EA;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
+  color: #C792EA;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #FFCB6B;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
+  color: #82AAFF;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #F07178;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  color: #FFCB6B;
+}
+.mpe-syntax--meta.mpe-syntax--class {
+  color: #FFE082;
+}
+.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
+  color: #89DDF3;
+}
+.mpe-syntax--meta.mpe-syntax--link {
+  color: #FFCB6B;
+}
+.mpe-syntax--meta.mpe-syntax--require {
+  color: #82AAFF;
+}
+.mpe-syntax--meta.mpe-syntax--selector {
+  color: #C792EA;
+}
+.mpe-syntax--meta.mpe-syntax--separator {
+  background-color: #373b41;
+  color: #EEFFFF;
+}
+.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
+.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #89DDF3;
+}
+.mpe-syntax--none {
+  color: #EEFFFF;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  color: #FFCB6B;
+  font-weight: bold;
+}
+.mpe-syntax--markup.mpe-syntax--changed {
+  color: #C792EA;
+}
+.mpe-syntax--markup.mpe-syntax--deleted {
+  color: #F07178;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
+  color: #82AAFF;
+}
+.mpe-syntax--markup.mpe-syntax--inserted {
+  color: #C3E88D;
+}
+.mpe-syntax--markup.mpe-syntax--list {
+  color: #F07178;
+}
+.mpe-syntax--markup.mpe-syntax--quote {
+  color: #FFCB6B;
+}
+.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
+  color: #C3E88D;
+}
+.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
+  color: #C3E88D;
+}.markdown-preview-enhanced pre[mini] .scroll-view {
+  padding-left: 1px;
+}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
+  z-index: inherit;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #009688;
+  box-sizing: border-box;
+  background-color: rgba(238, 255, 255, 0.1);
+  box-shadow: inset 0 -1px 0 #009688;
+}
+.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
+  color: #89DDF3;
+}
+.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
+  color: #73d1c8;
+}
+.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
+  color: #FFE082;
+}
+.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
+  color: #F78C6A;
+}
+.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
+  color: currentColor;
+}
+.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
+  color: #B2CCD6;
+}
+.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
+  color: #C792EA;
+}
+.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
+  color: #89DDF3;
+}
+.mpe-syntax--js .mpe-syntax--constant {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #FFCB6B;
+}
+.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
+  color: #82AAFF;
+}
+.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #F78C6A;
+}
+.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
+  color: #F07178;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
+  color: #C3E88D;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
+  color: currentColor;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
+  color: #C3E88D;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
+  color: currentColor;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
+  color: #C792EA;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
+  color: currentColor;
+}
+.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
+  color: #C792EA;
+}
+.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
+  color: #82AAFF;
+}
+.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
+  color: #C792EA;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
+  color: #82AAFF;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
+  color: #7986CB;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
+  color: #FF5370;
+}
+.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
+.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #C792EA;
+}
+.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
+  color: #89DDF3;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
+  color: #F07178;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
+  color: #F07178;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
+  color: currentColor;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #EEFFFF;
+  background-color: #263238;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[is="space-pen-div"] {
+  width: 100%;
+  margin: 0;
+  z-index: 999;
+  overflow: scroll;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #475d69;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #475d69;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #9cffff;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #475d69;
+}
+.markdown-preview-enhanced strong {
+  color: #ffffff;
+}
+.markdown-preview-enhanced del {
+  color: #9cffff;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #9cffff;
+  border-left: 4px solid #475d69;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #475d69;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #ffffff;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #475d69;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #ffffff;
+  background-color: #364850;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #EEFFFF;
+  background-color: #2e3d44 !important;
+  border: #475d69;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced kbd {
+  color: #ffffff;
+  border: 1px solid #475d69;
+  border-bottom: 2px solid #3b4d56;
+  padding: 2px 4px;
+  background-color: #364850;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #263238;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #263238;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #ffffff;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #9cffff;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn,
+.markdown-preview-enhanced[is="space-pen-div"] .refresh-btn {
+  position: fixed;
+  display: none;
+  right: 24px;
+  top: 54px;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn {
+  right: 72px;
+}
+.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn,
+.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn {
+  display: block;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn:hover,
+.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .status {
+  display: none;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .back-to-top-btn {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #263238;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+  z-index: 100;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+
+    
+  </head>
+  <body class="markdown-preview-enhanced   ">
+
+  <h1 id="cs201-homework-3-decryption">CS201: Homework #3 - Decryption</h1>
+<p><img src="encrypted.jpg" alt="Encrypted"></p>
+<p>From Professor Harry Porter’s Fall 2015 CS201 course: <a href="http://web.cecs.pdx.edu/~harry/cs201/HW3.pdf">External link</a></p>
+<h2 id="decryption-algorithm">Decryption Algorithm</h2>
+<blockquote>
+<p>For each student we have encrypted a file containing a secret message. Your task is to create a program to decrypt the file and discover the secret message.</p>
+<p>We are using a different encryption algorithm for each student so each student will create a unique decryption program. The encryption / decryption algorithm is based on the first 3 letters of your last name.</p>
+</blockquote>
+<h4 id="the-decryption-algorithm">The Decryption Algorithm</h4>
+<p>In this assignment, you are to implement the decryption algorithm associated with your username. The key to your decryption algorithm is the first three letters of your last name. We are getting your name from the PSU registration system. [ Vu, Hanh <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> vuh ]</p>
+<p>There are 3 stages to the decryption scheme. The first letter of your key determines the first stage. The second letter of your key determines the second stage. The third letter of your key determines the third stage.</p>
+<h6 id="first-stage">First stage</h6>
+<p>For every 4 bytes of the file <code>&lt;c0,c1,c2,c3&gt;</code>, implement the following based on the first letter of your key:</p>
+<p>‘a’ to ‘d’: Swap bytes <code>c0</code> and <code>c3</code>.<br>
+‘e’ to ‘h’: Swap bytes <code>c1</code> and <code>c2</code>.<br>
+‘i’ to ‘l’: Swap bytes <code>c0</code> and <code>c2</code>.<br>
+‘m’ to ‘p’: Swap bytes <code>c1</code> and <code>c3</code>.<br>
+‘q’ to ‘t’: Swap bytes <code>c2</code> and <code>c3</code>.<br>
+‘u’ to ‘z’: Swap bytes <code>c0</code> and <code>c1</code>.</p>
+<h6 id="second-stage">Second stage</h6>
+<p>For every byte of the file with bits <code>&lt;b7,b6,b5,b4,b3,b2,b1,b0&gt;</code>, implement the following based on the second letter of your key:</p>
+<p>‘a’ to ‘d’: Swap bits <code>b7</code> and <code>b1</code>, Swap bits <code>b6</code> and <code>b0</code>.<br>
+‘e’ to ‘h’: Swap bits <code>b5</code> and <code>b3</code>, Swap bits <code>b4</code> and <code>b2</code>.<br>
+‘i’ to ‘l’: Swap bits <code>b7</code> and <code>b3</code>, Swap bits <code>b6</code> and <code>b2</code>.<br>
+‘m’ to ‘p’: Swap bits <code>b5</code> and <code>b1</code>, Swap bits <code>b4</code> and <code>b0</code>.<br>
+‘q’ to ‘t’: Swap bits <code>b7</code> and <code>b5</code>, Swap bits <code>b6</code> and <code>b4</code>.<br>
+‘u’ to ‘z’: Swap bits <code>b3</code> and <code>b1</code>, Swap bits <code>b2</code> and <code>b0</code>.</p>
+<h6 id="third-stage">Third stage</h6>
+<p>For every 4 bytes of the file <code>&lt;c0,c1,c2,c3&gt;</code>, implement the following based on the third letter of your key, <code>&lt;k3&gt;</code>:</p>
+<p>‘a’ to ‘d’: <code>XOR</code> bytes <code>c0</code> and <code>c3</code> with <code>k3</code>.<br>
+‘e’ to ‘h’: <code>XOR</code> bytes <code>c1</code> and <code>c2</code> with <code>k3</code>.<br>
+‘i’ to ‘l’: <code>XOR</code> bytes <code>c0</code> and <code>c2</code> with <code>k3</code>.<br>
+‘m’ to ‘p’: <code>XOR</code> bytes <code>c1</code> and <code>c3</code> with <code>k3</code>.<br>
+‘q’ to ‘t’: <code>XOR</code> bytes <code>c2</code> and <code>c3</code> with <code>k3</code>.<br>
+‘u’ to ‘z’: <code>XOR</code> bytes <code>c1</code> and <code>c0</code> with <code>k3</code>.</p>
+<hr>
+<h4 id="additional-program-specifications">Additional Program Specifications</h4>
+<p>If the file size is not evenly divisible by 4 then, for the bytes at the end of the file that are not in a complete 4 byte block, the first and third stages are not to be applied.</p>
+<p>Your program should take <em>exactly</em> one command line argument: the name of the file to decrypt. It should print the decrypted contents to <code>stdout</code>.</p>
+<h4 id="hints-and-suggestions">Hints and Suggestions</h4>
+<p>Use <code>argv</code> to obtain the filename.</p>
+<p>You may use <code>fopen</code>, <code>fseek</code>, <code>ftell</code>, <code>malloc/calloc</code>, <code>fread</code>, and <code>fclose</code> to read the file into a buffer in memory.</p>
+<p>Do not use the string libraries since <code>NULL</code> bytes can and will be generated as part of the encryption/decryption<br>
+process.</p>
+<p>The utility command “xxd” will print the contents of a file in hexadecimal. For example:</p>
+<blockquote>
+<p><code>xxd filename</code></p>
+</blockquote>
+<p>To see the file in binary:</p>
+<blockquote>
+<p><code>xxd –b filename</code><br>
+(You can also use <code>od –x</code> or <code>hexdump</code>, but watch out; <code>od</code> may perform byte reordering.)</p>
+</blockquote>
+<p>For the second stage, the bit shift operator and bit masks are recommended for implementing the swap.</p>
+<h2 id="example-usage-session">Example Usage Session</h2>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>LINUX:/u/harry&nbsp;%&nbsp;od&nbsp;-x&nbsp;por</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000000&nbsp;6145&nbsp;4a35&nbsp;1153&nbsp;5739&nbsp;007a&nbsp;0201&nbsp;617e&nbsp;770d</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000020&nbsp;6166&nbsp;7e28&nbsp;206a&nbsp;573d&nbsp;1d56&nbsp;4661&nbsp;6167&nbsp;5600</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000040&nbsp;6147&nbsp;4a35&nbsp;384e&nbsp;5208&nbsp;1502&nbsp;461d&nbsp;4b12&nbsp;1271</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000060</span></span></span></div></pre>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>LINUX:/u/harry&nbsp;%&nbsp;hw3&nbsp;por</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>The&nbsp;quick&nbsp;brown&nbsp;fox&nbsp;jumped&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog!!!</span></span></span></div></pre>
+<h4 id="trace-of-example-usage-session">Trace of Example Usage Session</h4>
+<p>Here is the ciphertext above dumped out in hex bytes within my program. Note the byte ordering compared to the</p>
+<p>output of <code>od -x</code>:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>45&nbsp;61&nbsp;35&nbsp;4a&nbsp;53&nbsp;11&nbsp;39&nbsp;57&nbsp;7a&nbsp;00&nbsp;01&nbsp;02&nbsp;7e&nbsp;61&nbsp;0d&nbsp;77&nbsp;66&nbsp;61&nbsp;28&nbsp;7e&nbsp;6a&nbsp;20&nbsp;3d&nbsp;57&nbsp;56&nbsp;1d&nbsp;61&nbsp;46&nbsp;67&nbsp;61&nbsp;00&nbsp;56&nbsp;47&nbsp;61&nbsp;35&nbsp;4a&nbsp;4e&nbsp;38&nbsp;08&nbsp;52&nbsp;02&nbsp;15&nbsp;1d&nbsp;46&nbsp;12&nbsp;4b&nbsp;71&nbsp;12</span></span></span></div></pre>
+<p>Because my last name is “Porter”, in the first stage, I implement the corresponding algorithm for ‘p’, which is<br>
+swap bytes c1 and c3 in each 4 byte block. After, the first stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>45&nbsp;4a&nbsp;35&nbsp;61&nbsp;53&nbsp;57&nbsp;39&nbsp;11&nbsp;7a&nbsp;02&nbsp;01&nbsp;00&nbsp;7e&nbsp;77&nbsp;0d&nbsp;61&nbsp;66&nbsp;7e&nbsp;28&nbsp;61&nbsp;6a&nbsp;57&nbsp;3d&nbsp;20&nbsp;56&nbsp;46&nbsp;61&nbsp;1d&nbsp;67&nbsp;56&nbsp;00&nbsp;61&nbsp;47&nbsp;4a&nbsp;35&nbsp;61&nbsp;4e&nbsp;52&nbsp;08&nbsp;38&nbsp;02&nbsp;46&nbsp;1d&nbsp;15&nbsp;12&nbsp;12&nbsp;71&nbsp;4b</span></span></span></div></pre>
+<p>For the second stage, I implement the corresponding algorithm for ‘o’, which is to swap bits b5 with b1 and b4 with b0 in each byte. After the second stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>54&nbsp;68&nbsp;17&nbsp;52&nbsp;71&nbsp;75&nbsp;1b&nbsp;11&nbsp;6b&nbsp;20&nbsp;10&nbsp;00&nbsp;6f&nbsp;77&nbsp;1c&nbsp;52&nbsp;66&nbsp;6f&nbsp;0a&nbsp;52&nbsp;6a&nbsp;75&nbsp;1f&nbsp;02&nbsp;65&nbsp;64&nbsp;52&nbsp;1d&nbsp;76&nbsp;65&nbsp;00&nbsp;52&nbsp;74&nbsp;68&nbsp;17&nbsp;52&nbsp;6c&nbsp;61&nbsp;08&nbsp;0b&nbsp;20&nbsp;64&nbsp;1d&nbsp;15&nbsp;21&nbsp;21&nbsp;53&nbsp;78</span></span></span></div></pre>
+<p>Finally, for the third stage, I implement the corresponding algorithm for ‘r’, which is to XOR bytes c2 and c3 with ‘r’ (0x72) in each 4 byte block. After the third stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>54&nbsp;68&nbsp;65&nbsp;20&nbsp;71&nbsp;75&nbsp;69&nbsp;63&nbsp;6b&nbsp;20&nbsp;62&nbsp;72&nbsp;6f&nbsp;77&nbsp;6e&nbsp;20&nbsp;66&nbsp;6f&nbsp;78&nbsp;20&nbsp;6a&nbsp;75&nbsp;6d&nbsp;70&nbsp;65&nbsp;64&nbsp;20&nbsp;6f&nbsp;76&nbsp;65&nbsp;72&nbsp;20&nbsp;74&nbsp;68&nbsp;65&nbsp;20&nbsp;6c&nbsp;61&nbsp;7a&nbsp;79&nbsp;20&nbsp;64&nbsp;6f&nbsp;67&nbsp;21&nbsp;21&nbsp;21&nbsp;0a</span></span></span></div></pre>
+<p>When these bytes are output as a string, it outputs</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>The&nbsp;quick&nbsp;brown&nbsp;fox&nbsp;jumped&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog!!!\n</span></span></span></div></pre>
+<h3 id="grading">Grading</h3>
+<p>Your program will be compiled with this command on the PSU linux lab machines:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>gcc&nbsp;-Wall&nbsp;-O1&nbsp;–m64&nbsp;hw3.c&nbsp;-o&nbsp;hw3</span></span></span></div></pre>
+<p>Your program should work correctly. Therefore, your grade will be based on its simplicity, clarity, and efficiency.</p>
+<p>Your program should handle all conditions and print reasonable error messages if it is not used correctly. All error output should go to <code>stderr</code>. Nothing should go to <code>stdout</code> except the decrypted output.</p>
+<p>It seems likely that you can develop and test the program on your own computer and it will run identically on the PSU Linux machines, but it is up to you to make sure it runs correctly on the PSU Linux machines.</p>
+
+
+  </body>
+  
+</html>
