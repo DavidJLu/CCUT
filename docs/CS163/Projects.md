@@ -16,7 +16,7 @@ Many PSU CS programming courses typically post 5 assignments through the 10 week
     *
 
   * CS162 Introduction to Computer Science:
-    *
+    * [HW2: Cipher Program](Projects/Cipher.html)
 
   * CS163 Data Structures
     *
