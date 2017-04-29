@@ -941,6 +941,46 @@ of your key:<br>
 ‘m’ to ‘p’: <code>XOR</code> bytes <code>c1</code> and <code>c3</code> with <code>k3</code>.<br>
 ‘q’ to ‘t’: <code>XOR</code> bytes <code>c2</code> and <code>c3</code> with <code>k3</code>.<br>
 ‘u’ to ‘z’: <code>XOR</code> bytes <code>c1</code> and <code>c0</code> with <code>k3</code>.</k3></p>
+<h4 id="additional-program-specifications">Additional Program Specifications</h4>
+<p>If the file size is not evenly divisible by 4 then, for the bytes at the end of the file that are not in a complete 4 byte block, the first and third stages are not to be applied.</p>
+<p>Your program should take <em>exactly</em> one command line argument: the name of the file to decrypt. It should print the decrypted contents to <code>stdout</code>.</p>
+<h4 id="hints-and-suggestions">Hints and Suggestions</h4>
+<p>Use <code>argv</code> to obtain the filename.</p>
+<p>You may use <code>fopen</code>, <code>fseek</code>, <code>ftell</code>, <code>malloc/calloc</code>, <code>fread</code>, and <code>fclose</code> to read the file into a buffer in memory.</p>
+<p>Do not use the string libraries since <code>NULL</code> bytes can and will be generated as part of the encryption/decryption<br>
+process.</p>
+<p>The utility command “xxd” will print the contents of a file in hexadecimal. For example:</p>
+<blockquote>
+<p><code>xxd filename</code></p>
+</blockquote>
+<p>To see the file in binary:</p>
+<blockquote>
+<p><code>xxd –b filename</code><br>
+(You can also use <code>od –x</code> or <code>hexdump</code>, but watch out; <code>od</code> may perform byte reordering.)</p>
+</blockquote>
+<p>For the second stage, the bit shift operator and bit masks are recommended for implementing the swap.</p>
+<h2 id="example-usage-session">Example Usage Session</h2>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>LINUX:/u/harry&nbsp;%&nbsp;od&nbsp;-x&nbsp;por</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000000&nbsp;6145&nbsp;4a35&nbsp;1153&nbsp;5739&nbsp;007a&nbsp;0201&nbsp;617e&nbsp;770d</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000020&nbsp;6166&nbsp;7e28&nbsp;206a&nbsp;573d&nbsp;1d56&nbsp;4661&nbsp;6167&nbsp;5600</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000040&nbsp;6147&nbsp;4a35&nbsp;384e&nbsp;5208&nbsp;1502&nbsp;461d&nbsp;4b12&nbsp;1271</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>0000060</span></span></span></div></pre>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>LINUX:/u/harry&nbsp;%&nbsp;hw3&nbsp;por</span></span></span></div><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>The&nbsp;quick&nbsp;brown&nbsp;fox&nbsp;jumped&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog!!!</span></span></span></div></pre>
+<h4 id="trace-of-example-usage-session">Trace of Example Usage Session</h4>
+<p>Here is the ciphertext above dumped out in hex bytes within my program. Note the byte ordering compared to the</p>
+<p>output of <code>od -x</code>:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>45&nbsp;61&nbsp;35&nbsp;4a&nbsp;53&nbsp;11&nbsp;39&nbsp;57&nbsp;7a&nbsp;00&nbsp;01&nbsp;02&nbsp;7e&nbsp;61&nbsp;0d&nbsp;77&nbsp;66&nbsp;61&nbsp;28&nbsp;7e&nbsp;6a&nbsp;20&nbsp;3d&nbsp;57&nbsp;56&nbsp;1d&nbsp;61&nbsp;46&nbsp;67&nbsp;61&nbsp;00&nbsp;56&nbsp;47&nbsp;61&nbsp;35&nbsp;4a&nbsp;4e&nbsp;38&nbsp;08&nbsp;52&nbsp;02&nbsp;15&nbsp;1d&nbsp;46&nbsp;12&nbsp;4b&nbsp;71&nbsp;12</span></span></span></div></pre>
+<p>Because my last name is “Porter”, in the first stage, I implement the corresponding algorithm for ‘p’, which is<br>
+swap bytes c1 and c3 in each 4 byte block. After, the first stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>45&nbsp;4a&nbsp;35&nbsp;61&nbsp;53&nbsp;57&nbsp;39&nbsp;11&nbsp;7a&nbsp;02&nbsp;01&nbsp;00&nbsp;7e&nbsp;77&nbsp;0d&nbsp;61&nbsp;66&nbsp;7e&nbsp;28&nbsp;61&nbsp;6a&nbsp;57&nbsp;3d&nbsp;20&nbsp;56&nbsp;46&nbsp;61&nbsp;1d&nbsp;67&nbsp;56&nbsp;00&nbsp;61&nbsp;47&nbsp;4a&nbsp;35&nbsp;61&nbsp;4e&nbsp;52&nbsp;08&nbsp;38&nbsp;02&nbsp;46&nbsp;1d&nbsp;15&nbsp;12&nbsp;12&nbsp;71&nbsp;4b</span></span></span></div></pre>
+<p>For the second stage, I implement the corresponding algorithm for ‘o’, which is to swap bits b5 with b1 and b4 with b0 in each byte. After the second stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>54&nbsp;68&nbsp;17&nbsp;52&nbsp;71&nbsp;75&nbsp;1b&nbsp;11&nbsp;6b&nbsp;20&nbsp;10&nbsp;00&nbsp;6f&nbsp;77&nbsp;1c&nbsp;52&nbsp;66&nbsp;6f&nbsp;0a&nbsp;52&nbsp;6a&nbsp;75&nbsp;1f&nbsp;02&nbsp;65&nbsp;64&nbsp;52&nbsp;1d&nbsp;76&nbsp;65&nbsp;00&nbsp;52&nbsp;74&nbsp;68&nbsp;17&nbsp;52&nbsp;6c&nbsp;61&nbsp;08&nbsp;0b&nbsp;20&nbsp;64&nbsp;1d&nbsp;15&nbsp;21&nbsp;21&nbsp;53&nbsp;78</span></span></span></div></pre>
+<p>Finally, for the third stage, I implement the corresponding algorithm for ‘r’, which is to XOR bytes c2 and c3 with ‘r’ (0x72) in each 4 byte block. After the third stage, this is the result in hex bytes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>54&nbsp;68&nbsp;65&nbsp;20&nbsp;71&nbsp;75&nbsp;69&nbsp;63&nbsp;6b&nbsp;20&nbsp;62&nbsp;72&nbsp;6f&nbsp;77&nbsp;6e&nbsp;20&nbsp;66&nbsp;6f&nbsp;78&nbsp;20&nbsp;6a&nbsp;75&nbsp;6d&nbsp;70&nbsp;65&nbsp;64&nbsp;20&nbsp;6f&nbsp;76&nbsp;65&nbsp;72&nbsp;20&nbsp;74&nbsp;68&nbsp;65&nbsp;20&nbsp;6c&nbsp;61&nbsp;7a&nbsp;79&nbsp;20&nbsp;64&nbsp;6f&nbsp;67&nbsp;21&nbsp;21&nbsp;21&nbsp;0a</span></span></span></div></pre>
+<p>When these bytes are output as a string, it outputs</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>The&nbsp;quick&nbsp;brown&nbsp;fox&nbsp;jumped&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog!!!\n</span></span></span></div></pre>
+<h3 id="grading">Grading</h3>
+<p>Your program will be compiled with this command on the PSU linux lab machines:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="mpe-syntax--text mpe-syntax--plain"><span class="mpe-syntax--meta mpe-syntax--paragraph mpe-syntax--text"><span>gcc&nbsp;-Wall&nbsp;-O1&nbsp;–m64&nbsp;hw3.c&nbsp;-o&nbsp;hw3</span></span></span></div></pre>
+<p>Your program should work correctly. Therefore, your grade will be based on its simplicity, clarity, and efficiency.</p>
+<p>Your program should handle all conditions and print reasonable error messages if it is not used correctly. All error output should go to <code>stderr</code>. Nothing should go to <code>stdout</code> except the decrypted output.</p>
+<p>It seems likely that you can develop and test the program on your own computer and it will run identically on the PSU Linux machines, but it is up to you to make sure it runs correctly on the PSU Linux machines.</p>
 
 
   </body>
