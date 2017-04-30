@@ -36,6 +36,7 @@ Many PSU CS courses typically post about 5 assignments through the 10 week term.
 
 * [<span style="color:Turquoise">CS300 Elements of Software Engineering:](https://www.pdx.edu/computer-science/cs300)
   * [HW1: Word Processor Specification](Projects/WordProcessor.html)
+  * [HW5: Word Processor Complete Implementation](Projects/WordProcessorFull.html)
 
 
 * [<span style="color:Turquoise">CS311 Computational Structures:](https://www.pdx.edu/computer-science/cs311)

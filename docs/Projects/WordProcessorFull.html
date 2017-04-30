@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
+    <title>WordProcessorFull</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -907,66 +907,34 @@
   </head>
   <body class="markdown-preview-enhanced   ">
 
-  <h1 id="computer-science-homework-projects-at-psu">Computer Science Homework Projects at PSU</h1>
-<p>David Lu<br>
-4/27/17</p>
-<p><img src="code.jpg" alt="code"></p>
-<h2 id="examples">Examples</h2>
-<p>Here is a curated and lightly edited collection of programming projects that are assigned to computer science students at Portland State University.</p>
-<p>Many PSU CS courses typically post about 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.</p>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs161"><span style="color:Turquoise">CS161: Introduction to Programming and Problem Solving:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs162"><span style="color:Turquoise">CS162 Introduction to Computer Science:</span></a>
-<ul>
-<li><p><a href="Projects/Cipher.html">HW2: Cipher</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs163"><span style="color:Turquoise">CS163 Data Structures:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs201"><span style="color:Turquoise">CS201 Computer Systems Programming:</span></a>
-<ul>
-<li><p><a href="Projects/Typing_Speed_Game.html">HW1: Typing Speed Game</a></p></li>
-<li><p><a href="Projects/Decryption.html">HW3: Decryption</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs202"><span style="color:Turquoise">CS202 Programming Systems:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs300"><span style="color:Turquoise">CS300 Elements of Software Engineering:</span></a>
-<ul>
-<li><p><a href="Projects/WordProcessor.html">HW1: Word Processor Specification</a></p></li>
-<li><p><a href="Projects/WordProcessorFull.html">HW5: Word Processor Complete Implementation</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs311"><span style="color:Turquoise">CS311 Computational Structures:</span></a>
-<ul>
-<li><p><a href="Projects/DFA_Analyzer.html">HW1: DFA Analyzer</a></p></li>
-<li><p><a href="Projects/Simple_Grammar_Analyzer.html">HW2: Simple Grammar Analyzer</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs333"><span style="color:Turquoise">CS333 Introduction to Operating Systems:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul>
-<hr>
-</p><p><sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.</sub></p></li>
-</ul>
+  <h1 id="cs300-homework-5-word-processor">CS300: Homework 5 - Word Processor</h1>
+<p><img src="typewriter.jpg" alt="Typewriter"></p>
+<p>From Professor Herb Mayer’s CS300 course. <a href="http://web.cecs.pdx.edu/~herb/cs300s07/">External Link</a></p>
+<h2 id="word-processor-complete-implementation">Word Processor Complete Implementation</h2>
+<p>General Rules: Implement your Homework in C or C++, using any 32-bit or more powerful run-time system. Hand in the complete listing of all source files plus include files, if any, and all inputs with generated outputs. Write your group’s names, the HW number, completion date, and the current PSU term into the header of each source file. If you work in a group of 2 or more, keep in mind that fair work distribution is one important SW Engineering aspect. You need to practice fair work distribution, and group work. This aspect is important in your case, as all group members receive the identical credit for the delivered project.</p>
+<blockquote>
+<p>Abstract: Implement in C or C++ the Word Processor, specified in HW1. Show that all commands work by running the complete test suite specified in HW1. All previously functioning text processing commands must still work correctly.</p>
+</blockquote>
+<p>Detail: The word processor you implement is an old-fashioned, simple text processing tool that reads unformatted ASCII text input with embedded commands, and outputs formatted text. The output has all commands removed, and is formatted as specified by the commands or by defaults. Characters should be monospaced.</p>
+<p>Demonstrate via suitable input texts, that all text processing commands work. The <code>.ra</code> and <code>.co</code> commands had been implemented before and must still function properly. Hand in all inputs and their corresponding outputs, showing in each case that yet another formatting command works as specified.</p>
+<p>Following the emitted output, your word processor dumps additional internal information. This information is for tracking purposes for the implementation team, not meant for the benefit of the user of your word processor. This tracking information includes the following:</p>
+<table>
+<thead>
+<tr><th style="text-align:left">#</th><th style="text-align:left">Internal Data to be Tracked</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">1</td><td style="text-align:left">Total number of input characters read</td></tr>
+<tr><td style="text-align:left">2</td><td style="text-align:left">Total number of input blanks read</td></tr>
+<tr><td style="text-align:left">3</td><td style="text-align:left">Total number of input cr/lf read</td></tr>
+<tr><td style="text-align:left">4</td><td style="text-align:left">Total number of input tabs read</td></tr>
+<tr><td style="text-align:left">5</td><td style="text-align:left">Total number of input lines read</td></tr>
+<tr><td style="text-align:left">6</td><td style="text-align:left">Total number of unprintable character read</td></tr>
+<tr><td style="text-align:left">7</td><td style="text-align:left">Total number of commands encountered</td></tr>
+<tr><td style="text-align:left">8</td><td style="text-align:left">Total number of distinct commands, i.e. the same command occurring more than once in the input is counted just one time</td></tr>
+<tr><td style="text-align:left">9</td><td style="text-align:left">Total number of words in the input; a word is a contiguous sequence of characters embedded in white space. White space includes blanks, new-lines, the start of file, and of file, and tabs. Also, any combination of these c outs as one white space</td></tr>
+<tr><td style="text-align:left">10</td><td style="text-align:left">Total number of white spaces output. White space is a combinations of blanks, tabs, and newlines, but at least one of those</td></tr>
+</tbody>
+</table>
 
 
   </body>
