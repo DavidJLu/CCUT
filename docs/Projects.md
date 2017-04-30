@@ -7,16 +7,16 @@ David Lu
 
 Examples
 ------
-Here is a curated and slightly edited collection of programming projects that are assigned to computer science students at Portland State University.
+Here is a curated and lightly edited collection of programming projects that are assigned to computer science students at Portland State University.
 
-Many PSU CS programming courses typically post 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
+Many PSU CS courses typically post about 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
 
 
   * [CS161: Introduction to Programming and Problem Solving:](https://www.pdx.edu/computer-science/cs161)
     *
 
   * [CS162 Introduction to Computer Science:](https://www.pdx.edu/computer-science/cs162)
-    * [HW2: Cipher Program](Projects/Cipher.html)
+    * [HW2: Cipher](Projects/Cipher.html)
 
   * [CS163 Data Structures:](https://www.pdx.edu/computer-science/cs163)
     *
@@ -38,4 +38,4 @@ Many PSU CS programming courses typically post 5 assignments through the 10 week
   * [CS333 Introduction to Operating Systems:](https://www.pdx.edu/computer-science/cs333)
     *
   -----
-  <sub> These assignments are lightly edited and curated from publically available PSU course webpages.
+  <sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.
