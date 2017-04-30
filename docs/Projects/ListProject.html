@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
+    <title>ListProject</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -907,67 +907,25 @@
   </head>
   <body class="markdown-preview-enhanced   ">
 
-  <h1 id="computer-science-homework-projects-at-psu">Computer Science Homework Projects at PSU</h1>
-<p>David Lu<br>
-4/27/17</p>
-<p><img src="code.jpg" alt="code"></p>
-<h2 id="examples">Examples</h2>
-<p>Here is a curated and lightly edited collection of programming projects that are assigned to computer science students at Portland State University.</p>
-<p>Many PSU CS courses typically post about 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.</p>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs161"><span style="color:Turquoise">CS161: Introduction to Programming and Problem Solving:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs162"><span style="color:Turquoise">CS162 Introduction to Computer Science:</span></a>
-<ul>
-<li><p><a href="Projects/Cipher.html">HW2: Cipher</a></p></li>
-<li><p><a href="Projects/ListProject.html">HW4: Test Driving Lists</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs163"><span style="color:Turquoise">CS163 Data Structures:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs201"><span style="color:Turquoise">CS201 Computer Systems Programming:</span></a>
-<ul>
-<li><p><a href="Projects/Typing_Speed_Game.html">HW1: Typing Speed Game</a></p></li>
-<li><p><a href="Projects/Decryption.html">HW3: Decryption</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs202"><span style="color:Turquoise">CS202 Programming Systems:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs300"><span style="color:Turquoise">CS300 Elements of Software Engineering:</span></a>
-<ul>
-<li><p><a href="Projects/WordProcessor.html">HW1: Word Processor Specification</a></p></li>
-<li><p><a href="Projects/WordProcessorFull.html">HW5: Word Processor Complete Implementation</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs311"><span style="color:Turquoise">CS311 Computational Structures:</span></a>
-<ul>
-<li><p><a href="Projects/DFA_Analyzer.html">HW1: DFA Analyzer</a></p></li>
-<li><p><a href="Projects/Simple_Grammar_Analyzer.html">HW2: Simple Grammar Analyzer</a></p></li>
-</ul></p></li>
-</ul>
-<ul>
-<li><p><a href="https://www.pdx.edu/computer-science/cs333"><span style="color:Turquoise">CS333 Introduction to Operating Systems:</span></a>
-<ul>
-<li><p><a href="Projects.html">(Coming soon)</a></p></li>
-</ul>
-<hr>
-</p><p><sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.</sub></p></li>
-</ul>
+  <h1 id="cs162-homework-4-test-driving-a-list">CS162: Homework 4 - Test Driving a List</h1>
+<p><img src="car.jpg" alt="Pink Car"></p>
+<p>Adapted from David Lu’s Winter 2017 CS162 course.</p>
+<h2 id="working-with-lists">Working with Lists</h2>
+<blockquote>
+<p>When you purchase a car, you ought to make a list of the pros and cons of each model under consideration as well as your test driving impressions. For your 4th project, you are to write a program which allows a user to list information about the models of cars they are interested in purchasing. The user may modify listings with notes, including test driving impressions and pros and cons. The program should be able to save and load the list from disk.</p>
+</blockquote>
+<h3 id="details">Details</h3>
+<p>Your list should be implemented as a linear linked list. You may use a <code>struct</code> to define a node. All strings must be implemented as dynamically allocated null-terminating arrays. You may not use any global variables. File i/o should be implemented using the <code>fstream</code> library.</p>
+<p>Each node should have a number of fields corresponding to a car’s make, model, year, style (e.g. sedan, coupe, SUV), and price. You may include additional fields if you’d like (horsepower, mileage, etc…). Further, each node should have a list of pros, a list of cons, and a test driving impressions field.</p>
+<h3 id="program-functionality">Program Functionality</h3>
+<p>The user should be able to…</p>
+<ol>
+<li><p>Enter a car with associated information to the list.</p></li>
+<li><p>Save and load their list to the hard drive.</p></li>
+<li><p>Edit a listing to add pros and cons and their driving impressions.</p></li>
+<li><p>Delete a listing from the list.</p></li>
+<li><p>Pretty print the list to the screen.</p></li>
+</ol>
 
 
   </body>
