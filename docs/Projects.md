@@ -13,29 +13,29 @@ Many PSU CS courses typically post about 5 assignments through the 10 week term.
 
 
   * [CS161: Introduction to Programming and Problem Solving:](https://www.pdx.edu/computer-science/cs161)
-    *
+    * [(Coming soon)](Projects.html)
 
   * [CS162 Introduction to Computer Science:](https://www.pdx.edu/computer-science/cs162)
     * [HW2: Cipher](Projects/Cipher.html)
 
   * [CS163 Data Structures:](https://www.pdx.edu/computer-science/cs163)
-    *
+    * [(Coming soon)](Projects.html)
 
   * [CS201 Computer Systems Programming:](https://www.pdx.edu/computer-science/cs201)
     * [HW1: Typing Speed Game](Projects/Typing_Speed_Game.html)
     * [HW3: Decryption](Projects/Decryption.html)
 
   * [CS202 Programming Systems:](https://www.pdx.edu/computer-science/cs202)
-    *
+    * [(Coming soon)](Projects.html)
 
   * [CS300 Elements of Software Engineering:](https://www.pdx.edu/computer-science/cs300)
-    *
+    * [(Coming soon)](Projects.html)
 
   * [CS311 Computational Structures:](https://www.pdx.edu/computer-science/cs311)
     * [HW1: DFA Analyzer](Projects/DFA_Analyzer.html)
     * [HW2: Simple Grammar Analyzer](Projects/Simple_Grammar_Analyzer.html)
 
   * [CS333 Introduction to Operating Systems:](https://www.pdx.edu/computer-science/cs333)
-    *
+    * [(Coming soon)](Projects.html)
   -----
   <sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.
