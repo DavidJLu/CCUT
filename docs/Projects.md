@@ -1,3 +1,4 @@
+
 Computer Science Homework Projects at PSU
 ========
 David Lu
@@ -12,39 +13,37 @@ Here is a curated and lightly edited collection of programming projects that are
 Many PSU CS courses typically post about 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
 
 
-  ### [CS161: Introduction to Programming and Problem Solving:](https://www.pdx.edu/computer-science/cs161)
-
+* [<span style="color:#8ab400">CS161: Introduction to Programming and Problem Solving:](https://www.pdx.edu/computer-science/cs161)
   * [(Coming soon)](Projects.html)
 
 
-
-  ### [CS162 Introduction to Computer Science:](https://www.pdx.edu/computer-science/cs162)
+* [<span style="color:#8ab400">CS162 Introduction to Computer Science:](https://www.pdx.edu/computer-science/cs162)
   * [HW2: Cipher](Projects/Cipher.html)
 
 
-  ### [CS163 Data Structures:](https://www.pdx.edu/computer-science/cs163)
+* [<span style="color:#8ab400">CS163 Data Structures:](https://www.pdx.edu/computer-science/cs163)
   * [(Coming soon)](Projects.html)
 
 
-  ### [CS201 Computer Systems Programming:](https://www.pdx.edu/computer-science/cs201)
+* [<span style="color:#8ab400">CS201 Computer Systems Programming:](https://www.pdx.edu/computer-science/cs201)
   * [HW1: Typing Speed Game](Projects/Typing_Speed_Game.html)
   * [HW3: Decryption](Projects/Decryption.html)
 
 
-  ### [CS202 Programming Systems:](https://www.pdx.edu/computer-science/cs202)
+* [<span style="color:#8ab400">CS202 Programming Systems:](https://www.pdx.edu/computer-science/cs202)
   * [(Coming soon)](Projects.html)
 
 
-  ### [CS300 Elements of Software Engineering:](https://www.pdx.edu/computer-science/cs300)
+* [<span style="color:#8ab400">CS300 Elements of Software Engineering:](https://www.pdx.edu/computer-science/cs300)
   * [(Coming soon)](Projects.html)
 
 
-  ### [CS311 Computational Structures:](https://www.pdx.edu/computer-science/cs311)
+* [<span style="color:#8ab400">CS311 Computational Structures:](https://www.pdx.edu/computer-science/cs311)
   * [HW1: DFA Analyzer](Projects/DFA_Analyzer.html)
   * [HW2: Simple Grammar Analyzer](Projects/Simple_Grammar_Analyzer.html)
 
 
-  ### [CS333 Introduction to Operating Systems:](https://www.pdx.edu/computer-science/cs333)
+* [<span style="color:#8ab400">CS333 Introduction to Operating Systems:](https://www.pdx.edu/computer-science/cs333)
   * [(Coming soon)](Projects.html)
   -----
   <sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.
