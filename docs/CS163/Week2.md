@@ -48,13 +48,12 @@ Linked Lists are among the simplest and most common data structures because it a
 [Back to Index](#index)
 
 ----------------------
-
 #### Compare to Arrays <a id="arrays"></a>
 It is important to understand that a linked list is different than an array. Linked lists are not indexed and does not support arbitrary access.
 
 Do you recall what an array is and how arrays work?
----------------------
 
+---------------------
 ### Time Complexity <a id="complexity"></a>
 
 Average for Linear Linked List:
@@ -63,7 +62,6 @@ Average for Linear Linked List:
 |$\mathcal{O}(n)$ |$\mathcal{O}(n)$ |$\mathcal{O}(1)$ |$\mathcal{O}(1)$ |
 
 --------------------
-
 ### Basic Operations <a id="ops"></a>
 Abstract Data Type (ADT)
 
@@ -89,7 +87,6 @@ We can use a struct or a class to define each node inductively.
 [Back to Index](#index)
 
 ------------------------------
-
 ### Insertion <a id="insert"></a>
 Let's keep things simple and consider linear linked lists of integers.
 
@@ -126,7 +123,7 @@ You should have seen how to traverse the linear linked list by looping. Perhaps 
 
 ```c++
   node* temp = head;
-  while(temp != null)
+  while(temp != NULL)
   {
     //Do stuff
     temp = temp->next;
@@ -197,7 +194,9 @@ Here are two examples that you can try:
 [HackerRank](https://www.hackerrank.com/)
 
 
-## Populating a random list to practice with in C++
+Populating a random list to practice with in C++
+------
+
 Alternatively, you can program from scratch and practice.
 
 There are some useful functions in the C++ standard library to generate random numbers.
@@ -233,7 +232,7 @@ For example:
 
 
 Practice with Linear Linked Lists <a id="exercises"></a>
-===============
+-------
 
 #### Print a list in reverse
 
