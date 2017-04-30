@@ -16,6 +16,8 @@ CS163
   * Week 3
   * Week 4
 
+[Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
+
 CS251
 ----
   * Week 1
