@@ -909,7 +909,7 @@
 
   <h1 id="cs300-homework-1-word-processor-specifications">CS300: Homework 1 - Word Processor Specifications</h1>
 <p><img src="pen.jpg" alt="Fountain Pen"></p>
-<p>From Professor Herb Mayer’s CS300 course.</p>
+<p>From Professor Herb Mayer's CS300 course. <a href="http://web.cecs.pdx.edu/~herb/cs300s07/">External Link</a></p>
 <h2 id="word-processor-requirements-specification-test-specification">Word Processor Requirements Specification &amp; Test Specification</h2>
 <blockquote>
 <p><strong>Abstract:</strong> Compose 2 documents, each consisting of a Title Page, a Table of Contents, a Summary Section, and various content Chapters. The first document is a functional specification of all requirements for a word processor you will design, and which you later will implement. The second document is a complete list of tests that you will subject your project to, which will demonstrate that all features work as advertised. You will write all these test cases yourself and run your tool against each of them various times. A specification is a piece of technical writing; it should be short, factual, and to the point. Tables are encouraged, non-necessary prose is discouraged.</p>
@@ -940,7 +940,7 @@
 <tr><th style="text-align:left">Command</th><th style="text-align:left">Meaning and Function</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">.co #</td><td style="text-align:left">Number of columns. Implies … default … &lt; &gt;</td></tr>
+<tr><td style="text-align:left">.co #</td><td style="text-align:left">Number of columns. Implies .. default .. &lt; &gt;</td></tr>
 <tr><td style="text-align:left">.in #</td><td style="text-align:left">Indent: number of chars next line is indented before first character, may not exceed line length</td></tr>
 <tr><td style="text-align:left">.la [+/-]</td><td style="text-align:left">Left adjustment:</td></tr>
 <tr><td style="text-align:left">.ll #</td><td style="text-align:left">Line length: total number of characters on a line, must be &gt; 2, and &lt; 80</td></tr>
@@ -950,7 +950,7 @@
 </tbody>
 </table>
 <h4 id="input">Input:</h4>
-<p>Input to the word processor is a stream of text. In a Unix environment, this is a file named <code>stdin</code>. On other Operating systems use a text file explicitly named <code>stdin</code>. The input file contains the actual text to be formatted as well as embedded commands.</p>
+<p>Input to the word processor is a stream of ASCII text. In a Unix environment, this is a file named <code>stdin</code>. On other operating systems use a text file explicitly named <code>stdin</code>. The input file contains the actual text to be formatted as well as embedded commands.</p>
 <p>You create a table (Central Table) with all formatting commands, similar to the one shown above. Instead of a central table you can also use a list of paragraphs, explaining each command. This table needs to be short, sorting all commands in alphabetical order. The detailed explanation of defaults, min and max values of each command does not need to be included in the Central Table.</p>
 <p>Input:<br>
 Here is a sample input snippet, from file <code>stdin</code>:</p>
@@ -970,7 +970,7 @@ Here is a sample output snippet, to file <code>stdout</code>:</p>
 <tr><td style="text-align:left">4</td><td style="text-align:left">Format for all arguments: e.g. empty, +, -, a number, other</td></tr>
 <tr><td style="text-align:left">5</td><td style="text-align:left">Min value of argument</td></tr>
 <tr><td style="text-align:left">6</td><td style="text-align:left">Document what happens, if min value is violated. E.g. <code>.sp -5</code></td></tr>
-<tr><td style="text-align:left">7</td><td style="text-align:left">Max value of argument. E.g. <code>.sp 99999999</code> – probably invalid value</td></tr>
+<tr><td style="text-align:left">7</td><td style="text-align:left">Max value of argument. E.g. <code>.sp 99999999</code> -- probably invalid value</td></tr>
 <tr><td style="text-align:left">8</td><td style="text-align:left">What happens, if max value is violated</td></tr>
 </tbody>
 </table>

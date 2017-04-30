@@ -2,7 +2,7 @@ CS300: Homework 1 - Word Processor Specifications
 ============
 ![Fountain Pen](pen.jpg)
 
-From Professor Herb Mayer's CS300 course.
+From Professor Herb Mayer's CS300 course. [External Link](http://web.cecs.pdx.edu/~herb/cs300s07/)
 
 Word Processor Requirements Specification & Test Specification
 ------------
@@ -54,7 +54,7 @@ Command       | Meaning and Function
 .sp #     | Spaces: number of empty lines after previous line. May rollover to next page, in which case next page has leading empty lines. If # exceeds page length, a single empty page is printed
 
 #### Input:
-Input to the word processor is a stream of text. In a Unix environment, this is a file named `stdin`. On other Operating systems use a text file explicitly named `stdin`. The input file contains the actual text to be formatted as well as embedded commands.
+Input to the word processor is a stream of ASCII text. In a Unix environment, this is a file named `stdin`. On other operating systems use a text file explicitly named `stdin`. The input file contains the actual text to be formatted as well as embedded commands.
 
 You create a table (Central Table) with all formatting commands, similar to the one shown above. Instead of a central table you can also use a list of paragraphs, explaining each command. This table needs to be short, sorting all commands in alphabetical order. The detailed explanation of defaults, min and max values of each command does not need to be included in the Central Table.
 
