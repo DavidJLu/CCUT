@@ -11,22 +11,21 @@ Location: Changchun, Jilin, China
 
 CS163
 ----
-  * [Week 1](CS163/Lecture1.html) (updated 5/1/17)
-  * [Week 2](CS163/Week2.html) (updated 4/26/17)
-  * Week 3
-  * Week 4
-
-##### [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
+* [Week 1](CS163/Lecture1.html) (updated 5/1/17)
+* [Week 2](CS163/Week2.html) (updated 4/26/17)
+* Week 3
+* Week 4
+* [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
 
 >The best way to learn to program is by practice! PSU CS students get lots of practice. Click the link to see a sample list of assignments.
 >[Example PSU CS Programming Assignments](Projects.html)
 
 CS251
 ----
-  * [Week 1](CS251/Week1.html) (updated 4/30/17)
-  * [Week 2](CS251/Week2.html) (updated 4/26/17)
-  * [Week 3](CS251/Week3.html) (updated 4/26/17)
-  * Week 4
+* [Week 1](CS251/Week1.html) (updated 4/30/17)
+* [Week 2](CS251/Week2.html) (updated 4/26/17)
+* [Week 3](CS251/Week3.html) (updated 4/26/17)
+* Week 4
 
 -----
 These pages are under constant construction, so check back often for updates.
