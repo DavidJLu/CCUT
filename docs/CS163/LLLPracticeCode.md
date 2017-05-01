@@ -1,4 +1,4 @@
-CS163 at CCUT: Linear Linked List Practice code
+CS163 at CCUT: Linear Linked List Practice Code
 ======
 
 Here is some of the code that we wrote together in class. You may copy this and practice writing functions that manipulate linear linked lists.
@@ -6,7 +6,7 @@ Here is some of the code that we wrote together in class. You may copy this and 
 This code with the functions included will generate a list of size `LIST_SIZE` containing pseudo random ints in the range 0 to `MAX_NUM`. These constants are defined and you can change them. It will then print the list to `stdout`.
 
 -----
-#### Main function
+#### Main
 ```C++
 #include <iostream>
 #include <ctime>
