@@ -37,7 +37,7 @@ Note: Parentheses are given in the actual input. They are solely used here for l
 
 The meaning of these triples is as follows:
 `1 2 3 // process p1 uses 2 milliseconds to run, has priority`
-`3 4 50 6 // process p4 uses 50 milliseconds, has priority 6. 0 is highest`
+`4 50 6 // process p4 uses 50 milliseconds, has priority 6. 0 is highest`
 
 Use the definitions below to compute for each process *Throughput*, *Wait Time*, and *Turn-around Time*. Compute these for each process handled by each of the 3 schedulers, and average for all processes.
 
