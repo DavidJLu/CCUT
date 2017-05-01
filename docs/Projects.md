@@ -32,7 +32,7 @@ Many PSU CS courses typically post about 5 assignments through the 10 week term.
 
 
 * [<span style="color:Turquoise">CS202 Programming Systems:](https://www.pdx.edu/computer-science/cs202)
-  * [(Coming soon)](Projects.html)
+  * [HW3: String Class](Projects/OperatorOverloading.html)
 
 
 * [<span style="color:Turquoise">CS300 Elements of Software Engineering:](https://www.pdx.edu/computer-science/cs300)
