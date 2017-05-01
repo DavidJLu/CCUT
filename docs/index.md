@@ -16,7 +16,10 @@ CS163
   * Week 3
   * Week 4
 
-[Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
+##### [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
+
+>The best way to learn to program is by practice! PSU CS students get lots of practice. Click the link to see a sample list of assignments.
+>[Example PSU CS Programming Assignments](Projects.html)
 
 CS251
 ----
@@ -24,10 +27,6 @@ CS251
   * [Week 2](CS251/Week2.html) (updated 4/26/17)
   * [Week 3](CS251/Week3.html) (updated 4/26/17)
   * Week 4
-
-<br>
-#### [Example PSU CS Programming Assignments](Projects.html)
-The best way to learn to program is by practice!
 
 -----
 These pages are under constant construction, so check back often for updates.
