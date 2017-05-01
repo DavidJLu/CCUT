@@ -95,7 +95,7 @@ __*It's also important to have fun!*__
 ### FizzBuzz
 Let's do a warm up programming exercise together called FizzBuzz.
 
-In the US, companies sometimes ask the applicant to write this program during an interview. My friend was just asked to write FizzBuzz on an interview last week!
+In the US, companies sometimes ask the applicant to write this program during an interview. I know someone who was just asked to write FizzBuzz on an interview last week!
 
 It is designed to see if the candidate has any ability to program.
 
