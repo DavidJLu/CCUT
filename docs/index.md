@@ -31,4 +31,4 @@ CS251
 These pages are under constant construction, so check back often for updates.
 
 <Sub>I'm hosted with GitHub Pages and created in Markdown with KaTeX math rendering.
-Images are copyright free under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+Images unless otherwise noted are copyright free under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) from [PixaBay](https://pixabay.com)
