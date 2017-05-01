@@ -13,8 +13,6 @@ CS161: Homework 7 - Letter Matrix
 /_/   \_\_| \_\|_|
 ```
 
-From Herb Mayer's CS161 course.
-
 ASCII ART
 --------
 >Summary: Create a two-dimensional character array, into which you place a pattern. This array is copied with modifications into another array, and both are printed.

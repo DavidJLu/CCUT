@@ -3,7 +3,7 @@ CS333: Homework 1 - Scheduler
 
 ![Trains](trains.jpg)
 
-From Professor Herb Mayer's CS333 Course.
+From Professor Herb Mayer's CS333 Course. [PSU Course Description](https://www.pdx.edu/computer-science/cs333)
 
 Scheduler
 -------
