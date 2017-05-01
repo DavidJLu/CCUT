@@ -3,6 +3,8 @@
 
 ![Open Logic Text](openlogic.png)
 
+<sub>Image from ["AN ACTUAL TEXTBOOK, AND: PHOTOS!"](http://openlogicproject.org/2016/03/12/an-actual-textbook-and-photos/) by [Richard Zach](http://openlogicproject.org/author/rzach/) is licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+
 *Sets, Logic, Computation* is an open source textbook which you can download at the [Open Logic Project](http://openlogicproject.org/download/)
 
 --------
