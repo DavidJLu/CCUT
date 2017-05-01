@@ -20,7 +20,7 @@ CS163
 
 CS251
 ----
-  * Week 1
+  * [Week 1](CS251/Week1.html) (updated 4/30/17)
   * [Week 2](CS251/Week2.html) (updated 4/26/17)
   * [Week 3](CS251/Week3.html) (updated 4/26/17)
   * Week 4
