@@ -19,7 +19,7 @@ Outline: <a id="index"></a>
     * [Consistency](#consistent)
     * [Inconsistency](#inconsistent)
 
-Many examples and exercises on this page are sourced from *forall x: Calgary Remix An Introduction to Formal Logic* By P. D. Magnus and Tim Button with additions by J. Robert Loftis and remixed and revised by Aaron Thomas-Bolduc and Richard Zach under a [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+Many examples and exercises on this page are sourced from [*forall x: Calgary Remix An Introduction to Formal Logic*](http://openlogicproject.org/2017/01/18/forall-x-calgary-remix/) by P. D. Magnus and Tim Button with additions by J. Robert Loftis and remixed and revised by Aaron Thomas-Bolduc and Richard Zach under a [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
 
 
 
