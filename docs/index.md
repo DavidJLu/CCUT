@@ -2,7 +2,7 @@
 
 PSU CS Guest Lectures at CCUT
 =====
-Instructor: David Lu
+Instructor: David Lu [dlu (at) pdx.edu]
 Dates: 4/17/17 - 5/12/17
 Location: Changchun, Jilin, China
 [MCECS Special Programs: Changchun 2+2 Partnership](https://www.pdx.edu/cecs/changchun-partnership-22-programs)
