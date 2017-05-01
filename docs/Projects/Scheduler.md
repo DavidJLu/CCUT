@@ -9,7 +9,7 @@ Scheduler
 -------
 General Rules: Implement all Homework (HW) in C or C++. Submit all sources, including .c, .cpp, and .h files, if any. Also hand-in sample inputs and generated outputs. Write the date, your name, school, class, year, and the name of this HW clearly on each separately compiled module in the form of a program comment. Your written discussion of your outputs is an important part of HW1.
 
->Abstract: Design, implement, document, test, and debug the schedulers of three types of Operating Systems. Do not be scared! Only the (simulation of the) timing analysis of each scheduler is of interest, thus design and implementation efforts are quite small. The simulator measures key performance data, such as throughput, wait time, and turn-around time.
+>**Abstract**: Design, implement, document, test, and debug the schedulers of three types of Operating Systems. Do not be scared! Only the (simulation of the) timing analysis of each scheduler is of interest, thus design and implementation efforts are quite small. The simulator measures key performance data, such as throughput, wait time, and turn-around time.
 >
 >One OS is a strict batch system with a non-preemptive First Come First Serve (FCFS) scheduler. The second OS uses a non-preemptive, high-priority first (HPF) scheduler, while the third OS uses a preemptive round robin (RR) scheduler with a variable time-quantum with varying context switch overhead. Design meaningful input data, run them through all schedulers, generate output data, and interpret and discuss the results. To start, use the sample data from this HW assignment. In addition, provide 3 additional, meaningful input scenarios, all more complex than the samples in this HW.
 
