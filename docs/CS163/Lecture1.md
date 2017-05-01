@@ -3,15 +3,25 @@
 * Instructor: David Lu
 * 4/20/17
 
+#### About Your Instructor:
+I'm glad to be back in Changchun and to see everyone here at CCUT again.
+
+Some quick facts about me:
+* Born and grew up in the US (mostly in New York)
+* Went to college at the [University at Buffalo](https://www.buffalo.edu/), which is located in upstate NY, near Canada.
+* Graduated with a BA in Philosophy
+* Worked on a PhD in Philosophy at [Syracuse University](https://www.syracuse.edu/) (also located in upstate NY - central), specializing in metaphysics and philosophical methodology
+* Taught philosophy courses over 6 years in ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University
+* Currently teaching discrete math, introduction to C++, and ethics for computing at Portland State University
+* 2nd year participating in the PSU/CCUT partnership program
+* One younger brother and one younger sister
+
+
 ### CS162 and CS163 at CCUT
 
-What have you learned in CS162 since I last met you?
+* What have you learned in CS162 since I last met you?
 
-
-What have you learned in CS163 with Professor Sun Yang so far?
-
-
-<br>
+* What have you learned in CS163 with Professor Sun Yang so far?
 
 ### CS162 and CS163 at PSU
 
