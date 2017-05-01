@@ -2,17 +2,15 @@ CS161: Homework 7 - Letter Matrix
 ======
 
 ```
- ______     ______     ______     __     __    
-/\  __ \   /\  ___\   /\  ___\   /\ \   /\ \   
-\ \  __ \  \ \___  \  \ \ \____  \ \ \  \ \ \  
- \ \_\ \_\  \/\_____\  \ \_____\  \ \_\  \ \_\
-  \/_/\/_/   \/_____/   \/_____/   \/_/   \/_/
-
- ______     ______     ______                  
-/\  __ \   /\  == \   /\__  _\                 
-\ \  __ \  \ \  __<   \/_/\ \/                 
- \ \_\ \_\  \ \_\ \_\    \ \_\                 
-  \/_/\/_/   \/_/ /_/     \/_/                   
+    _    ____   ____ ___ ___
+   / \  / ___| / ___|_ _|_ _|
+  / _ \ \___ \| |    | | | |
+ / ___ \ ___) | |___ | | | |
+/_/ _ \_\____/_\____|___|___|
+   / \  |  _ \_   _|         
+  / _ \ | |_) || |           
+ / ___ \|  _ < | |           
+/_/   \_\_| \_\|_|                            
 ```
 
 ASCII ART
@@ -36,5 +34,5 @@ Next assign `a[][]` to another matrix `b[][]` but with the following modificatio
 * And all positions in `a[][]` that hold a `.` will be assigned the blank character ` ` in `b[][]`.
 
 Print `b[][]`.
- 
+
 Finally, print `b[][]` in reversed order of rows, so that an upside down `A` will result.
