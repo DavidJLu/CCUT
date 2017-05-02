@@ -18,6 +18,7 @@ Outline: <a id="index"></a>
   * [Sets of Sentences](#sets)
     * [Consistency](#consistent)
     * [Inconsistency](#inconsistent)
+  * [Practice Problems](#practice)
 
 Many examples and exercises on this page are sourced from [*forall x: Calgary Remix An Introduction to Formal Logic*](http://openlogicproject.org/2017/01/18/forall-x-calgary-remix/) by P. D. Magnus and Tim Button with additions by J. Robert Loftis and remixed and revised by Aaron Thomas-Bolduc and Richard Zach under a [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
 
@@ -182,9 +183,9 @@ F | F | F  F  F  **T**  F
 
 This sentence, (H $\land$ I) $\rightarrow$ H, is a tautology. We know this because the column for the sentence is true at every row. In other words, this sentence cannot be false.
 
-The drawback of the truth table method is that as our sentences contain more atomic propositions, the number of rows in a truth table grows exponentially.
+The drawback of the truth table method is that as our sentences contain more atomic propositions, the number of rows in a truth table grows exponentially. A complete truth table has a line for every possible assignment of true and false to the relevant atomic sentences.
 
-How many rows does our table need if there are $n$ atomic proposition letters?
+How many rows does our table need if there are 3 atomic proposition letters? What about for $n \in \mathbb{N}$ atomic proposition letters?
 
 #### Practice problems
 
@@ -230,3 +231,35 @@ How many rows does our table need if there are $n$ atomic proposition letters?
 ## Inconsistency <a id="inconsistent"></a>
 
 [Back to the Top](#index)
+
+## Practice Problems <a id="practice"></a>
+Practice exercises
+##### A. Use either a derivation or a truth table for each of the following.
+1. Show that $A \rightarrow (((B \land C) \lor D) \rightarrow A)$ is a tautology.
+
+2. Show that $A \rightarrow (A \rightarrow B)$ is not a tautology
+3. Show that the sentence $A \rightarrow \neg A$ is not a contradiction.
+4. Show that the sentence $A \leftrightarrow \neg A$ is a contradiction.
+5. Show that the sentence $\neg W \rightarrow (J \lor J))$ is contingent
+6. Show that the sentence $\neg(X \lor (Y \lor Z)) \lor (X \lor (Y \lor Z))$ is not contingent
+7. Show that the sentence $B \rightarrow \neg S$ is equivalent to the sentence $\neg \neg B \rightarrow \neg S$
+8. Show that the sentence $\neg(X \lor O)$ is not equivalent to the
+sentence $X \land O$
+9. Show that the sentences $\neg(A \lor B)$, $C$, $C \rightarrow A$ are jointly inconsistent.
+10. Show that the sentences $\neg(A \lor B)$, $\neg B$, $B \rightarrow A$ are jointly consistent
+11. Show that $\neg(A \lor (B \lor C)) \therefore \neg C$ is valid.
+12. Show that $\neg (A \land (B \lor C)) \therefore \neg C$ is invalid.
+
+##### B. Use either a derivation or a truth table for each of the following.
+1. Show that $A \rightarrow (B \rightarrow A)$ is a tautology
+2. Show that $\neg (((N \leftrightarrow Q) \lor Q) \lor N)$  is not a tautology
+3. Show that $Z \lor (\neg Z \leftrightarrow Z)$ is contingent
+4. show that $(L \leftrightarrow ((N \rightarrow N) \rightarrow L)) \lor H$ is not contingent
+5. Show that $(A \leftrightarrow A) \land (B \land \neg B)$ is a contradiction
+6. Show that $(B \leftrightarrow (C \lor B))$ is not a contradiction.
+7. Show that $((\neg X \leftrightarrow X) \lor X)$ is equivalent to $X$
+8. Show that $F \land (K \land R)$ is not equivalent to $(F \leftrightarrow (K \leftrightarrow R))$
+9. Show that the sentences $\neg (W \rightarrow W)$, $ (W \leftrightarrow W) \land W$, $E \lor (W \rightarrow \neg (E \land W))$ are inconsistent.
+10. Show that the sentences :$\neg R \lor C$, $(C \land R) \rightarrow R$, $(\neg(R \lor R) \rightarrow R)$ are consistent.
+11. Show that $\neg \neg (C \leftrightarrow \neg C)$, $((G \lor C) \lor G)$ $\therefore ((G \rightarrow C) \land G)$ is valid.
+12. Show that $\neg \neg L$, $(C \rightarrow \neg L) \rightarrow C$ $\therefore \neg C$ is invalid.
