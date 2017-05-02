@@ -16,6 +16,7 @@ CS163
 * [Week 3](CS163/Week3.html) (updated 5/2/17)
 * Week 4
 * [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
+* [Binary Search Tree Practice Code](CS163/BSTPracticeCode.html)
 
 >The best way to learn to program is by practice! PSU CS students get lots of practice. Click the link to see a sample list of assignments.
 >[Example PSU CS Programming Assignments](Projects.html)

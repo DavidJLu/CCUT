@@ -139,6 +139,40 @@ The two methods fall into the categories of truth tables and natural deduction. 
 [Back to the Top](#index)
 
 ## Truth Tables <a id="truthtables"></a>
+Every non-atomic sentence of PL is composed of atomic sentences with logical connectives. We call these **compound sentences**. The truth value of compound sentences depends *only* on the truth value of the atomic sentences that comprise it along with the semantics of the logical connectives.
+
+For example, in order to know the truth value of $D \land E$, we need only to know the truth values of $D$ and $E$ as well as the meaning of the connective $\land$.
+
+As we saw last week, we can use truth tables to show a mapping of the truth values.
+
+For instance the truth value of the compound sentence $\neg p$ is summarized by the following truth table:
+p | $\neg$ p
+:-|:-
+T | F
+F | T
+
+We can use this same truth table method to **decide** whether an argument is valid or invalid. To show that an argument is valid, we must show that it is impossible for the premises to be true while the conclusion false. Or, in other words, whenever the premises are true, the conclusion is also true.
+
+To use this truth table method for showing validity of an argument, we need to draw the truth table, with columns including each premise and the conclusion. Then we look to see if there are any rows where the premises are true and the conclusion is false. If so, the argument is *invalid*; if not, the argument is *valid*.
+
+Example:
+$A \rightarrow B$
+$A$
+$\therefore B$
+
+A  |B   | Premise 1         | Premise 2| Conclusion
+:-|:- |:-                 |:- |:-
+A | B | A $\rightarrow$ B | A | B
+T | T | T                 | T | T
+T | F | F                 | T | F
+F | T | T                 | F | T
+F | F | T                 | F | F
+
+As we can see, there is only 1 row where the premises are true (row 1), and the conclusion at row 1 is also true. So, there does not exist any row where the premises are true and the conclusion is false. We can conclude that the argument is *valid*.
+
+Truth tables can be used to decide any of the problems in this section, i.e. they can be used to decide whether an argument is valid or invalid; they can be used to decide whether a set of sentences is consistent or inconsistent; they can be used to decide whether a sentence is a tautology, contradiction, or contingency; and they can be used to decide whether two sentences are logically equivalent or inequivalent.
+
+The drawback is that as our sentences contain more atomic propositions, the number of rows in a truth table grows exponentially.
 
 [Back to the Top](#index)
 
