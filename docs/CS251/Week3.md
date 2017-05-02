@@ -187,9 +187,6 @@ The drawback of the truth table method is that as our sentences contain more ato
 
 How many rows does our table need if there are 3 atomic proposition letters? What about for $n \in \mathbb{N}$ atomic proposition letters?
 
-#### Practice problems
-
-
 [Back to the Top](#index)
 
 ## Natural Deduction <a id="natural"></a>
@@ -197,39 +194,40 @@ How many rows does our table need if there are 3 atomic proposition letters? Wha
 [Back to the Top](#index)
 
 # Sentence Forms <a id="sentence"></a>
+There are a number of sentence forms that we are interested in. These are **tautologies**, **contradictions**, and **contingencies**.
 
 [Back to the Top](#index)
 
 ## Tautology <a id="taut"></a>
-
+A tautology is a sentence that is always true.
 [Back to the Top](#index)
 
 ## Contradiction <a id="contra"></a>
-
+A contradiction is a sentence that is always false.
 [Back to the Top](#index)
 
 ## Contingency <a id="contingent"></a>
-
+A contingency is a sentence that is neither a tautology nor a contradiction.
 [Back to the Top](#index)
 
 # Equivalence <a id="equiv"></a>
-
+Two sentences are **logically equivalent** when they always have the same truth value. That is, on a truth table, they have the same truth value at each row.
 [Back to the Top](#index)
 
 ## Inequivalence <a id="inequiv"></a>
-
+Two sentences are inequivalent if and only if they are not equivalent. In other words, their truth values differ at *at least* one row of a truth table.
 [Back to the Top](#index)
 
 # Sets of Sentences <a id="set"></a>
-
+We are also interested in properties of sets of sentences in the propositional logic.
 [Back to the Top](#index)
 
 ## Consistency <a id="consistent"></a>
-
+A set of sentences is consistent if and only if they can all be true at the same time. That is, a set of sentences is consistent if there is a row of the truth table where they are all true.
 [Back to the Top](#index)
 
 ## Inconsistency <a id="inconsistent"></a>
-
+A set of sentences is inconsistent if and only if they cannot all be true at the same time. That is, a set of sentences is inconsistent if there is no row of the truth table where they are all true.
 [Back to the Top](#index)
 
 ## Practice Problems <a id="practice"></a>
