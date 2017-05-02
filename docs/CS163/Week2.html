@@ -393,8 +393,8 @@
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #EEFFFF;
-  background-color: #263238;
+  color: #333;
+  background-color: #fff;
   overflow: initial;
   margin: 10px 13px 10px 13px;
   padding: 2em;
@@ -422,19 +422,19 @@
   line-height: 1.2;
   margin-top: 1em;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #000000;
 }
 .markdown-preview-enhanced h1 {
   font-size: 2.25em;
   font-weight: 300;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #d6d6d6;
 }
 .markdown-preview-enhanced h2 {
   font-size: 1.75em;
   font-weight: 400;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #d6d6d6;
 }
 .markdown-preview-enhanced h3 {
   font-size: 1.5em;
@@ -463,17 +463,17 @@
   font-size: 1em;
 }
 .markdown-preview-enhanced h6 {
-  color: #9cffff;
+  color: #5c5c5c;
 }
 .markdown-preview-enhanced h1,
 .markdown-preview-enhanced h2 {
-  border-bottom: 1px solid #475d69;
+  border-bottom: 1px solid #d6d6d6;
 }
 .markdown-preview-enhanced strong {
-  color: #ffffff;
+  color: #000000;
 }
 .markdown-preview-enhanced del {
-  color: #9cffff;
+  color: #5c5c5c;
 }
 .markdown-preview-enhanced a:not([href]) {
   color: inherit;
@@ -537,8 +537,8 @@
   margin: 16px 0;
   font-size: inherit;
   padding: 0 15px;
-  color: #9cffff;
-  border-left: 4px solid #475d69;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
 }
 .markdown-preview-enhanced blockquote > :first-child {
   margin-top: 0;
@@ -549,7 +549,7 @@
 .markdown-preview-enhanced hr {
   height: 4px;
   margin: 32px 0;
-  background-color: #475d69;
+  background-color: #d6d6d6;
   border: 0 none;
 }
 .markdown-preview-enhanced table {
@@ -564,11 +564,11 @@
 }
 .markdown-preview-enhanced table th {
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 }
 .markdown-preview-enhanced table td,
 .markdown-preview-enhanced table th {
-  border: 1px solid #475d69;
+  border: 1px solid #d6d6d6;
   padding: 6px 13px;
 }
 .markdown-preview-enhanced dl {
@@ -588,8 +588,8 @@
 .markdown-preview-enhanced code {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 0.85em !important;
-  color: #ffffff;
-  background-color: #364850;
+  color: #000000;
+  background-color: #f0f0f0;
   border-radius: 3px;
   padding: 0.2em 0;
 }
@@ -619,7 +619,7 @@
   line-height: 1.45;
   color: #EEFFFF;
   background-color: #2e3d44 !important;
-  border: #475d69;
+  border: #d6d6d6;
   border-radius: 3px;
 }
 .markdown-preview-enhanced .highlight pre {
@@ -662,11 +662,11 @@
   margin-bottom: 16px;
 }
 .markdown-preview-enhanced kbd {
-  color: #ffffff;
-  border: 1px solid #475d69;
-  border-bottom: 2px solid #3b4d56;
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
   padding: 2px 4px;
-  background-color: #364850;
+  background-color: #f0f0f0;
   border-radius: 3px;
 }
 .markdown-preview-enhanced .pagebreak,
@@ -677,7 +677,7 @@
   .markdown-preview-enhanced {
     width: 980px;
     margin: 10px auto;
-    background: #263238;
+    background: #fff;
   }
 }
 @media screen and (max-width: 400px) {
@@ -689,7 +689,7 @@
 }
 @media print {
   .markdown-preview-enhanced {
-    background-color: #263238;
+    background-color: #fff;
     /*table,*/
   }
   .markdown-preview-enhanced h1,
@@ -698,11 +698,11 @@
   .markdown-preview-enhanced h4,
   .markdown-preview-enhanced h5,
   .markdown-preview-enhanced h6 {
-    color: #ffffff;
+    color: #000000;
     page-break-after: avoid;
   }
   .markdown-preview-enhanced blockquote {
-    color: #9cffff;
+    color: #5c5c5c;
   }
   .markdown-preview-enhanced pre {
     page-break-inside: avoid;
@@ -813,7 +813,7 @@
 }
 [data-presentation-preview-mode] .preview-slides .slide {
   position: relative;
-  background-color: #263238;
+  background-color: #fff;
   padding: 2em !important;
   margin-bottom: 12px;
   text-align: left !important;
@@ -984,7 +984,7 @@
 <p><a href="#index">Back to Index</a></p>
 <hr>
 <h3 id="insertion-a-idinserta">Insertion <a id="insert"></a></h3>
-<p>Let's keep things simple and consider linear linked lists of integers.</p>
+<p>Let’s keep things simple and consider linear linked lists of integers.</p>
 <p>A basic operation for lists is to put something on the list. If our list is written on paper, we just find a place to write our item down. If our list is in markdown, we can do this:</p>
 <ol>
 <li><p>First item</p></li>
@@ -1001,8 +1001,8 @@
 <p><a href="#index">Back to Index</a></p>
 <hr>
 <h3 id="traversal-a-idtraversea">Traversal <a id="traverse"></a></h3>
-<p>You should have seen how to traverse the linear linked list by looping. Perhaps you've seen code that looks like this:</p>
-<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;node</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>*</span></span><span>&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;head;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--c"><span>while</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span>temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--c"><span>!=</span></span><span>&nbsp;null</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--begin mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>Do&nbsp;stuff</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;temp</span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--pointer-access mpe-syntax--c"><span>-&gt;</span></span><span class="mpe-syntax--variable mpe-syntax--other mpe-syntax--member mpe-syntax--c"><span>next</span></span><span>;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--end mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>}</span></span></span></span></div></pre>
+<p>You should have seen how to traverse the linear linked list by looping. Perhaps you’ve seen code that looks like this:</p>
+<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;node</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>*</span></span><span>&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;head;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--c"><span>while</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span>temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--c"><span>!=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--c"><span>NULL</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--begin mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>Do&nbsp;stuff</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;temp</span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--pointer-access mpe-syntax--c"><span>-&gt;</span></span><span class="mpe-syntax--variable mpe-syntax--other mpe-syntax--member mpe-syntax--c"><span>next</span></span><span>;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--end mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>}</span></span></span></span></div></pre>
 <h3 id="recursion-a-idrecursiona">Recursion <a id="recursion"></a></h3>
 <p>Since a list is a recursive data type, it makes sense to make use of recursion in programming operations on lists.</p>
 <p>Recursion is a tool a programmer can use to invoke a function call on itself.</p>
@@ -1017,7 +1017,7 @@ In recursive programming we need two things:</p>
 <pre class="editor-colors lang-python"><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--python"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--function mpe-syntax--python"><span>def</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--python"><span>addLast</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--parameters mpe-syntax--python"><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>item</span></span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--end mpe-syntax--python"><span>)</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--function mpe-syntax--begin mpe-syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>if</span></span><span>&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--python"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>else</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>node</span><span>&nbsp;</span><span>temp</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>head</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--repeat mpe-syntax--python"><span>while</span></span><span>&nbsp;</span><span>temp</span><span>.</span><span>next</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>!=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>temp</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>temp</span><span>.</span><span>next</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>temp</span><span>.</span><span>next</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div></pre>
 <p><em>Recursively</em></p>
 <pre class="editor-colors lang-python"><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--python"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--function mpe-syntax--python"><span>def</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--python"><span>addLast</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--parameters mpe-syntax--python"><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>head</span></span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--parameters mpe-syntax--python"><span>,</span></span><span>&nbsp;</span><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>item</span></span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--end mpe-syntax--python"><span>)</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--function mpe-syntax--begin mpe-syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>if</span></span><span>&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--python"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>else</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>addLast</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>head</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&gt;</span></span><span class="mpe-syntax--support mpe-syntax--function mpe-syntax--builtin mpe-syntax--python"><span>next</span></span><span>,&nbsp;</span><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div></pre>
-<p>Let's try in C++ together.</p>
+<p>Let’s try in C++ together.</p>
 <p><a href="#index">Back to Index</a></p>
 <hr>
 <h3 id="searching-a-idsearcha">Searching <a id="search"></a></h3>
@@ -1038,7 +1038,7 @@ In recursive programming we need two things:</p>
 <p>Alternatively, you can program from scratch and practice.</p>
 <p>There are some useful functions in the C++ standard library to generate random numbers.<br>
 We will need to include two libraries: ctime and cstdlib.</p>
-<p>We need the ctime library to &quot;seed&quot; the peudo random number generator. The cstdlib library contains a pseudo random number generator function.</p>
+<p>We need the ctime library to “seed” the peudo random number generator. The cstdlib library contains a pseudo random number generator function.</p>
 <pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--preprocessor mpe-syntax--include mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--directive mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--directive mpe-syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="mpe-syntax--string mpe-syntax--quoted mpe-syntax--other mpe-syntax--lt-gt mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--begin mpe-syntax--c"><span>&lt;</span></span><span>ctime</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--end mpe-syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--preprocessor mpe-syntax--include mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--directive mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--directive mpe-syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="mpe-syntax--string mpe-syntax--quoted mpe-syntax--other mpe-syntax--lt-gt mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--begin mpe-syntax--c"><span>&lt;</span></span><span>cstdlib</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--end mpe-syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;...</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;To&nbsp;seed&nbsp;the&nbsp;PRNG:</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--c"><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>srand</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>time</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--c"><span>NULL</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span><span>)</span></span></span><span>;&nbsp;</span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;Do&nbsp;this&nbsp;only&nbsp;once!</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;To&nbsp;get&nbsp;a&nbsp;random&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;100:</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--c"><span>int</span></span><span>&nbsp;num&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--c"><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>rand</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>%</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--numeric mpe-syntax--c"><span>101</span></span><span>;</span></span></div></pre>
 <p>So we may have a loop to insert some number of random numbers into our list to practice with.<br>
 For example:</p>
