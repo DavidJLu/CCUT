@@ -23,7 +23,7 @@ Many PSU CS courses typically post about 5 assignments through the 10 week term.
 
 
 * [<span style="color:blue">CS163 Data Structures:](https://www.pdx.edu/computer-science/cs163)
-  * [(Coming soon)](Projects.html)
+  * [HW3: Course List](Projects/BST.html)
 
 
 * [<span style="color:blue">CS201 Computer Systems Programming:](https://www.pdx.edu/computer-science/cs201)

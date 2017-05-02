@@ -909,6 +909,43 @@
 
   <p>CS163: Homework 3 - Binary Search Tree</p>
 <p><img src="bst.jpg" alt="Lone Tree"></p>
+<h1 id="course-listing">Course Listing</h1>
+<blockquote>
+<p>For this assignment, you are to create a program that holds a searchable list of courses. The goal is to practice implementing a binary search tree with functionality like insert, search, remove by match, remove all, display in sorted order, and so on recursively.</p>
+</blockquote>
+<h2 id="details">Details</h2>
+<p>Your binary search tree should be implemented as a class with at least the following methods:</p>
+<ol>
+<li><p>Constructor (you are allowed to load from an external file or not)</p></li>
+<li><p>Destructor (call a recursive function to deallocate the tree)</p></li>
+<li><p>Insert course information(add the course information into the tree)</p></li>
+<li><p>Retrieveby number (retrieve all courses based on the course number)</p></li>
+<li><p>Retrieve a range (retrieve all courses within a range of course numbers)</p></li>
+<li><p>Display all</p></li>
+<li><p>Remove (remove by course number)</p></li>
+<li><p>Remove all (remove everything)</p></li>
+</ol>
+<p>Each node of the tree should contain pointers to the left and right children as well as course information. A course has the following fields:</p>
+<ul>
+<li><p>Course number (e.g., CS163)</p></li>
+<li><p>Course name (e.g., Data Structures)</p></li>
+<li><p>Section Number (e.g. 001)</p></li>
+<li><p>CRN (Course Resource Number)</p></li>
+<li><p>Day and Time of the class (e.g., T/TH 10-11:50)</p></li>
+<li><p>Course Description</p></li>
+</ul>
+<h3 id="requirements">Requirements:</h3>
+<ol>
+<li><p>Do  not  use  statically  allocated  arrays  in  your  classes  or  structures.  All memory must be dynamically allocated and kept to a minimum.</p></li>
+<li><p>All data members in a class must be private.</p></li>
+<li><p>Never perform input operations from your class in CS163.</p></li>
+<li><p>Global variables are not allowed in CS163</p></li>
+<li><p>Do not use the String class. (Use arrays of characters instead and the cstring library.)</p></li>
+<li><p>Use modular design, separating the .h files from the .cpp files. Remember, .h files should contain the class header and any necessary prototypes. The .cpp files should contain function definitions. You must have at least 1 .h file and 2 .cpp files. Never “#include” .cpp files.</p></li>
+<li><p>Use the iostream library for all I/O; do not use stdio.h.</p></li>
+<li><p>Make  sure  to  define  a  constructor  and  destructor  for  your  class.  Your destructor<br>
+must deallocate all dynamically allocated memory.</p></li>
+</ol>
 
 
   </body>

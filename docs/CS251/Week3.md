@@ -172,7 +172,22 @@ As we can see, there is only 1 row where the premises are true (row 1), and the 
 
 Truth tables can be used to decide any of the problems in this section, i.e. they can be used to decide whether an argument is valid or invalid; they can be used to decide whether a set of sentences is consistent or inconsistent; they can be used to decide whether a sentence is a tautology, contradiction, or contingency; and they can be used to decide whether two sentences are logically equivalent or inequivalent.
 
-The drawback is that as our sentences contain more atomic propositions, the number of rows in a truth table grows exponentially.
+Another example:
+H | I | (H $\land$ I) $\rightarrow$ H
+:-|:--|:------------------------------
+T | T | T  T  T  **T**  T
+T | F | T  F  F  **T**  T
+F | T | F  F  T  **T**  F
+F | F | F  F  F  **T**  F
+
+This sentence, (H $\land$ I) $\rightarrow$ H, is a tautology. We know this because the column for the sentence is true at every row. In other words, this sentence cannot be false.
+
+The drawback of the truth table method is that as our sentences contain more atomic propositions, the number of rows in a truth table grows exponentially.
+
+How many rows does our table need if there are $n$ atomic proposition letters?
+
+#### Practice problems
+
 
 [Back to the Top](#index)
 
