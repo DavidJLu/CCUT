@@ -191,8 +191,6 @@ How many rows does our table need if there are 3 atomic proposition letters? Wha
 
 ## Natural Deduction <a id="natural"></a>
 
-
-[Natural Deduction Rules](NDrules.pdf)
 [Back to the Top](#index)
 
 # Sentence Forms <a id="sentence"></a>
@@ -243,8 +241,7 @@ Practice exercises
 5. Show that the sentence $\neg W \rightarrow (J \lor J))$ is contingent
 6. Show that the sentence $\neg(X \lor (Y \lor Z)) \lor (X \lor (Y \lor Z))$ is not contingent
 7. Show that the sentence $B \rightarrow \neg S$ is equivalent to the sentence $\neg \neg B \rightarrow \neg S$
-8. Show that the sentence $\neg(X \lor O)$ is not equivalent to the
-sentence $X \land O$
+8. Show that the sentence $\neg(X \lor O)$ is not equivalent to the sentence $X \land O$
 9. Show that the sentences $\neg(A \lor B)$, $C$, $C \rightarrow A$ are jointly inconsistent.
 10. Show that the sentences $\neg(A \lor B)$, $\neg B$, $B \rightarrow A$ are jointly consistent
 11. Show that $\neg(A \lor (B \lor C)) \therefore \neg C$ is valid.
