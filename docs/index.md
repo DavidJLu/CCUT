@@ -14,7 +14,7 @@ CS163
 * [Week 1](CS163/Lecture1.html) (updated 5/1/17)
 * [Week 2](CS163/Week2.html) (updated 4/26/17)
 * [Week 3](CS163/Week3.html) (updated 5/2/17)
-* Week 4
+* [Week 4](CS163/Week4.html) (updated 5/5/17)
 * [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
 * [Binary Search Tree Practice Code](CS163/BSTPracticeCode.html)
 
