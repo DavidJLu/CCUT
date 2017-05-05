@@ -6,4 +6,4 @@ CS163 at CCUT Week 3: Binary Search Tree
 Binary Search Tree Implementation
 ------
 
-(Coming soon: See BST Practice Code)
+[BST Practice Code is up!](BSTPracticeCode.html)
