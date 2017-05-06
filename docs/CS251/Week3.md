@@ -252,7 +252,7 @@ sentence $X \land O$
 
 ##### B. Use either a derivation or a truth table for each of the following.
 1. Show that $A \rightarrow (B \rightarrow A)$ is a tautology
-2. Show that $\neg (((N \leftrightarrow Q) \lor Q) \lor N)$  is not a tautology
+2. Show that $\neg (((N \leftrightarrow Q) \lor Q) \lor N)$ is not a tautology
 3. Show that $Z \lor (\neg Z \leftrightarrow Z)$ is contingent
 4. show that $(L \leftrightarrow ((N \rightarrow N) \rightarrow L)) \lor H$ is not contingent
 5. Show that $(A \leftrightarrow A) \land (B \land \neg B)$ is a contradiction
@@ -260,6 +260,6 @@ sentence $X \land O$
 7. Show that $((\neg X \leftrightarrow X) \lor X)$ is equivalent to $X$
 8. Show that $F \land (K \land R)$ is not equivalent to $(F \leftrightarrow (K \leftrightarrow R))$
 9. Show that the sentences $\neg (W \rightarrow W)$, $ (W \leftrightarrow W) \land W$, $E \lor (W \rightarrow \neg (E \land W))$ are inconsistent.
-10. Show that the sentences :$\neg R \lor C$, $(C \land R) \rightarrow R$, $(\neg(R \lor R) \rightarrow R)$ are consistent.
+10. Show that the sentences $\neg R \lor C$, $(C \land R) \rightarrow R$, $(\neg (R \lor R) \rightarrow R)$ are consistent.
 11. Show that $\neg \neg (C \leftrightarrow \neg C)$, $((G \lor C) \lor G)$ $\therefore ((G \rightarrow C) \land G)$ is valid.
 12. Show that $\neg \neg L$, $(C \rightarrow \neg L) \rightarrow C$ $\therefore \neg C$ is invalid.
