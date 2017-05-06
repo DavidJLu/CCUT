@@ -2,7 +2,13 @@ CS163 at CCUT Week 4: Final Week!
 ======
 ![Matrix](matrix.jpg)
 
-Last Week
+Contents <a id="Index"></a>
+--------
+* [Last Week's Exercises](#LastWeek)
+* [Binary Search Trees](#BST)
+
+
+Last Week <a id="LastWeek"></a>
 -----
 Last week we implemented a number of linear linked list functions together. For instance here is our sortedInsert function:
 
@@ -51,3 +57,35 @@ bool deleteAllN(node *&head, int N)
     return true;
 }
 ```
+
+[Return to top](#Index)
+
+Binary Search Trees <a id="BST"></a>
+=======
+A binary tree is a recursively-defined tree that can have a maximum of two children. The two children are by convention called *left child* and *right child*. Nodes that do not have any children are called *leaves*. Binary trees are used for many things, ranging from efficient searching techniques, data compression, and expression parsers (simple compilers).
+
+Since binary tree nodes can only have a maximum of two children, this introduces several properties that we care about. There are two important properties that a binary tree can have: **fullness** and **balance**.
+
+Binary search tree have an additional property called the **binary search tree property**.
+
+#### Fullness
+
+A binary tree is considered full if every node in the tree has either two or zero children (a leaf) and every leaf is on the lowest level of the tree.
+
+![full tree](fullbst.jpg)
+
+#### Balance
+
+A binary tree can be *balanced*, such that one branch of the tree is about the same size and depth as the other. In order to find out if a tree node is balanced, you need to find out the maximum height level of both children in each node, and if they differ by no more than one level, it is considered balanced.
+
+An easy way to determine balance by a recursive function to find the maximum depth of the left child, find the maximum depth of the right child, then subtract the two. If the number is –1, 0, or 1, the node is balanced. If the difference is anything else, then it is unbalanced. A balanced binary tree requires every node in the tree to have the balanced property.
+
+Test yourself! Write a function that determines whether a binary tree is balanced.
+
+![balance](balance.jpg)
+
+In this example, the only node which is unbalanced is node \#3, because the depth of its left side is 0, and the depth of the right side is 2. Subtracting 2 from 0 yields –2, thus that node is unbalanced. Note that node \#1, the root, is considered balanced, since the maximum height level of both of its’ children is 3. This raises an important point: You cannot check just the root node for balancing, because it may be balanced but its child nodes may not be. Therefore, every node in the tree must be balanced in order for the tree to be considered balanced. The example tree above can be easily balanced by giving node \#3 a left child.
+
+#### Binary Search Tree Property
+
+The binary search tree property holds that the key/data in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree.
