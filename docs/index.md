@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/x-icon" href="wiki.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 PSU CS Guest Lectures at CCUT
 =====
@@ -32,4 +32,4 @@ CS251
 These pages are under constant construction, so check back often for updates.
 
 <Sub>I'm hosted with GitHub Pages and created in Markdown with KaTeX math rendering.
-Images unless otherwise noted are copyright free under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) from [PixaBay](https://pixabay.com)
+Images unless otherwise noted are [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) copyright free from [PixaBay](https://pixabay.com)
