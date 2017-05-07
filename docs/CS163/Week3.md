@@ -1,4 +1,4 @@
-CS163 at CCUT Week 3: Binary Search Tree
+CS163 at CCUT Week 3: Recursive Data Types - Linear Linked Lists and Binary Search Trees
 ======
 
 ![Search](search.jpg)
@@ -7,3 +7,5 @@ Binary Search Tree Implementation
 ------
 
 [BST Practice Code is up!](BSTPracticeCode.html)
+
+We continued thinking about and implementing linear linked list recursive functions this week. See [Week 4](Week4.html) notes for binary search tree material. We will think about and implement recursive functions for BSTs.
