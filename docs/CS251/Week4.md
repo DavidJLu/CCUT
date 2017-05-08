@@ -1,5 +1,8 @@
-# CS251 at CCUT Week 4: The Predicate Calculus
+CS251 at CCUT Week 4: The Predicate Calculus
+=======
+David Lu
 5/8/17
+
 
 ![Matrix](matrix.jpg)
 
@@ -155,7 +158,7 @@ This allows the possibility that George smiles too; if we want to exclude that w
 $\forall x[(Bx \land Lxm) \rightarrow (\forall y(By \land Lmy) \rightarrow Hxy)]$ or by Exportation
 $\forall x\forall y[((Bx \land Lxm) \land (By \land Lmy)) \rightarrow Hxy]$
 1. Every boy who loves Mary hates every other boy who Mary loves:
-$\forall x\{[(Bx \land Lxm) \rightarrow \forall y((By \land Lmy) \land y \ne x)] \rightarrow Hxy)\}$ or 
+$\forall x\{[(Bx \land Lxm) \rightarrow \forall y((By \land Lmy) \land y \ne x)] \rightarrow Hxy)\}$ or
 $\forall x\forall y \{[(Bx \land Lxm) \land ((By \land Lmy) \land x \ne y)] \rightarrow Hxy\}$
 If John loves Mary and Mary loves John, 13 says that John hates himself, but 14 does not.
 
@@ -179,5 +182,25 @@ $Proof$:
 |3| $Hs \rightarrow Ms$| 1 | UI|
 |4| $Ms$ | 2, 3| MP|
 
-Predicate Calculus Proof Exercises
-------
+Showing Invalidity
+=======
+In the propositional logic, we could show that an argument is `invalid` by finding a row of the truth table where the premises are true and the conclusion false. That would show that it is possible for the truth of the premises to fail to guarantee the truth of the conclusion. This works because the truth table contains every possible combination of truth values for the atomic sentences.
+
+However, predicate calculus sentences may contain variables which range over some domain. That domain may contain an infinite number of items. For instance the set of natural numbers $\mathbb{N}$ is a set with countably infinite cardinality. We could not produce a truth table for a sentence that said something about the natural numbers.
+
+Consider every natural number is even or odd:
+
+$\forall x (Ex \lor Ox)$ where $x \in \mathbb{N}$
+
+So we cannot show the invalidity of a predicate calculus argument by truth table. We need another method.
+
+#### Models
+
+A model is a domain of individuals and a specification of all properties and relations of those individuals. For instance, we might imagine a universe with two individuals, $a$ and $b$, and $a$ has the property $P$ while $b$ does not, and nothing else about the universe is true. This is a model and we could represent it using a table.
+
+| | $P$ |
+|:-|-   |
+|$a$| T |
+|$b$| F |
+
+To show that an argument is invalid, we need to be able to create a model where the premises are true and the conclusion is false.

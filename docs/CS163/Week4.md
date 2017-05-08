@@ -1,5 +1,8 @@
 CS163 at CCUT Week 4: Final Week!
 ======
+David Lu
+5/5/17
+
 ![Code](code-blur.jpg)
 
 Contents <a id="Index"></a>
