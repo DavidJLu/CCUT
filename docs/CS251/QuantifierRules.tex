@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm, logicproof}
+\usepackage[margin=2.75cm]{geometry}
+\usepackage{multicol}
+\newcommand{\encode}[1]{\langle #1 \rangle}
+
+\title{\bf Predicate Logic\\Quantifier Rules\\[2ex]
+\rm\normalsize CS251 at CCUT, Spring 2017 \\}
+\date{May 8$^{th}$, 2017}
+\author{David Lu}
+
+\begin{document}
+\maketitle
+
+\paragraph{Contents}
+\begin{enumerate}
+	\item Universal Instantiation (UI)
+	\item Existential Generalization (EG)
+	\item Universal Generalization (UG)
+	\item Existential Instantiation (EI)
+	\item Quantifier Negation (QN) and Quantifier Equivalence (QE)
+	\item Multiple Quantification
+\end{enumerate}
+
+\paragraph{1. Universal Instantiation/Elimination UI}
+If X is a universally quantified sentence, then you are licensed to conclude any of its substitution instances below it. Let $s$ be any constant, $P$ be a predicate, and $u$ be any variable. The natural deduction rule UI can be expressed as follows:
+
+\begin{logicproof}{1}
+	\forall uP(...u...)\\
+	...\\
+	P(...s...) & UI
+\end{logicproof}
+
+This rule, in short, allows us to eliminate the universal quantifier of a universally quantified sentence and substitute any constant we'd like for instances of the variable that it bound. The parenthetical notation in the argument place of the predicate denotes that the expression may be complex and not a simple subject predicate sentence.\\
+
+Here's an example:
+Everyone loves Eve. Therefore Adam loves Eve.
+
+\begin{logicproof}{1}
+	\forall x Lxe & Premise \\
+	Lae & 1, UI
+\end{logicproof}
+
+In forming the substitution instance of a universally quantified sentence, you must be careful always to put the same name everywhere for the substituted variable. Substituting $a$ for $x$ in $\forall xLxx$, we get $Laa$, not $Lxa$.\\
+
+Here's another example: All humans are mortal. Socrates is a human. Thus, Socrates is mortal.
+\begin{logicproof}{1}
+	\forall x(Hx \rightarrow Mx) & Premise \\
+	Hs & Premise \\
+	Hs \rightarrow Ms & 1, UI \\
+	Ms & 2, 3 MP
+\end{logicproof}
+
+Notice that the universal quantifier in the first premise binds two instances of $x$ in the sentence. So when we use UI at line 3, both must be replaced by our chosen constant.
+
+\paragraph{2. Existential Generalization/Introduction EG}
+Intuitively, from a closed sentence with a constant, we are licensed to infer the existential generalization of that sentence, where $\exists xPx$ is an existential generalization of $Pa$. The natural deduction rule EG can be expressed as follows:
+
+\begin{logicproof}{1}
+	P(...s...) \\
+	...\\
+	\exists x P(...x...) & EG
+\end{logicproof}
+
+From a non-quantified sentence, which contains the constant $s$, we are allowed to take out one or more of the occurrences of $s$ and substitute an existentially bound variable. Example: Rover loves to wag his tail. Therefore, something loves to wag its tail.
+
+\begin{logicproof}{1}
+	Wr & Premise\\
+	\exists x Wx & 1, EG
+	\end{logicproof}
+
+Here's another example: Everyone is happy. Therefore, someone is happy.
+\begin{logicproof}{1}
+	\forall xHx & Premise\\
+	Ha & 1, UI\\
+	\exists x Hx & 2, EG
+	\end{logicproof}
+
+
+\newpage
+\paragraph{3. Universal Generalization/Introduction UG}
+The intuitive idea for universal introduction is that if a constant, as it occurs in a sentence, is completely arbitrary, you can universally generalize on that constant. This means that you can rewrite the sentence with a variable written in for all occurrences of the arbitrary constant, all bound by a universal quantifier. If I can show that an arbitrary element of set A is also an element of set B, then I am licensed to infer that every element of A is an element of B.\\
+
+There are a number of ways to state the UG rule such that the restriction that our constant is arbitrary is satisfied. Here's one way:
+\begin{logicproof}{1}
+	P(...s...) & ($s$ must name an arbitrary individual)\\
+	...\\
+	\forall x P(...x...) & 1, UG
+\end{logicproof}
+
+To say that $s$ names an arbitrary individual puts a restriction on what constants we are allowed to universally generalize upon. In particular, $s$ may not appear in the premises and $s$ may not come from the result of a use of EI. Further, every instance of $s$ in the sentence must be replaced by a variable when we use the rule UG.\\
+
+Here's an example of the mistake above: Everyone loves themself. Therefore, everyone loves Alice.
+\begin{logicproof}{1}
+	\forall x Lxx & Premise\\
+	Laa & 1, UI\\
+	\forall x Lxa & 2, UG (Mistake!)
+	\end{logicproof}
+
+Here is an example of a mistake in not generalizing upon an arbitrary individual: Doug is good at logic. Therefore, everyone is good at logic.
+\begin{logicproof}{1}
+	Gd & Premise\\
+	\forall x Gx & 1, UG (Mistake!)
+	\end{logicproof}
+
+Here's a somewhat longer example: All birds have feathers. Only birds fly. Therefore, only feathered things fly. 
+\begin{logicproof}{2}
+	\forall x (Bx \rightarrow Fx) & Premise \\
+	\forall x(\neg Bx \rightarrow \neg Lx) & Premise \\
+	Ba \rightarrow Fa & 1, UI \\
+	\neg Ba \rightarrow \neg La & 2, UI \\
+	La \rightarrow Ba & 4, Contra \\
+	La \rightarrow Fa & 3, 5 HS \\
+	\neg Fa \rightarrow \neg La & 6, Contra \\
+	\forall x(\neg Fx \rightarrow \neg Lx) & 7, UG
+	\end{logicproof}
+	
+Notice that the constant $a$ in the proof above does not appear in the premises or as the result of an existential instantiation. So $a$ names an arbitrary individual, satisfying the restriction on on our use of UG at line 8.
+
+\newpage
+\paragraph{4. Existential Instantiation/Elimination EI}
+The following argument is intuitively valid: All lions are cats. Some lions roar. Therefore, some cats roar.
+\begin{logicproof}{1}
+	\forall x(Lx \rightarrow Cx) & Premise \\
+	\exists x (Lx \land Rx) & Premise \\
+	\exists x (Cx \land Rx) & Conclusion
+	\end{logicproof}
+	
+We have no rule yet for exploiting the existential premise. Our reasoning ought to go something like this: Suppose Simba is a lion that roars. Since all lions are cats, Simba must be a cat that roars. So there exists a cat that roars.\\
+
+There are a couple of ways to implement the EI rule. In my informal reasoning above, I asked the reader to suppose that some individual named Simba was a lion that roars. Importantly, Simba may, or may not, exist. So any conclusions we draw from our reasoning, cannot include conclusions about Simba. So we might implement our EI rule as a sub-derivation rule, much like \textit{conditional proof} and \textit{indirect proof}. (The boxes in the proofs below surround a subproof, much like I do with a vertical bar when I hand write proofs.)
+
+\begin{logicproof}{2}
+	\exists x P(...x...) \\
+	\begin{subproof}
+		P(...s...) & Assumption for EI \\
+		... &\\
+		p & $p$ is any sentence that does not mention $s$
+		\end{subproof}
+		p & 1, 2-4 EI
+	\end{logicproof}
+		
+Here's our initial cat argument example:
+		
+\begin{logicproof}{2}
+	\forall x(Lx \rightarrow Cx) & Premise \\
+	\exists x (Lx \land Rx) & Premise \\
+	\begin{subproof}
+		Ls \land Rs & Assumption for EI\\
+		Ls & 3, Simp\\
+		Rs & 3, Simp\\
+		Ls \rightarrow Cs & 1, UI\\
+		Cs & 4, 6 MP\\
+		Cs \land Rs & 5, 7 Conj\\
+		\exists x (Cx \land Rx) & 8, EG (Notice $s$ does not appear here)
+		\end{subproof}
+		\exists x (Cx \land Rx) & 2, 3-9 EI 
+	\end{logicproof}
+
+An alternate way to schematize our EI rule is to place a restriction on what constant we're allowed to substitute for variables bound by the existential quantifier we're removing. In particular, we must pick a new constant, one that does not appear earlier in our proof. 
+
+\begin{logicproof}{1}
+	\exists x P(...x...)\\
+	...\\
+	P(...c...) & 1, EI ($c$ must be a new constant, not appearing earlier in the proof)
+\end{logicproof}
+
+The result of either version of the rule is the same sort of restriction on how we may use the EI.
+
+\newpage
+\paragraph{5. Quantifier Negation QN and Quantifier Equivalence QE}
+In addition to the rules allowing us to introduce or eliminate the two quantifiers, we have some rules allowing us to translate from one quantifier to the other and visa versa as well as some natural equivalences between quantified statements.
+
+Here are some QN rules. Let $W$ be some well formed formula. I left out the variables for readability.
+
+\begin{enumerate}
+	\item $\forall W \equiv \neg \exists \neg W$
+	\item $\exists W \equiv \neg \forall \neg W$
+	\item $\neg \forall W \equiv \exists \neg W$
+	\item $\neg \exists W \equiv \forall \neg W$
+\end{enumerate}
+
+Here are some QEs or quantifier equivalences.
+
+\begin{enumerate}
+	\item $\forall x \forall y W \equiv \forall y \forall x W$
+	\item $\exists x \exists y W \equiv \exists y \exists x W$
+	\item $\forall (Px \land Qx) \equiv \forall x Px \land \forall y Qy$
+	\item $\exists (Px \lor Qx) \equiv \exists x Px \lor \exists y Qy$
+	\item $\forall x Wx \equiv \forall y W(x/y)$ Where $(x/y)$ means replace each instance of $x$ with $y$
+	\item $\exists x Wx \equiv \exists y W(x/y)$ Where $(x/y)$ means replace each instance of $x$ with $y$
+\end{enumerate}
+
+
+\paragraph{6. Multiple Quantification}
+To represent the sentence, \textit{Someone gave a bracelet to Alice} we need to associate quantifier phrases with two of the noun phrase positions in the predicative context: $x$ gave $y$ to $z$ ($Gxyz$). There's no special problem about this; we simply prefix both quantifiers, using the variables to link each quantifier with the appropriate noun phrase: $\exists x \exists y (Gxya \land Px \land By)$, where $Px$ means "$x$ is a person" and $By$ means "$y$ is a bracelet."\\
+
+Another example. \textit{Any elephant is larger than every person}: $\forall x \forall y ((Ex \land Py) \rightarrow Lxy)$
+
+\end{document}

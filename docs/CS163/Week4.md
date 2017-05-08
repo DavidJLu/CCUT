@@ -1,6 +1,6 @@
 CS163 at CCUT Week 4: Final Week!
 ======
-![Matrix](matrix.jpg)
+![Code](code-blur.jpg)
 
 Contents <a id="Index"></a>
 --------
@@ -36,6 +36,7 @@ void sortedInsert(node *&head, int data)
 }
 ```
 
+#### An Error in Our Code!
 We ended class before we could finish debugging the code for a function which takes a linear linked list and an int $n$, and deletes all occurrences of $n$ from the list recursively. Here is that code. Try to find our mistake and correct it!
 
 ```c++
@@ -80,11 +81,12 @@ A binary tree can be *balanced*, such that one branch of the tree is about the s
 
 An easy way to determine balance by a recursive function to find the maximum depth of the left child, find the maximum depth of the right child, then subtract the two. If the number is –1, 0, or 1, the node is balanced. If the difference is anything else, then it is unbalanced. A balanced binary tree requires every node in the tree to have the balanced property.
 
-Test yourself! Write a function that determines whether a binary tree is balanced.
+>Test yourself! Write a function that determines whether a binary tree is balanced.
 
 ![balance](balance.jpg)
 
 In this example, the only node which is unbalanced is node \#3, because the depth of its left side is 0, and the depth of the right side is 2. Subtracting 2 from 0 yields –2, thus that node is unbalanced. Note that node \#1, the root, is considered balanced, since the maximum height level of both of its’ children is 3. This raises an important point: You cannot check just the root node for balancing, because it may be balanced but its child nodes may not be. Therefore, every node in the tree must be balanced in order for the tree to be considered balanced. The example tree above can be easily balanced by giving node \#3 a left child.
+
 
 #### Binary Search Tree Property
 
