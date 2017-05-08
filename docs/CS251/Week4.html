@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <style>
+    atom-text-editor {
+  background-color: #263238;
+  color: #EEFFFF;
+}.markdown-preview-enhanced pre .wrap-guide {
+  background-color: #2b3940;
+}.markdown-preview-enhanced pre .indent-guide {
+  color: #2b3940;
+}.markdown-preview-enhanced pre .invisible-character {
+  color: #373b41;
+}.markdown-preview-enhanced pre .cursor-line {
+  background-color: #212b30;
+}.markdown-preview-enhanced pre .gutter {
+  background-color: #263238;
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
+  background-color: #212b30;
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
+  color: rgba(238, 255, 255, 0.2);
+}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
+  color: #B2CCD6;
+}.markdown-preview-enhanced pre .invisible {
+  color: #EEFFFF;
+}.markdown-preview-enhanced pre .cursor {
+  color: #009688;
+  border-width: 2px;
+}.markdown-preview-enhanced pre .selection .region {
+  background-color: #3b4d56;
+}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid #B2CCD6;
+}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
+  border: 1px solid white;
+}
+.mpe-syntax--comment {
+  color: #4f6875;
+}
+.mpe-syntax--keyword {
+  color: #C792EA;
+}
+.mpe-syntax--keyword.mpe-syntax--control {
+  color: #C792EA;
+}
+.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
+  color: #B2CCD6;
+}
+.mpe-syntax--keyword.mpe-syntax--operator {
+  color: #89DDF3;
+}
+.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
+  color: #82AAFF;
+}
+.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
+  color: #FFCB6B;
+}
+.mpe-syntax--storage {
+  color: #C792EA;
+}
+.mpe-syntax--constant {
+  color: #F07178;
+}
+.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
+  color: #89DDF3;
+}
+.mpe-syntax--constant.mpe-syntax--numeric {
+  color: #F78C6A;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
+  color: #89DDF3;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
+  color: #C3E88D;
+}
+.mpe-syntax--variable {
+  color: #EEFFFF;
+}
+.mpe-syntax--variable.mpe-syntax--interpolation {
+  color: #eb434c;
+}
+.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #F78C6A;
+}
+.mpe-syntax--variable.mpe-syntax--language {
+  color: #FF5370;
+}
+.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
+  color: #FFCB6B;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  background-color: #F07178;
+  color: #263238;
+}
+.mpe-syntax--string {
+  color: #C3E88D;
+}
+.mpe-syntax--string.mpe-syntax--regexp {
+  color: #89DDF3;
+}
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
+  color: #FFCB6B;
+}
+.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
+  color: #F07178;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
+  color: #4f6875;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
+  color: #EEFFFF;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
+  color: #82AAFF;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
+  color: #FFE082;
+  font-weight: bold;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
+  color: #89DDF3;
+}
+.mpe-syntax--punctuation.mpe-syntax--terminator {
+  color: #89DDF3;
+}
+.mpe-syntax--support.mpe-syntax--class {
+  color: #FFCB6B;
+}
+.mpe-syntax--support.mpe-syntax--function {
+  color: #82AAFF;
+}
+.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
+  color: #82AAFF;
+}
+.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
+  color: #B2CCD6;
+}
+.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
+  color: #FFCB6B;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
+  color: #82AAFF;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #EEFFFF;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
+  color: #C3E88D;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
+  color: #C792EA;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
+  color: #C792EA;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
+  color: #FFCB6B;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
+  color: #82AAFF;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  color: #F07178;
+}
+.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  color: #FFCB6B;
+}
+.mpe-syntax--meta.mpe-syntax--class {
+  color: #FFE082;
+}
+.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
+  color: #89DDF3;
+}
+.mpe-syntax--meta.mpe-syntax--link {
+  color: #FFCB6B;
+}
+.mpe-syntax--meta.mpe-syntax--require {
+  color: #82AAFF;
+}
+.mpe-syntax--meta.mpe-syntax--selector {
+  color: #C792EA;
+}
+.mpe-syntax--meta.mpe-syntax--separator {
+  background-color: #373b41;
+  color: #EEFFFF;
+}
+.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
+.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
+  color: #89DDF3;
+}
+.mpe-syntax--none {
+  color: #EEFFFF;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  color: #FFCB6B;
+  font-weight: bold;
+}
+.mpe-syntax--markup.mpe-syntax--changed {
+  color: #C792EA;
+}
+.mpe-syntax--markup.mpe-syntax--deleted {
+  color: #F07178;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  color: #C792EA;
+  font-style: italic;
+}
+.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
+  color: #82AAFF;
+}
+.mpe-syntax--markup.mpe-syntax--inserted {
+  color: #C3E88D;
+}
+.mpe-syntax--markup.mpe-syntax--list {
+  color: #F07178;
+}
+.mpe-syntax--markup.mpe-syntax--quote {
+  color: #FFCB6B;
+}
+.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
+  color: #C3E88D;
+}
+.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
+  color: #C3E88D;
+}.markdown-preview-enhanced pre[mini] .scroll-view {
+  padding-left: 1px;
+}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
+  z-index: inherit;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #009688;
+  box-sizing: border-box;
+  background-color: rgba(238, 255, 255, 0.1);
+  box-shadow: inset 0 -1px 0 #009688;
+}
+.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
+  color: #89DDF3;
+}
+.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
+  color: #73d1c8;
+}
+.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
+  color: #FFE082;
+}
+.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
+  color: #F78C6A;
+}
+.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
+  color: currentColor;
+}
+.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
+  color: #B2CCD6;
+}
+.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
+  color: #C792EA;
+}
+.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
+  color: #89DDF3;
+}
+.mpe-syntax--js .mpe-syntax--constant {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
+  color: #FFCB6B;
+}
+.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
+  color: #82AAFF;
+}
+.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
+  color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
+  color: #F78C6A;
+}
+.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
+  color: #F07178;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
+  color: #C3E88D;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
+  color: currentColor;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
+  color: #C3E88D;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
+  color: currentColor;
+}
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
+.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
+  color: #89DDF3;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
+  color: #C792EA;
+}
+.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
+  color: currentColor;
+}
+.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
+  color: #C792EA;
+}
+.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
+  color: #82AAFF;
+}
+.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
+  color: #C792EA;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
+  color: #82AAFF;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
+  color: #7986CB;
+}
+.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
+  color: #FF5370;
+}
+.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
+.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
+  color: #89DDF3;
+}
+.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
+  color: #C792EA;
+}
+.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
+  color: #89DDF3;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
+  color: #F07178;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
+  color: #F07178;
+}
+.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
+  color: currentColor;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[is="space-pen-div"] {
+  width: 100%;
+  margin: 0;
+  z-index: 999;
+  overflow: scroll;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced strong {
+  color: #000000;
+}
+.markdown-preview-enhanced del {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #d6d6d6;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #000000;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #EEFFFF;
+  background-color: #2e3d44 !important;
+  border: #d6d6d6;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced kbd {
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #fff;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #5c5c5c;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn,
+.markdown-preview-enhanced[is="space-pen-div"] .refresh-btn {
+  position: fixed;
+  display: none;
+  right: 24px;
+  top: 54px;
+}
+.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn {
+  right: 72px;
+}
+.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn,
+.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn {
+  display: block;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn:hover,
+.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .status {
+  display: none;
+}
+.markdown-preview-enhanced:not([is="space-pen-div"]) .back-to-top-btn {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #fff;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+  z-index: 100;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+
+    
+  </head>
+  <body class="markdown-preview-enhanced   ">
+
+  <h1 id="cs251-at-ccut-week-4-the-predicate-calculus">CS251 at CCUT Week 4: The Predicate Calculus</h1>
+<p>5/8/17</p>
+<p><img src="matrix.jpg" alt="Matrix"></p>
+<h2 id="what-propositional-logic-cant-do">What Propositional Logic Can’t Do</h2>
+<p>There are many arguments whose formal validity cannot be shown using just the propositional logic. Consider the following argument:</p>
+<ol>
+<li><p>All humans are mortal.</p></li>
+<li><p>Socrates is a human.</p></li>
+<li><p>Therefore, Socrates is mortal.</p></li>
+</ol>
+<p>Propositional logic takes each of these statements as atomic propositions and thus logically unrelated. We might translate this to the propositional logic like so:</p>
+<ol>
+<li><p>H</p></li>
+<li><p>S</p></li>
+<li><p>M</p></li>
+</ol>
+<p>But as we can see from the following truth assignment, the arugment is invalid:</p>
+<table>
+<thead>
+<tr><th style="text-align:center">H</th><th style="text-align:center">S</th><th style="text-align:center">M</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">T</td><td style="text-align:center">T</td><td style="text-align:center">F</td></tr>
+</tbody>
+</table>
+<p>This row of the truth table shows that it is possible for the premises to be true while the conclusion false, as construed in the propositional logic.</p>
+<p>However, intuitively this argument <em>is</em> formally valid. Propositional logic does not represent the <em>internal</em> structure of an atomic sentence. And it is by virtue of logical features of the structure of these atomic sentences that this argument is formally valid. So we need a more detailed formal language to represent this kind of argument.</p>
+<h2 id="the-language-of-predicate-calculus-vocabulary-and-syntax">The Language of Predicate Calculus: Vocabulary and Syntax</h2>
+<p><strong>Vocabulary</strong></p>
+<ul>
+<li><p>Logical Connectives: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∧</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∨</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≡</mo></mrow><annotation encoding="application/x-tex">\equiv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46375em;"></span><span class="strut bottom" style="height:0.46375em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≡</span></span></span></span>.</p></li>
+<li><p>Individual Constants: lower case letters of the alphabet toward the beginning (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">a, b, c,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mpunct">,</span></span></span></span> …)</p></li>
+<li><p>Predicates: upper case letters (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">A, B, C, ..., Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.07153em;">Z</span></span></span></span>)</p></li>
+<li><p>Individual Variables: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span></p></li>
+<li><p>Quantifiers: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi></mrow><annotation encoding="application/x-tex">\forall</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span></span></span></span> (universal quantifier); <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi></mrow><annotation encoding="application/x-tex">\exists</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∃</span></span></span></span> (existential quantifier)</p></li>
+</ul>
+<p>The language of predicate calculus retains all of the logical vocabulary of propositional logic but replaces atomic sentences with predicate and individual constants and variables, and quantifiers.</p>
+<h4 id="individual-constants">Individual Constants</h4>
+<p><em>Individual constants</em> name individuals: persons, places, things</p>
+<h4 id="predicates">Predicates</h4>
+<p><em>Predicates</em> ascribe properties and relations to individuals. One place predicates, called monadic predicates, assign properties to single individuals. For instance, being human. Two place predicates, called dyadic predicates, assign relations to pairs of individuals. For instance, being taller than. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span>-place <em>polyadic</em> predicates assign relations between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span>-individuals. The argument place matters for polyadic predicates. Examples:</p>
+<table>
+<thead>
+<tr><th style="text-align:left">PC</th><th style="text-align:left">English</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Hs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">s</span></span></span></span></td><td style="text-align:left">Socrates is human.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">s</span></span></span></span></td><td style="text-align:left">Socrates is mortal.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>s</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Tsp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">s</span><span class="mord mathit">p</span></span></span></span></td><td style="text-align:left">Socrates is taller than Plato.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Tps</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">p</span><span class="mord mathit">s</span></span></span></span></td><td style="text-align:left">Plato is taller than Socrates.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mi>c</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Bcp</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">c</span><span class="mord mathit">p</span></span></span></span></td><td style="text-align:left">Changchun is bigger than Portland.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mi>a</mi><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">Babc</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">a</span><span class="mord mathit">b</span><span class="mord mathit">c</span></span></span></span></td><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> is between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span>.</td></tr>
+</tbody>
+</table>
+<h4 id="singular-sentences">Singular Sentences</h4>
+<p>These statements, which assign properties to named individuals are called <em>singular sentences</em>, similar to propositional logic’s atomic sentences. Every singular sentence is well-formed.</p>
+<h4 id="compound-sentences">Compound Sentences</h4>
+<p>Just like in propositional logic, we can translate compound sentences by using the logical connectives. These have the same syntax and semantics we studied previously. Compound sentences are well-formed.</p>
+<table>
+<thead>
+<tr><th style="text-align:left">PC</th><th style="text-align:left">English</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>s</mi><mo>∧</mo><mi>P</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Gs \land Ps</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">G</span><span class="mord mathit">s</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord mathit">s</span></span></span></span></td><td style="text-align:left">Socrates was a Greek philosopher.</td></tr>
+<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>s</mi><mo>→</mo><mi>M</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Hs \rightarrow Ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">s</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">s</span></span></span></span></td><td style="text-align:left">If Socrates is human then Socrates is mortal.</td></tr>
+</tbody>
+</table>
+<h4 id="variables-and-quantifiers">Variables and Quantifiers</h4>
+<p>Recall the argument we began with. It contains the premise <code>All humans are mortal</code>. How should we translate this into a sentence of propositional calculus? Here is where we need to use variables, since the sentence states that all individuals which are humans are mortals. Notice here that the quantifier <code>all</code> is employed. We should translate this sentence as:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>H</mi><mi>x</mi><mo>→</mo><mi>M</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Hx \rightarrow Mx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p>
+<p>That is, <code>for all x if x is a human, then x is mortal</code>.</p>
+<p>Similarly, the existential quantifier is used in the following example:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi><mi>x</mi><mi>H</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\exists x Hx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span></span></span></span></p>
+<p>That is, <code>there exists an x such that x is a human</code>.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi mathvariant="normal">∃</mi><mi>x</mi><mi>U</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\neg \exists x Ux</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord mathit">x</span></span></span></span></p>
+<p><code>Unicorns do not exist.</code></p>
+<p>A quantifier must always be paired with a variable. We say that a quantifier <code>binds</code> a variable when it is paired in this way.</p>
+<p>Sentences may also have multiple quantifiers binding different variables.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi mathvariant="normal">∃</mi><mi>y</mi><mo>(</mo><mo>(</mo><mi>B</mi><mi>x</mi><mo>∧</mo><mi>W</mi><mi>y</mi><mo>)</mo><mo>→</mo><mi>E</mi><mi>x</mi><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x \exists y ((Bx \land Wy) \rightarrow Exy)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathrm">∃</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></p>
+<p><code>Every bird eats some worm.</code></p>
+<p>Quantifiers have scope.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∃</mi><mi>x</mi><mi>H</mi><mi>x</mi><mo>∧</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mi>B</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\exists x Hx \land \exists x Bx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span></span></span></span></p>
+<p><code>Some human exists and some bird exists.</code></p>
+<p>Notice each existential quantifier here binds an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>. However, the scope of the first existential quantifier ends before the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∧</span></span></span></span>. So there is no ambiguity about which <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span> is being bound by which quantifier.</p>
+<p>The following is an example of quantifier scope ambiguity.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>P</mi><mi>x</mi><mo>→</mo><mi mathvariant="normal">∃</mi><mi>x</mi><mo>(</mo><mi>Q</mi><mi>x</mi><mo>∧</mo><mi>R</mi><mi>x</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x(Px \rightarrow \exists x (Qx \land Rx))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit">Q</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p>
+<p>It is ambiguous which quantifier binds the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>es in the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">Qx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span><span class="mord mathit">x</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">Rx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mord mathit">x</span></span></span></span>. In such cases choose another variable letter to disambiguate.</p>
+<h4 id="free-variables">Free variables</h4>
+<p>Notice that the sentence <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">Hx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span></span></span></span> is not a complete sentence. What could this say? When would it be true and when would it be false?</p>
+<p>If a variable is not bound by a quantifier in a sentence, then we call it a <code>free variable</code>. The sentence is then not a complete sentence, i.e. it does not have a truth value since it does not have any truth conditions.</p>
+<h1 id="predicate-calculus-translation-practice">Predicate Calculus Translation Practice</h1>
+<ol>
+<li><p>Mary loves everyone</p></li>
+<li><p>Mary loves everyone</p></li>
+<li><p>No one talks</p></li>
+<li><p>Everyone loves themself</p></li>
+<li><p>Everyone loves everyone</p></li>
+<li><p>Everyone loves everyone except themself</p></li>
+<li><p>Every student smiles</p></li>
+<li><p>Every student except George smiles</p></li>
+<li><p>Everyone walks or talks</p></li>
+<li><p>Every student walks or talks</p></li>
+<li><p>Every student who walks talks</p></li>
+<li><p>Every student who loves Mary is happy</p></li>
+<li><p>Every boy who loves Mary hates every boy who Mary loves:</p></li>
+<li><p>Every boy who loves Mary hates every other boy who Mary loves:</p></li>
+</ol>
+<h2 id="answers">Answers</h2>
+<ol>
+<li><p>Mary loves everyone: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi>L</mi><mi>m</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\forall x Lmx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit">x</span></span></span></span></p></li>
+<li><p>Mary loves everyone: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>H</mi><mi>x</mi><mo>→</mo><mi>L</mi><mi>m</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Hx \rightarrow Lmx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> (Assuming domain contains non-humans)</p></li>
+<li><p>No one talks: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi mathvariant="normal">∃</mi><mi>x</mi><mi>T</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\neg \exists x Tx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathrm">∃</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">x</span></span></span></span></p></li>
+<li><p>Everyone loves themself: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi>L</mi><mi>x</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\forall x Lxx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">x</span></span></span></span></p></li>
+<li><p>Everyone loves everyone: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi mathvariant="normal">∀</mi><mi>y</mi><mi>L</mi><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">\forall x \forall y Lxy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span></p></li>
+<li><p>Everyone loves everyone except themself: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi mathvariant="normal">∀</mi><mi>y</mi><mo>(</mo><mi>x</mi><mo>≠</mo><mi>y</mi><mo>↔</mo><mi>L</mi><mi>x</mi><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x \forall y (x \ne y \leftrightarrow Lxy)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">↔</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every student smiles: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>S</mi><mi>x</mi><mo>→</mo><mi>M</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Sx \rightarrow Mx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every student except George smiles: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mo>(</mo><mi>S</mi><mi>x</mi><mo>∧</mo><mi>x</mi><mo>≠</mo><mi>g</mi><mo>)</mo><mo>→</mo><mi>M</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x((Sx \land x \ne g) \rightarrow Mx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">x</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span><br>
+This allows the possibility that George smiles too; if we want to exclude that we might want something like this: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>S</mi><mi>x</mi><mo>→</mo><mo>(</mo><mi>x</mi><mo>≠</mo><mi>g</mi><mo>↔</mo><mi>M</mi><mi>x</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x(Sx \rightarrow (x \ne g \leftrightarrow Mx))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mrel">↔</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>. \textit{All students are such that they smile if and only if they are not identical to George.}</p></li>
+<li><p>Everyone walks or talks: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>W</mi><mi>x</mi><mo>∨</mo><mi>T</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Wx \lor Tx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mord mathit">x</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every student walks or talks: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>S</mi><mi>x</mi><mo>→</mo><mo>(</mo><mi>W</mi><mi>x</mi><mo>∨</mo><mi>T</mi><mi>x</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Sx \rightarrow (Wx \lor Tx))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mord mathit">x</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every student who walks talks: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mo>(</mo><mi>S</mi><mi>x</mi><mo>∧</mo><mi>W</mi><mi>x</mi><mo>)</mo><mo>→</mo><mi>T</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x((Sx \land Wx) \rightarrow Tx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every student who loves Mary is happy: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mo>(</mo><mi>S</mi><mi>x</mi><mo>∧</mo><mi>L</mi><mi>x</mi><mi>m</mi><mo>)</mo><mo>→</mo><mi>H</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x((Sx \land Lxm) \rightarrow Hx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p></li>
+<li><p>Every boy who loves Mary hates every boy who Mary loves:<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>[</mo><mo>(</mo><mi>B</mi><mi>x</mi><mo>∧</mo><mi>L</mi><mi>x</mi><mi>m</mi><mo>)</mo><mo>→</mo><mo>(</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo>(</mo><mi>B</mi><mi>y</mi><mo>∧</mo><mi>L</mi><mi>m</mi><mi>y</mi><mo>)</mo><mo>→</mo><mi>H</mi><mi>x</mi><mi>y</mi><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">\forall x[(Bx \land Lxm) \rightarrow (\forall y(By \land Lmy) \rightarrow Hxy)]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">[</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">]</span></span></span></span> or by Exportation<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi mathvariant="normal">∀</mi><mi>y</mi><mo>[</mo><mo>(</mo><mo>(</mo><mi>B</mi><mi>x</mi><mo>∧</mo><mi>L</mi><mi>x</mi><mi>m</mi><mo>)</mo><mo>∧</mo><mo>(</mo><mi>B</mi><mi>y</mi><mo>∧</mo><mi>L</mi><mi>m</mi><mi>y</mi><mo>)</mo><mo>)</mo><mo>→</mo><mi>H</mi><mi>x</mi><mi>y</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">\forall x\forall y[((Bx \land Lxm) \land (By \land Lmy)) \rightarrow Hxy]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">[</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">]</span></span></span></span></p></li>
+<li><p>Every boy who loves Mary hates every other boy who Mary loves:<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>{</mo><mo>[</mo><mo>(</mo><mi>B</mi><mi>x</mi><mo>∧</mo><mi>L</mi><mi>x</mi><mi>m</mi><mo>)</mo><mo>→</mo><mi mathvariant="normal">∀</mi><mi>y</mi><mo>(</mo><mo>(</mo><mi>B</mi><mi>y</mi><mo>∧</mo><mi>L</mi><mi>m</mi><mi>y</mi><mo>)</mo><mo>∧</mo><mi>y</mi><mo>≠</mo><mi>x</mi><mo>)</mo><mo>]</mo><mo>→</mo><mi>H</mi><mi>x</mi><mi>y</mi><mo>)</mo><mo>}</mo></mrow><annotation encoding="application/x-tex">\forall x\{[(Bx \land Lxm) \rightarrow \forall y((By \land Lmy) \land y \ne x)] \rightarrow Hxy)\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">{</span><span class="mopen">[</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">≠</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">]</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">}</span></span></span></span> or<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mi mathvariant="normal">∀</mi><mi>y</mi><mo>{</mo><mo>[</mo><mo>(</mo><mi>B</mi><mi>x</mi><mo>∧</mo><mi>L</mi><mi>x</mi><mi>m</mi><mo>)</mo><mo>∧</mo><mo>(</mo><mo>(</mo><mi>B</mi><mi>y</mi><mo>∧</mo><mi>L</mi><mi>m</mi><mi>y</mi><mo>)</mo><mo>∧</mo><mi>x</mi><mo>≠</mo><mi>y</mi><mo>)</mo><mo>]</mo><mo>→</mo><mi>H</mi><mi>x</mi><mi>y</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">\forall x\forall y \{[(Bx \land Lxm) \land ((By \land Lmy) \land x \ne y)] \rightarrow Hxy\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mord mathrm">∀</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mopen">{</span><span class="mopen">[</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">x</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">x</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">∧</span><span class="mord mathit">L</span><span class="mord mathit">m</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mord mathit">x</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">]</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">}</span></span></span></span><br>
+If John loves Mary and Mary loves John, 13 says that John hates himself, but 14 does not.</p></li>
+</ol>
+<h1 id="natural-deduction-with-quantifiers">Natural Deduction with Quantifiers</h1>
+<p>There are four quantifier rules that we need for extending our natural deduction system to predicate calculus. We need introduction and elimination rules for each of the two quantifiers. You can find an explanation of these rules at the following pdf:</p>
+<p><a href="QuantifierRules.pdf">Quantifier Rules</a></p>
+<blockquote>
+<p>All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>H</mi><mi>x</mi><mo>→</mo><mi>M</mi><mi>x</mi><mo>)</mo><mo separator="true">,</mo><mi>H</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\forall x (Hx \rightarrow Mx), Hs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">s</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊢</mo><mi>M</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\vdash Ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">⊢</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">s</span></span></span></span></p>
+</blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>r</mi><mi>o</mi><mi>o</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">Proof</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span>:</p>
+<table>
+<thead>
+<tr><th></th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∀</mi><mi>x</mi><mo>(</mo><mi>H</mi><mi>x</mi><mo>→</mo><mi>M</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\forall x (Hx \rightarrow Mx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∀</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">x</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></td><td></td><td>Premise</td></tr>
+<tr><td>2</td><td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Hs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">s</span></span></span></span></td><td></td><td>Premise</td></tr>
+<tr><td>3</td><td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>s</mi><mo>→</mo><mi>M</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Hs \rightarrow Ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit">s</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">s</span></span></span></span></td><td>1</td><td>UI</td></tr>
+<tr><td>4</td><td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">s</span></span></span></span></td><td>2, 3</td><td>MP</td></tr>
+</tbody>
+</table>
+<h2 id="predicate-calculus-proof-exercises">Predicate Calculus Proof Exercises</h2>
+
+
+  </body>
+  
+</html>
