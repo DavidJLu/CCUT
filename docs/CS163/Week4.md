@@ -93,4 +93,16 @@ In this example, the only node which is unbalanced is node \#3, because the dept
 
 #### Binary Search Tree Property
 
-The binary search tree property holds that the key/data in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree.
+The binary search tree property holds that the key/data in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree. This property must hold for the BST at all times. We saw how to enforce this during insertion in our insert function.
+
+Consider what needs to be done to maintain the property when we remove a node from the BST. What is the pseudocode to remove an item?
+
+BST Complexity
+------
+
+Algorithm |		Average	| Worst Case
+:--|:--:|:--:
+Space	  |	$\mathcal{O}(n)$      |$\mathcal{O}(n)$  
+Search	|	$\mathcal{O}(\log n)$  |$\mathcal{O}(n)$  
+Insert	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
+Delete	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
