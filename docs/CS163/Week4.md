@@ -40,7 +40,7 @@ void sortedInsert(node *&head, int data)
 ```
 
 #### An Error in Our Code!
-We ended class before we could finish debugging the code for a function which takes a linear linked list and an int $n$, and deletes all occurrences of $n$ from the list recursively. Here is that code. Try to find our mistake and correct it!
+We ended class before we could finish debugging the code for a function which takes a linear linked list and an int $n$, and deletes all occurrences of $n$ from the list recursively. Here is that code. Try to find our mistake and correct it! Think about whether we want a bool return. Think about what we need to do with our recursive call.
 
 ```c++
 bool deleteAllN(node *&head, int N)
@@ -90,12 +90,46 @@ An easy way to determine balance by a recursive function to find the maximum dep
 
 In this example, the only node which is unbalanced is node \#3, because the depth of its left side is 0, and the depth of the right side is 2. Subtracting 2 from 0 yields –2, thus that node is unbalanced. Note that node \#1, the root, is considered balanced, since the maximum height level of both of its’ children is 3. This raises an important point: You cannot check just the root node for balancing, because it may be balanced but its child nodes may not be. Therefore, every node in the tree must be balanced in order for the tree to be considered balanced. The example tree above can be easily balanced by giving node \#3 a left child.
 
+#### Graph Isomorphism
+Two binary trees are isomorphic just if one tree can be transformed into the other through a series of swapping the left child and right child of any nodes. The following is an example:
 
-#### Binary Search Tree Property
+![Isomorphic Trees](graphisomorphism.png)
+
+Here's a function that checks to see if two binary trees are isomorphic in this way:
+
+```c++
+bool isIsomorphic(node* r1, node *r2)
+{
+   // Both roots are NULL, trees isomorphic by definition
+   if (r1 == NULL && r2 == NULL)
+      return true;
+
+   // Exactly one of the n1 and n2 is NULL, trees not isomorphic
+   if (r1 == NULL || r2 == NULL)
+      return false;
+
+   // If the data in the trees are not the same, trees are not isomorphic
+   if (r1->data != r2->data)
+      return false;
+
+   // There are two possible cases for r1 and r2 to be isomorphic
+   // Case 1: The subtrees rooted at these nodes have NOT been swapped.
+   // Both of these subtrees have to be isomorphic, hence the &&
+   // Case 2: The subtrees rooted at these nodes have been swapped
+   return (isIsomorphic(r1->left, r2->left) &&
+    isIsomorphic(r1->right, r2->right)) ||
+     (isIsomorphic(r1->left, r2->right) &&
+      isIsomorphic(r1->right, r2->left));
+}
+```
+
+### Binary Search Tree Property
 
 The binary search tree property holds that the key/data in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree. This property must hold for the BST at all times. We saw how to enforce this during insertion in our insert function.
 
 Consider what needs to be done to maintain the property when we remove a node from the BST. What is the pseudocode to remove an item?
+
+
 
 BST Complexity
 ------
