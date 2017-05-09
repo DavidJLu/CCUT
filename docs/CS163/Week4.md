@@ -129,7 +129,20 @@ The binary search tree property holds that the key/data in each node must be gre
 
 Consider what needs to be done to maintain the property when we remove a node from the BST. What is the pseudocode to remove an item?
 
+### Binary Search Tree Delete
+Deleting an item from a binary search tree is a complicated matter. This is because after we remove the data, we need to make sure the tree maintains the binary search tree property. How should the pseudocode go?
 
+```python
+def delete(root, data)
+  if root = None
+    return
+  if root->data = data
+    ???
+  else
+    ???
+```
+
+Now try it in C++.
 
 BST Complexity
 ------
