@@ -144,6 +144,56 @@ def delete(root, data):
 
 Now try it in C++.
 
+This is what we saw in class. There was a segfault in one of our test cases. Can you find the bug?
+
+```c++
+void helperDelete(node *&root, int data)
+{
+    if(!root)   // Base case
+        return;
+    if(root->data == data)
+    {
+        if(root->left && root->right)   // If node has two children
+        {
+            node * curr = root->right;
+            node * prev = root;
+            while(curr->left)   // Find inorder successor
+            {
+                prev = curr;
+                curr = curr->left;
+            }
+            root->data = curr->data;  // Swap inorder successor with root
+            if(prev == root->right)   // Keep rest of subtree
+                prev->left = curr->right;
+            else
+                prev->right = curr->right;
+            delete curr;    // Delete that node
+        }
+        else if(root->left || root->right)
+        {   // Node has only one child
+            node *temp = root;
+            if(root->left)  // It's the left child
+                root = root->left;
+            else            // It's the right child
+                root = root->right;
+            delete temp;
+        }      
+        else if(!root->left && !root->right)
+        {   // If node is a leaf with no children
+            delete root;
+            root = NULL;
+        }
+    }
+    else
+    {   // If data not found here, then check appropriately
+        if(data < root->data)
+            helperDelete(root->left, data);
+        else
+            helperDelete(root->right, data);
+    }
+}
+```
+
 BST Complexity
 ------
 
