@@ -208,8 +208,10 @@ To show that an argument is invalid, we need to be able to create a model where 
 Predicate Calculus Argument Exercises
 -------
 
-1. $\forall x(Fx \rightarrow Gx)$
-$\exists x(Hx \land \neg Gx))$
-$\therefore \exists x(Hx \land \neg Fx)$
+1. $\forall x(Fx \rightarrow Gx)$, $\exists x(Hx \land \neg Gx))$ $\vdash \exists x(Hx \land \neg Fx)$
 
 2. $\vdash \exists x (Fx \lor Gx)) \leftrightarrow (\exists x Fx \lor \exists x G)$
+
+3. $\vdash (\forall x(Px \rightarrow Qx) \land \exists x Px) \rightarrow \exists x Qx$
+
+4. $\vdash \forall x(Px \rightarrow Qx) \rightarrow (\exists x Px \rightarrow \exists x Qx)$
