@@ -171,7 +171,7 @@ void helperDelete(node *&root, int data)
         }
         else if(root->left || root->right)
         {   // Node has only one child
-            node *temp = root;
+            node * temp = root;
             if(root->left)  // It's the left child
                 root = root->left;
             else            // It's the right child
@@ -203,3 +203,11 @@ Space	  |	$\mathcal{O}(n)$      |$\mathcal{O}(n)$
 Search	|	$\mathcal{O}(\log n)$  |$\mathcal{O}(n)$  
 Insert	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
 Delete	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
+
+More Practice Problems
+-----
+* Find an item in the tree
+* Delete an entire tree and free the memory
+* Delete all the items less than or greater than $n$ from the tree
+* Make a copy of the tree
+* Balance the tree
