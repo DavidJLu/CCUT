@@ -194,6 +194,16 @@ void helperDelete(node *&root, int data)
 }
 ```
 
+The bug was inside the case where root has two children. Here is the fixed portion of that code:
+
+```c++
+if(prev == root)   // Keep rest of subtree
+    prev->right = curr->right;
+else
+    prev->left = curr->right;
+delete curr;    // Delete that node
+```
+
 BST Complexity
 ------
 
