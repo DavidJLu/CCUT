@@ -9,6 +9,9 @@ Location: Changchun, Jilin, China
 
 ![binary](binary.jpg)
 
+I hope to see you at PSU in the fall!
+
+
 CS163
 ----
 * [Week 1](CS163/Lecture1.html) (updated 5/1/17)
