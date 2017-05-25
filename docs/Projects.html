@@ -81,6 +81,9 @@
 .mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
   color: #C3E88D;
 }
+.mpe-syntax--constant.mpe-syntax--language.mpe-syntax--null {
+  color: #FF5370;
+}
 .mpe-syntax--variable {
   color: #EEFFFF;
 }
@@ -167,8 +170,8 @@
 .mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
   color: #82AAFF;
 }
-.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
-  color: #B2CCD6;
+.mpe-syntax--support.mpe-syntax--type {
+  color: #FFCB6B;
 }
 .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
   color: #FFCB6B;
@@ -271,6 +274,13 @@
   box-sizing: border-box;
   background-color: rgba(238, 255, 255, 0.1);
   box-shadow: inset 0 -1px 0 #009688;
+}.markdown-preview-enhanced pre .spell-check-misspelling .region {
+  z-index: auto;
+}
+.mpe-syntax--jsx.mpe-syntax--component {
+  color: #F07178;
+}.markdown-preview-enhanced pre .mpe-syntax--source.mpe-syntax--js.mpe-syntax--jsx .mpe-syntax--jsx .mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
+  font-style: normal;
 }
 .mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
   color: #89DDF3;
@@ -279,10 +289,13 @@
   color: #73d1c8;
 }
 .mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
+  color: #F78C6A;
+}
+.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--numeric {
   color: #FFE082;
 }
 .mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
-  color: #F78C6A;
+  color: #FFE082;
 }
 .mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
   color: currentColor;
@@ -290,10 +303,53 @@
 .mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
   color: #B2CCD6;
 }
-.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
+.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--id {
   color: #C792EA;
 }
-.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
+.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--delimiter {
+  color: #89DDF3;
+}
+.mpe-syntax--css .mpe-syntax--punctuation.mpe-syntax--delimiter + .mpe-syntax--constant.mpe-syntax--numeric:not(.mpe-syntax--color) {
+  color: #F78C6A;
+}
+[data-grammar*="gfm"] .mpe-syntax--markup.mpe-syntax--underline.mpe-syntax--link {
+  color: #ff869a;
+}
+[data-grammar*="gfm"] .mpe-syntax--markup.mpe-syntax--underline.mpe-syntax--link span.mpe-syntax--punctuation {
+  color: #FF5370;
+}
+[data-grammar*="gfm"] .mpe-syntax--markup.mpe-syntax--strike {
+  position: relative;
+  color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .mpe-syntax--markup.mpe-syntax--strike::after {
+  content: "";
+  position: absolute;
+  top: calc(54%);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .mpe-syntax--table .mpe-syntax--border {
+  color: rgba(238, 255, 255, 0.5);
+}
+[data-grammar*="gfm"] .mpe-syntax--markup.mpe-syntax--heading {
+  color: #82AAFF;
+}
+[data-grammar*="gfm"] .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--begin,
+[data-grammar*="gfm"] .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--end {
+  color: #82AAFF;
+}
+[data-grammar*="gfm"] .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--begin + span:not(.mpe-syntax--function.mpe-syntax--parameter) {
+  color: #9cbbff;
+}
+.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype,
+.mpe-syntax--jsx .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
+  color: #C792EA;
+}
+.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag,
+.mpe-syntax--jsx .mpe-syntax--punctuation.mpe-syntax--tag {
   color: #89DDF3;
 }
 .mpe-syntax--js .mpe-syntax--constant {
@@ -301,6 +357,9 @@
 }
 .mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
   color: #EEFFFF;
+}
+.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property.mpe-syntax--dom {
+  color: #82AAFF;
 }
 .mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
   color: #FFCB6B;
@@ -311,11 +370,26 @@
 .mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
   color: #EEFFFF;
 }
+.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object.mpe-syntax--property {
+  color: #82AAFF;
+}
+.mpe-syntax--js .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--template .mpe-syntax--other.mpe-syntax--object.mpe-syntax--property {
+  color: #C3E88D;
+}
 .mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
   color: #F78C6A;
 }
 .mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
   color: #F07178;
+}
+.mpe-syntax--js .mpe-syntax--punctuation.mpe-syntax--begin,
+.mpe-syntax--js .mpe-syntax--punctuation.mpe-syntax--end,
+.mpe-syntax--js .mpe-syntax--delimiter.mpe-syntax--object.mpe-syntax--comma,
+.mpe-syntax--js .mpe-syntax--brace.mpe-syntax--curly {
+  color: #89DDF3;
+}
+.mpe-syntax--js .mpe-syntax--export .mpe-syntax--variable.mpe-syntax--default {
+  color: #C792EA;
 }
 .mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
   color: #C3E88D;
@@ -966,7 +1040,7 @@
 <li><p><a href="Projects/Scheduler.html">HW1: Scheduler</a></p></li>
 </ul>
 <hr>
-</p><p><sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.</sub></p></li>
+</p><p><sub> Assignments gathered here are used with permission, inspired by actual assignments or curated and lightly edited from publically available PSU course webpages.</sub></p></li>
 </ul>
 
 

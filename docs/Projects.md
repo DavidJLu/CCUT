@@ -48,4 +48,4 @@ Many PSU CS courses typically post about 5 assignments through the 10 week term.
 * [<span style="color:pink">CS333 Introduction to Operating Systems:](https://www.pdx.edu/computer-science/cs333)
   * [HW1: Scheduler](Projects/Scheduler.html)
   -----
-  <sub> Assignments gathered here are curated and lightly edited from publically available PSU course webpages.
+  <sub> Assignments gathered here are used with permission, inspired by actual assignments or curated and lightly edited from publically available PSU course webpages.
