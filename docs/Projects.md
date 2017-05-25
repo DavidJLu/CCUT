@@ -8,7 +8,7 @@ David Lu
 
 Examples
 ------
-Here is a curated and lightly edited collection of programming projects that are assigned to computer science students at Portland State University.
+Here is a collection of programming projects that are similar to those assigned to computer science students at Portland State University.
 
 Many PSU CS courses typically post about 5 assignments through the 10 week term. So you can estimate when an assignment was posted by its number. For example a HW3, would likely have been posted about midway through the term.
 
