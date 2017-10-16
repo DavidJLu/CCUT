@@ -41,6 +41,7 @@ Location: Changchun, Jilin, China
 -----
 
 #### Blog
+* [Slides About the PSU-CCUT CS Partnership](Blog/CCUTintro.ppt)
 * [Building Your Own Keyboard](Blog/Keyboard/Keyboard.html) (updated 10/12/17)
 
 ------
