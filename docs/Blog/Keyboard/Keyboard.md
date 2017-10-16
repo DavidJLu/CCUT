@@ -2,8 +2,6 @@ Building a Custom Mechanical Keyboard
 =======
 By David Lu
 
-$A \rightarrow B$
-
 ![Completed](DustCover.jpg)
 
 ### Why?
@@ -61,15 +59,29 @@ I purchased many of the parts from China!
 
 The Build
 ------
-Here's the plate and pcb.
+Here's the plate and PCB.
 
 ![Plate and PCB](PlatePCB.jpg)
 
+The plate is what holds the switches in place. This determines the layout of the keyboard. This particular plate has a slightly shorter than usual left shift, resulting in the entire *z* row shifted to the left slightly. This will allow placement of a dedicated arrow cluster on the bottom right.
 
+The PCB contains the circuitry and microcontroller needed. It's also possible to hand-wire a keyboard if no PCB is compatible with the layout you desire. Notice this PCB is compatible with many layouts on the bottom two rows.
+
+![PCB closeup](PCBclose.jpg)
+
+The first step to assembling a keyboard is to install stabilizers for the longer keys. You'll want to test fit them before you clip them in.
+
+![Stabilizers](Stabs.jpg)
+
+While you're at it, test fit the layout of the bottom row.
+
+![Bottom Row](BottomRow.jpg)
 
 Lessons
 =======
 
-Explore, modify, and build things that you enjoy; Learn
+There are two lessons I hope you might learn from this blog post. Neither are about keyboards.
+
+First, I hope that you will be motivated to explore, modify, and build things that you're interested in. This is a great way to have fun and learn.
 
 Write up and document your projects
