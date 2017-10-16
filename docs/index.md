@@ -3,17 +3,20 @@
 PSU CS Guest Lectures at CCUT
 =====
 Instructor: David Lu [dlu (at) pdx.edu]
-Dates: 4/17/17 - 5/12/17
 Location: Changchun, Jilin, China
 [MCECS Special Programs: Changchun 2+2 Partnership](https://www.pdx.edu/cecs/changchun-partnership-22-programs)
 
 ![binary](binary.jpg)
 
-I hope to see you at PSU in the fall!
+>The best way to learn to program is by practice! PSU CS students get lots of practice. Click the link to see a sample list of assignments.
+>[Example PSU CS Programming Assignments](Projects.html)
+
+#### CS161 -- Introduction to Programming and Problem Solving
+* [Week 1](CS161/Week1.html) (updated 10/10/17)
 
 
-CS163
-----
+#### CS163 -- Data Structures
+
 * [Week 1](CS163/Lecture1.html) (updated 5/1/17)
 * [Week 2](CS163/Week2.html) (updated 4/26/17)
 * [Week 3](CS163/Week3.html) (updated 5/2/17)
@@ -21,17 +24,25 @@ CS163
 * [Linear Linked List Practice Code](CS163/LLLPracticeCode.html)
 * [Binary Search Tree Practice Code](CS163/BSTPracticeCode.html)
 
->The best way to learn to program is by practice! PSU CS students get lots of practice. Click the link to see a sample list of assignments.
->[Example PSU CS Programming Assignments](Projects.html)
+---------------
 
-CS251
-----
+#### CS250 -- Discrete Structures I
+
+* [Week 1](CS250/Week1.html) (10/10/17)
+
+#### CS251 -- Discrete Structures II
+
 * [Week 1](CS251/Week1.html) (updated 4/30/17)
 * [Week 2](CS251/Week2.html) (updated 4/26/17)
 * [Week 3](CS251/Week3.html) (updated 4/26/17)
 * [Week 4](CS251/Week4.html) (updated 5/10/17)
 
 -----
+
+#### Blog
+* [Building Your Own Keyboard](Blog/Keyboard/Keyboard.html) (updated 10/12/17)
+
+------
 These pages are under constant construction, so check back often for updates.
 
 <Sub>I'm hosted with GitHub Pages and created in Markdown with KaTeX math rendering.
