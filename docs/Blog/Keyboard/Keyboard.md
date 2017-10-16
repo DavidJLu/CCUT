@@ -81,7 +81,7 @@ Once we're happy with the fit, we can begin soldering. The switches should be cl
 
 ![Soldering](Soldering.jpg)
 
-Notice that I'm missing a stabilizer on the left shift. This caused a great headache later on after many switches were soldered. Since the stabilizers are also sandwiched between the PCB and plate, removing or adding a stabilizer requires taking this sandwich apart, which means desoldering a great number of switches. I ended up solving this problem by using a hair dryer to desolder entire areas at once.
+Notice that I'm missing a stabilizer on the left shift. This caused a great headache later on after many switches were soldered. Since the stabilizers are also sandwiched between the PCB and plate, removing or adding a stabilizer requires taking this sandwich apart, which means desoldering everything. I ended up solving this problem by using a hair dryer to desolder entire areas at once.
 
 Once I was done with the switches, I decided to put in individual 3mm LEDs for each key. The circuitry is already supported by the PCB.
 
@@ -107,7 +107,7 @@ And now we'e done assembling!
 
 ![All done](AllDone.jpg)
 
-Since the PCB contains an Atmega32u4 8-bit microcontroller, it's fully programmable with its C compiler. I flashed the keyboard with the open source [QMK keyboard firmware](https://github.com/qmk/qmk_firmware) and it's ready to go. 
+Since the PCB contains an Atmega32u4 8-bit microcontroller, it's fully programmable with its C compiler. I flashed the keyboard with the open source [QMK keyboard firmware](https://github.com/qmk/qmk_firmware) and it's ready to go.
 
 -------
 
