@@ -69,19 +69,55 @@ The PCB contains the circuitry and microcontroller needed. It's also possible to
 
 ![PCB closeup](PCBclose.jpg)
 
-The first step to assembling a keyboard is to install stabilizers for the longer keys. You'll want to test fit them before you clip them in.
+The first step to assembling a keyboard is to install stabilizers for the longer keys. We'll want to test fit them before you clip them in.
 
 ![Stabilizers](Stabs.jpg)
 
-While you're at it, test fit the layout of the bottom row.
+While we're at it, test fit the layout of the bottom row.
 
 ![Bottom Row](BottomRow.jpg)
 
-Lessons
+Once we're happy with the fit, we can begin soldering. The switches should be clipped into the plate with its two contacts fitting the PCB. When soldered the switches will be sandwiched between the PCB and the plate. Solder the corners first so that the sandwich is tight.
+
+![Soldering](Soldering.jpg)
+
+Notice that I'm missing a stabilizer on the left shift. This caused a great headache later on after many switches were soldered. Since the stabilizers are also sandwiched between the PCB and plate, removing or adding a stabilizer requires taking this sandwich apart, which means desoldering a great number of switches. I ended up solving this problem by using a hair dryer to desolder entire areas at once.
+
+Once I was done with the switches, I decided to put in individual 3mm LEDs for each key. The circuitry is already supported by the PCB.
+
+![LEDs](LEDleads.jpg)
+
+Here it is with switches and LEDs soldered.
+
+![Soldering Done](Switches.jpg)
+
+Plug it in to test everything.
+
+![Testing](Lights.jpg)
+
+Now we'll install it into the case.
+
+![In the case](InCase.jpg)
+
+Next we'll place the keycaps on each switch.
+
+![Keycaps!](Keycaps.jpg)
+
+And now we'e done assembling!
+
+![All done](AllDone.jpg)
+
+Since the PCB contains an Atmega32u4 8-bit microcontroller, it's fully programmable with its C compiler. I flashed the keyboard with the open source [QMK keyboard firmware](https://github.com/qmk/qmk_firmware) and it's ready to go. 
+
+-------
+
+Lesson
 =======
 
 There are two lessons I hope you might learn from this blog post. Neither are about keyboards.
 
-First, I hope that you will be motivated to explore, modify, and build things that you're interested in. This is a great way to have fun and learn.
+First: explore, modify, and build things that you're interested in and have a passion for. This is a great way to have fun and learn at the same time. Many programmers got their start programming by exploring, modifying, and creating video games.
 
-Write up and document your projects
+Second: write up and document your projects. You should do this for your personal projects as well as your school projects. It doesn't have to be long or very detailed. It doesn't even have to be very good writing. The purpose is to reflect on what you've done and what went well and what went wrong.
+
+-David
