@@ -2,6 +2,8 @@ Building a Custom Mechanical Keyboard
 =======
 By David Lu
 
+$A \rightarrow B$
+
 ![Completed](DustCover.jpg)
 
 ### Why?
