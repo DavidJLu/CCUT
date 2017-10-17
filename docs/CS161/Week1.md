@@ -64,3 +64,5 @@ Computer programs -- also called *applications* or *apps* -- tell computers what
 To begin programming, we have to speak a language the computer understands. Computers need step-by-step instructions, and they can only understand certain languages like the Python above or the C++ you will learn this year.
 
 We'll get started next time with C++. Bring you computers to class so you can experiment with code too!
+
+-----------------
