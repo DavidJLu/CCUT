@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <title>Week1</title>
+      <title>Week1Day2</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -208,62 +208,53 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <h1>CS161 at CCUT Week 1: Introductions</h1>
-<p>Course Title: CS161 – Introduction to Programming and Problem Solving</p>
-<p>Instructor: David Lu</p>
-<p>Some facts about me:</p>
-<ul>
-<li>Born and grew up in the US (mostly in New York, near New York city)</li>
-<li>Went to college at the <a href="https://www.buffalo.edu/">University at Buffalo</a>, which is located in upstate NY, near Canada.</li>
-<li>Graduated with a BA in Philosophy</li>
-<li>Worked on a PhD in Philosophy at <a href="https://www.syracuse.edu/">Syracuse University</a> (also located in upstate NY - central), specializing in metaphysics and philosophical methodology</li>
-<li>Taught philosophy courses on ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University</li>
-</ul>
-<p>Here are some pictures of SU:<br>
-<img src="SUpan.jpg" alt="Syracuse University Panoramic"></p>
-<p>The building housing the philosophy department:<br>
-<img src="SUfall.jpg" alt="Hall of Languages in the Fall"></p>
-<ul>
-<li>Now I teach discrete math, introduction to C++, and ethics for computing at Portland State University</li>
-</ul>
-<p><img src="PSUlibrary.jpg" alt="PSU Library"></p>
-<p><img src="PSUiso.jpg" alt="PSU Overhead"></p>
-<ul>
-<li>This is my 3rd year participating in the PSU–CCUT partnership program</li>
-<li>Oldest of three: one younger brother and one younger sister</li>
-</ul>
-<h3 class="mume-header" id="course-purpose-and-goals">Course Purpose and Goals</h3>
-
-<p>The goal of CS161 is to introduce students to programming concepts and practices.</p>
-<p>Computer programming is a crucial skill that everyone should be learning. We use computers to solve problems, play games, work more effectively, automate tasks, connect with people around the world, and many other examples.</p>
-<p>Everyone can learn to program. It’s somewhat like solving a puzzle. Learning to program is exciting if you’re willing to try new things and to explore. Try taking some code and modifying it, seeing what happens with the resulting program. Even if it breaks, you’ll learn something new by trying to fix it. Let’s try running the following Python code.</p>
-<pre class="language-Python"><span class="token keyword">import</span> turtle   
-colors<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'purple'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">,</span>
-        <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'yellow'</span><span class="token punctuation">,</span> <span class="token string">'orange'</span><span class="token punctuation">]</span>
-t<span class="token operator">=</span>turtle<span class="token punctuation">.</span>Pen<span class="token punctuation">(</span><span class="token punctuation">)</span>
-turtle<span class="token punctuation">.</span>bgcolor<span class="token punctuation">(</span><span class="token string">'grey'</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> x <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">360</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    t<span class="token punctuation">.</span>pencolor<span class="token punctuation">(</span>colors<span class="token punctuation">[</span>x<span class="token operator">%</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    t<span class="token punctuation">.</span>width<span class="token punctuation">(</span>x<span class="token operator">/</span><span class="token number">100</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
-    t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span>x<span class="token punctuation">)</span>        
-    t<span class="token punctuation">.</span>left<span class="token punctuation">(</span><span class="token number">59</span><span class="token punctuation">)</span>
-</pre>
-<p>Now let’s change some of the values. What happens?</p>
-<p>Experimenting with code is a great way to learn how programs work; it’s even more fun if you work with a friend.</p>
+      <h1>CS161 at CCUT Week 1: Day 2</h1>
+<p>Before we return to C++, let’s play around with that Python example from last time and see how parts of the program work and what happens when we modify it a bit.</p>
 <blockquote>
-<p>Side note on programming languages:<br>
-In this course, you have been learning C++. In an introductory class, I prefer to teach Python. So I may show you some motivating examples in Python that are a bit too complicated to implement in C++ for beginners.</p>
+<p>Python is free and easy to get from the Python website: <a href="http://www.python.org">www.python.org</a><br>
+So if you’d like to learn Python, go to the website’s Downloads area and download and install Python 3 and the IDLE editor.</p>
+<p>Python is an interpreted language rather than a compiled one. IDLE is a program that’s used to type and run our Python programs.</p>
+<p>You can test your installation by starting IDLE and running a simple program.<br>
+Start IDLE and type <code>Print(&quot;Hello World&quot;)</code> and then press enter.</p>
 </blockquote>
-<p>Computer programs – also called <em>applications</em> or <em>apps</em> – tell computers what to do. A web app can tell a computer how to keep track of the things you buy; a game app might tell a computer how to display a battlefield with players on it; and the simple app above tells the computer to draw a colorful spiral. Apps can be thousands or millions of lines of code, or they can be just a few lines of code like above.</p>
-<p>To begin programming, we have to speak a language the computer understands. Computers need step-by-step instructions, and they can only understand certain languages like the Python above or the C++ you will learn this year.</p>
-<p>Bring you computers to class so you can experiment with code too!</p>
+<p>In Python, <code>Turtle graphics</code> is a library that allows us to draw basic pictures. It’s a great tool for introducing beginning programmers to programming concepts.</p>
+<p>Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an <code>import turtle</code>, give it the command <code>turtle.forward(100)</code>, and it moves (on-screen!) 100 pixels in the direction it is facing, drawing a line as it moves. Give it the command <code>turtle.right(90)</code>, and it rotates in-place 90 degrees clockwise.</p>
+<p>By combining together these and similar commands, we can draw shapes and pictures.</p>
+<p>What do you think the following bit of code does?</p>
+<pre class="language-Py"><span class="token keyword">import</span> turtle
+
+t <span class="token operator">=</span> turtle<span class="token punctuation">.</span>Turtle<span class="token punctuation">(</span><span class="token punctuation">)</span>
+turtle<span class="token punctuation">.</span>bgcolor<span class="token punctuation">(</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>color<span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Draw foward 100 pixels</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># Rotate clockwise by 90 degrees</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
+</pre>
+<p>Let’s consider it line by line.</p>
+<p>Remember, <code>import turtle</code> allows us to use the turtle graphics library’s functions. Importing code that’s already written is one of the coolest things about programming. If you program something interesting and useful, you can share it with other people or reuse it yourself. Some Python programmers built a <em>library</em> to help other programmers use turtle graphics even though turtle graphics are originally from the Logo programming language from the 1960s! So <code>import turtle</code> allows your program to use the code that those programmers wrote. Cool!</p>
+<blockquote>
+<p>As you should already know, this can be done in C++ too. Your professor has shown you how to import the iostream library so that you can get input from the keyboard and output to the screen. In C++ you type <code>#include &lt;iostream&gt;</code>. This allows you to use the code that someone else wrote in order to output <code>Hello World</code> to the screen with the statement <code>cout &lt;&lt; &quot;Hello World&quot;;</code></p>
+</blockquote>
+<p>The next line <code>t = turtle.Turtle()</code> declares the variable <code>t</code> to be a turtle. What this means is that we can use <code>t</code> to draw lines. Don’t worry about this line of code for now.</p>
+<p>The next two lines set the color of the background on the canvas and the color of the line drawn by our turtle. Again, don’t worry too much about these lines. You can play around with their values and see how things change if you like. Try substituting a white background or a different color. You can find what color strings are recognized online, or you can specify the RGB as a comma separated tuple.</p>
+<p>The next line <code>t.forward(100) # Draw foward 100 pixels</code> is interesting. This line says to move the turtle 100 pixels forward, drawing a line along the way. The turtle starts out in the center of the canvas facing right by default.</p>
+<p>The <code>#</code> specifies a comment. Anything after the <code>#</code> on this line will not be interpreted as code by the computer. Comments are useful to explain what is going on with the code written and why it was written this way. It’s a way to document the code for people who look at the code in the future. This is an important thing to do, since we want to be able to maintain our programs.</p>
+<p><code>t.right(90)</code> tells our turtle to turn right 90 degrees.</p>
+<p>The next 3 pairs of lines do the same as the last two lines we inspected. Draw a line 100 pixels then turn 90 degrees. This draws a square!</p>
+<p>How would we modify this to make a hexagon (6 sided polygon)?</p>
 <hr>
 
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#course-purpose-and-goals">Course Purpose and Goals</a></li>
-</ul>
-</div>
+      <div class="md-sidebar-toc"></div>
       <a id="sidebar-toc-btn">≡</a>
     </body>
     

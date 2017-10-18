@@ -12,7 +12,7 @@ Location: Changchun, Jilin, China
 >[Example PSU CS Programming Assignments](Projects.html)
 
 #### CS161 -- Introduction to Programming and Problem Solving
-* [Week 1](CS161/Week1.html) (updated 10/10/17)
+* [Week 1](CS161/Week1.html) | [Day 2](CS161/Week1Day2.html) (updated 10/18/17)
 
 
 

@@ -49,20 +49,13 @@ Now let's change some of the values. What happens?
 
 Experimenting with code is a great way to learn how programs work; it's even more fun if you work with a friend.
 
-```
-Side note on programming Languages
-
-In this program, we will learn C++.
-However, I encourage you to try other languages too.
-In an introductory class, I prefer to teach Python.
-I may show you some Python examples, like above to
-illustrate certain points.
-```
+>Side note on programming languages:
+In this course, you have been learning C++. In an introductory class, I prefer to teach Python. So I may show you some motivating examples in Python that are a bit too complicated to implement in C++ for beginners.
 
 Computer programs -- also called *applications* or *apps* -- tell computers what to do. A web app can tell a computer how to keep track of the things you buy; a game app might tell a computer how to display a battlefield with players on it; and the simple app above tells the computer to draw a colorful spiral. Apps can be thousands or millions of lines of code, or they can be just a few lines of code like above.
 
 To begin programming, we have to speak a language the computer understands. Computers need step-by-step instructions, and they can only understand certain languages like the Python above or the C++ you will learn this year.
 
-We'll get started next time with C++. Bring you computers to class so you can experiment with code too!
+Bring you computers to class so you can experiment with code too!
 
 -----------------

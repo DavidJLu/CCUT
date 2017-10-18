@@ -39,7 +39,24 @@ The goals of the course are listed below:
 1. Find closed form solutions for simple recurrences using the techniques of substitution, cancellation, and generating functions.
 1. Demonstrate standard proof techniques and the technique of inductive proof by writing short informal proofs about simple properties of numbers, sets, and ordered structures.
 
+-------
 
+You should have had an introduction to set theory by now. Let's do a quick recap and take a look at the next topic: relations.
+
+
+
+
+
+### Introduction to Relations
+
+Let $A = \{a_1, a_2, ..., a_k\}$ and $B = \{b_1, b_2, ..., b_m\}$
+
+Recall that a **Cartesian product** $A \times B$ is defined by a set of pairs $\{(a_1, b_1), (a_1, b_2), ..., (a_1, b_m), ..., (a_k, b_m)\}$.
+
+A **Cartesian product** defines a product set, or a set of all ordered arrangements of elements in sets in the Cartesian product.
+
+#### Binary relations
+Definition: Let $A$ and $B$ be two sets. A binary relation from $A$ to $B$ is a subset of a Cartesian product $A \times B$.
 
 
 
