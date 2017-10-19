@@ -62,7 +62,15 @@ How would we modify this to make a hexagon (6 sided polygon)?
 
 
 -------
+You can download these Python programs here:
 
+[NiceHexSpiral.py](NiceHexSpiral.py)
+[Square.py](Square.py)
+[SquareLoop.py](SquareLoop.py)
+[Star.py](Star.py)
+[StarColor.py](StarColor.py)
+[Polygon.py](Polygon.py)
+[PolygonSides.py](PolygonSides.py)
 
 
 
