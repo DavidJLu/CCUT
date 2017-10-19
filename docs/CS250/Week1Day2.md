@@ -14,6 +14,39 @@ A **Cartesian product** defines a product set, or a set of all ordered arrangeme
 #### Binary relations
 Definition: Let $A$ and $B$ be two sets. A binary relation from $A$ to $B$ is a subset of a Cartesian product $A \times B$.
 
+* Let $R \subseteq A \times B$ mean $R$ is a set of ordered pairs of the form $(a, b)$ where $a \in A$ and $b \in B$.
+* We use the notation $aRb$ or sometimes $Rab$ to denote $(a, b) \in R$.
+* If $aRb$, we say that $a$ is related to $b$ by $R$.
 
+>Example: Let $A=\{a, b, c\}$ and $B = \{1, 2, 3\}$.
+> * Is $R = \{(a, 1), (b, 2), (c, 2)\}$ a relation from $A$ to $B$?
+> * Is $Q = \{(1, a), (2, b)\}$ a relation from $A$ to $B$?
+> * Is $P = \{(a, a), (b, c), (b, a)\}$ a relation from $A$ to $A$?
+
+#### Representing binary relations
+We can represent a binary relation graphically as follows:
+
+if $a R b$ then draw and arrow from $a$ to $b$ to form the following graph.
+
+$a \rightarrow b$
+
+> Example:
+> * Let $A = \{0, 1, 2\}$, $B = \{u, v\}$ and $R = \{(0, u), (0, v), (1, v), (2, u)\}$.
+> * Is it true that $R \subseteq A \times B$?
+> * Draw the graph.
+
+We can also represent a binary relation $R$ by a *table* showing the ordered pairs of R.
+
+Let $A = \{0, 1, 2\}$, $B = \{u, v\}$ and $R = \{(0, u), (0, v), (1, v), (2, u)\}$.
+
+The table looks like this:
+
+R   |u  |v
+|---|---|---
+0   | 1 | 1
+1   | 0 | 1
+2   | 1 | 0
+
+Relations represent *one to many relationships* between elements in $A$ and $B$.
 
 -------
