@@ -11,7 +11,9 @@ Before we return to C++, let's play around with that Python example from last ti
 >You can test your installation by starting IDLE and running a simple program.
 >Start IDLE and type `Print("Hello World")` and then press enter.
 
-In Python, `Turtle graphics` is a library that allows us to draw basic pictures. It's a great tool for introducing beginning programmers to programming concepts.
+Python is a widely used *high-level programming language*, created by Guido van Rossum in 1991. Python is an interpreted language, and has a design philosophy that emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly brackets or keywords). It also has a syntax that allows programmers to express concepts in fewer lines of code than might be used in languages such as C++ or Java.
+
+In Python, `Turtle graphics` is a library that allows us to draw basic pictures. It's a great tool for introducing beginning programmers to programming concepts. You can find the documentation at [https://docs.python.org/3.2/library/turtle.html](https://docs.python.org/3.2/library/turtle.html)
 
 Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an `import turtle`, give it the command `turtle.forward(100)`, and it moves (on-screen!) 100 pixels in the direction it is facing, drawing a line as it moves. Give it the command `turtle.right(90)`, and it rotates in-place 90 degrees clockwise.
 
