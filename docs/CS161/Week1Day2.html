@@ -250,7 +250,39 @@ t<span class="token punctuation">.</span>right<span class="token punctuation">(<
 <p>The <code>#</code> specifies a comment. Anything after the <code>#</code> on this line will not be interpreted as code by the computer. Comments are useful to explain what is going on with the code written and why it was written this way. It’s a way to document the code for people who look at the code in the future. This is an important thing to do, since we want to be able to maintain our programs.</p>
 <p><code>t.right(90)</code> tells our turtle to turn right 90 degrees.</p>
 <p>The next 3 pairs of lines do the same as the last two lines we inspected. Draw a line 100 pixels then turn 90 degrees. This draws a square!</p>
-<p>How would we modify this to make a hexagon (6 sided polygon)?</p>
+<p>How would we modify this to make a hexagon (6 sided polygon)? Let’s modify the program and try it together.</p>
+<blockquote>
+<p>Hint: Think about what angles you need for a hexagon.</p>
+</blockquote>
+<p>Although these programs are not long, we might notice that some parts of our code looks a lot like other parts of our code. A principle that we try to follow when writing good programs is <em>do not repeat yourself</em></p>
+<blockquote>
+<p>Don’t Repeat Yourself (DRY)</p>
+</blockquote>
+<p>In this case, there is a better solution using loops. A loop statement in programming allows us to execute some other statement a number of times.</p>
+<p>The syntax of a loop in Python looks like this:</p>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  do a
+  do b
+</pre>
+<p>This code will do <code>a</code> then <code>b</code> x number of times. Each time through the loop, <code>n</code>, which is called a counter, gets incremented by 1. The expression <code>range(x)</code> gives us an integer beginning with <code>0</code> and incrementing to <code>x-1</code> each time through the loop.</p>
+<blockquote>
+<p>Test it yourself if you have the IDLE running. Test the following code. What do you think will happen? What happens?</p>
+</blockquote>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+</pre>
+<p>Loops are the first excellent way to follow the DRY principle. They allow us to execute repetitive tasks with many fewer lines of code.</p>
+<p>Notice that the print line of this code is indented. Python marks code blocks through white space (tabs, spaces, etc…). So the body of this loop, the statements which will get executed multiple times, is whatever is contained in the body. What happens with the following bit of code?</p>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"World"</span><span class="token punctuation">)</span>
+</pre>
+<p>Again, notice that the second print statement is not indented. What do you tink will happen? What happens?</p>
+<p>Let’s take a look at the implementation of the square drawing program using a loop.</p>
+<blockquote>
+<p>In C++, the syntax for loops are a bit different but the semantics are basically the same. In fact, there are 3 ways to write a loop in C++. We’ll take a look at these later.</p>
+</blockquote>
+<p>Here are some other interesting Python turtle programs. Let’s explore them together.</p>
 <hr>
 <p>You can download these Python programs here:</p>
 <p><a href="NiceHexSpiral.py">NiceHexSpiral.py</a><br>

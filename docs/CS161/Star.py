@@ -9,3 +9,5 @@ t.width(5)
 for i in range(50):
     t.forward(150)
     t.right(144)
+
+turtle.done()

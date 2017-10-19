@@ -57,9 +57,48 @@ The `#` specifies a comment. Anything after the `#` on this line will not be int
 
 The next 3 pairs of lines do the same as the last two lines we inspected. Draw a line 100 pixels then turn 90 degrees. This draws a square!
 
-How would we modify this to make a hexagon (6 sided polygon)?
+How would we modify this to make a hexagon (6 sided polygon)? Let's modify the program and try it together.
 
+> Hint: Think about what angles you need for a hexagon.
 
+Although these programs are not long, we might notice that some parts of our code looks a lot like other parts of our code. A principle that we try to follow when writing good programs is *do not repeat yourself*
+
+> Don't Repeat Yourself (DRY)
+
+In this case, there is a better solution using loops. A loop statement in programming allows us to execute some other statement a number of times.
+
+The syntax of a loop in Python looks like this:
+```py
+for n in range(x):
+  do a
+  do b
+```
+This code will do `a` then `b` x number of times. Each time through the loop, `n`, which is called a counter, gets incremented by 1. The expression `range(x)` gives us an integer beginning with `0` and incrementing to `x-1` each time through the loop.
+
+> Test it yourself if you have the IDLE running. Test the following code. What do you think will happen? What happens?
+
+```py
+for n in range(4):
+  print(n)
+```
+
+Loops are the first excellent way to follow the DRY principle. They allow us to execute repetitive tasks with many fewer lines of code.
+
+Notice that the print line of this code is indented. Python marks code blocks through white space (tabs, spaces, etc...). So the body of this loop, the statements which will get executed multiple times, is whatever is contained in the body. What happens with the following bit of code?
+
+```py
+for n in range(4):
+  print("Hello")
+print("World")
+```
+
+Again, notice that the second print statement is not indented. What do you tink will happen? What happens?
+
+Let's take a look at the implementation of the square drawing program using a loop.
+
+>In C++, the syntax for loops are a bit different but the semantics are basically the same. In fact, there are 3 ways to write a loop in C++. We'll take a look at these later.
+
+Here are some other interesting Python turtle programs. Let's explore them together.
 
 -------
 You can download these Python programs here:
