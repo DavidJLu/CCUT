@@ -95,6 +95,23 @@ Examples:
 * $|\{\varnothing\}| = 1$
 * The set of integers Z is infinite.
 
+#### Power Sets
+
+>Definition
+The set of all subsets of a set $S$ is called the power set of $S$.
+
+* It is denoted by $\wp (S)$.
+* Formally: $\wp(S) = \{S' \mid S' \subseteq S\}$
+* In particular, $S \in \wp(S)$ and $\varnothing \in \wp(S)$.
+* Example: $\wp(\{a, b\}) = \{\varnothing, \{a\}, \{b\}, \{a, b\}\}$
+* If $|S| = n$ then $|\wp(S)| = 2^n$
+
+#### Tuples
+* The ordered $n$-tuple $(a_1, a_2, ... , a_n)$ is the ordered collection of $n$ elements, where $a_1$ is the first, $a_2$ the second, etc., and an the $n$-th (i.e., the last).
+* Two $n$-tuples are equal iff their corresponding elements are equal.
+$(a_1, a_2, ... , a_n) = (b_1, b_2, ... , b_n) \leftrightarrow a_1 = b_1 \land a_2 = b_2 \land ...  \land a_n = b_n$
+* 2-tuples are called ordered pairs
+
 ------
 ### Introduction to Relations
 
