@@ -15,7 +15,34 @@ You should have had an introduction to set theory by now. Let's do a quick recap
 * Dots “. . . ” may be used to describe a set without listing all of the members when the pattern is clear. $S = \{a, b, c, d, . . . , z\}$ or $S = \{5, 6, 7, . . . , 20\}$.
 * Try not to overuse this. Patters are not always as clear as the writer thinks
 
+#### Important sets
+$\mathbb{B}$ = Boolean values = $\{true, false\}$
+$\mathbb{N}$ = natural numbers = $\{0, 1, 2, 3, . . . \}$
+$\mathbb{Z}$ = integers = $\{. . . , -3, -2, -1, 0, 1, 2, 3, . . . \}$
+$\mathbb{Z}+$ = $\mathbb{Z}\geq 1$ = positive integers = $\{1, 2, 3, . . . \}$
+$\mathbb{R}$ = set of real numbers
+$\mathbb{R}+$ = $\mathbb{R} > 0$ = set of positive real numbers
+$\mathbb{C}$ = set of complex numbers
+$\mathbb{Q}$ = set of rational numbers
 
+#### Set Builder Notation
+Another way of describing a set is to specify the property (or properties) that all members of the set must satisfy. We use a pipe, '$\mid$', to read "such that."
+
+* $S = \{x \mid$ x is a positive integer less than 100 $\}$
+* $S = \{x \mid x \in \mathbb{Z}+$ and $x < 100\}$
+* $S = \{x \in \mathbb{Z}+ \mid x < 100\}$
+* A predicate can be used, e.g., $S = \{x \mid P(x)\}$ where $P(x)$ is true iff $x$ is a prime number.
+* Positive rational numbers $\mathbb{Q}+ = \{x \in \mathbb{R} \mid \exists p, q \in \mathbb{Z}+ x = p/q\}$
+
+#### Interval Notation
+We can use interval notation to describe subsets of sets upon which an order is defined, e.g., numbers.
+* $[a, b] = \{x \mid a \leq x \leq b\}$
+* $[a, b) = \{x \mid a \leq x < b\}$
+* $(a, b] = \{x \mid a < x \leq b\}$
+* $(a, b) = \{x \mid a < x < b\}$
+* closed interval $[a, b]$
+* open interval $(a, b)$
+* half-open intervals $[a, b)$ and $(a, b]$
 ------
 ### Introduction to Relations
 
@@ -36,6 +63,8 @@ Definition: Let $A$ and $B$ be two sets. A binary relation from $A$ to $B$ is a 
 > * Is $R = \{(a, 1), (b, 2), (c, 2)\}$ a relation from $A$ to $B$?
 > * Is $Q = \{(1, a), (2, b)\}$ a relation from $A$ to $B$?
 > * Is $P = \{(a, a), (b, c), (b, a)\}$ a relation from $A$ to $A$?
+
+> Exercise: List all of the binary relations on the set $\{0, 1\}$
 
 #### Representing binary relations
 We can represent a binary relation graphically as follows:
