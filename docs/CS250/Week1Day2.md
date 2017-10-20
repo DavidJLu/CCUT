@@ -57,6 +57,43 @@ Symbolized by $\varnothing$ or $\{\}$.
 $\{\{1, 2, 3\}, a, \{u\}, \{b, c\}\}$
 * The empty set is different from the set containing the empty set $\varnothing \neq \{\varnothing\}$
 
+#### Subsets and Set Equality
+>Definition:
+Set $A$ is a subset of set $B$ iff every element of $A$ is also an element of
+$B$.
+
+* Formally: $A \subseteq B \leftrightarrow \forall x(x \in A \rightarrow x \in B)$
+* In particular, $\varnothing \subseteq S$ and $S \subseteq S$ for every set $S$.
+
+>Definition:
+Two sets A and B are equal iff they have the same elements.
+
+* Formally: $A = B \leftrightarrow A \subseteq B \land B \subseteq A$.
+* Example: {1, 5, 5, 5, 3, 3, 1} = {1, 3, 5} = {3, 5, 1}.
+
+#### Proper Subsets
+>Definition:
+A is a proper subset of B iff A ⊆ B and A 6= B.
+
+* This is denoted by $A \subset B$.
+* $A \subset B$ can be expressed by
+$\forall x(x \in A \rightarrow x \in B) \land \exists x(x \in B \land x \notin A)$
+
+#### Set Cardinality
+>Definition:
+If there are exactly $n$ distinct elements in a set $S$, where $n$ is a nonnegative integer, we say that $S$ is finite. Otherwise it is infinite.
+
+>Definition
+The cardinality of a finite set $S$, denoted by $|S|$, is the number of
+(distinct) elements of $S$.
+
+
+Examples:
+* $|\varnothing| = 0$
+* Let S be the set of letters of the English alphabet. Then $|S| = 26$.
+* $|\{1, 2, 3\}| = 3$
+* $|\{\varnothing\}| = 1$
+* The set of integers Z is infinite.
 
 ------
 ### Introduction to Relations
