@@ -2,7 +2,21 @@
 
 You should have had an introduction to set theory by now. Let's do a quick recap and take a look at the next topic: relations.
 
+#### Sets
+* A set is an unordered collection of objects, e.g., students in this class; air molecules in this room.
+* The objects in a set are called the elements, or members of the set. A set is said to contain its elements.
+* The notation $x \in S$ denotes that $x$ is an element of the set $S$.
+* If $x$ is not a member of $S$, write $x \notin S$.
 
+#### Describing sets
+* $S = \{a, b, c, d\}$.
+* Order not important $S = \{a, b, c, d\} = \{b, c, a, d\}$.
+* Each distinct object is either a member or not; listing more than once does not change the set. $S = \{a, b, c, d\} = \{a, b, c, b, c, d\}$.
+* Dots “. . . ” may be used to describe a set without listing all of the members when the pattern is clear. $S = \{a, b, c, d, . . . , z\}$ or $S = \{5, 6, 7, . . . , 20\}$.
+* Try not to overuse this. Patters are not always as clear as the writer thinks
+
+
+------
 ### Introduction to Relations
 
 Let $A = \{a_1, a_2, ..., a_k\}$ and $B = \{b_1, b_2, ..., b_m\}$

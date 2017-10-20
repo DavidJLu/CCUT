@@ -1,8 +1,9 @@
 #Star.py
+#David Lu
 import turtle 
 
 t = turtle.Turtle()
-turtle.bgcolor('black')
+turtle.bgcolor('white')
 t.color('green')
 t.width(5)
 
