@@ -43,6 +43,21 @@ We can use interval notation to describe subsets of sets upon which an order is 
 * closed interval $[a, b]$
 * open interval $(a, b)$
 * half-open intervals $[a, b)$ and $(a, b]$
+
+#### Universal Set and Empty Set
+
+* The universal set $U$ is the set containing everything currently under consideration.
+  * Content depends on the context.
+  * Sometimes explicitly stated, sometimes implicit.
+* The empty set is the set with no elements.
+Symbolized by $\varnothing$ or $\{\}$.
+
+#### Things to remember
+* Sets can be elements of other sets, e.g.,
+$\{\{1, 2, 3\}, a, \{u\}, \{b, c\}\}$
+* The empty set is different from the set containing the empty set $\varnothing \neq \{\varnothing\}$
+
+
 ------
 ### Introduction to Relations
 
