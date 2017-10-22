@@ -9,3 +9,5 @@ for x in range(360):
     #t.width(x/100+1)
     t.forward(100)        
     t.left(123)
+
+t.exitonclick()

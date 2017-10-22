@@ -1,3 +1,5 @@
+#David Lu
+
 from turtle import * 	# Makes code look a bit cleaner
 
 def curvemove():     	# A function!
@@ -15,4 +17,4 @@ curvemove()
 forward(111.65)
 end_fill()
 exitonclick()			# Exit on click once done.
-#done()	
+

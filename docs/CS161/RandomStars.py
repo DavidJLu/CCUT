@@ -1,4 +1,6 @@
-import turtle as tu
+# David Lu
+
+import turtle as tu         # What's different between this and the ones we've seen?
 import random as rn
 def draw_star(x, y, color, side):
     tu.color(color)
@@ -30,4 +32,4 @@ for k in range(stars):
     x, y  = random_xy_coord()
     draw_star(x, y, color, side)
 # keep showing until window corner x is clicked
-tu.done()
+tu.exitonclick()

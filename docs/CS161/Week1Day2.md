@@ -112,6 +112,11 @@ You can download these Python programs here:
 [StarColor.py](StarColor.py)
 [Polygon.py](Polygon.py)
 [PolygonSides.py](PolygonSides.py)
+[Spiralgraph.py](Spiralgraph.py)
+[Heart.py](Heart.py)
+[Honeycomb.py](Honeycomb.py)
+[RandomStars.py](RandomStars.py)
+[Circles.py](Circles.py)
 
 
 
