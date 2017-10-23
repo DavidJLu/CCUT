@@ -29,7 +29,8 @@ Location: Changchun, Jilin, China
 
 #### CS250 -- Discrete Structures I
 
-* [Week 1](CS250/Week1.html) | [Day 2](CS250/Week1Day2.html) (updated 10/18/17)
+* [Week 1](CS250/Week1.html) (updated 10/15/17)
+* [Week 2](CS250/Week2.html) (updated 10/23/17)
 
 #### CS251 -- Discrete Structures II
 
