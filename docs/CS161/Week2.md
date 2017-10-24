@@ -32,23 +32,18 @@ Remember that color codes begin with `#` and use a six digit hexadecimal number,
 Below you will find a list of statements patterns that you are allowed to use. You will generally need to first assign values to the variables before you can use the statements. Or you can replace the variables directly with numbers.
 
 * `t.forward(x)`
-
 Moves the turtle foward `x` pixels in the direction it's facing.
 
 * `t.right(x)`
-
 Turns the turtle `x` degrees right.
 
 * `t.left(x)`
-
 Turns the turtle `x` degrees left.
 
 * `t.width(x)`
-
 Sets the width of the drawn line to `x` pixels.
 
 * `t.color(x)`
-
 Sets the color of the drawn line to `x`. `x` must be a color code or a color string.
 
 * `t.fillcolor(x)`
@@ -57,19 +52,15 @@ Sets the color of the drawn line to `x`. `x` must be a color code or a color str
   ``---> Your code here <---``
 
   `t.end_fill()`
-
 Sets the fill color and fills in a shape that's drawn between the begin_fill() and end_fill() statements with that color.
 
 * `t.penup()`
-
 Turtle will not draw when it moves until pendown() statement is executed.
 
 * `t.pendown()`
-
 Turtle will draw a line when it moves. This happens by default.
 
 * `t.goto(x,y)`
-
 Turtle will jump to the coordinates `(x, y)` without drawing.
 
 * For loops:
@@ -79,13 +70,10 @@ Turtle will jump to the coordinates `(x, y)` without drawing.
 [tab]>More code in the loop <---
 >Code outside of the loop <---
 ```
-
-Be sure to indent with a tab for the code you want inside the loop. This will execute the statements inside the loop `x` times with `i` starting at `0` and incrementing to `x-1`. `x` can be a number, but `i` must be a variable.
+>Be sure to indent with a tab for the code you want inside the loop. This will execute the statements inside the loop `x` times with `i` starting at `0` and incrementing to `x-1`. `x` can be a number, but `i` must be a variable.
 
 * `colors=["red","green","purple"]`
-
 Creates a list of colors. You can have more than these three. The statement `colors[0]` accesses the first item of the list, in this case `"red"`. You can use this in conjunction with `t.color(colors[i%3])` to cycle through the colors in the list each time through a loop.
 
 * Arithmetic expressions:
-
 You may use any arithmetic expressions you'd like, such as `x = y/z`.
