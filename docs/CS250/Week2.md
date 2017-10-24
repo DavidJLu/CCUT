@@ -147,7 +147,7 @@ A **Cartesian product** defines a product set, or a set of all ordered arrangeme
 > * Does $A \times B = B \times A$?
 
 #### Binary Relations
-Definition: Let $A$ and $B$ be two sets. A binary relation from $A$ to $B$ is a subset of a Cartesian product $A \times B$.
+Definition: Let $A$ and $B$ be two sets. A binary relation, $R$ from $A$, called the *domain* to $B$, called the *codomain* is a subset of a Cartesian product $A \times B$.
 
 * Let $R \subseteq A \times B$ mean $R$ is a set of ordered pairs of the form $(a, b)$ where $a \in A$ and $b \in B$.
 * We use the notation $aRb$ or sometimes $Rab$ to denote $(a, b) \in R$.
@@ -188,7 +188,7 @@ Relations represent *one to many relationships* between elements in $A$ and $B$.
 
 -------
 
-### Review: Types of Relation
+### Types of Relation
 
 * **Empty Relation**: A relation $R$ on a set $A$ is called Empty if the set $A$ is empty set.
 * **Full Relation**: A binary relation $R$ on a set $A$ and $B$ is called full if $A \times B$.
