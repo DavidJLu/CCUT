@@ -15,4 +15,4 @@ for i in range(num_sides):
     shape.forward(side_length)
     shape.right(angle)
     
-turtle.done()
+turtle.exitonclick()

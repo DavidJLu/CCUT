@@ -2,6 +2,8 @@
 
 You should have had an introduction to set theory by now. Let's do a quick recap and take a look at the next topic: relations.
 
+
+
 #### Sets
 * A set is an unordered collection of objects, e.g., students in this class; air molecules in this room.
 * The objects in a set are called the elements, or members of the set. A set is said to contain its elements.
@@ -56,6 +58,21 @@ Symbolized by $\varnothing$ or $\{\}$.
 * Sets can be elements of other sets, e.g.,
 $\{\{1, 2, 3\}, a, \{u\}, \{b, c\}\}$
 * The empty set is different from the set containing the empty set $\varnothing \neq \{\varnothing\}$
+
+#### Problems with Set Theory
+
+While sets seem quite intuitive, there are certain deep mathematical problems.
+
+>Russell’s Paradox
+(Named after philosopher, Bertrand Russell (1872–1970))
+
+Naive set theory contains contradictions.
+* Let $S$ be the set of all sets which are not members of themselves.
+$S = \{S \mid S' \notin S'\}$
+* “Is S a member of itself?”, i.e., $S \in S$ ?
+
+* Russell's Barber Paradox:
+“A barber shaves all people in town who do not shave themselves, but no one else." So who shaves the barber?
 
 #### Subsets and Set Equality
 >Definition:
@@ -112,8 +129,11 @@ The set of all subsets of a set $S$ is called the power set of $S$.
 $(a_1, a_2, ... , a_n) = (b_1, b_2, ... , b_n) \leftrightarrow a_1 = b_1 \land a_2 = b_2 \land ...  \land a_n = b_n$
 * 2-tuples are called ordered pairs
 
+
 ------
 ### Introduction to Relations
+
+#### Cartesian Products
 
 Let $A = \{a_1, a_2, ..., a_k\}$ and $B = \{b_1, b_2, ..., b_m\}$
 
@@ -121,7 +141,12 @@ Recall that a **Cartesian product** $A \times B$ is defined by a set of pairs $\
 
 A **Cartesian product** defines a product set, or a set of all ordered arrangements of elements in sets in the Cartesian product.
 
-#### Binary relations
+> Exercise: Let $A = \{1, 2\}$ and $B = \{a, b, c\}$.
+> * What is $A \times B$?
+> * What is $B \times A$?
+> * Does $A \times B = B \times A$?
+
+#### Binary Relations
 Definition: Let $A$ and $B$ be two sets. A binary relation from $A$ to $B$ is a subset of a Cartesian product $A \times B$.
 
 * Let $R \subseteq A \times B$ mean $R$ is a set of ordered pairs of the form $(a, b)$ where $a \in A$ and $b \in B$.
@@ -162,3 +187,15 @@ R   |u  |v
 Relations represent *one to many relationships* between elements in $A$ and $B$.
 
 -------
+
+### Review: Types of Relation
+
+* **Empty Relation**: A relation $R$ on a set $A$ is called Empty if the set $A$ is empty set.
+* **Full Relation**: A binary relation $R$ on a set $A$ and $B$ is called full if $A \times B$.
+* **Reflexive Relation**: A relation $R$ on a set $A$ is called reflexive if $(a, a) \in R$ holds for every element $a \in A$, e.g. if set $A = \{a, b\}$ then $R = \{(a, a), (b, b)\}$ is reflexive relation.
+* **Irreflexive relation**: A relation $R$ on a set $A$ is called reflexive if no $(a, a) \in R$ holds for every element $a \in A$, e.g. if set $A = \{a, b\}$ then $R = \{(a, b), (b, a)\}$ is irreflexive relation.
+* **Symmetric Relation**: A relation $R$ on a set $A$ is called symmetric if $(b, a) \in R$ holds when $(a, b) \in R$, e.g. The relation $R=\{(4, 5), (5, 4), (6, 5), (5, 6)\}$ on set $A=\{4, 5, 6\}$ is symmetric.
+* **Anti-Symmetric Relation**: A relation $R$ on a set $A$ is called anti-symmetric if $(a, b) \in R$ and $(b, a) \in R$ then $a = b$ is called antisymmetric, e.g. The relation $R = \{(a, b) \rightarrow R \mid a \leq b\}$ is anti-symmetric since $a \leq b$ and $b \leq a$ implies $a = b$.
+* **Transitive Relation**: A relation $R$ on a set $A$ is called transitive if $(a, b) \in R$ and $(b, c) \in R$ then $(a, c) \in R$ for all $a, b, c \in A$, e.g. Relation $R=\{(1, 2), (2, 3), (1, 3)\}$ on set $A=\{1, 2, 3\}$ is transitive.
+* **Equivalence Relation**: A relation is an Equivalence Relation if it is reflexive, symmetric, and transitive. E.g. relation $R=\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3), (3, 2), (1, 3), (3, 1)\}$ on set $A=\{1, 2, 3\}$ is equivalence relation as it is reflexive, symmetric, and transitive.
+* **Asymmetric Relation**: Asymmetric relation is opposite of symmetric relation. A relation $R$ on a set $A$ is called asymmetric if no $(b, a) \in R$ when $(a,b) \in R$.
