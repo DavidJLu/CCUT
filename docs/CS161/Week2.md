@@ -6,8 +6,9 @@ Before we leave Python and the turtle library and look toward C++, everyone shou
 
 >Exercise:
 Form a small group. Your task is to discuss with your group, design, and write a turtle program that draws a picture. It cannot be something I've shown you. You are limited to the types of statements below.
+**Be ready to show the rest of the class what your program does.**
 
-Programming is a creative exercise. It's good practice to explore and modify someone else's program, but you should also be able to create your own program. Try to think of something new. **Don't just copy or memorize other people's code.**
+Programming is a creative exercise. It's good practice to explore and modify someone else's program, but you should also be able to create your own program. Try to think of something new. *Don't just copy or memorize other people's code.*
 
 Open IDLE and click on `file` to bring the drop down menu and click `new file`. This will open a text editor in which you can write your program.
 
