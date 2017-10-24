@@ -186,8 +186,7 @@ R   |u  |v
 
 Relations represent *one to many relationships* between elements in $A$ and $B$.
 
-#### Theorem: The number of binary relations on a set A, where
-$\mid A \mid = n$ is: $2^{n^2}$
+#### Theorem: The number of binary relations on a set A where $\mid A \mid = n$ is: $2^{n^2}$
 > Proof:
 >* If $\mid A \mid = n$ then the cardinality of the Cartesian product $\mid A \times A \mid = n^2$.
 >* $R$ is a binary relation on $A$ if $R \subseteq A \times A$ (that is, $R$ is a subset of $A \times A$).
