@@ -214,8 +214,9 @@ code.language-yaml {
 <p>Before we leave Python and the turtle library and look toward C++, everyone should have some practice designing a program, programming, and seeing the results of their own program.</p>
 <blockquote>
 <p>Exercise:<br>
-Form a small group. Your task is to discuss with your group, design, and write a turtle program that draws a picture. It cannot be something I’ve shown you. You are limited to the types of statements below.<br>
-<strong>Be ready to show the rest of the class what your program does.</strong></p>
+Form a small group. Your task is to discuss with your group, design, and write a turtle program that draws a picture. It cannot be something I’ve shown you. You are limited to the types of statements below.</p>
+<p>Each person in the group should have a chance to type at the keyboard.</p>
+<p><strong>Be ready to show the rest of the class what your program does.</strong></p>
 </blockquote>
 <p>Programming is a creative exercise. It’s good practice to explore and modify someone else’s program, but you should also be able to create your own program. Try to think of something new. <em>Don’t just copy or memorize other people’s code.</em></p>
 <p>Open IDLE and click on <code>file</code> to bring the drop down menu and click <code>new file</code>. This will open a text editor in which you can write your program.</p>
@@ -233,63 +234,67 @@ turtle<span class="token punctuation">.</span>exitonclick<span class="token punc
 <p>Remember that color codes begin with <code>#</code> and use a six digit hexadecimal number, the first two indicating the saturation of red, the next two green, and the last two blue. So very red will be <code>#FF0000</code>. You can also use some English color names such as <code>white</code>, <code>black</code>, <code>red</code>, <code>purple</code>, <code>yellow</code>, <code>green</code>, <code>blue</code>, and so on. You should experiment with colors and color codes.</p>
 <p>Below you will find a list of statements patterns that you are allowed to use. You will generally need to first assign values to the variables before you can use the statements. Or you can replace the variables directly with numbers.</p>
 <ul>
-<li><code>t.forward(x)</code></li>
-</ul>
-<p>Moves the turtle foward <code>x</code> pixels in the direction it’s facing.</p>
-<ul>
-<li><code>t.right(x)</code></li>
-</ul>
-<p>Turns the turtle <code>x</code> degrees right.</p>
-<ul>
-<li><code>t.left(x)</code></li>
-</ul>
-<p>Turns the turtle <code>x</code> degrees left.</p>
-<ul>
-<li><code>t.width(x)</code></li>
-</ul>
-<p>Sets the width of the drawn line to <code>x</code> pixels.</p>
-<ul>
-<li><code>t.color(x)</code></li>
-</ul>
-<p>Sets the color of the drawn line to <code>x</code>. <code>x</code> must be a color code or a color string.</p>
-<ul>
+<li>
+<p><code>t.forward(x)</code><br>
+Moves the turtle foward <code>x</code> pixels in the direction it’s facing.</p>
+</li>
+<li>
+<p><code>t.right(x)</code><br>
+Turns the turtle <code>x</code> degrees right.</p>
+</li>
+<li>
+<p><code>t.left(x)</code><br>
+Turns the turtle <code>x</code> degrees left.</p>
+</li>
+<li>
+<p><code>t.width(x)</code><br>
+Sets the width of the drawn line to <code>x</code> pixels.</p>
+</li>
+<li>
+<p><code>t.color(x)</code><br>
+Sets the color of the drawn line to <code>x</code>. <code>x</code> must be a color code or a color string.</p>
+</li>
 <li>
 <p><code>t.fillcolor(x)</code><br>
 <code>t.begin_fill()</code></p>
 <p><code>---&gt; Your code here &lt;---</code></p>
-<p><code>t.end_fill()</code></p>
+<p><code>t.end_fill()</code><br>
+Sets the fill color and fills in a shape that’s drawn between the begin_fill() and end_fill() statements with that color.</p>
 </li>
-</ul>
-<p>Sets the fill color and fills in a shape that’s drawn between the begin_fill() and end_fill() statements with that color.</p>
-<ul>
-<li><code>t.penup()</code></li>
-</ul>
-<p>Turtle will not draw when it moves until pendown() statement is executed.</p>
-<ul>
-<li><code>t.pendown()</code></li>
-</ul>
-<p>Turtle will draw a line when it moves. This happens by default.</p>
-<ul>
-<li><code>t.goto(x,y)</code></li>
-</ul>
-<p>Turtle will jump to the coordinates <code>(x, y)</code> without drawing.</p>
-<ul>
-<li>For loops:</li>
+<li>
+<p><code>t.penup()</code><br>
+Turtle will not draw when it moves until pendown() statement is executed.</p>
+</li>
+<li>
+<p><code>t.pendown()</code><br>
+Turtle will draw a line when it moves. This happens by default.</p>
+</li>
+<li>
+<p><code>t.goto(x,y)</code><br>
+Turtle will jump to the coordinates <code>(x, y)</code> without drawing.</p>
+</li>
+<li>
+<p>For loops:</p>
+</li>
 </ul>
 <pre class="language-">&gt;for i in range(x):
 [tab]&gt;Your code here &lt;---
 [tab]&gt;More code in the loop &lt;---
 &gt;Code outside of the loop &lt;---
 </pre>
+<blockquote>
 <p>Be sure to indent with a tab for the code you want inside the loop. This will execute the statements inside the loop <code>x</code> times with <code>i</code> starting at <code>0</code> and incrementing to <code>x-1</code>. <code>x</code> can be a number, but <code>i</code> must be a variable.</p>
+</blockquote>
 <ul>
-<li><code>colors=[&quot;red&quot;,&quot;green&quot;,&quot;purple&quot;]</code></li>
+<li>
+<p><code>colors=[&quot;red&quot;,&quot;green&quot;,&quot;purple&quot;]</code><br>
+Creates a list of colors. You can have more than these three. The statement <code>colors[0]</code> accesses the first item of the list, in this case <code>&quot;red&quot;</code>. You can use this in conjunction with <code>t.color(colors[i%3])</code> to cycle through the colors in the list each time through a loop.</p>
+</li>
+<li>
+<p>Arithmetic expressions:<br>
+You may use any arithmetic expressions you’d like, such as <code>x = y/z</code>.</p>
+</li>
 </ul>
-<p>Creates a list of colors. You can have more than these three. The statement <code>colors[0]</code> accesses the first item of the list, in this case <code>&quot;red&quot;</code>. You can use this in conjunction with <code>t.color(colors[i%3])</code> to cycle through the colors in the list each time through a loop.</p>
-<ul>
-<li>Arithmetic expressions:</li>
-</ul>
-<p>You may use any arithmetic expressions you’d like, such as <code>x = y/z</code>.</p>
 
       </div>
       <div class="md-sidebar-toc"><ul>
