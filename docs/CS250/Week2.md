@@ -233,3 +233,5 @@ Consider the following relations:
 Which of the relations are reflexive.
 
 Which of these are symmetric?
+
+Which are transitive and which not?
