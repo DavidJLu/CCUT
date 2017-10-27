@@ -1,5 +1,7 @@
 #CS161 at CCUT Week 2 Day 2: Algorithms
 
+Let's take a short break from learning syntax and semantics to step back and think about how to plan and design a program that solves a problem.
+
 Suppose you want to know whether a given positive integer less than 100 is even or odd. What is the process by which you find out?
 
 #### Algorithms
@@ -60,10 +62,16 @@ Can you think of a better algorithm to solve this problem?
 
 Before you begin writing code to tackle a problem, you should first think about what sequence of operations need to be done in order to solve the problem. You should probably write it out in pseudo code so that you can look at it and think about whether it will work or not.
 
-Let's try to write a better version of this function together.
+Let's try to design a better version of this function together.
 
-### Functions
+#### Additional Exercises
+* Design an algorithm that returns the largest integer within a list of integers.
 
+* Design an algorithm that returns true if a name is found within a list of names and false otherwise.
+
+  * Suppose the list is *sorted* alphabetically.
+
+* Design an algorithm that takes a lists of numbers and returns a list of numbers sorted from smallest to largest.
 
 <!---
 --------
