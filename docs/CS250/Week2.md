@@ -90,7 +90,7 @@ Two sets A and B are equal iff they have the same elements.
 
 #### Proper Subsets
 >Definition:
-A is a proper subset of B iff A ⊆ B and A 6= B.
+$A$ is a proper subset of $B$ iff $A \subseteq B$ and $A \ne B$.
 
 * This is denoted by $A \subset B$.
 * $A \subset B$ can be expressed by
@@ -195,7 +195,9 @@ Relations represent *one to many relationships* between elements in $A$ and $B$.
 
 -------
 
-### Types of Relation
+### Types of Relations
+
+Let's come up with examples for each.
 
 * **Empty Relation**: A relation $R$ on a set $A$ is called Empty if the set $A$ is empty set.
 * **Full Relation**: A binary relation $R$ on a set $A$ and $B$ is called full if $A \times B$.
@@ -206,3 +208,28 @@ Relations represent *one to many relationships* between elements in $A$ and $B$.
 * **Transitive Relation**: A relation $R$ on a set $A$ is called transitive if $(a, b) \in R$ and $(b, c) \in R$ then $(a, c) \in R$ for all $a, b, c \in A$, e.g. Relation $R=\{(1, 2), (2, 3), (1, 3)\}$ on set $A=\{1, 2, 3\}$ is transitive.
 * **Equivalence Relation**: A relation is an Equivalence Relation if it is reflexive, symmetric, and transitive. E.g. relation $R=\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3), (3, 2), (1, 3), (3, 1)\}$ on set $A=\{1, 2, 3\}$ is equivalence relation as it is reflexive, symmetric, and transitive.
 * **Asymmetric Relation**: Asymmetric relation is opposite of symmetric relation. A relation $R$ on a set $A$ is called asymmetric if no $(b, a) \in R$ when $(a,b) \in R$.
+
+### Exercises:
+Consider the following relations on the set A = {1, 2, 3, 4}:
+1. $R1 = \{(1, 1), (1, 2), (2, 3), (1, 3), (4, 4)\}$
+1. $R2 = \{(1, 1)(1, 2), (2, 1), (2, 2), (3, 3), (4, 4)\}$
+1. $R3 = \{(1, 3), (2, 1)\}$
+1. $R4 = \varnothing$, the empty relation
+1. $R5 = A \times A$, the universal relation
+
+Which of the relations are reflexive.
+
+Which of these are symmetric?
+
+------
+Consider the following relations:
+1. Relation $\leq$ (less than or equal) on the set $\mathbb{Z}$ of integers.
+1. Set inclusion $\subseteq$ on a collection $C$ of sets.
+1. Relation $\perp$ (perpendicular) on the set $L$ of lines in the plane.
+1. Relation $\parallel$ (parallel) on the set $L$ of lines in the plane.
+1. Relation $\mid$ of divisibility on the set $\mathbb{N}$ of positive integers. (Recall $x \mid y$ if there exists $z$ such that $xz = y$.)
+
+
+Which of the relations are reflexive.
+
+Which of these are symmetric?
