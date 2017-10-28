@@ -2,7 +2,7 @@
 
 ![House](House.png)
 
-Before we leave Python and the turtle library and look toward C++, everyone should have some practice designing a program, programming, and seeing the results of their own program.
+I would like everyone to have some practice designing a program, programming, and seeing the results of their own program in class.
 
 >Exercise:
 >Form a small group. Your task is to discuss with your group, design, and write a turtle program that draws a picture. It cannot be something I've shown you. You are limited to the types of statements below.
