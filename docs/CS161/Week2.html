@@ -208,99 +208,100 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <h1 class="mume-header" id="cs161-at-ccut-week-2-in-class-group-exercise">CS161 at CCUT Week 2: In-Class Group Exercise</h1>
-
-<p><img src="House.png" alt="House"></p>
-<p>Before we leave Python and the turtle library and look toward C++, everyone should have some practice designing a program, programming, and seeing the results of their own program.</p>
+      <h1>CS161 at CCUT Week 2</h1>
+<p>Let’s continue to explore the Python example from last time and see how parts of the program work and what happens when we modify it a bit.</p>
 <blockquote>
-<p>Exercise:<br>
-Form a small group. Your task is to discuss with your group, design, and write a turtle program that draws a picture. It cannot be something I’ve shown you. You are limited to the types of statements below.</p>
-<p>Each person in the group should have a chance to type at the keyboard.</p>
-<p><strong>Be ready to show the rest of the class what your program does.</strong></p>
+<p>Python is free and easy to get from the Python website: <a href="http://www.python.org">www.python.org</a><br>
+So if you’d like to learn Python, go to the website’s Downloads area and download and install Python 3 and the IDLE editor.</p>
+<p>Python is an interpreted language rather than a compiled one. IDLE is a program that’s used to type and run our Python programs.</p>
+<p>You can test your installation by starting IDLE and running a simple program.<br>
+Start IDLE and type <code>Print(&quot;Hello World&quot;)</code> and then press enter.</p>
 </blockquote>
-<p>Programming is a creative exercise. It’s good practice to explore and modify someone else’s program, but you should also be able to create your own program. Try to think of something new. <em>Don’t just copy or memorize other people’s code.</em></p>
-<p>Open IDLE and click on <code>file</code> to bring the drop down menu and click <code>new file</code>. This will open a text editor in which you can write your program.</p>
-<p>Your program should contain the following 5 lines of code:</p>
-<pre class="language-py"><span class="token keyword">import</span> turtle
+<p>Python is a widely used <em>high-level programming language</em>, created by Guido van Rossum in 1991. Python is an interpreted language, and has a design philosophy that emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly brackets or keywords). It also has a syntax that allows programmers to express concepts in fewer lines of code than might be used in languages such as C++ or Java.</p>
+<p>In Python, <code>Turtle graphics</code> is a library that allows us to draw basic pictures. It’s a great tool for introducing beginning programmers to programming concepts. You can find the documentation at <a href="https://docs.python.org/3.2/library/turtle.html">https://docs.python.org/3.2/library/turtle.html</a></p>
+<p>Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an <code>import turtle</code>, give it the command <code>turtle.forward(100)</code>, and it moves (on-screen!) 100 pixels in the direction it is facing, drawing a line as it moves. Give it the command <code>turtle.right(90)</code>, and it rotates in-place 90 degrees clockwise.</p>
+<p>By combining together these and similar commands, we can draw shapes and pictures.</p>
+<p>What do you think the following bit of code does?</p>
+<pre class="language-Py"><span class="token keyword">import</span> turtle
+
 t <span class="token operator">=</span> turtle<span class="token punctuation">.</span>Turtle<span class="token punctuation">(</span><span class="token punctuation">)</span>
-turtle<span class="token punctuation">.</span>bgcolor<span class="token punctuation">(</span><span class="token string">"#FFFFFF"</span><span class="token punctuation">)</span>
-t<span class="token punctuation">.</span>color<span class="token punctuation">(</span><span class="token string">"#000000"</span><span class="token punctuation">)</span>
+turtle<span class="token punctuation">.</span>bgcolor<span class="token punctuation">(</span><span class="token string">'black'</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>color<span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span>
 
-<span class="token comment" spellcheck="true">#---> Your code here &lt;---</span>
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Draw foward 100 pixels</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># Rotate clockwise by 90 degrees</span>
 
-turtle<span class="token punctuation">.</span>exitonclick<span class="token punctuation">(</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
+
+t<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+t<span class="token punctuation">.</span>right<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span>
 </pre>
-<p>Recall that the first line allows you to use the functions in the Turtle library. The second line assigns the variable <code>t</code> to be a turtle. The third line sets the background color to white. The fourth line sets the color that the turtle draws. <code>#000000</code> is <code>black</code>. The last line keeps your drawing open after it is done until you click the screen.</p>
-<p>Remember that color codes begin with <code>#</code> and use a six digit hexadecimal number, the first two indicating the saturation of red, the next two green, and the last two blue. So very red will be <code>#FF0000</code>. You can also use some English color names such as <code>white</code>, <code>black</code>, <code>red</code>, <code>purple</code>, <code>yellow</code>, <code>green</code>, <code>blue</code>, and so on. You should experiment with colors and color codes.</p>
-<p>Below you will find a list of statements patterns that you are allowed to use. You will generally need to first assign values to the variables before you can use the statements. Or you can replace the variables directly with numbers.</p>
-<ul>
-<li>
-<p><code>t.forward(x)</code><br>
-Moves the turtle foward <code>x</code> pixels in the direction it’s facing.</p>
-</li>
-<li>
-<p><code>t.right(x)</code><br>
-Turns the turtle <code>x</code> degrees right.</p>
-</li>
-<li>
-<p><code>t.left(x)</code><br>
-Turns the turtle <code>x</code> degrees left.</p>
-</li>
-<li>
-<p><code>t.width(x)</code><br>
-Sets the width of the drawn line to <code>x</code> pixels.</p>
-</li>
-<li>
-<p><code>t.color(x)</code><br>
-Sets the color of the drawn line to <code>x</code>. <code>x</code> must be a color code or a color string.</p>
-</li>
-<li>
-<p><code>t.fillcolor(x)</code><br>
-<code>t.begin_fill()</code></p>
-<p><code>---&gt; Your code here &lt;---</code></p>
-<p><code>t.end_fill()</code><br>
-Sets the fill color and fills in a shape that’s drawn between the begin_fill() and end_fill() statements with that color.</p>
-</li>
-<li>
-<p><code>t.penup()</code><br>
-Turtle will not draw when it moves until pendown() statement is executed.</p>
-</li>
-<li>
-<p><code>t.pendown()</code><br>
-Turtle will draw a line when it moves. This happens by default.</p>
-</li>
-<li>
-<p><code>t.goto(x,y)</code><br>
-Turtle will jump to the coordinates <code>(x, y)</code> without drawing.</p>
-</li>
-<li>
-<p>For loops:</p>
-</li>
-</ul>
-<pre class="language-">&gt;for i in range(x):
-[tab]&gt;Your code here &lt;---
-[tab]&gt;More code in the loop &lt;---
-&gt;Code outside of the loop &lt;---
-</pre>
+<p>Let’s consider it line by line.</p>
+<p>Remember, <code>import turtle</code> allows us to use the turtle graphics library’s functions. Importing code that’s already written is one of the coolest things about programming. If you program something interesting and useful, you can share it with other people or reuse it yourself. Some Python programmers built a <em>library</em> to help other programmers use turtle graphics even though turtle graphics are originally from the Logo programming language from the 1960s! So <code>import turtle</code> allows your program to use the code that those programmers wrote. Cool!</p>
 <blockquote>
-<p>Be sure to indent with a tab for the code you want inside the loop. This will execute the statements inside the loop <code>x</code> times with <code>i</code> starting at <code>0</code> and incrementing to <code>x-1</code>. <code>x</code> can be a number, but <code>i</code> must be a variable.</p>
+<p>As you should already know, this can be done in C++ too. Your professor has shown you how to import the iostream library so that you can get input from the keyboard and output to the screen. In C++ you type <code>#include &lt;iostream&gt;</code>. This allows you to use the code that someone else wrote in order to output <code>Hello World</code> to the screen with the statement <code>cout &lt;&lt; &quot;Hello World&quot;;</code></p>
 </blockquote>
-<ul>
-<li>
-<p><code>colors=[&quot;red&quot;,&quot;green&quot;,&quot;purple&quot;]</code><br>
-Creates a list of colors. You can have more than these three. The statement <code>colors[0]</code> accesses the first item of the list, in this case <code>&quot;red&quot;</code>. You can use this in conjunction with <code>t.color(colors[i%3])</code> to cycle through the colors in the list each time through a loop.</p>
-</li>
-<li>
-<p>Arithmetic expressions:<br>
-You may use any arithmetic expressions you’d like, such as <code>x = y/z</code>.</p>
-</li>
-</ul>
+<p>The next line <code>t = turtle.Turtle()</code> declares the variable <code>t</code> to be a turtle. What this means is that we can use <code>t</code> to draw lines. Don’t worry about this line of code for now.</p>
+<p>The next two lines set the color of the background on the canvas and the color of the line drawn by our turtle. Again, don’t worry too much about these lines. You can play around with their values and see how things change if you like. Try substituting a white background or a different color. You can find what color strings are recognized online, or you can specify the RGB as a comma separated tuple.</p>
+<p>The next line <code>t.forward(100) # Draw foward 100 pixels</code> is interesting. This line says to move the turtle 100 pixels forward, drawing a line along the way. The turtle starts out in the center of the canvas facing right by default.</p>
+<p>The <code>#</code> specifies a comment. Anything after the <code>#</code> on this line will not be interpreted as code by the computer. Comments are useful to explain what is going on with the code written and why it was written this way. It’s a way to document the code for people who look at the code in the future. This is an important thing to do, since we want to be able to maintain our programs.</p>
+<p><code>t.right(90)</code> tells our turtle to turn right 90 degrees.</p>
+<p>The next 3 pairs of lines do the same as the last two lines we inspected. Draw a line 100 pixels then turn 90 degrees. This draws a square!</p>
+<p>How would we modify this to make a hexagon (6 sided polygon)? Let’s modify the program and try it together.</p>
+<blockquote>
+<p>Hint: Think about what angles you need for a hexagon.</p>
+</blockquote>
+<p>Although these programs are not long, we might notice that some parts of our code looks a lot like other parts of our code. A principle that we try to follow when writing good programs is <em>do not repeat yourself</em></p>
+<blockquote>
+<p>Don’t Repeat Yourself (DRY)</p>
+</blockquote>
+<p>In this case, there is a better solution using loops. A loop statement in programming allows us to execute some other statement a number of times.</p>
+<p>The syntax of a loop in Python looks like this:</p>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  do a
+  do b
+</pre>
+<p>This code will do <code>a</code> then <code>b</code> x number of times. Each time through the loop, <code>n</code>, which is called a counter, gets incremented by 1. The expression <code>range(x)</code> gives us an integer beginning with <code>0</code> and incrementing to <code>x-1</code> each time through the loop.</p>
+<blockquote>
+<p>Test it yourself if you have the IDLE running. Test the following code. What do you think will happen? What happens?</p>
+</blockquote>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+</pre>
+<p>Loops are the first excellent way to follow the DRY principle. They allow us to execute repetitive tasks with many fewer lines of code.</p>
+<p>Notice that the print line of this code is indented. Python marks code blocks through white space (tabs, spaces, etc…). So the body of this loop, the statements which will get executed multiple times, is whatever is contained in the body. What happens with the following bit of code?</p>
+<pre class="language-py"><span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"World"</span><span class="token punctuation">)</span>
+</pre>
+<p>Again, notice that the second print statement is not indented. What do you tink will happen? What happens?</p>
+<p>Let’s take a look at the implementation of the square drawing program using a loop.</p>
+<blockquote>
+<p>In C++, the syntax for loops are a bit different but the semantics are basically the same. In fact, there are 3 ways to write a loop in C++. We’ll take a look at these later.</p>
+</blockquote>
+<p>Here are some other interesting Python turtle programs. Let’s explore them together.</p>
+<hr>
+<p>You can download these Python programs here:</p>
+<p><a href="NiceHexSpiral.py">NiceHexSpiral.py</a><br>
+<a href="Square.py">Square.py</a><br>
+<a href="SquareLoop.py">SquareLoop.py</a><br>
+<a href="Star.py">Star.py</a><br>
+<a href="StarColor.py">StarColor.py</a><br>
+<a href="Polygon.py">Polygon.py</a><br>
+<a href="PolygonSides.py">PolygonSides.py</a></p>
+<p>Here are some more advanced examples. Explore with them!<br>
+<a href="Spiralgraph.py">Spiralgraph.py</a><br>
+<a href="Heart.py">Heart.py</a><br>
+<a href="Honeycomb.py">Honeycomb.py</a><br>
+<a href="RandomStars.py">RandomStars.py</a><br>
+<a href="Circles.py">Circles.py</a></p>
 
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#cs161-at-ccut-week-2-in-class-group-exercise">CS161 at CCUT Week 2: In-Class Group Exercise</a></li>
-</ul>
-</div>
+      <div class="md-sidebar-toc"></div>
       <a id="sidebar-toc-btn">≡</a>
     </body>
     

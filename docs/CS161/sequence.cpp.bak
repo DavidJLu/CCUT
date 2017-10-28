@@ -9,6 +9,7 @@ int main()
 		x += 1;
 	cout << x;
 	
+	
 	char y;			// Hack to keep the window open until enter pressed...
 	cin.get(y);
 	return 0;

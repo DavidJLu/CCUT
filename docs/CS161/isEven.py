@@ -3,8 +3,13 @@ def isEven(value):
 	odd = False
 	for num in numbers:
 		if odd:
-			numbers.remove(num)
-		odd = not odd
+                    numbers.remove(num)
+            #odd = not odd
+		if odd:
+                    odd = False
+                else:
+                    odd = True
+	print(numbers)
 	if value in numbers:
 		return True
 	else:
@@ -15,3 +20,5 @@ if isEven(num):
 	print("This number is even")
 else:
 	print("This number is odd")
+
+

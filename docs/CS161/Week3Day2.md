@@ -1,4 +1,4 @@
-#CS161 at CCUT Week 2 Day 2: Algorithms
+#CS161 at CCUT Week 3 Day 2: Algorithms
 
 Let's take a short break from learning syntax and semantics to step back and think about how to plan and design a program that solves a problem.
 
