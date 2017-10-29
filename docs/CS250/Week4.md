@@ -25,3 +25,7 @@ t.right(90)
 
 turtle.exitonclick()
 ```
+
+```python {cmd="/usr/local/bin/python3"}
+print("This will run python3 program")
+```
