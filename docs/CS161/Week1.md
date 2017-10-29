@@ -14,11 +14,11 @@ Some facts about me:
 
 Here are some pictures of SU:
 
-![Syracuse University Panoramic](SUpan.jpg)
+![Syracuse University Panoramic](SUPan.jpg)
 
 The building housing the philosophy department:
 
-![Hall of Languages in the Fall](SUfall.jpg)
+![Hall of Languages in the Fall](SUFall.jpg)
 
 * Now I teach discrete math, introduction to C++, and ethics at Portland State University
 
