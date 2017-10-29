@@ -1,6 +1,7 @@
 CS161 at CCUT Week 2
 ======
 
+![Python](Python.jpg)
 Let's continue to explore the Python example from last time and see how parts of the program work and what happens when we modify it a bit.
 
 >Python is free and easy to get from the Python website: www.python.org
