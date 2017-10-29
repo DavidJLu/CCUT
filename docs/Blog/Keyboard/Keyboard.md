@@ -103,7 +103,7 @@ Next we'll place the keycaps on each switch.
 
 ![Keycaps!](Keycaps.jpg)
 
-And now we'e done assembling!
+And now we're done assembling!
 
 ![All done](AllDone.jpg)
 
