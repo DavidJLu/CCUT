@@ -13,9 +13,11 @@ Some facts about me:
 * Taught philosophy courses on ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University
 
 Here are some pictures of SU:
+
 ![Syracuse University Panoramic](SUpan.jpg)
 
 The building housing the philosophy department:
+
 ![Hall of Languages in the Fall](SUfall.jpg)
 
 * Now I teach discrete math, introduction to C++, and ethics at Portland State University
@@ -23,6 +25,7 @@ The building housing the philosophy department:
 ![PSU Library](PSUlibrary.jpg)
 
 ![PSU Overhead](PSUiso.jpg)
+
 * This is my 3rd year participating in the PSU--CCUT partnership program
 * Oldest of three: one younger brother and one younger sister
 
