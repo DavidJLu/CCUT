@@ -2,6 +2,7 @@ CS161 at CCUT Week 2
 ======
 
 ![Python](Python.jpg)
+
 Let's continue to explore the Python example from last time and see how parts of the program work and what happens when we modify it a bit.
 
 >Python is free and easy to get from the Python website: www.python.org
@@ -114,7 +115,7 @@ You can download these Python programs here:
 [Polygon.py](Polygon.py)
 [PolygonSides.py](PolygonSides.py)
 
-Here are some more advanced examples. Explore with them! 
+Here are some more advanced examples. Explore with them!
 [Spiralgraph.py](Spiralgraph.py)
 [Heart.py](Heart.py)
 [Honeycomb.py](Honeycomb.py)

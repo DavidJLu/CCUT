@@ -1,6 +1,5 @@
 #CS250 at CCUT Week 3: Relations
 
-
 #### Representing binary relations
 We can represent a binary relation graphically as follows:
 

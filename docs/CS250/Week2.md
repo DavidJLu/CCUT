@@ -1,9 +1,31 @@
 #CS250 at CCUT Week 2: Set Theory Review
 ![Intersection](SetTheory.png)
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->
+<!-- code_chunk_output -->
+
+* [Sets](#sets)
+	* [Describing sets](#describing-sets)
+	* [Important sets](#important-sets)
+	* [Set Builder Notation](#set-builder-notation)
+	* [Interval Notation](#interval-notation)
+	* [Universal Set and Empty Set](#universal-set-and-empty-set)
+	* [Things to remember](#things-to-remember)
+	* [Subsets and Set Equality](#subsets-and-set-equality)
+	* [Proper Subsets](#proper-subsets)
+	* [Set Cardinality](#set-cardinality)
+	* [Power Sets](#power-sets)
+	* [Tuples](#tuples)
+* [Introduction to Relations](#introduction-to-relations)
+	* [Binary relations](#binary-relations)
+
+<!-- /code_chunk_output -->
+
+
 You should have had an introduction to set theory by now. Let's do a quick recap and take a look at the next topic: relations.
 
-#### Sets
+### Sets
 * A set is an unordered collection of objects, e.g., students in this class; air molecules in this room.
 * The objects in a set are called the elements, or members of the set. A set is said to contain its elements.
 * The notation $x \in S$ denotes that $x$ is an element of the set $S$.
