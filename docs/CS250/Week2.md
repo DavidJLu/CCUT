@@ -1,4 +1,5 @@
-#CS250 at CCUT Week 2: Relations
+#CS250 at CCUT Week 2: Set Theory Review
+![Intersection](SetTheory.png)
 
 You should have had an introduction to set theory by now. Let's do a quick recap and take a look at the next topic: relations.
 
