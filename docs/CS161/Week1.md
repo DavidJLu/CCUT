@@ -18,7 +18,7 @@ Here are some pictures of SU:
 The building housing the philosophy department:
 ![Hall of Languages in the Fall](SUfall.jpg)
 
-* Now I teach discrete math, introduction to C++, and ethics for computing at Portland State University
+* Now I teach discrete math, introduction to C++, and ethics at Portland State University
 
 ![PSU Library](PSUlibrary.jpg)
 
