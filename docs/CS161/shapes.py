@@ -65,7 +65,7 @@ def drawPath(pen):
   pen.color(0,0,0)
   pen.fillcolor("#965000")
   pen.penup()
-  pen.goto(-65,-400)
+  pen.goto(-90,-400)
   pen.begin_fill()
   pen.pendown()
   pen.right(10)
