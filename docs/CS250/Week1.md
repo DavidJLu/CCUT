@@ -40,3 +40,5 @@ The goals of the course are listed below:
 1. Demonstrate standard proof techniques and the technique of inductive proof by writing short informal proofs about simple properties of numbers, sets, and ordered structures.
 
 -------
+
+Now for something fun, here's a project I worked on a few weeks ago: [Building a custom keyboard](../Blog/Keyboard/Keyboard.html)

@@ -235,16 +235,16 @@ code.language-yaml {
 </blockquote>
 <p>Here’s the function in Python:</p>
 <pre class="language-py"><span class="token keyword">def</span> <span class="token function">isEven</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	numbers <span class="token operator">=</span> list<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-	odd <span class="token operator">=</span> <span class="token boolean">False</span>
-	<span class="token keyword">for</span> num <span class="token keyword">in</span> numbers<span class="token punctuation">:</span>
-		<span class="token keyword">if</span> odd<span class="token punctuation">:</span>
-			numbers<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-		odd <span class="token operator">=</span> <span class="token operator">not</span> odd
-	<span class="token keyword">if</span> value <span class="token keyword">in</span> numbers<span class="token punctuation">:</span>
-		<span class="token keyword">return</span> <span class="token boolean">True</span>
-	<span class="token keyword">else</span><span class="token punctuation">:</span>
-		<span class="token keyword">return</span> <span class="token boolean">False</span>
+  numbers <span class="token operator">=</span> list<span class="token punctuation">(</span>range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  odd <span class="token operator">=</span> <span class="token boolean">False</span>
+  <span class="token keyword">for</span> num <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> odd<span class="token punctuation">:</span>
+      numbers<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+    odd <span class="token operator">=</span> <span class="token operator">not</span> odd
+  <span class="token keyword">if</span> value <span class="token keyword">in</span> numbers<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+  <span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
 </pre>
 <p>Here’s a line by line explanation. The first line let us know we have one input <code>value</code>, the given number to be checked. The next line says create a list of numbers from <code>0</code> to <code>99</code> and call it <code>numbers</code>. The third says to keep track of a variable called <code>odd</code>, which we initialize to <code>False</code>. Then we check each number in <code>numbers</code>. If <code>odd</code> is <code>True</code> at the time, then we remove that number from the list. Then we flip <code>odd</code>s boolean value. After processing the entire list this way, removing every other number, we check to see whether <code>value</code> is in the list. If so, then return <code>True</code>, else return <code>False</code>.</p>
 <p>Two questions:</p>

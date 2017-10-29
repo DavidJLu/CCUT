@@ -28,16 +28,16 @@ def isEven(value):
 Here's the function in Python:
 ```py
 def isEven(value):
-	numbers = list(range(0, 100))
-	odd = False
-	for num in numbers:
-		if odd:
-			numbers.remove(num)
-		odd = not odd
-	if value in numbers:
-		return True
-	else:
-		return False
+  numbers = list(range(0, 100))
+  odd = False
+  for num in range(0, 100):
+    if odd:
+      numbers.remove(num)
+    odd = not odd
+  if value in numbers:
+    return True
+  else:
+    return False
 ```
 
 Here's a line by line explanation. The first line let us know we have one input `value`, the given number to be checked. The next line says create a list of numbers from `0` to `99` and call it `numbers`. The third says to keep track of a variable called `odd`, which we initialize to `False`. Then we check each number in `numbers`. If `odd` is `True` at the time, then we remove that number from the list. Then we flip `odd`s boolean value. After processing the entire list this way, removing every other number, we check to see whether `value` is in the list. If so, then return `True`, else return `False`.
