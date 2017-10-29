@@ -1,5 +1,7 @@
 #CS161 at CCUT Week 3 Day 2: Algorithms
 
+![Fractal Spiral](Fractal.jpg)
+
 Let's take a short break from learning syntax and semantics to step back and think about how to plan and design a program that solves a problem.
 
 Suppose you want to know whether a given positive integer less than 100 is even or odd. What is the process by which you find out?
