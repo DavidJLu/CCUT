@@ -57,7 +57,7 @@ I purchased many of the parts from China!
 * Screwdriver
 * Wire clipper
 
-## The Build
+### The Build
 
 Here's the plate and PCB.
 
