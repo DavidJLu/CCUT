@@ -39,4 +39,4 @@ t.exitonclick()
 
 
 <!-- slide data-background-video="../Duke.mp4" data-background-video-loop=true -->
-<div style="color:#FFFF00"> I look forward to seeing everyone next spring!!</div>
+<div style="color:#5AFF0A"> I look forward to seeing all of you next spring!!</div>

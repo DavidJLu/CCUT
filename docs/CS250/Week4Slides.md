@@ -8,6 +8,9 @@ presentation:
   transition: 'slide'
 ---
 
+<!-- slide data-background-video="../Portlandia.mp4" -->
+
+
 <!-- slide data-transition='zoom'-->
 # CS250 at CCUT Week 4: Relations and Ordering
 
@@ -170,6 +173,11 @@ Examples - Show that these are equivalence relations:
 
 * *has the same number of letters* on a set of English words.
 
+<!-- slide -->
+
+Consider the set of lines $L$ on a Euclidean plane.
+
+The relation *is parallel to* is an equivalence relation on $L$
 
 
 <!-- slide data-transition="fade" -->
@@ -187,6 +195,33 @@ A *partially ordered set* (or *poset*) is a set together with a binary relation 
 <!-- slide -->
 The word *partial* is used indicate that not every pair of elements need be comparable.
 
+The subset relation ($\subseteq$) on sets is a partial order where not every element may be comparable.
+
+<!-- slide -->
+The ordering of the natural numbers $\mathbb{N}$ is a familiar partial order.
+
+
+<!-- slide -->
+### Total Order
+
+A total order is a partial order where every element *is* comparable.
+
+<!-- slide -->
+
+More formally, we can describe a binary relation $R$ as being total if for any $a$ and $b \in S$, $Rab$ or $Rba$.
+
+Then a total order relation is total, reflexive, anti-symmetric, and transitive.
+
+<!-- slide -->
+### Strict Partial Order
+
+A strict partial order is similar to a partial order but is defined by a relation with the following properties: *irreflexivity*, *anti-symmetry*, and *transitivity*.
+
+<!-- slide -->
+Example:
+
+The ancestor relation on the set of people is a *strict partial order*.
+
 <!-- slide data-background-video="../Duke.mp4" data-background-video-loop=true -->
 
-<div style="color:#5AFF0A"> I look forward to seeing everyone next spring!!</div>
+<div style="color:#5AFF0A"> I look forward to seeing all of you next spring!!</div>
