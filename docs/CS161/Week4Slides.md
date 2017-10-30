@@ -9,7 +9,7 @@ presentation:
 ---
 
 <!-- slide -->
-```python {cmd=true}
+```python
 import turtle
 t = turtle.Pen()
 t.speed(20)          # Set turtle drawing speed
@@ -34,5 +34,8 @@ for m in range(0, 75):
         for n in range(sides):
             t.forward(m)
             t.right(360/sides)
-
+t.exitonclick()
 ```
+
+
+<!-- slide data-background-video="../Duke.mp4" data-background-video-loop=true -->

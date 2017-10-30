@@ -145,14 +145,46 @@ Example:
 Is the relation *sister of* transitive?
 
 <!-- slide -->
+Exercise:
+Let $A = B = \{1,2,3,4,6\}$.
+
+Consider the relation $R$ such that $(a,b) \in R$ iff $a$ is a multiple of $b$, i.e. $(a = kb)$ for some $k \in \mathbb{Z}$
+
+* What elements are in $R$?
+* Draw a table that represents $R$.
+* Draw a graph that represents $R$.
+* What properties does $R$ have?
+
+<!-- slide -->
+
+### Equivalence
+
+<!-- slide -->
+
+A relation is an *equivalence* if and only if it is *reflexive*, *symmetric*, and *transitive*.
+
+<!-- slide -->
+Examples - Show that these are equivalence relations:
+
+* *has the same birthday as* on a set of people.
+
+* *has the same number of letters* on a set of English words.
+
+
 
 <!-- slide data-transition="fade" -->
 ## Partial Order Relations
 
 <!-- slide -->
-Partial Order Relation: A binary relation $R$ on a set $A$ is a *partial order* if and only if it is:
+A binary relation $R$ on a set $A$ is a *partial order* if and only if it is:
 * Reflexive
 * Antisymmetric
 * Transitive
+
+<!-- slide -->
+A *partially ordered set* (or *poset*) is a set together with a binary relation indicating that, for certain pairs of elements in the set, one of the elements precedes the other in some ordering.
+
+<!-- slide -->
+The word *partial* is used as an indication that not every pair of elements need be comparable.
 
 <!-- slide data-background-video="../Duke.mp4" data-background-video-loop=true -->
