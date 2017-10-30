@@ -185,6 +185,8 @@ A binary relation $R$ on a set $A$ is a *partial order* if and only if it is:
 A *partially ordered set* (or *poset*) is a set together with a binary relation indicating that, for certain pairs of elements in the set, one of the elements precedes the other in some ordering.
 
 <!-- slide -->
-The word *partial* is used as an indication that not every pair of elements need be comparable.
+The word *partial* is used indicate that not every pair of elements need be comparable.
 
 <!-- slide data-background-video="../Duke.mp4" data-background-video-loop=true -->
+
+<div style="color:#5AFF0A"> I look forward to seeing everyone next spring!!</div>
