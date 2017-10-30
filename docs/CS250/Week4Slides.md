@@ -83,7 +83,7 @@ The relation *being taller than* on a set of people is not.
 $R$ on a set $S$ is **anti-symmetric** if there is no pair of *distinct* elements of $X$ each of which is related by $R$ to the other.
 
 <!-- slide data-transition="fade" -->
-More formally, $R$ is anti-symmetric if for all $a$ and $b \in X$, if $Rab$ and $Rba$, then $a = b$
+More formally, $R$ is anti-symmetric if for all $a$ and $b \in X$, if $(a, b) \in R$ and $(b, a) \in R$, then $a = b$
 
 * Put another way: if $(a, b) \in R$ and $a \neq b$, then $(b, a) \notin R$ must not hold. <!-- .element: class="fragment" data-fragment-index="1" -->
 
