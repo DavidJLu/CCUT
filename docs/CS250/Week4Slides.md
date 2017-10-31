@@ -3,7 +3,7 @@ presentation:
   # The "normal" size of the presentation, aspect ratio will be preserved
   # when the presentation is scaled to fit different resolutions. Can be
   # specified using percentage units.
-  width: 960
+  width: 1280
   height: 700
   transition: 'slide'
 ---
@@ -179,6 +179,13 @@ Consider the set of lines $L$ on a Euclidean plane.
 
 The relation *is parallel to* is an equivalence relation on $L$
 
+
+<!-- slide -->
+Consider the following relations:
+1. Relation $\perp$ (perpendicular) on the set $L$ of lines in the plane.
+1. Relation $\mid$ of divisibility on the set $\mathbb{N}$ of positive integers. (Recall $x \mid y$ if there exists $z$ such that $xz = y$.)
+
+What properties do these relations have?
 
 <!-- slide data-transition="fade" -->
 ## Partial Order Relations

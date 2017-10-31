@@ -3,8 +3,8 @@ presentation:
   # The "normal" size of the presentation, aspect ratio will be preserved
   # when the presentation is scaled to fit different resolutions. Can be
   # specified using percentage units.
-  width: 960
-  height: 700
+  width: 1280
+  height: 740
   transition: 'slide'
 ---
 
@@ -13,7 +13,9 @@ presentation:
 <!-- slide -->
 # CS161 at CCUT Week 4:
 
-## Control Structures (If... else...)
+## [Control Structures ]
+### If... else...
+### Nested loops
 
 And more turtle!
 
