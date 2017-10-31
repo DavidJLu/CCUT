@@ -218,6 +218,8 @@ What if we don't want a polygon on every side? Instead, let's draw a rosette on 
 <!-- slide -->
 A rosette is a small decoration, usually circular in shape or with circular patterns. I gave you an example earlier that drew a rosette: [Circles.py](Circles.py)
 
+![Circles](Circles.png)
+
 <!-- slide -->
 ## Putting it all together:
 ### [Rosettes and Polygons](RosettesAndPolygons.py)
