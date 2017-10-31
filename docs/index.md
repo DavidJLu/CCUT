@@ -15,6 +15,7 @@ Location: Changchun, Jilin, China
 * [Week 1](CS161/Week1.html) (updated 10/18/17)
 * [Week 2](CS161/Week2.html) (updated 10/27/17)
 * [Week 3](CS161/Week3.html) | [Day 2](CS161/Week3Day2.html) (updated 10/28/17)
+* [Week 4 Slides](CS161/Week4Slides.html) (updated 10/31/17)
 
 
 
