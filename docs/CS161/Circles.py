@@ -1,10 +1,9 @@
 #David Lu
-from turtle import Turtle
+import turtle
  
-t=Turtle()
+t=turtle.Turtle()
 t.screen.bgcolor("white")
 colors=["red","green","purple"]
-#t.screen.tracer(0,0)
  
 for x in range(100):
     t.circle(x)
@@ -12,4 +11,4 @@ for x in range(100):
     t.left(60)
  
 t.screen.exitonclick()
-t.screen.mainloop()
+

@@ -5,7 +5,7 @@ t = turtle.Pen()
 turtle.bgcolor("black")
 t.speed(40)          # Set turtle drawing speed
 
-colors=['deep sky blue', 'orange red', 'green', 'yellow', 'cyan', 'purple',
+colors=['deep sky blue', 'orange red', 'purple', 'yellow', 'cyan', 'green',
         'deep pink', 'navy', 'lavender', 'aquamarine', 'pink', 'gold']
 sides = int(turtle.numinput("Number of sides", "How many spiral sides?", 4, 1, 12))
 
