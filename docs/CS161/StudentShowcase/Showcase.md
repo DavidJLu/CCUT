@@ -53,40 +53,40 @@ Toward the end of the session, students participated in an in-class group projec
 
 Here are a few examples that were presented to the class.
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 One group decided to make use of the goto() and circle() functions to draw the Olympic Rings
 
-<!-- slide data-transition="fade" -->
+<!-- slide  data-transition="convex" -->
 ![Olympic Rings](OlympicRings.png)
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 Another group used the goto() and circle() functions to draw a Yin and Yang symbol.
 
-<!-- slide data-transition="fade" -->
+<!-- slide data-transition="convex" -->
 ![Yin Yang](YinYang.png)
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 One group used a series of heading changes and forward movements to draw a robot. They also took some of the examples from class and placed them around the robot.
 
-<!-- slide data-transition="fade" -->
+<!-- slide data-transition="convex" -->
 ![Robot](Robot.png)
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 This group experimented with a recursive function!
 
-<!-- slide data-transition="fade" -->
+<!-- slide data-transition="convex" -->
 ![Branch](Branch.png)
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 These students made use of a number of techniques we covered in class to draw a night scene on the water.
 
-<!-- slide data-transition="fade" -->
+<!-- slide data-transition="convex" -->
 ![Sailboat Scene](Sailboat.png)
 
-<!-- slide data-transition="zoom" -->
+<!-- slide data-transition="convex" -->
 And lastly, this group explored using subroutines to draw curves and made use of the turtle text writing function.
 
-<!-- slide data-transition="fade" -->
+<!-- slide data-transition="convex" -->
 ![Heart](Heart.png)
 
 <!-- slide align="left"-->
