@@ -80,10 +80,10 @@ The relation *being taller than* on a set of people is not.
 ### Antisymmetry
 
 <!-- slide -->
-$R$ on a set $S$ is **anti-symmetric** if there is no pair of *distinct* elements of $X$ each of which is related by $R$ to the other.
+$R$ on a set $S$ is **anti-symmetric** if there is no pair of *distinct* elements of $S$ each of which is related by $R$ to the other.
 
 <!-- slide data-transition="fade" -->
-More formally, $R$ is anti-symmetric if for all $a$ and $b \in X$, if $(a, b) \in R$ and $(b, a) \in R$, then $a = b$
+More formally, $R$ is anti-symmetric if for all $a$ and $b \in S$, if $(a, b) \in R$ and $(b, a) \in R$, then $a = b$
 
 * Put another way: if $(a, b) \in R$ and $a \neq b$, then $(b, a) \notin R$ must not hold. <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -140,7 +140,7 @@ I.e. Whenever $x > y$ and $y > z$ it holds that $x > z$.
 
 On the other hand, *mother of* is not transitive.
 
-If Alice is the mother of Barbara, and Barbara is the mother of Clara, it cannot be the case that Alice is the mother of Barbara.
+If Alice is the mother of Barbara, and Barbara is the mother of Clara, it cannot be the case that Alice is the mother of Clara.
 
 <!-- slide -->
 
