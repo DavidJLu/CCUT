@@ -1,7 +1,6 @@
 import turtle
 turtle.color('green')
 turtle.bgcolor('black')
-turtle.width(3)
 def branch(length,level):
   if level<=0:
     return
