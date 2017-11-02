@@ -54,13 +54,13 @@ Toward the end of the session, students participated in an in-class group projec
 Here are a few examples that were presented to the class.
 
 <!-- slide data-transition="convex" -->
-One group decided to make use of the goto() and circle() functions to draw the Olympic Rings
+One group decided to make use of the `goto` and `circle` functions to draw the Olympic Rings
 
 <!-- slide  data-transition="convex" -->
 ![Olympic Rings](OlympicRings.png)
 
 <!-- slide data-transition="convex" -->
-Another group used the goto() and circle() functions to draw a Yin and Yang symbol.
+Another group cleverly used the `goto` and `circle` along with the color fill functions to draw a Yin and Yang symbol.
 
 <!-- slide data-transition="convex" -->
 ![Yin Yang](YinYang.png)
@@ -92,6 +92,8 @@ And lastly, this group explored using subroutines to draw curves and made use of
 <!-- slide align="left"-->
 ## Conclusion
 Students appeared to have a positive experience with Python and the turtle graphics library. They more enthusiastic, more engaged, and more motivated to participate in class and experiment on their own than in previous CS161 guest sessions.
+
+Many thanks for my CCUT co-professor ShanHong for being so supportive.
 
 <!-- slide -->
 # END
