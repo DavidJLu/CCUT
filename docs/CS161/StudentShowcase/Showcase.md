@@ -93,7 +93,7 @@ And lastly, this group explored using subroutines to draw curves and made use of
 ## Conclusion
 Students appeared to have a positive experience with Python and the turtle graphics library. They more enthusiastic, more engaged, and more motivated to participate in class and experiment on their own than in previous CS161 guest sessions.
 
-Many thanks for my CCUT co-professor ShanHong for being so supportive.
+Many thanks to my CCUT co-professor Shan Hong for being so supportive.
 
 <!-- slide -->
 # END
