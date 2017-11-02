@@ -81,7 +81,7 @@ This group experimented with a recursive function!
 These students made use of a number of techniques we covered in class to draw a night scene on the water.
 
 <!-- slide data-transition="convex" -->
-![Sailboat Scene](Sailboat.png)
+![Sailboat Scene](SailBoat.png)
 
 <!-- slide data-transition="convex" -->
 And lastly, this group explored using subroutines to draw curves and made use of the turtle text writing function.
