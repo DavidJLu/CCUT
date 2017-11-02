@@ -89,5 +89,9 @@ And lastly, this group explored using subroutines to draw curves and made use of
 <!-- slide data-transition="fade" -->
 ![Heart](Heart.png)
 
+<!-- slide align="left"-->
+## Conclusion
+Students appeared to have a positive experience with Python and the turtle graphics library. They more enthusiastic, more engaged, and more motivated to participate in class and experiment on their own than in previous CS161 guest sessions.
+
 <!-- slide -->
 # END
