@@ -84,10 +84,16 @@ These students made use of a number of techniques we covered in class to draw a 
 ![Sailboat Scene](SailBoat.png)
 
 <!-- slide data-transition="convex" -->
-And lastly, this group explored using subroutines to draw curves and made use of the turtle text writing function.
+This group explored using subroutines to draw curves and made use of the turtle text writing function.
 
 <!-- slide data-transition="convex" -->
 ![Heart](Heart.png)
+
+<!-- slide data-transition="convex" -->
+The last group synthesized ideas from each lesson to show their patriotism.
+
+<!-- slide data-transition="convex" -->
+![Chinese National Flag](ChinaFlag.png)
 
 <!-- slide align="left"-->
 ## Conclusion
