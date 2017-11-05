@@ -93,7 +93,7 @@ This group explored using subroutines to draw curves and made use of the turtle 
 The last group synthesized ideas from each lesson to show their patriotism.
 
 <!-- slide data-transition="convex" -->
-![Chinese National Flag](ChinaFlag.png)
+![Chinese National Flag](ChinaFlag.PNG)
 
 <!-- slide align="left"-->
 ## Conclusion
