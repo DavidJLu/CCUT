@@ -1,1005 +1,349 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Week1</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html>
+    <head>
+      <title>Week1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+      
+      
+      
+      
+      
+      
 
-    
-
-    <style>
-    atom-text-editor {
-  background-color: #263238;
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .wrap-guide {
-  background-color: #2b3940;
-}.markdown-preview-enhanced pre .indent-guide {
-  color: #2b3940;
-}.markdown-preview-enhanced pre .invisible-character {
-  color: #373b41;
-}.markdown-preview-enhanced pre .cursor-line {
-  background-color: #212b30;
-}.markdown-preview-enhanced pre .gutter {
-  background-color: #263238;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
-  background-color: #212b30;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
-  color: #B2CCD6;
-}.markdown-preview-enhanced pre .invisible {
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .cursor {
-  color: #009688;
-  border-width: 2px;
-}.markdown-preview-enhanced pre .selection .region {
-  background-color: #3b4d56;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
-  background-color: transparent;
-  border: 1px solid #B2CCD6;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
-  border: 1px solid white;
-}
-.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--keyword {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
-  color: #B2CCD6;
-}
-.mpe-syntax--keyword.mpe-syntax--operator {
-  color: #89DDF3;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
-  color: #82AAFF;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
-  color: #FFCB6B;
-}
-.mpe-syntax--storage {
-  color: #C792EA;
-}
-.mpe-syntax--constant {
-  color: #F07178;
-}
-.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
-  color: #C3E88D;
-}
-.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--variable.mpe-syntax--interpolation {
-  color: #eb434c;
-}
-.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
-  color: #F78C6A;
-}
-.mpe-syntax--variable.mpe-syntax--language {
-  color: #FF5370;
-}
-.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
-  color: #FFCB6B;
-}
-.mpe-syntax--invalid.mpe-syntax--illegal {
-  background-color: #F07178;
-  color: #263238;
-}
-.mpe-syntax--string {
-  color: #C3E88D;
-}
-.mpe-syntax--string.mpe-syntax--regexp {
-  color: #89DDF3;
-}
-.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
-  color: #FFCB6B;
-}
-.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
-  color: #F07178;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
-  color: #82AAFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
-  color: #FFE082;
-  font-weight: bold;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--terminator {
-  color: #89DDF3;
-}
-.mpe-syntax--support.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--support.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
-  color: #B2CCD6;
-}
-.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #EEFFFF;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
-  color: #C3E88D;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
-  color: #F07178;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--class {
-  color: #FFE082;
-}
-.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
-  color: #89DDF3;
-}
-.mpe-syntax--meta.mpe-syntax--link {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--require {
-  color: #82AAFF;
-}
-.mpe-syntax--meta.mpe-syntax--selector {
-  color: #C792EA;
-}
-.mpe-syntax--meta.mpe-syntax--separator {
-  background-color: #373b41;
-  color: #EEFFFF;
-}
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
-  color: #89DDF3;
-}
-.mpe-syntax--none {
-  color: #EEFFFF;
-}
-.mpe-syntax--markup.mpe-syntax--bold {
-  color: #FFCB6B;
-  font-weight: bold;
-}
-.mpe-syntax--markup.mpe-syntax--changed {
-  color: #C792EA;
-}
-.mpe-syntax--markup.mpe-syntax--deleted {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
-  color: #82AAFF;
-}
-.mpe-syntax--markup.mpe-syntax--inserted {
-  color: #C3E88D;
-}
-.mpe-syntax--markup.mpe-syntax--list {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--quote {
-  color: #FFCB6B;
-}
-.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
-  color: #C3E88D;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
-  -webkit-font-smoothing: auto;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
-  color: #C3E88D;
-}.markdown-preview-enhanced pre[mini] .scroll-view {
-  padding-left: 1px;
-}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
-  z-index: inherit;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #009688;
-  box-sizing: border-box;
-  background-color: rgba(238, 255, 255, 0.1);
-  box-shadow: inset 0 -1px 0 #009688;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
-  color: #89DDF3;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
-  color: #73d1c8;
-}
-.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
-  color: #FFE082;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
-  color: #F78C6A;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
-  color: #B2CCD6;
-}
-.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
-  color: #C792EA;
-}
-.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
-  color: #89DDF3;
-}
-.mpe-syntax--js .mpe-syntax--constant {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #FFCB6B;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
-  color: #82AAFF;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
-  color: #F07178;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C792EA;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
-  color: currentColor;
-}
-.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
-  color: #C792EA;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
-  color: #82AAFF;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
-  color: #C792EA;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
-  color: #82AAFF;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
-  color: #7986CB;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
-  color: #FF5370;
-}
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
-  color: #C792EA;
-}
-.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
-  color: #89DDF3;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.markdown-preview-enhanced {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  overflow: initial;
-  margin: 10px 13px 10px 13px;
-  padding: 2em;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[is="space-pen-div"] {
-  width: 100%;
-  margin: 0;
-  z-index: 999;
-  overflow: scroll;
-  font-size: 16px;
-  display: block;
-  position: absolute;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5,
-.markdown-preview-enhanced h6 {
-  line-height: 1.2;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  color: #000000;
-}
-.markdown-preview-enhanced h1 {
-  font-size: 2.25em;
-  font-weight: 300;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h2 {
-  font-size: 1.75em;
-  font-weight: 400;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.markdown-preview-enhanced h4 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h6 {
-  font-size: 1.0em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5 {
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1em;
-}
-.markdown-preview-enhanced h6 {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2 {
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced strong {
-  color: #000000;
-}
-.markdown-preview-enhanced del {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a {
-  color: #08c;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a:hover {
-  color: #0050a3;
-  text-decoration: none;
-}
-.markdown-preview-enhanced img,
-.markdown-preview-enhanced svg {
-  max-width: 100%;
-}
-.markdown-preview-enhanced > p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > ul,
-.markdown-preview-enhanced > ol {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol {
-  padding-left: 2em;
-}
-.markdown-preview-enhanced ul.no-list,
-.markdown-preview-enhanced ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-.markdown-preview-enhanced ul ul,
-.markdown-preview-enhanced ul ol,
-.markdown-preview-enhanced ol ol,
-.markdown-preview-enhanced ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li.task-list-item {
-  list-style: none;
-}
-.markdown-preview-enhanced li > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced .task-list-item-checkbox {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
-}
-.markdown-preview-enhanced .task-list-item-checkbox:hover {
-  cursor: pointer;
-}
-.markdown-preview-enhanced blockquote {
-  margin: 16px 0;
-  font-size: inherit;
-  padding: 0 15px;
-  color: #5c5c5c;
-  border-left: 4px solid #d6d6d6;
-}
-.markdown-preview-enhanced blockquote > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced blockquote > :last-child {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced hr {
-  height: 4px;
-  margin: 32px 0;
-  background-color: #d6d6d6;
-  border: 0 none;
-}
-.markdown-preview-enhanced table {
-  margin: 10px 0 15px 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-preview-enhanced table th {
-  font-weight: bold;
-  color: #000000;
-}
-.markdown-preview-enhanced table td,
-.markdown-preview-enhanced table th {
-  border: 1px solid #d6d6d6;
-  padding: 6px 13px;
-}
-.markdown-preview-enhanced dl {
-  padding: 0;
-}
-.markdown-preview-enhanced dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown-preview-enhanced dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced code {
+      <style> 
+      pre {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 0.85em !important;
-  color: #000000;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  padding: 0.2em 0;
-}
-.markdown-preview-enhanced code::before,
-.markdown-preview-enhanced code::after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-.markdown-preview-enhanced pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 0.85em !important;
-  word-break: normal;
+  direction: ltr;
+  text-align: left;
   white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced .highlight {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced .highlight pre,
-.markdown-preview-enhanced pre {
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  padding: 16px;
+  word-spacing: normal;
+  word-break: normal;
+  padding: 1em;
+  margin: .5em 0;
   overflow: auto;
-  font-size: 0.85em !important;
-  line-height: 1.45;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
   color: #EEFFFF;
   background-color: #2e3d44 !important;
-  border: #d6d6d6;
+  border: #475d69;
   border-radius: 3px;
 }
-.markdown-preview-enhanced .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
+pre[class*="language-"] {
+  padding: 1em;
 }
-.markdown-preview-enhanced pre {
-  word-wrap: break-word;
-  white-space: normal;
-  word-break: break-all;
-}
-.markdown-preview-enhanced pre .section {
-  opacity: 1;
-}
-.markdown-preview-enhanced pre code,
-.markdown-preview-enhanced pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced pre code:before,
-.markdown-preview-enhanced pre tt:before,
-.markdown-preview-enhanced pre code:after,
-.markdown-preview-enhanced pre tt:after {
-  content: normal;
-}
-.markdown-preview-enhanced p,
-.markdown-preview-enhanced blockquote,
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol,
-.markdown-preview-enhanced dl,
-.markdown-preview-enhanced pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced kbd {
-  color: #000000;
-  border: 1px solid #d6d6d6;
-  border-bottom: 2px solid #c7c7c7;
-  padding: 2px 4px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
-.markdown-preview-enhanced .pagebreak,
-.markdown-preview-enhanced .newpage {
-  page-break-before: always;
-}
-@media screen and (min-width: 914px) {
-  .markdown-preview-enhanced {
-    width: 980px;
-    margin: 10px auto;
-    background: #fff;
+code[class*="language-"],
+pre[class*="language-"] {
+  /*
+&.line-numbers {
+  .line-numbers-rows>span:before {
   }
 }
-@media screen and (max-width: 400px) {
-  .markdown-preview-enhanced {
-    font-size: 14px;
-    margin: 0 auto;
-    padding: 15px;
-  }
+*/
 }
-@media print {
-  .markdown-preview-enhanced {
-    background-color: #fff;
-    /*table,*/
-  }
-  .markdown-preview-enhanced h1,
-  .markdown-preview-enhanced h2,
-  .markdown-preview-enhanced h3,
-  .markdown-preview-enhanced h4,
-  .markdown-preview-enhanced h5,
-  .markdown-preview-enhanced h6 {
-    color: #000000;
-    page-break-after: avoid;
-  }
-  .markdown-preview-enhanced blockquote {
-    color: #5c5c5c;
-  }
-  .markdown-preview-enhanced pre {
-    page-break-inside: avoid;
-  }
-  .markdown-preview-enhanced table {
-    display: table;
-  }
-  .markdown-preview-enhanced img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .markdown-preview-enhanced pre,
-  .markdown-preview-enhanced code {
-    word-wrap: break-word;
-    white-space: normal;
-  }
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #4f6875;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk {
-  position: relative;
+code[class*="language-"] .token.punctuation,
+pre[class*="language-"] .token.punctuation {
+  color: #82AAFF;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div {
-  overflow-x: auto;
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: .7;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div svg {
-  display: block;
+code[class*="language-"] .token.constant,
+pre[class*="language-"] .token.constant {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk pre {
-  cursor: text;
+code[class*="language-"] .token.property,
+pre[class*="language-"] .token.property {
+  color: #73d1c8;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #F78C6A;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn {
-  float: right;
-  margin-left: 4px;
-  border-radius: 3px;
-  font-size: 0.8em;
-  color: #eee;
-  background-color: #528bff;
-  background-image: none;
-  border: none;
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn:hover {
-  background-color: #4b7fe8;
-  cursor: pointer;
+code[class*="language-"] .token.deleted,
+pre[class*="language-"] .token.deleted {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk:hover .btn-group {
-  display: block;
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .status {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 0.85em;
-  color: inherit;
-  padding: 2px 6px;
-  background-color: rgba(0, 0, 0, 0.04);
-  display: none;
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .btn-group {
-  display: none;
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .status {
-  display: block;
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .refresh-btn {
-  position: fixed;
-  display: none;
-  right: 24px;
-  top: 54px;
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #373b41;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn {
-  right: 72px;
+code[class*="language-"] .token.builtin,
+pre[class*="language-"] .token.builtin,
+code[class*="language-"] .token.inserted,
+pre[class*="language-"] .token.inserted {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn {
-  display: block;
-  opacity: 0.4;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn:hover {
-  opacity: 1.0;
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #FFCB6B;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .btn-group {
-  display: none;
+code[class*="language-"] .token.operator,
+pre[class*="language-"] .token.operator {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .status {
-  display: none;
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value,
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #C792EA;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .back-to-top-btn {
-  display: none;
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #82AAFF;
 }
-/*
- * Reveal.js styles
- */
-[data-presentation-preview-mode] {
-  background-color: #f4f4f4;
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  color: #FFCB6B;
 }
-[data-presentation-preview-mode] .preview-slides {
-  width: 100%;
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex,
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #89DDF3;
 }
-[data-presentation-preview-mode] .preview-slides .slide {
-  position: relative;
-  background-color: #fff;
-  padding: 2em !important;
-  margin-bottom: 12px;
-  text-align: left !important;
-  display: flex;
-  align-items: center;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0px 0px 16px 4px #eeeeee;
-  font-size: 24px;
-}
-[data-presentation-preview-mode] .preview-slides .slide h1,
-[data-presentation-preview-mode] .preview-slides .slide h2,
-[data-presentation-preview-mode] .preview-slides .slide h3,
-[data-presentation-preview-mode] .preview-slides .slide h4,
-[data-presentation-preview-mode] .preview-slides .slide h5,
-[data-presentation-preview-mode] .preview-slides .slide h6 {
-  margin-top: 0;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border: none;
-  z-index: 1;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  z-index: 2;
-}
-[data-presentation-preview-mode] section {
-  display: block;
-  width: 100%;
-  transform-style: preserve-3d;
-  font-size: 100%;
-  font: inherit;
-  z-index: 100;
-}
-.markdown-preview-enhanced[data-presentation-mode] {
-  font-size: 24px;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] h1,
-.markdown-preview-enhanced[data-presentation-mode] h2,
-.markdown-preview-enhanced[data-presentation-mode] h3,
-.markdown-preview-enhanced[data-presentation-mode] h4,
-.markdown-preview-enhanced[data-presentation-mode] h5,
-.markdown-preview-enhanced[data-presentation-mode] h6 {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] strong {
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
   font-weight: bold;
 }
-.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
-  display: none;
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
 }
-.markdown-preview-enhanced .slides {
-  text-align: left !important;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
 }
-
-    /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
-/*
- * Examples
- * (To see them, uncomment and save)
- */
-
-    </style>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-
-    
-  </head>
-  <body class="markdown-preview-enhanced   ">
-
-  <h1 id="cs251-week-1-welcome">CS251 Week 1: Welcome!</h1>
+html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+       
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1>CS251 Week 1: Welcome!</h1>
 <p><img src="math.jpg" alt="Math Art"></p>
 <p><sub>(Converted from week 1 slides)</sub></p>
 <p>Instructor: David Lu<br>
-Textbook: <a href="http://textbooks.opensuny.org/concise-introduction-to-logic/">A Concise Introduction to Logic</a><br>
-Author: Craig DeLancey</p>
-<p>Another good textbook: <a href="https://www.fecundity.com/logic/">Forall x</a><br>
-Author: PD Magnus</p>
-<h4 id="about-your-instructor">About Your Instructor:</h4>
+A good textbook: <a href="http://forallx.openlogicproject.org/">forall x Calgary Remix</a><br>
+Author: PD Magnus, Tim Button, J. Robert Loftis, Aaron Thomas-Bolduc, Richard Zach</p>
+<h4 class="mume-header" id="about-your-instructor">About Your Instructor:</h4>
+
 <p>I’m glad to be back in Changchun and to see everyone here at CCUT again.</p>
 <p>Some quick facts about me:</p>
 <ul>
-<li><p>Born and grew up in the US (mostly in New York)</p></li>
-<li><p>Went to college at the <a href="https://www.buffalo.edu/">University at Buffalo</a>, which is located in upstate NY, near Canada.</p></li>
-<li><p>Graduated with a BA in Philosophy</p></li>
-<li><p>Worked on a PhD in Philosophy at <a href="https://www.syracuse.edu/">Syracuse University</a> (also located in upstate NY - central), specializing in metaphysics and philosophical methodology</p></li>
-<li><p>Taught philosophy courses over 6 years in ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University</p></li>
-<li><p>Currently teaching discrete math, introduction to C++, and ethics for computing at Portland State University</p></li>
-<li><p>2nd year participating in the PSU/CCUT partnership program</p></li>
-<li><p>One younger brother and one younger sister</p></li>
+<li>Born and grew up in the US (mostly in New York)</li>
+<li>Went to college at the <a href="https://www.buffalo.edu/">University at Buffalo</a>, which is located in upstate NY, near Canada.</li>
+<li>Graduated with a BA in Philosophy</li>
+<li>Worked on a PhD in Philosophy at <a href="https://www.syracuse.edu/">Syracuse University</a> (also located in upstate NY - central), specializing in metaphysics and philosophical methodology</li>
+<li>Taught philosophy courses over 6 years in ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University</li>
+<li>Currently teaching discrete math, introduction to C++, and ethics for computing at Portland State University</li>
+<li>3rd year participating in the PSU/CCUT partnership program</li>
+<li>One younger brother and one younger sister</li>
 </ul>
-<h2 id="cs251-guest-lectures-at-ccut">CS251 Guest Lectures at CCUT</h2>
-<p>CS251 focuses on one central topic: Formal Logic</p>
-<p>In this course, we will be studying a number of logical systems, also known<br>
-as logical theories or logical systems. Logic is important in all areas of study. It’s not just for computer science students. Can you think of why?</p>
-<h4 id="logical-systems">Logical Systems</h4>
+<h2>CS251 Guest Lectures at CCUT</h2>
+<p>The central topic in CS251 is formal logic</p>
+<p>In this course, we will be studying formal language which we can use to express and investigate logical ideas. Logic is important in all areas of study. It’s not just for computer science students. Can you think of why?</p>
+<h4 class="mume-header" id="arguments">Arguments</h4>
+
+<p>Logic is in the business of evaluating arguments. We’d like to have a rigorous method for sorting the good arguments from the bad arguments.</p>
+<p>An argument is a series of sentences, one of which is a conclusion and the others given as reasons to believe the conclusion. Here’s an example:</p>
+<p>It’s raining heavily.<br>
+If you do not take an umbrella, you’ll get soaked.<br>
+Therefore, you should take an umbrella.</p>
+<h4 class="mume-header" id="logical-systems">Logical Systems</h4>
+
 <p>A logical system consists of four things:</p>
 <ol>
-<li><p>A vocabulary of primitive signs used in the language of that system.</p></li>
-<li><p>A list or set of rules governing what strings of signs (called <em>formulas</em>) are grammatically or syntactically well-formed in the language of that system.</p></li>
-<li><p>A list of axioms, or a subset of the well-formed formulas, considered as basic and unprovable principles taken as true in the system.</p></li>
-<li><p>A specification of what inferences, or inference patterns or rules, are taken as valid in that system.</p></li>
+<li>A vocabulary of primitive signs used in the language of that system.</li>
+<li>A list or set of rules governing what strings of signs (called <em>formulas</em>) are grammatically or syntactically well-formed in the language of that system.</li>
+<li>A list of axioms, or a subset of the well-formed formulas, considered as basic and unprovable principles taken as true in the system.</li>
+<li>A specification of what inferences, or inference patterns or rules, are taken as valid in that system.</li>
 </ol>
-<h4 id="the-languages">The Languages</h4>
+<h4 class="mume-header" id="the-language">The Language</h4>
+
 <p>Because we always start discussing a logical system by discussing the<br>
 language it uses, it is worth pausing to discuss the notion of using language<br>
 to study language.</p>
 <p>These comprise the first two parts of the logical system: a vocabulary and a syntax or grammar.</p>
-<h4 id="metalanguage-and-object-language">Metalanguage and Object Language</h4>
-<p>The languages of the systems we study are symbolic logical languages. They use symbols such as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∨</span></span></span></span>, not found in ordinary English or Chinese.</p>
+<h4 class="mume-header" id="metalanguage-and-object-language">Metalanguage and Object Language</h4>
+
+<p>The languages of the systems we study are symbolic logical languages. They use symbols such as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span>, not found in ordinary English or Chinese.</p>
 <p>However, we will talk and read <em>about</em> these logical languages in ordinary English or Chinese.</p>
 <p>Whenever one language is used to discuss to study another, we can distinguish between the language that is being studied, called the <strong>object language</strong>, from the language in which we conduct the study, called the <strong>metalanguage</strong>.</p>
 <p>What one is the object language and which one is the metalanguage for this course?</p>
 <p>In this course, the object languages will be propositional logic (sometimes called sentential logic) and predicate calculus. In CS250, set theory was the main object language you studied.</p>
 <p>Often we will use the metalanguage (English and Chinese) to prove things about the object language. Proving things already requires logical vocabulary! Fortunately English (and Chinese) has words like <em>all</em>, <em>or</em>, <em>and</em>, <em>if</em>, and so on. These are some of the logical vocabulary of English.</p>
-<h3 id="the-propositional-logic">The Propositional Logic</h3>
+<h3 class="mume-header" id="the-propositional-logic">The Propositional Logic</h3>
+
 <p>For the first part of this class, we will study the Propositional Logic (PL).</p>
-<h5 id="logical-vocabulary">Logical Vocabulary</h5>
+<h5 class="mume-header" id="logical-vocabulary">Logical Vocabulary</h5>
+
 <p>The Propositional Logic, like any  language contains a volcabulary. In this case, it is pretty small, so it is easy to study.</p>
-<p>Logical Connectives: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∧</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∨</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≡</mo></mrow><annotation encoding="application/x-tex">\equiv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46375em;"></span><span class="strut bottom" style="height:0.46375em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≡</span></span></span></span> (sometimes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span>)</p>
+<p>Logical Connectives: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">¬</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∧</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≡</mo></mrow><annotation encoding="application/x-tex">\equiv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46375em;"></span><span class="strut bottom" style="height:0.46375em;vertical-align:0em;"></span><span class="base"><span class="mrel">≡</span></span></span></span> (sometimes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">↔</span></span></span></span>)</p>
 <p>Atomic Propositions: Uppercase letters: A, B, C, … P, Q, R</p>
 <p>Sentence Schema (sentence variables): lowercase letters: \textit{p, q, r}</p>
 <p>Parentheses: ( ) [ ] { }</p>
-<h5 id="syntax">Syntax</h5>
+<h5 class="mume-header" id="syntax">Syntax</h5>
+
 <ul>
-<li><p>Any atomic proposition, P, is syntactically well-formed.</p></li>
-<li><p>For any well-formed proposition, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span>, is well-formed.</p></li>
-<li><p>For any well-formed propositions, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∧</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \land r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∨</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \lor r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>→</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \rightarrow r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>↔</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \leftrightarrow r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">↔</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> are well-formed.</p></li>
+<li>
+<p>Any atomic proposition, P, is syntactically well-formed.</p>
+</li>
+<li>
+<p>For any well-formed proposition, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span>, is well-formed.</p>
+</li>
+<li>
+<p>For any well-formed propositions, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∧</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \land r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∨</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \lor r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>→</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \rightarrow r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>↔</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">p \leftrightarrow r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span><span class="mrel">↔</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> are well-formed.</p>
+</li>
 </ul>
-<h4 id="precision">Precision</h4>
+<h4 class="mume-header" id="precision">Precision</h4>
+
 <p>Why do we study these logical languages?</p>
 <p><strong>Answer:</strong> We want to use them very precisely.</p>
 <p>Consider the precision needed to program a computer.<br>
 Computers are very dumb. They do exactly what you tell them to.<br>
 Computer languages are very much like our logical languages - they are precise.</p>
-<h5 id="vagueness">Vagueness</h5>
+<h5 class="mume-header" id="vagueness">Vagueness</h5>
+
 <p>Natural languages like English and Chinese contain lots of imprecision.</p>
 <p>Consider the sentence: <em>The train is moving too fast.</em></p>
 <p>Is this true or not?</p>
-<h5 id="ambiguity">Ambiguity</h5>
+<h5 class="mume-header" id="ambiguity">Ambiguity</h5>
+
 <p>How about this one: <em>The professor from PSU is very nice.</em></p>
 <p>This one contains ambiguity and vagueness!</p>
 <hr>
-<h4 id="exercises">Exercises</h4>
+<h4 class="mume-header" id="exercises">Exercises</h4>
+
 <p>Try some exercises from chapter 1 of the textbook</p>
-<h6 id="exercise-1">Exercise 1</h6>
+<h6 class="mume-header" id="exercise-1">Exercise 1</h6>
+
 <p>Vagueness arises when the conditions under which a sentence might be true are not clear.</p>
 <p>Come up with five sentences in English that are vague.</p>
-<h6 id="exercise-2">Exercise 2</h6>
+<h6 class="mume-header" id="exercise-2">Exercise 2</h6>
+
 <p>Ambiguity arises when a word or phrase has several different meanings.</p>
 <p>Come up with five sentences in English that are ambiguous.</p>
 <p>Hint: This will require that you identify a homonym, two words that sound the same but have different meanings.</p>
-<h6 id="exercise-3">Exercise 3</h6>
+<h6 class="mume-header" id="exercise-3">Exercise 3</h6>
+
 <p>We can often make a vague sentence precise by giving a specific interpretation for the vague term.</p>
 <p>For each of the five vague sentences, try to come up with an interpretation that makes the sentence no longer vague.</p>
-<h6 id="exercise-4">Exercise 4</h6>
+<h6 class="mume-header" id="exercise-4">Exercise 4</h6>
+
 <p>Again we can often make ambiguous sentences precise by specifying which meaning we intended for the ambiguous term.</p>
 <p>For each of the five ambiguous sentences, make it precise.</p>
-<h6 id="exercise-5">Exercise 5</h6>
+<h6 class="mume-header" id="exercise-5">Exercise 5</h6>
+
 <p>Come up with five examples of English sentences that are not declarative sentences.</p>
 <hr>
 
+      </div>
+      <div class="md-sidebar-toc"><pre><code>* [About Your Instructor:](#about-your-instructor)
+* [Arguments](#arguments)
+* [Logical Systems](#logical-systems)
+* [The Language](#the-language)
+* [Metalanguage and Object Language](#metalanguage-and-object-language)
+</code></pre>
+<ul>
+<li><a href="#the-propositional-logic">The Propositional Logic</a><br>
+* <a href="#logical-vocabulary">Logical Vocabulary</a><br>
+* <a href="#syntax">Syntax</a>
+<ul>
+<li><a href="#precision">Precision</a>
+<ul>
+<li><a href="#vagueness">Vagueness</a></li>
+<li><a href="#ambiguity">Ambiguity</a></li>
+</ul>
+</li>
+<li><a href="#exercises">Exercises</a><br>
+* <a href="#exercise-1">Exercise 1</a><br>
+* <a href="#exercise-2">Exercise 2</a><br>
+* <a href="#exercise-3">Exercise 3</a><br>
+* <a href="#exercise-4">Exercise 4</a><br>
+* <a href="#exercise-5">Exercise 5</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
 
-  </body>
-  
-</html>
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>

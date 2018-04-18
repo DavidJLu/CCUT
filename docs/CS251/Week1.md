@@ -6,12 +6,8 @@ CS251 Week 1: Welcome!
 <sub>(Converted from week 1 slides)
 
 Instructor: David Lu
-Textbook: [A Concise Introduction to Logic](http://textbooks.opensuny.org/concise-introduction-to-logic/)
-Author: Craig DeLancey
-
-Another good textbook: [Forall x](https://www.fecundity.com/logic/)
-Author: PD Magnus
-
+A good textbook: [forall x Calgary Remix](http://forallx.openlogicproject.org/)
+Author: PD Magnus, Tim Button, J. Robert Loftis, Aaron Thomas-Bolduc, Richard Zach
 
 #### About Your Instructor:
 I'm glad to be back in Changchun and to see everyone here at CCUT again.
@@ -23,17 +19,25 @@ Some quick facts about me:
 * Worked on a PhD in Philosophy at [Syracuse University](https://www.syracuse.edu/) (also located in upstate NY - central), specializing in metaphysics and philosophical methodology
 * Taught philosophy courses over 6 years in ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University
 * Currently teaching discrete math, introduction to C++, and ethics for computing at Portland State University
-* 2nd year participating in the PSU/CCUT partnership program
+* 3rd year participating in the PSU/CCUT partnership program
 * One younger brother and one younger sister
 
 
 CS251 Guest Lectures at CCUT
 -----
 
-CS251 focuses on one central topic: Formal Logic
+The central topic in CS251 is formal logic
 
-In this course, we will be studying a number of logical systems, also known
-as logical theories or logical systems. Logic is important in all areas of study. It's not just for computer science students. Can you think of why?
+In this course, we will be studying formal language which we can use to express and investigate logical ideas. Logic is important in all areas of study. It's not just for computer science students. Can you think of why?
+
+#### Arguments
+Logic is in the business of evaluating arguments. We'd like to have a rigorous method for sorting the good arguments from the bad arguments.
+
+An argument is a series of sentences, one of which is a conclusion and the others given as reasons to believe the conclusion. Here's an example:
+
+It's raining heavily.
+If you do not take an umbrella, you'll get soaked.
+Therefore, you should take an umbrella.
 
 #### Logical Systems
 
@@ -44,7 +48,7 @@ A logical system consists of four things:
 1. A list of axioms, or a subset of the well-formed formulas, considered as basic and unprovable principles taken as true in the system.
 1. A specification of what inferences, or inference patterns or rules, are taken as valid in that system.
 
-#### The Languages
+#### The Language
 Because we always start discussing a logical system by discussing the
 language it uses, it is worth pausing to discuss the notion of using language
 to study language.
