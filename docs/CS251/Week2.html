@@ -1,983 +1,357 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Week2</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html>
+    <head>
+      <title>Week2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+      
+      
+      
+      
+      
+      
 
-    
-
-    <style>
-    atom-text-editor {
-  background-color: #263238;
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .wrap-guide {
-  background-color: #2b3940;
-}.markdown-preview-enhanced pre .indent-guide {
-  color: #2b3940;
-}.markdown-preview-enhanced pre .invisible-character {
-  color: #373b41;
-}.markdown-preview-enhanced pre .cursor-line {
-  background-color: #212b30;
-}.markdown-preview-enhanced pre .gutter {
-  background-color: #263238;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
-  background-color: #212b30;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
-  color: #B2CCD6;
-}.markdown-preview-enhanced pre .invisible {
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .cursor {
-  color: #009688;
-  border-width: 2px;
-}.markdown-preview-enhanced pre .selection .region {
-  background-color: #3b4d56;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
-  background-color: transparent;
-  border: 1px solid #B2CCD6;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
-  border: 1px solid white;
-}
-.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--keyword {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
-  color: #B2CCD6;
-}
-.mpe-syntax--keyword.mpe-syntax--operator {
-  color: #89DDF3;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
-  color: #82AAFF;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
-  color: #FFCB6B;
-}
-.mpe-syntax--storage {
-  color: #C792EA;
-}
-.mpe-syntax--constant {
-  color: #F07178;
-}
-.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
-  color: #C3E88D;
-}
-.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--variable.mpe-syntax--interpolation {
-  color: #eb434c;
-}
-.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
-  color: #F78C6A;
-}
-.mpe-syntax--variable.mpe-syntax--language {
-  color: #FF5370;
-}
-.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
-  color: #FFCB6B;
-}
-.mpe-syntax--invalid.mpe-syntax--illegal {
-  background-color: #F07178;
-  color: #263238;
-}
-.mpe-syntax--string {
-  color: #C3E88D;
-}
-.mpe-syntax--string.mpe-syntax--regexp {
-  color: #89DDF3;
-}
-.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
-  color: #FFCB6B;
-}
-.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
-  color: #F07178;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
-  color: #82AAFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
-  color: #FFE082;
-  font-weight: bold;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--terminator {
-  color: #89DDF3;
-}
-.mpe-syntax--support.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--support.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
-  color: #B2CCD6;
-}
-.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #EEFFFF;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
-  color: #C3E88D;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
-  color: #F07178;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--class {
-  color: #FFE082;
-}
-.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
-  color: #89DDF3;
-}
-.mpe-syntax--meta.mpe-syntax--link {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--require {
-  color: #82AAFF;
-}
-.mpe-syntax--meta.mpe-syntax--selector {
-  color: #C792EA;
-}
-.mpe-syntax--meta.mpe-syntax--separator {
-  background-color: #373b41;
-  color: #EEFFFF;
-}
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
-  color: #89DDF3;
-}
-.mpe-syntax--none {
-  color: #EEFFFF;
-}
-.mpe-syntax--markup.mpe-syntax--bold {
-  color: #FFCB6B;
-  font-weight: bold;
-}
-.mpe-syntax--markup.mpe-syntax--changed {
-  color: #C792EA;
-}
-.mpe-syntax--markup.mpe-syntax--deleted {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
-  color: #82AAFF;
-}
-.mpe-syntax--markup.mpe-syntax--inserted {
-  color: #C3E88D;
-}
-.mpe-syntax--markup.mpe-syntax--list {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--quote {
-  color: #FFCB6B;
-}
-.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
-  color: #C3E88D;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
-  -webkit-font-smoothing: auto;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
-  color: #C3E88D;
-}.markdown-preview-enhanced pre[mini] .scroll-view {
-  padding-left: 1px;
-}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
-  z-index: inherit;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #009688;
-  box-sizing: border-box;
-  background-color: rgba(238, 255, 255, 0.1);
-  box-shadow: inset 0 -1px 0 #009688;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
-  color: #89DDF3;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
-  color: #73d1c8;
-}
-.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
-  color: #FFE082;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
-  color: #F78C6A;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
-  color: #B2CCD6;
-}
-.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
-  color: #C792EA;
-}
-.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
-  color: #89DDF3;
-}
-.mpe-syntax--js .mpe-syntax--constant {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #FFCB6B;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
-  color: #82AAFF;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
-  color: #F07178;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C792EA;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
-  color: currentColor;
-}
-.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
-  color: #C792EA;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
-  color: #82AAFF;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
-  color: #C792EA;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
-  color: #82AAFF;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
-  color: #7986CB;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
-  color: #FF5370;
-}
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
-  color: #C792EA;
-}
-.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
-  color: #89DDF3;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.markdown-preview-enhanced {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  overflow: initial;
-  margin: 10px 13px 10px 13px;
-  padding: 2em;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[is="space-pen-div"] {
-  width: 100%;
-  margin: 0;
-  z-index: 999;
-  overflow: scroll;
-  font-size: 16px;
-  display: block;
-  position: absolute;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5,
-.markdown-preview-enhanced h6 {
-  line-height: 1.2;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  color: #000000;
-}
-.markdown-preview-enhanced h1 {
-  font-size: 2.25em;
-  font-weight: 300;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h2 {
-  font-size: 1.75em;
-  font-weight: 400;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.markdown-preview-enhanced h4 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h6 {
-  font-size: 1.0em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5 {
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1em;
-}
-.markdown-preview-enhanced h6 {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2 {
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced strong {
-  color: #000000;
-}
-.markdown-preview-enhanced del {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a {
-  color: #08c;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a:hover {
-  color: #0050a3;
-  text-decoration: none;
-}
-.markdown-preview-enhanced img,
-.markdown-preview-enhanced svg {
-  max-width: 100%;
-}
-.markdown-preview-enhanced > p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > ul,
-.markdown-preview-enhanced > ol {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol {
-  padding-left: 2em;
-}
-.markdown-preview-enhanced ul.no-list,
-.markdown-preview-enhanced ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-.markdown-preview-enhanced ul ul,
-.markdown-preview-enhanced ul ol,
-.markdown-preview-enhanced ol ol,
-.markdown-preview-enhanced ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li.task-list-item {
-  list-style: none;
-}
-.markdown-preview-enhanced li > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced .task-list-item-checkbox {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
-}
-.markdown-preview-enhanced .task-list-item-checkbox:hover {
-  cursor: pointer;
-}
-.markdown-preview-enhanced blockquote {
-  margin: 16px 0;
-  font-size: inherit;
-  padding: 0 15px;
-  color: #5c5c5c;
-  border-left: 4px solid #d6d6d6;
-}
-.markdown-preview-enhanced blockquote > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced blockquote > :last-child {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced hr {
-  height: 4px;
-  margin: 32px 0;
-  background-color: #d6d6d6;
-  border: 0 none;
-}
-.markdown-preview-enhanced table {
-  margin: 10px 0 15px 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-preview-enhanced table th {
-  font-weight: bold;
-  color: #000000;
-}
-.markdown-preview-enhanced table td,
-.markdown-preview-enhanced table th {
-  border: 1px solid #d6d6d6;
-  padding: 6px 13px;
-}
-.markdown-preview-enhanced dl {
-  padding: 0;
-}
-.markdown-preview-enhanced dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown-preview-enhanced dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced code {
+      <style> 
+      pre {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 0.85em !important;
-  color: #000000;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  padding: 0.2em 0;
-}
-.markdown-preview-enhanced code::before,
-.markdown-preview-enhanced code::after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-.markdown-preview-enhanced pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 0.85em !important;
-  word-break: normal;
+  direction: ltr;
+  text-align: left;
   white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced .highlight {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced .highlight pre,
-.markdown-preview-enhanced pre {
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  padding: 16px;
+  word-spacing: normal;
+  word-break: normal;
+  padding: 1em;
+  margin: .5em 0;
   overflow: auto;
-  font-size: 0.85em !important;
-  line-height: 1.45;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
   color: #EEFFFF;
   background-color: #2e3d44 !important;
-  border: #d6d6d6;
+  border: #475d69;
   border-radius: 3px;
 }
-.markdown-preview-enhanced .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
+pre[class*="language-"] {
+  padding: 1em;
 }
-.markdown-preview-enhanced pre {
-  word-wrap: break-word;
-  white-space: normal;
-  word-break: break-all;
-}
-.markdown-preview-enhanced pre .section {
-  opacity: 1;
-}
-.markdown-preview-enhanced pre code,
-.markdown-preview-enhanced pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced pre code:before,
-.markdown-preview-enhanced pre tt:before,
-.markdown-preview-enhanced pre code:after,
-.markdown-preview-enhanced pre tt:after {
-  content: normal;
-}
-.markdown-preview-enhanced p,
-.markdown-preview-enhanced blockquote,
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol,
-.markdown-preview-enhanced dl,
-.markdown-preview-enhanced pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced kbd {
-  color: #000000;
-  border: 1px solid #d6d6d6;
-  border-bottom: 2px solid #c7c7c7;
-  padding: 2px 4px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
-.markdown-preview-enhanced .pagebreak,
-.markdown-preview-enhanced .newpage {
-  page-break-before: always;
-}
-@media screen and (min-width: 914px) {
-  .markdown-preview-enhanced {
-    width: 980px;
-    margin: 10px auto;
-    background: #fff;
+code[class*="language-"],
+pre[class*="language-"] {
+  /*
+&.line-numbers {
+  .line-numbers-rows>span:before {
   }
 }
-@media screen and (max-width: 400px) {
-  .markdown-preview-enhanced {
-    font-size: 14px;
-    margin: 0 auto;
-    padding: 15px;
-  }
+*/
 }
-@media print {
-  .markdown-preview-enhanced {
-    background-color: #fff;
-    /*table,*/
-  }
-  .markdown-preview-enhanced h1,
-  .markdown-preview-enhanced h2,
-  .markdown-preview-enhanced h3,
-  .markdown-preview-enhanced h4,
-  .markdown-preview-enhanced h5,
-  .markdown-preview-enhanced h6 {
-    color: #000000;
-    page-break-after: avoid;
-  }
-  .markdown-preview-enhanced blockquote {
-    color: #5c5c5c;
-  }
-  .markdown-preview-enhanced pre {
-    page-break-inside: avoid;
-  }
-  .markdown-preview-enhanced table {
-    display: table;
-  }
-  .markdown-preview-enhanced img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .markdown-preview-enhanced pre,
-  .markdown-preview-enhanced code {
-    word-wrap: break-word;
-    white-space: normal;
-  }
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #4f6875;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk {
-  position: relative;
+code[class*="language-"] .token.punctuation,
+pre[class*="language-"] .token.punctuation {
+  color: #82AAFF;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div {
-  overflow-x: auto;
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: .7;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div svg {
-  display: block;
+code[class*="language-"] .token.constant,
+pre[class*="language-"] .token.constant {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk pre {
-  cursor: text;
+code[class*="language-"] .token.property,
+pre[class*="language-"] .token.property {
+  color: #73d1c8;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #F78C6A;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn {
-  float: right;
-  margin-left: 4px;
-  border-radius: 3px;
-  font-size: 0.8em;
-  color: #eee;
-  background-color: #528bff;
-  background-image: none;
-  border: none;
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn:hover {
-  background-color: #4b7fe8;
-  cursor: pointer;
+code[class*="language-"] .token.deleted,
+pre[class*="language-"] .token.deleted {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk:hover .btn-group {
-  display: block;
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .status {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 0.85em;
-  color: inherit;
-  padding: 2px 6px;
-  background-color: rgba(0, 0, 0, 0.04);
-  display: none;
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .btn-group {
-  display: none;
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .status {
-  display: block;
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .refresh-btn {
-  position: fixed;
-  display: none;
-  right: 24px;
-  top: 54px;
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #373b41;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn {
-  right: 72px;
+code[class*="language-"] .token.builtin,
+pre[class*="language-"] .token.builtin,
+code[class*="language-"] .token.inserted,
+pre[class*="language-"] .token.inserted {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn {
-  display: block;
-  opacity: 0.4;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn:hover {
-  opacity: 1.0;
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #FFCB6B;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .btn-group {
-  display: none;
+code[class*="language-"] .token.operator,
+pre[class*="language-"] .token.operator {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .status {
-  display: none;
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value,
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #C792EA;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .back-to-top-btn {
-  display: none;
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #82AAFF;
 }
-/*
- * Reveal.js styles
- */
-[data-presentation-preview-mode] {
-  background-color: #f4f4f4;
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  color: #FFCB6B;
 }
-[data-presentation-preview-mode] .preview-slides {
-  width: 100%;
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex,
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #89DDF3;
 }
-[data-presentation-preview-mode] .preview-slides .slide {
-  position: relative;
-  background-color: #fff;
-  padding: 2em !important;
-  margin-bottom: 12px;
-  text-align: left !important;
-  display: flex;
-  align-items: center;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0px 0px 16px 4px #eeeeee;
-  font-size: 24px;
-}
-[data-presentation-preview-mode] .preview-slides .slide h1,
-[data-presentation-preview-mode] .preview-slides .slide h2,
-[data-presentation-preview-mode] .preview-slides .slide h3,
-[data-presentation-preview-mode] .preview-slides .slide h4,
-[data-presentation-preview-mode] .preview-slides .slide h5,
-[data-presentation-preview-mode] .preview-slides .slide h6 {
-  margin-top: 0;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border: none;
-  z-index: 1;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  z-index: 2;
-}
-[data-presentation-preview-mode] section {
-  display: block;
-  width: 100%;
-  transform-style: preserve-3d;
-  font-size: 100%;
-  font: inherit;
-  z-index: 100;
-}
-.markdown-preview-enhanced[data-presentation-mode] {
-  font-size: 24px;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] h1,
-.markdown-preview-enhanced[data-presentation-mode] h2,
-.markdown-preview-enhanced[data-presentation-mode] h3,
-.markdown-preview-enhanced[data-presentation-mode] h4,
-.markdown-preview-enhanced[data-presentation-mode] h5,
-.markdown-preview-enhanced[data-presentation-mode] h6 {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] strong {
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
   font-weight: bold;
 }
-.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
-  display: none;
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
 }
-.markdown-preview-enhanced .slides {
-  text-align: left !important;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
 }
+html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+       
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="cs251-at-ccut-week-2-propositional-logic">CS251 at CCUT Week 2: Propositional Logic</h1>
 
-    /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
-/*
- * Examples
- * (To see them, uncomment and save)
- */
-
-    </style>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-
-    
-  </head>
-  <body class="markdown-preview-enhanced   ">
-
-  <h1 id="cs251-at-ccut-week-2-propositional-logic">CS251 at CCUT Week 2: Propositional Logic</h1>
-<p>4/24/17</p>
 <p><img src="openlogic.png" alt="Open Logic Text"></p>
 <p><sub>Image from <a href="http://openlogicproject.org/2016/03/12/an-actual-textbook-and-photos/">“AN ACTUAL TEXTBOOK, AND: PHOTOS!”</a> by <a href="http://openlogicproject.org/author/rzach/">Richard Zach</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></sub></p>
-<p><em>Sets, Logic, Computation</em> is an open source textbook which you can download at the <a href="http://openlogicproject.org/download/">Open Logic Project</a></p>
+<p>Another good logic textbook, <em>Sets, Logic, Computation</em> is an open source textbook which you can download at the <a href="http://openlogicproject.org/download/">Open Logic Project</a></p>
 <hr>
-<p>Last week we briefly reviewed the vocabulary and syntax of propositional logic (PL), and we discussed some motivations for studying it.</p>
-<p>This week, we will think about the semantics (or meanings) of the PL, and practice a bit of translation between English and PL.</p>
-<p>The study of logic really comes down to the study of valid arguments. So we will also begin to look at what an argument is and what makes an argument valid this week.</p>
-<p>Outline: <a id="index"></a></p>
+<p>During the first meeting, we talked a little bit about the background of logic and we looked at some arguments, identifying the premises and conclusions and translating them to Chinese.</p>
+<p>Let’s take a quick look at a couple more examples to warm up.</p>
+<p>Examples:</p>
 <ul>
-<li><p><a href="#semantics">Semantics</a></p></li>
-<li><p><a href="#atom">Atomic Sentences</a></p></li>
-<li><p><a href="#compound">Compound Sentences</a>
-<ul>
-<li><p><a href="#not">Not</a></p></li>
-<li><p><a href="#and">And</a></p></li>
-<li><p><a href="#or">Or</a></p></li>
-<li><p><a href="#conditional">Conditional</a></p></li>
-</ul></p></li>
-<li><p><a href="#exercises">Exercises</a></p></li>
+<li>
+<p>If Jupiter is more massive than Earth, then Jupiter has a stronger gravitational field than Earth. Jupiter is more massive than Earth. In conclusion, Jupiter has a stronger gravitational field than Earth.</p>
+</li>
+<li>
+<p>If we want to be safe, then we should have a state that can protect us. If we should have a state that can protect us, then we should give up some freedoms. Therefore, if we want to be safe, then we should give up some freedoms.</p>
+</li>
+<li>
+<p>Suppose <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>∈</mo><mi>X</mi><mo>∩</mo><mo>(</mo><mi>X</mi><mo>∪</mo><mi>Y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">z \in X \cap (X \cup Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">∈</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∩</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span>. Then <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">z \in X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">∈</span><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span>, so <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>∩</mo><mo>(</mo><mi>X</mi><mo>∪</mo><mi>Y</mi><mo>)</mo><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X \cap (X \cup Y) \subseteq X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∩</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span><span class="mrel">⊆</span><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span>. Next, Suppose <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">z \in X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">∈</span><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span>. Then also <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>∈</mo><mi>X</mi><mo>∪</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">z \in X \cup Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">∈</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span></span></span></span>, and therefor also <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>∈</mo><mi>X</mi><mo>∩</mo><mo>(</mo><mi>X</mi><mo>∪</mo><mi>Y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">z \in X \cap (X \cup Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">∈</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∩</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span>. Thus, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>⊆</mo><mi>X</mi><mo>∩</mo><mo>(</mo><mi>X</mi><mo>∪</mo><mi>Y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">X \subseteq X \cap (X \cup Y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mrel">⊆</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∩</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span>.</p>
+</li>
 </ul>
-<h3 id="semantics-and-principle-of-bivalence-a-idsemanticsa">Semantics and Principle of Bivalence <a id="semantics"></a></h3>
-<p>In studying languages, we often distinguish the syntax from the semantics of the language.</p>
-<p>Recall the syntax refers to the rules that allow us to form sentences of the language.<br>
-Recall that the syntax for PL is as follows:</p>
+<hr>
+<p>This week, we will begin to look at a language of logic, which we can use to represent arguments we find in English or Chinese and formally investigate their logical properties.</p>
+<p>Outline: <a id="index" href=""></a></p>
+<ul>
+<li><a href="#logicallanguage">Language of Logic</a></li>
+<li><a href="#syntax">Syntax</a></li>
+<li><a href="#semantics">Semantics</a></li>
+<li><a href="#atom">Atomic Sentences</a></li>
+<li><a href="#compound">Compound Sentences</a>
+<ul>
+<li><a href="#not">Not</a></li>
+<li><a href="#and">And</a></li>
+<li><a href="#or">Or</a></li>
+<li><a href="#conditional">Conditional</a></li>
+</ul>
+</li>
+<li><a href="#exercises">Exercises</a></li>
+</ul>
+<h4 class="mume-header" id="a-language-of-logic-a-idlogicallanguagea">A Language of Logic <a id="logicallanguage" href=""></a></h4>
+
+<p>A language of logic consists of a number of things:</p>
 <ol>
-<li><p>Any atomic sentence P is well-formed</p></li>
-<li><p>For any well-formed sentence <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span> is well-formed</p></li>
-<li><p>For any well-formed sentences <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∧</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \land q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>∨</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \lor q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.75em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>→</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \rightarrow q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>≡</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \equiv q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46375em;"></span><span class="strut bottom" style="height:0.65819em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">≡</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span> are all well-formed.</p></li>
+<li>A vocabulary of symbols used in the language.</li>
+<li>A list or set of rules governing what strings of symbols (called <em>formulas</em>) are grammatically or syntactically well-formed in the language.</li>
+<li>A semantics for the language, specifying the meanings for the symbols.</li>
 </ol>
-<p>So the formula <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>→</mo><mo>(</mo><mi>B</mi><mo>∨</mo><mi>C</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">A \rightarrow (B \lor C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span> is well-formed.</p>
-<p>On the other hand, the semantics of a language refers to the meanings.</p>
+<h4 class="mume-header" id="the-language">The Language</h4>
+
+<p>Because we always start discussing a logical system by discussing the language it uses, it is worth pausing to discuss the notion of using language to study language.</p>
+<p>These comprise the first two parts of the logical system: a vocabulary and a syntax or grammar.</p>
+<h4 class="mume-header" id="metalanguage-and-object-language">Metalanguage and Object Language</h4>
+
+<p>The languages of the systems we study are symbolic logical languages. They use symbols such as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span>, not found in ordinary English or Chinese.</p>
+<p>However, we will talk and read <em>about</em> these logical languages in ordinary English or Chinese.</p>
+<p>Whenever one language is used to discuss to study another, we can distinguish between the language that is being studied, called the <strong>object language</strong>, from the language in which we conduct the study, called the <strong>metalanguage</strong>.</p>
+<p>What one is the object language and which one is the metalanguage for this course?</p>
+<p>In this course, the object languages will be propositional logic (referred to as truth functional logic in the <em>forallx</em> textbook) and predicate calculus (referred to as first order logic in the textbook). In CS250, set theory was the main object language you studied.</p>
+<p>Often we will use the metalanguage (English or Chinese or example) to prove things about the object language. Proving things already requires logical vocabulary! Fortunately English (and Chinese) has words like <em>all</em>, <em>or</em>, <em>and</em>, <em>if</em>, and so on. These are some of the logical vocabulary of English.</p>
+<h3 class="mume-header" id="propositional-logic">Propositional Logic</h3>
+
+<p>While I am here, we will study the Propositional Logic (PL) also called Truth Functional Logic (TFL) in the textbook. It’s called the propositonal logic because the word ‘proposition’ means “sentence,” and this is the logic of sentences.</p>
+<h5 class="mume-header" id="logical-vocabulary">Logical Vocabulary</h5>
+
+<p>The Propositional Logic, like any language contains a volcabulary. In this case, it is pretty small, so it is easy to study.</p>
+<p>Logical Connectives: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">¬</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∧</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">↔</span></span></span></span></p>
+<p>These are called, in order from left to right, “negation,” “conjunction,” “disjunction,” “conditional,” and “biconditional.”</p>
+<p>Atomic Sentences: Uppercase letters: A, B, C, … P, Q, R</p>
+<p>Sentence Schema (sentence variables): lowercase letters: \textit{p, q, r}</p>
+<p>Parentheses: ( ), [ ], { }</p>
+<h5 class="mume-header" id="syntax-a-idsyntaxa">Syntax <a id="syntax" href=""></a></h5>
+
+<p>Propositional logic also has a syntax, rules that govern the structure of sentences in the language.</p>
+<ul>
+<li>
+<p>Any atomic sentence, P, is syntactically well-formed.</p>
+</li>
+<li>
+<p>For any well-formed sentence, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span>, is well-formed.</p>
+</li>
+<li>
+<p>For any well-formed sentence, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>p</mi><mo>∧</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(p \land r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">p</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>p</mi><mo>∨</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(p \lor r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">p</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>p</mi><mo>→</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(p \rightarrow r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>p</mi><mo>↔</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(p \leftrightarrow r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">p</span><span class="mrel">↔</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> are well-formed.</p>
+</li>
+</ul>
+<p>Are the following sentences well-formed?</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A \land B \to C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi mathvariant="normal">¬</mi><mi>C</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\neg \neg C \lor B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathrm">¬</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi mathvariant="normal">¬</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \neg \to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span><span class="mord mathrm">¬</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi><mo>∧</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A \land B \land C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi><mo>∧</mo><mo>(</mo><mi>B</mi><mo>∨</mo><mi>C</mi><mo>)</mo><mo>→</mo><mi>D</mi><mo>)</mo><mo>↔</mo><mo>(</mo><mi>E</mi><mo>∧</mo><mi>F</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(A \land (B \lor C) \to D) \leftrightarrow (E \land F)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">A</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mrel">↔</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mclose">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi><mo>∧</mo><mo>(</mo><mi>B</mi><mo>∨</mo><mi>C</mi><mo>)</mo><mo>→</mo><mi>D</mi><mo>)</mo><mo>↔</mo><mi>E</mi><mo>∧</mo><mi>F</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(A \land (B \lor C) \to D) \leftrightarrow E \land F)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathit">A</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mrel">↔</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mbin">∧</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+<h3 class="mume-header" id="semantics-and-principle-of-bivalence-a-idsemanticsa">Semantics and Principle of Bivalence <a id="semantics" href=""></a></h3>
+
+<p>In studying languages, we often distinguish the syntax from the semantics of the language. The semantics of a language refers to the meanings.</p>
 <p>In the propositional logic, the meaning of a sentence is its truth conditions. For this class, we will consider just two truth values: true and false. And we will assume the principle of bivalance</p>
 <blockquote>
 <p>Principle of Bivalence: Each sentence of our language must be either true or false, not both, not neither.</p>
 </blockquote>
 <p>So we will assume that each sentence is either true or false.</p>
 <p><a href="#index">Back to Top</a></p>
-<h2 id="atomic-sentences-a-idatoma">Atomic Sentences <a id="atom"></a></h2>
+<h2 class="mume-header" id="atomic-sentences-a-idatoma">Atomic Sentences <a id="atom" href=""></a></h2>
+
 <p>CCUT is in Changchun.</p>
-<p>This can be represented by P.</p>
-<h3 id="compound-sentences-a-idcompounda">Compound Sentences <a id="compound"></a></h3>
+<p>This can be represented by a single capital letter, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span>. Atomic sentences are the basic building blocks of our language. Sentences are called atomic if they cannot be broken down into more basic parts.</p>
+<p>In the propositional logic, sentences are either atomic or they are compound. Compound sentences are built up from sentences and the logical connectives mentioned above.</p>
+<h3 class="mume-header" id="compound-sentences-a-idcompounda">Compound Sentences <a id="compound" href=""></a></h3>
+
+<p>We have some idea of what the logical connectives mean, since we used English words to describe them. However, their precise meaning is given by a truth table.</p>
+<p>A truth table is a table which represents all of the possible truth values a sentence of the propositional logic can take.</p>
 <p>Here are the truth tables for our logical connectives:</p>
 <table>
 <thead>
-<tr><th style="text-align:left">p</th><th style="text-align:left">q</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∧</span></span></span></span> q</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∨</span></span></span></span> q</th><th style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span></span></span></span>p</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> q</th></tr>
+<tr>
+<th style="text-align:left">p</th>
+<th style="text-align:left">q</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∧</span></span></span></span> q</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span> q</th>
+<th style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">¬</span></span></span></span>p</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span> q</th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">F</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
 </tbody>
 </table>
-<p>These truth tables give the semantics for the logical connectives. Notice that these are lower case <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, indicating that these are sentence schema (or sentence variables).</p>
-<h4 id="pattern-matching">Pattern Matching</h4>
-<p>So the compound sentence <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>→</mo><mo>(</mo><mi>B</mi><mo>∨</mo><mi>C</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">A \rightarrow (B \lor C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span> has the form <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>→</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \rightarrow q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>.</p>
+<p>These truth tables give the semantics for the logical connectives. Notice that these are lower case <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>, indicating that these are sentence schema (or sentence variables).</p>
+<h4 class="mume-header" id="pattern-matching">Pattern Matching</h4>
+
+<p>So the compound sentence <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>→</mo><mo>(</mo><mi>B</mi><mo>∨</mo><mi>C</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">A \rightarrow (B \lor C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">A</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span> has the form <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>→</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p \rightarrow q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.03588em;">q</span></span></span></span>.</p>
 <p>This type of pattern matching is important to understand.</p>
 <p><a href="#index">Back to Top</a></p>
-<h2 id="not-a-idnota">“Not” <a id="not"></a></h2>
+<h2 class="mume-header" id="not-a-idnota">“Not” <a id="not" href=""></a></h2>
+
 <p><strong>Not</strong> or <em>negation</em> is a <em>unary</em> connective. This means that it “connects” only to one sentence.</p>
-<p>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> is a well-formed sentence, then we can attach <strong>not</strong> to it: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span></p>
+<p>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit">p</span></span></span></span> is a well-formed sentence, then we can attach <strong>not</strong> to it: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span></p>
 <p>The semantics for <strong>not</strong> are given by the following truth table:</p>
 <table>
 <thead>
-<tr><th style="text-align:left">p</th><th style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span></th></tr>
+<tr>
+<th style="text-align:left">p</th>
+<th style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathit">p</span></span></span></span></th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">T</td><td style="text-align:left">F</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">T</td></tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+</tr>
 </tbody>
 </table>
 <p>As we can see, negation gives us the opposite truth value of the original sentence.</p>
@@ -985,96 +359,172 @@ Recall that the syntax for PL is as follows:</p>
 <p>“The Earth is not the center of the universe”</p>
 </blockquote>
 <p>How do we translate this and what is the truth value?</p>
-<p><br></p>
+<br>
 <p>Let R mean “The widget is replaceable.”</p>
 <ol>
-<li><p>The widget can be replaced.</p></li>
-<li><p>The widget is irreplaceable.</p></li>
-<li><p>The widget is not irreplaceable.</p></li>
+<li>The widget can be replaced.</li>
+<li>The widget is irreplaceable.</li>
+<li>The widget is not irreplaceable.</li>
 </ol>
 <p>How should we translate these?</p>
 <p>But be careful!</p>
 <ol>
-<li><p>Jane is happy.</p></li>
-<li><p>Jane is unhappy.</p></li>
+<li>Jane is happy.</li>
+<li>Jane is unhappy.</li>
 </ol>
-<p>We might translate 1 to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span>, but 2 shouldn’t be translated as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">\neg H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span>. It may be that Jane is neither happy nor unhappy. The point here is that “Jane is not happy” does not necessarily mean the same thing as “Jane is unhappy.”</p>
+<p>We might translate 1 to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span>, but 2 shouldn’t be translated as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">\neg H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span>. It may be that Jane is neither happy nor unhappy. The point here is that &quot;Jane is not happy&quot; does not necessarily mean the same thing as &quot;Jane is unhappy.&quot;</p>
 <p><a href="#index">Back to Top</a></p>
-<h2 id="and-and-conjunction-a-idanda">“And” and “Conjunction” <a id="and"></a></h2>
+<h2 class="mume-header" id="and-and-conjunction-a-idanda">“And” and “Conjunction” <a id="and" href=""></a></h2>
+
 <blockquote>
 <p>I went to the party and I had fun.</p>
 </blockquote>
 <table>
 <thead>
-<tr><th style="text-align:left">p</th><th style="text-align:left">q</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∧</span></span></span></span> q</th></tr>
+<tr>
+<th style="text-align:left">p</th>
+<th style="text-align:left">q</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∧</span></span></span></span> q</th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">F</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">F</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">F</td></tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+</tr>
 </tbody>
 </table>
 <p>Examples</p>
 <ol>
-<li><p>Barbara is athletic and energetic.</p></li>
-<li><p>Barbara and Adam are both athletic.</p></li>
-<li><p>Although Barbara is energetic, she is not athletic.</p></li>
-<li><p>Adam is athletic, but Barbara is more athletic than him.</p></li>
+<li>Barbara is athletic and energetic.</li>
+<li>Barbara and Adam are both athletic.</li>
+<li>Although Barbara is energetic, she is not athletic.</li>
+<li>Adam is athletic, but Barbara is more athletic than him.</li>
 </ol>
 <p><a href="#index">Back to Top</a></p>
-<h2 id="or-and-disjunction-a-idora">“Or” and “Disjunction” <a id="or"></a></h2>
+<h2 class="mume-header" id="or-and-disjunction-a-idora">“Or” and “Disjunction” <a id="or" href=""></a></h2>
+
 <blockquote>
 <p>I go to the party or I study.</p>
 </blockquote>
 <table>
 <thead>
-<tr><th style="text-align:left">p</th><th style="text-align:left">q</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∨</span></span></span></span> q</th></tr>
+<tr>
+<th style="text-align:left">p</th>
+<th style="text-align:left">q</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.55556em;"></span><span class="strut bottom" style="height:0.55556em;vertical-align:0em;"></span><span class="base"><span class="mord">∨</span></span></span></span> q</th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">F</td></tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+</tr>
 </tbody>
 </table>
 <p>Or is <em>inclusive</em>.</p>
 <p>Examples</p>
 <ol>
-<li><p>Either Faye will play videogames, or she will watch<br>
-movies.</p></li>
-<li><p>Either Faye or Ali will play videogames with me.</p></li>
-<li><p>Either you will not have soup, or you will not have salad.</p></li>
-<li><p>You will have neither soup nor salad.</p></li>
-<li><p>You get either soup or salad, but not both.</p></li>
+<li>Either Faye will play videogames, or she will watch<br>
+movies.</li>
+<li>Either Faye or Ali will play videogames with me.</li>
+<li>Either you will not have soup, or you will not have salad.</li>
+<li>You will have neither soup nor salad.</li>
+<li>You get either soup or salad, but not both.</li>
 </ol>
 <p><a href="#index">Back to Top</a></p>
-<h2 id="if-then-a-idconditionala">“If… then…” <a id="conditional"></a></h2>
+<h2 class="mume-header" id="if-then-a-idconditionala">“If… then…” <a id="conditional" href=""></a></h2>
+
 <blockquote>
 <p>If I goto the party, then I will not study.</p>
 </blockquote>
 <table>
 <thead>
-<tr><th style="text-align:left">p</th><th style="text-align:left">q</th><th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> q</th></tr>
+<tr>
+<th style="text-align:left">p</th>
+<th style="text-align:left">q</th>
+<th style="text-align:left">p <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span> q</th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">T</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">T</td><td style="text-align:left">F</td><td style="text-align:left">F</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">T</td><td style="text-align:left">T</td></tr>
-<tr><td style="text-align:left">F</td><td style="text-align:left">F</td><td style="text-align:left">T</td></tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">F</td>
+<td style="text-align:left">T</td>
+</tr>
 </tbody>
 </table>
 <p>Examples</p>
 <ol>
-<li><p>If Jean is in Paris, then Jean is in France.</p></li>
-<li><p>Jean is in France only if Jean is in Paris.</p></li>
-<li><p>For Jean to be in Paris, it is necessary that Jean be in France.</p></li>
-<li><p>It is a necessary condition on Jean’s being in Paris that she<br>
-be in France.</p></li>
-<li><p>For Jean to be in France, it is sufficient that Jean be in Paris.</p></li>
-<li><p>It is a sufficient condition on Jean’s being in France that she be in Paris</p></li>
+<li>
+<p>If Jean is in Paris, then Jean is in France.</p>
+</li>
+<li>
+<p>Jean is in France only if Jean is in Paris.</p>
+</li>
+<li>
+<p>For Jean to be in Paris, it is necessary that Jean be in France.</p>
+</li>
+<li>
+<p>It is a necessary condition on Jean’s being in Paris that she<br>
+be in France.</p>
+</li>
+<li>
+<p>For Jean to be in France, it is sufficient that Jean be in Paris.</p>
+</li>
+<li>
+<p>It is a sufficient condition on Jean’s being in France that she be in Paris</p>
+</li>
 </ol>
-<h3 id="do-you-understand-the-conditional">Do you understand the conditional?</h3>
+<h3 class="mume-header" id="do-you-understand-the-conditional">Do you understand the conditional?</h3>
+
 <p><strong>Puzzle</strong>: Each card has a letter (consonant or vowel) on one side, and a number (odd or even) on the other.</p>
 <p><strong>Rule</strong>: If there’s a vowel on one side of the card, there is always an odd number on the other.</p>
 <p><strong>Challenge</strong>: How many of the pictured cards must you turn over to see if any break this rule?<br>
@@ -1082,18 +532,19 @@ be in France.</p></li>
 <p><a href="#index">Back to Top</a><br>
 <br></p>
 <hr>
-<h1 id="exercises-a-idexercisesa">Exercises <a id="exercises"></a></h1>
+<h1 class="mume-header" id="exercises-a-idexercisesa">Exercises <a id="exercises" href=""></a></h1>
+
 <p>Translations:</p>
 <ol>
-<li><p>Mary is in Barcelona.</p></li>
-<li><p>Those fruits are apples or they are not.</p></li>
-<li><p>Those fruits are neither apples nor oranges.</p></li>
-<li><p>If Professor Plum was murdered, then either Colonel Mustard or Mrs. White did it.</p></li>
-<li><p>If you didn’t grow up speaking English it is difficult to understand many jokes made in English but, if you watch enough television, you can learn many of those jokes.</p></li>
+<li>Mary is in Barcelona.</li>
+<li>Those fruits are apples or they are not.</li>
+<li>Those fruits are neither apples nor oranges.</li>
+<li>If Professor Plum was murdered, then either Colonel Mustard or Mrs. White did it.</li>
+<li>If you didn’t grow up speaking English it is difficult to understand many jokes made in English but, if you watch enough television, you can learn many of those jokes.</li>
 </ol>
 <p><a href="#answers">Answers</a><br>
 <a href="#index">Back to Top</a></p>
-<h2 id="br"><br></h2>
+<h2><br></h2>
 <p> <br>
  <br>
  <br>
@@ -1107,41 +558,105 @@ be in France.</p></li>
  <br>
  <br>
  </p>
-<h1 id="answers">Answers</h1>
+<h1 class="mume-header" id="answers">Answers</h1>
+
 <p><a href="#exercises">Back to Exercises</a><br>
-<a class="anchor" id="answers"></a></p>
+<a class="anchor" id="answers" href=""></a></p>
 <ol>
-<li><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> is the atomic proposition “Mary is in Barcelona.”</p></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> is the atomic proposition &quot;Mary is in Barcelona.&quot;</li>
 </ol>
 <hr>
 <ol start="2">
-<li><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>∨</mo><mi mathvariant="normal">¬</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">A \lor \neg A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mbin">∨</span><span class="mord mathrm">¬</span><span class="mord mathit">A</span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> - “Those fruits are apples.”</p></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>∨</mo><mi mathvariant="normal">¬</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">A \lor \neg A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span><span class="mbin">∨</span><span class="mord mathrm">¬</span><span class="mord mathit">A</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span> - &quot;Those fruits are apples.&quot;</li>
 </ol>
 <hr>
 <ol start="3">
-<li><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mo>(</mo><mi>A</mi><mo>∨</mo><mi>O</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\neg (A \lor O)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">¬</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mclose">)</span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> - “Those fruits are apples.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi></mrow><annotation encoding="application/x-tex">O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span></span></span> - “Those fruits are oranges.”</p></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">¬</mi><mo>(</mo><mi>A</mi><mo>∨</mo><mi>O</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\neg (A \lor O)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathrm">¬</span><span class="mopen">(</span><span class="mord mathit">A</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span> - &quot;Those fruits are apples.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi></mrow><annotation encoding="application/x-tex">O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span></span></span> - &quot;Those fruits are oranges.&quot;</li>
 </ol>
 <hr>
 <ol start="4">
-<li><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>→</mo><mo>(</mo><mi>M</mi><mo>∨</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P \rightarrow (M \lor W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> - “Professor Plum was murdered.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> - “Colonel Mustard did it.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span></span></span></span> - “Mrs. White did it.”</p></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>→</mo><mo>(</mo><mi>M</mi><mo>∨</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P \rightarrow (M \lor W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">→</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mbin">∨</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> - &quot;Professor Plum was murdered.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> - &quot;Colonel Mustard did it.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">W</span></span></span></span> - &quot;Mrs. White did it.&quot;</li>
 </ol>
 <hr>
 <ol start="5">
-<li><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">¬</mi><mi>G</mi><mo>→</mo><mi>J</mi><mo>)</mo><mo>∧</mo><mo>(</mo><mi>W</mi><mo>→</mo><mi>L</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(\neg G \rightarrow J) \land (W \rightarrow L)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">¬</span><span class="mord mathit">G</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mrel">→</span><span class="mord mathit">L</span><span class="mclose">)</span></span></span></span><br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">G</span></span></span></span> - “You grew up speaking English.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.09618em;">J</span></span></span></span> - “It is difficult to understand many jokes made in English.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">W</span></span></span></span> - “You watched enough TV.”<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span> - “You can learn many English jokes.”</p></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">¬</mi><mi>G</mi><mo>→</mo><mi>J</mi><mo>)</mo><mo>∧</mo><mo>(</mo><mi>W</mi><mo>→</mo><mi>L</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(\neg G \rightarrow J) \land (W \rightarrow L)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord mathrm">¬</span><span class="mord mathit">G</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mclose">)</span><span class="mbin">∧</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mrel">→</span><span class="mord mathit">L</span><span class="mclose">)</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">G</span></span></span></span> - &quot;You grew up speaking English.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.09618em;">J</span></span></span></span> - &quot;It is difficult to understand many jokes made in English.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">W</span></span></span></span> - &quot;You watched enough TV.&quot;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">L</span></span></span></span> - &quot;You can learn many English jokes.&quot;</li>
 </ol>
 
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#cs251-at-ccut-week-2-propositional-logic">CS251 at CCUT Week 2: Propositional Logic</a><br>
+* <a href="#a-language-of-logic-a-idlogicallanguagea">A Language of Logic </a><br>
+* <a href="#the-language">The Language</a><br>
+* <a href="#metalanguage-and-object-language">Metalanguage and Object Language</a><br>
+* <a href="#propositional-logic">Propositional Logic</a><br>
+* <a href="#logical-vocabulary">Logical Vocabulary</a><br>
+* <a href="#syntax-a-idsyntaxa">Syntax </a><br>
+* <a href="#semantics-and-principle-of-bivalence-a-idsemanticsa">Semantics and Principle of Bivalence </a>
+<ul>
+<li><a href="#atomic-sentences-a-idatoma">Atomic Sentences </a>
+<ul>
+<li><a href="#compound-sentences-a-idcompounda">Compound Sentences </a>
+<ul>
+<li><a href="#pattern-matching">Pattern Matching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#not-a-idnota">“Not” </a></li>
+<li><a href="#and-and-conjunction-a-idanda">“And” and “Conjunction” </a></li>
+<li><a href="#or-and-disjunction-a-idora">“Or” and “Disjunction” </a></li>
+<li><a href="#if-then-a-idconditionala">“If… then…” </a>
+<ul>
+<li><a href="#do-you-understand-the-conditional">Do you understand the conditional?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#exercises-a-idexercisesa">Exercises </a></li>
+<li><a href="#answers">Answers</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
 
-  </body>
-  
-</html>
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>

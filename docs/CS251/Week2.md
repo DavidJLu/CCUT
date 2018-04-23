@@ -10,13 +10,23 @@ Another good logic textbook, *Sets, Logic, Computation* is an open source textbo
 
 During the first meeting, we talked a little bit about the background of logic and we looked at some arguments, identifying the premises and conclusions and translating them to Chinese.
 
+Let's take a quick look at a couple more examples to warm up.
 
+Examples:
 
-This week, we will think about the semantics (or meanings) of the PL, and practice a bit of translation between English and PL.
+* If Jupiter is more massive than Earth, then Jupiter has a stronger gravitational field than Earth. Jupiter is more massive than Earth. In conclusion, Jupiter has a stronger gravitational field than Earth.
 
-The study of logic really comes down to the study of valid arguments. So we will also begin to look at what an argument is and what makes an argument valid this week.
+* If we want to be safe, then we should have a state that can protect us. If we should have a state that can protect us, then we should give up some freedoms. Therefore, if we want to be safe, then we should give up some freedoms.
+
+* Suppose $z \in X \cap (X \cup Y)$. Then $z \in X$, so $X \cap (X \cup Y) \subseteq X$. Next, Suppose $z \in X$. Then also $z \in X \cup Y$, and therefor also $z \in X \cap (X \cup Y)$. Thus, $X \subseteq X \cap (X \cup Y)$.
+
+----------
+
+This week, we will begin to look at a language of logic, which we can use to represent arguments we find in English or Chinese and formally investigate their logical properties.
 
 Outline: <a id="index"></a>
+  * [Language of Logic](#logicallanguage)
+  * [Syntax](#syntax)
   * [Semantics](#semantics)
   * [Atomic Sentences](#atom)
   * [Compound Sentences](#compound)
@@ -26,20 +36,72 @@ Outline: <a id="index"></a>
     * [Conditional](#conditional)
   * [Exercises](#exercises)
 
+#### A Language of Logic <a id="logicallanguage"></a>
+
+A language of logic consists of a number of things:
+
+  1. A vocabulary of symbols used in the language.
+  1. A list or set of rules governing what strings of symbols (called *formulas*) are grammatically or syntactically well-formed in the language.
+  1. A semantics for the language, specifying the meanings for the symbols.
+
+#### The Language
+Because we always start discussing a logical system by discussing the language it uses, it is worth pausing to discuss the notion of using language to study language.
+
+These comprise the first two parts of the logical system: a vocabulary and a syntax or grammar.
+
+#### Metalanguage and Object Language
+
+The languages of the systems we study are symbolic logical languages. They use symbols such as $\rightarrow$ and $\lor$, not found in ordinary English or Chinese.
+
+However, we will talk and read *about* these logical languages in ordinary English or Chinese.
+
+Whenever one language is used to discuss to study another, we can distinguish between the language that is being studied, called the **object language**, from the language in which we conduct the study, called the **metalanguage**.
+
+What one is the object language and which one is the metalanguage for this course?
+
+In this course, the object languages will be propositional logic (referred to as truth functional logic in the *forallx* textbook) and predicate calculus (referred to as first order logic in the textbook). In CS250, set theory was the main object language you studied.
+
+Often we will use the metalanguage (English or Chinese or example) to prove things about the object language. Proving things already requires logical vocabulary! Fortunately English (and Chinese) has words like *all*, *or*, *and*, *if*, and so on. These are some of the logical vocabulary of English.
+
+### Propositional Logic
+
+While I am here, we will study the Propositional Logic (PL) also called Truth Functional Logic (TFL) in the textbook. It's called the propositonal logic because the word 'proposition' means "sentence," and this is the logic of sentences.
+
+##### Logical Vocabulary
+
+The Propositional Logic, like any language contains a volcabulary. In this case, it is pretty small, so it is easy to study.
+
+Logical Connectives: $\neg$, $\land$, $\lor$, $\rightarrow$, and $\leftrightarrow$
+
+These are called, in order from left to right, "negation," "conjunction," "disjunction," "conditional," and "biconditional."
+
+Atomic Sentences: Uppercase letters: A, B, C, ... P, Q, R
+
+Sentence Schema (sentence variables): lowercase letters: \textit{p, q, r}
+
+Parentheses: ( ), [ ], \{ \}
+
+##### Syntax <a id="syntax"></a>
+Propositional logic also has a syntax, rules that govern the structure of sentences in the language.
+
+  * Any atomic sentence, P, is syntactically well-formed.
+
+  * For any well-formed sentence, $p$, $\neg p$, is well-formed.
+
+  * For any well-formed sentence, $p$ and $r$, $(p \land r)$, $(p \lor r)$, $(p \rightarrow r)$, and $(p \leftrightarrow r)$ are well-formed.
+
+Are the following sentences well-formed?
+
+* $A \land B \to C$
+* $\neg \neg C \lor B$
+* $A \neg \to B$
+* $A \land B \land C$
+* $(A \land (B \lor C) \to D) \leftrightarrow (E \land F)$
+* $(A \land (B \lor C) \to D) \leftrightarrow E \land F)$
+
 
 ### Semantics and Principle of Bivalence <a id="semantics"></a>
-In studying languages, we often distinguish the syntax from the semantics of the language.
-
-Recall the syntax refers to the rules that allow us to form sentences of the language.
-Recall that the syntax for PL is as follows:
-
-  1. Any atomic sentence P is well-formed
-  1. For any well-formed sentence $p$, $\neg p$ is well-formed
-  1. For any well-formed sentences $p$ and $q$, $p \land q$, $p \lor q$, $p \rightarrow q$, and $p \equiv q$ are all well-formed.
-
-So the formula $A \rightarrow (B \lor C)$ is well-formed.
-
-On the other hand, the semantics of a language refers to the meanings.
+In studying languages, we often distinguish the syntax from the semantics of the language. The semantics of a language refers to the meanings.
 
 In the propositional logic, the meaning of a sentence is its truth conditions. For this class, we will consider just two truth values: true and false. And we will assume the principle of bivalance
 
@@ -53,9 +115,15 @@ So we will assume that each sentence is either true or false.
 
 CCUT is in Changchun.
 
-This can be represented by P.
+This can be represented by a single capital letter, $A$. Atomic sentences are the basic building blocks of our language. Sentences are called atomic if they cannot be broken down into more basic parts.
+
+In the propositional logic, sentences are either atomic or they are compound. Compound sentences are built up from sentences and the logical connectives mentioned above.
 
 ### Compound Sentences <a id="compound"></a>
+We have some idea of what the logical connectives mean, since we used English words to describe them. However, their precise meaning is given by a truth table.
+
+A truth table is a table which represents all of the possible truth values a sentence of the propositional logic can take.
+
 Here are the truth tables for our logical connectives:
 
 |p |q |p $\land$ q| p $\lor$ q| $\neg$p | p $\rightarrow$ q |
