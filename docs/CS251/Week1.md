@@ -26,130 +26,28 @@ Some quick facts about me:
 CS251 Guest Lectures at CCUT
 -----
 
-The central topic in CS251 is formal logic
+The central topic of CS251 is formal logic
 
-In this course, we will be studying formal language which we can use to express and investigate logical ideas. Logic is important in all areas of study. It's not just for computer science students. Can you think of why?
+In this course, we study a language which we can use to express and investigate valid inferences. Formal logic is the study of valid inferences in an abstract fashion, usually in terms of abstract rules. In many ways, it is similar to the study of formal mathematics, which you are familiar with. Logic, like mathematics, is an important field of study because sometimes we need very precise ways to prove that something is or is not the case.
+
+In the preface of Daniel Velleman's excellent book, *How to Prove It: A Structured Approach* he writes:
+>‘Students... often have trouble the ﬁrst time that they’re asked to work seriously with mathematical proofs, because they don’t know ‘the rules of the game’. What is expected of you if you are asked to prove something? What distinguishes a correct proof from an incorrect one?
+
+This class is the first step toward learning how correct proofs are constructed.
+
 
 #### Arguments
 Logic is in the business of evaluating arguments. We'd like to have a rigorous method for sorting the good arguments from the bad arguments.
 
 An argument is a series of sentences, one of which is a conclusion and the others given as reasons to believe the conclusion. Here's an example:
 
-It's raining heavily.
-If you do not take an umbrella, you'll get soaked.
-Therefore, you should take an umbrella.
+1. It's raining heavily.
+2. If you do not take an umbrella, you'll get soaked.
+3. Therefore, you should take an umbrella.
 
-#### Logical Systems
+1 and 2 are the premises of this argument and 3 is the conclusion.
 
-A logical system consists of four things:
+We shall specify every argument has one conclusion and zero or more premises. Let's look at some more examples of arguments.
 
-1. A vocabulary of primitive signs used in the language of that system.
-1. A list or set of rules governing what strings of signs (called *formulas*) are grammatically or syntactically well-formed in the language of that system.
-1. A list of axioms, or a subset of the well-formed formulas, considered as basic and unprovable principles taken as true in the system.
-1. A specification of what inferences, or inference patterns or rules, are taken as valid in that system.
-
-#### The Language
-Because we always start discussing a logical system by discussing the
-language it uses, it is worth pausing to discuss the notion of using language
-to study language.
-
-These comprise the first two parts of the logical system: a vocabulary and a syntax or grammar.
-
-#### Metalanguage and Object Language
-
-The languages of the systems we study are symbolic logical languages. They use symbols such as $\rightarrow$ and $\lor$, not found in ordinary English or Chinese.
-
-However, we will talk and read *about* these logical languages in ordinary English or Chinese.
-
-Whenever one language is used to discuss to study another, we can distinguish between the language that is being studied, called the **object language**, from the language in which we conduct the study, called the **metalanguage**.
-
-What one is the object language and which one is the metalanguage for this course?
-
-In this course, the object languages will be propositional logic (sometimes called sentential logic) and predicate calculus. In CS250, set theory was the main object language you studied.
-
-Often we will use the metalanguage (English and Chinese) to prove things about the object language. Proving things already requires logical vocabulary! Fortunately English (and Chinese) has words like *all*, *or*, *and*, *if*, and so on. These are some of the logical vocabulary of English.
-
-### The Propositional Logic
-
-For the first part of this class, we will study the Propositional Logic (PL).
-
-##### Logical Vocabulary
-
-The Propositional Logic, like any  language contains a volcabulary. In this case, it is pretty small, so it is easy to study.
-
-Logical Connectives: $\neg$, $\land$, $\lor$, $\rightarrow$, and $\equiv$ (sometimes $\leftrightarrow$)
-
-Atomic Propositions: Uppercase letters: A, B, C, ... P, Q, R
-
-Sentence Schema (sentence variables): lowercase letters: \textit{p, q, r}
-
-Parentheses: ( ) [ ] \{ \}
-
-##### Syntax
-
-* Any atomic proposition, P, is syntactically well-formed.
-
-* For any well-formed proposition, $p$, $\neg p$, is well-formed.
-
-* For any well-formed propositions, $p$ and $r$, $p \land r$, $p \lor r$, $p \rightarrow r$, and $p \leftrightarrow r$ are well-formed.
-
-#### Precision
-
-Why do we study these logical languages?
-
-**Answer:** We want to use them very precisely.
-
-Consider the precision needed to program a computer.
-Computers are very dumb. They do exactly what you tell them to.
-Computer languages are very much like our logical languages - they are precise.
-
-##### Vagueness
-Natural languages like English and Chinese contain lots of imprecision.
-
-Consider the sentence: *The train is moving too fast.*
-
-Is this true or not?
-
-##### Ambiguity
-
-How about this one: *The professor from PSU is very nice.*
-
-This one contains ambiguity and vagueness!
-
---------------------------------------------------------------
 #### Exercises
-
-Try some exercises from chapter 1 of the textbook
-
-
-###### Exercise 1
-
-Vagueness arises when the conditions under which a sentence might be true are not clear.
-
-Come up with five sentences in English that are vague.
-
-###### Exercise 2
-
-Ambiguity arises when a word or phrase has several different meanings.
-
-Come up with five sentences in English that are ambiguous.
-
-Hint: This will require that you identify a homonym, two words that sound the same but have different meanings.
-
-###### Exercise 3
-
-We can often make a vague sentence precise by giving a specific interpretation for the vague term.
-
-For each of the five vague sentences, try to come up with an interpretation that makes the sentence no longer vague.
-
-###### Exercise 4
-
-Again we can often make ambiguous sentences precise by specifying which meaning we intended for the ambiguous term.
-
-For each of the five ambiguous sentences, make it precise.
-
-###### Exercise 5
-
-Come up with five examples of English sentences that are not declarative sentences.
-
-----------------------------------
+Let's look at some of the exercises in the book and practice translating them into Chinese, identifying the premises and conclusions, and deciding whether they are good or bad arguments. 
