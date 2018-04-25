@@ -46,6 +46,7 @@ void insert(node *&head, int data) // Insert at rear of list
   {
     head = new node;
     head->data = data;
+    head->next = NULL;
   }
   else
     insert(head->next, data);
