@@ -57,6 +57,8 @@ Elements | Simple cearch | Binary search
 
 As the size of the search space increases, the time it takes simple search increases faster than binary search!
 
+Algorithm efficiency is not measured in terms of seconds. Algorithm efficiency is measured in terms of growth.
+
 -------
 
 ## Lists  <a id="list"></a>
