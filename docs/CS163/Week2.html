@@ -1,942 +1,255 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Week2</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html>
+    <head>
+      <title>Week2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+      
+      
+      
+      
+      
+      
 
-    
-
-    <style>
-    atom-text-editor {
-  background-color: #263238;
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .wrap-guide {
-  background-color: #2b3940;
-}.markdown-preview-enhanced pre .indent-guide {
-  color: #2b3940;
-}.markdown-preview-enhanced pre .invisible-character {
-  color: #373b41;
-}.markdown-preview-enhanced pre .cursor-line {
-  background-color: #212b30;
-}.markdown-preview-enhanced pre .gutter {
-  background-color: #263238;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line {
-  background-color: #212b30;
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .gutter .line-number.cursor-line-no-selection {
-  color: rgba(238, 255, 255, 0.2);
-}.markdown-preview-enhanced pre .fold-marker:after,.markdown-preview-enhanced pre .gutter .line-number.folded,.markdown-preview-enhanced pre .gutter .line-number:after {
-  color: #B2CCD6;
-}.markdown-preview-enhanced pre .invisible {
-  color: #EEFFFF;
-}.markdown-preview-enhanced pre .cursor {
-  color: #009688;
-  border-width: 2px;
-}.markdown-preview-enhanced pre .selection .region {
-  background-color: #3b4d56;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker .region {
-  background-color: transparent;
-  border: 1px solid #B2CCD6;
-}.markdown-preview-enhanced pre .search-results .mpe-syntax--marker.current-result .region {
-  border: 1px solid white;
-}
-.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--keyword {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control {
-  color: #C792EA;
-}
-.mpe-syntax--keyword.mpe-syntax--control.mpe-syntax--elements {
-  color: #B2CCD6;
-}
-.mpe-syntax--keyword.mpe-syntax--operator {
-  color: #89DDF3;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--special-method {
-  color: #82AAFF;
-}
-.mpe-syntax--keyword.mpe-syntax--other.mpe-syntax--unit {
-  color: #FFCB6B;
-}
-.mpe-syntax--storage {
-  color: #C792EA;
-}
-.mpe-syntax--constant {
-  color: #F07178;
-}
-.mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--color {
-  color: #89DDF3;
-}
-.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--symbol {
-  color: #C3E88D;
-}
-.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--variable.mpe-syntax--interpolation {
-  color: #eb434c;
-}
-.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
-  color: #F78C6A;
-}
-.mpe-syntax--variable.mpe-syntax--language {
-  color: #FF5370;
-}
-.mpe-syntax--variable.mpe-syntax--variable.mpe-syntax--object {
-  color: #FFCB6B;
-}
-.mpe-syntax--invalid.mpe-syntax--illegal {
-  background-color: #F07178;
-  color: #263238;
-}
-.mpe-syntax--string {
-  color: #C3E88D;
-}
-.mpe-syntax--string.mpe-syntax--regexp {
-  color: #89DDF3;
-}
-.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded {
-  color: #FFCB6B;
-}
-.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
-  color: #F07178;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment {
-  color: #4f6875;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable {
-  color: #EEFFFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--begin,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--array.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--parameters.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string.mpe-syntax--end,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--variable.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading,
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--identity {
-  color: #82AAFF;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--bold {
-  color: #FFE082;
-  font-weight: bold;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--entity {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--array {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value {
-  color: #89DDF3;
-}
-.mpe-syntax--punctuation.mpe-syntax--terminator {
-  color: #89DDF3;
-}
-.mpe-syntax--support.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--support.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--function.mpe-syntax--any-method {
-  color: #82AAFF;
-}
-.mpe-syntax--support.mpe-syntax--type.mpe-syntax--property-name {
-  color: #B2CCD6;
-}
-.mpe-syntax--support.mpe-syntax--variable.mpe-syntax--dom {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--function {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #EEFFFF;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--inherited-class {
-  color: #C3E88D;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--pseudo-element {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name.mpe-syntax--attribute {
-  color: #C792EA;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--class,
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type.mpe-syntax--class {
-  color: #FFCB6B;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--section {
-  color: #82AAFF;
-}
-.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
-  color: #F07178;
-}
-.mpe-syntax--entity.mpe-syntax--other.mpe-syntax--attribute-name {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--class {
-  color: #FFE082;
-}
-.mpe-syntax--meta.mpe-syntax--delimiter.mpe-syntax--period {
-  color: #89DDF3;
-}
-.mpe-syntax--meta.mpe-syntax--link {
-  color: #FFCB6B;
-}
-.mpe-syntax--meta.mpe-syntax--require {
-  color: #82AAFF;
-}
-.mpe-syntax--meta.mpe-syntax--selector {
-  color: #C792EA;
-}
-.mpe-syntax--meta.mpe-syntax--separator {
-  background-color: #373b41;
-  color: #EEFFFF;
-}
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--round,
-.mpe-syntax--meta.mpe-syntax--brace.mpe-syntax--square {
-  color: #89DDF3;
-}
-.mpe-syntax--none {
-  color: #EEFFFF;
-}
-.mpe-syntax--markup.mpe-syntax--bold {
-  color: #FFCB6B;
-  font-weight: bold;
-}
-.mpe-syntax--markup.mpe-syntax--changed {
-  color: #C792EA;
-}
-.mpe-syntax--markup.mpe-syntax--deleted {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--italic {
-  color: #C792EA;
-  font-style: italic;
-}
-.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--heading {
-  color: #82AAFF;
-}
-.mpe-syntax--markup.mpe-syntax--inserted {
-  color: #C3E88D;
-}
-.mpe-syntax--markup.mpe-syntax--list {
-  color: #F07178;
-}
-.mpe-syntax--markup.mpe-syntax--quote {
-  color: #FFCB6B;
-}
-.mpe-syntax--markup.mpe-syntax--raw.mpe-syntax--inline {
-  color: #C3E88D;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup {
-  -webkit-font-smoothing: auto;
-}
-.mpe-syntax--source.mpe-syntax--gfm .mpe-syntax--markup.mpe-syntax--heading {
-  color: #C3E88D;
-}.markdown-preview-enhanced pre[mini] .scroll-view {
-  padding-left: 1px;
-}.markdown-preview-enhanced pre .highlight .region.bracket-matcher {
-  z-index: inherit;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #009688;
-  box-sizing: border-box;
-  background-color: rgba(238, 255, 255, 0.1);
-  box-shadow: inset 0 -1px 0 #009688;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--constant {
-  color: #89DDF3;
-}
-.mpe-syntax--css .mpe-syntax--support.mpe-syntax--property-name {
-  color: #73d1c8;
-}
-.mpe-syntax--css .mpe-syntax--keyword.mpe-syntax--unit {
-  color: #FFE082;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color {
-  color: #F78C6A;
-}
-.mpe-syntax--css .mpe-syntax--constant.mpe-syntax--color .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.mpe-syntax--css .mpe-syntax--entity.mpe-syntax--tag {
-  color: #B2CCD6;
-}
-.mpe-syntax--html .mpe-syntax--meta.mpe-syntax--tag.mpe-syntax--doctype {
-  color: #C792EA;
-}
-.mpe-syntax--html .mpe-syntax--punctuation.mpe-syntax--tag {
-  color: #89DDF3;
-}
-.mpe-syntax--js .mpe-syntax--constant {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--support.mpe-syntax--variable.mpe-syntax--property {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--entity.mpe-syntax--name.mpe-syntax--type {
-  color: #FFCB6B;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--property {
-  color: #82AAFF;
-}
-.mpe-syntax--js .mpe-syntax--variable.mpe-syntax--other.mpe-syntax--object {
-  color: #EEFFFF;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--numeric {
-  color: #F78C6A;
-}
-.mpe-syntax--js .mpe-syntax--constant.mpe-syntax--boolean {
-  color: #F07178;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--array.mpe-syntax--structure .mpe-syntax--string.mpe-syntax--quoted.mpe-syntax--double > *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C3E88D;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted * {
-  color: currentColor;
-}
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--begin,
-.mpe-syntax--json .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--separator.mpe-syntax--key-value + .mpe-syntax--string.mpe-syntax--quoted *.mpe-syntax--punctuation.mpe-syntax--end {
-  color: #89DDF3;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted {
-  color: #C792EA;
-}
-.mpe-syntax--json .mpe-syntax--meta.mpe-syntax--structure.mpe-syntax--dictionary .mpe-syntax--string.mpe-syntax--quoted .mpe-syntax--punctuation.mpe-syntax--string {
-  color: currentColor;
-}
-.mpe-syntax--php .mpe-syntax--keyword.mpe-syntax--operator.mpe-syntax--assignment {
-  color: #C792EA;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--object {
-  color: #82AAFF;
-}
-.mpe-syntax--php .mpe-syntax--meta.mpe-syntax--arguments {
-  color: #C792EA;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call {
-  color: #82AAFF;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments {
-  color: #7986CB;
-}
-.mpe-syntax--python .mpe-syntax--meta.mpe-syntax--function-call .mpe-syntax--arguments.mpe-syntax--punctuation {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--self {
-  color: #FF5370;
-}
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--inheritance,
-.mpe-syntax--python .mpe-syntax--meta .mpe-syntax--punctuation.mpe-syntax--section {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--variable.mpe-syntax--parameter {
-  color: #89DDF3;
-}
-.mpe-syntax--python .mpe-syntax--keyword.mpe-syntax--operator {
-  color: #C792EA;
-}
-.mpe-syntax--ruby .mpe-syntax--punctuation.mpe-syntax--separator {
-  color: #89DDF3;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--block {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance {
-  color: #F07178;
-}
-.mpe-syntax--ruby .mpe-syntax--variable.mpe-syntax--instance .mpe-syntax--punctuation {
-  color: currentColor;
-}
-.markdown-preview-enhanced {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  overflow: initial;
-  margin: 10px 13px 10px 13px;
-  padding: 2em;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[is="space-pen-div"] {
-  width: 100%;
-  margin: 0;
-  z-index: 999;
-  overflow: scroll;
-  font-size: 16px;
-  display: block;
-  position: absolute;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5,
-.markdown-preview-enhanced h6 {
-  line-height: 1.2;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  color: #000000;
-}
-.markdown-preview-enhanced h1 {
-  font-size: 2.25em;
-  font-weight: 300;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h2 {
-  font-size: 1.75em;
-  font-weight: 400;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.markdown-preview-enhanced h4 {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h6 {
-  font-size: 1.0em;
-  font-weight: 600;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2,
-.markdown-preview-enhanced h3,
-.markdown-preview-enhanced h4,
-.markdown-preview-enhanced h5 {
-  font-weight: 600;
-}
-.markdown-preview-enhanced h5 {
-  font-size: 1em;
-}
-.markdown-preview-enhanced h6 {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced h1,
-.markdown-preview-enhanced h2 {
-  border-bottom: 1px solid #d6d6d6;
-}
-.markdown-preview-enhanced strong {
-  color: #000000;
-}
-.markdown-preview-enhanced del {
-  color: #5c5c5c;
-}
-.markdown-preview-enhanced a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a {
-  color: #08c;
-  text-decoration: none;
-}
-.markdown-preview-enhanced a:hover {
-  color: #0050a3;
-  text-decoration: none;
-}
-.markdown-preview-enhanced img,
-.markdown-preview-enhanced svg {
-  max-width: 100%;
-}
-.markdown-preview-enhanced > p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  word-wrap: break-word;
-}
-.markdown-preview-enhanced > ul,
-.markdown-preview-enhanced > ol {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol {
-  padding-left: 2em;
-}
-.markdown-preview-enhanced ul.no-list,
-.markdown-preview-enhanced ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-.markdown-preview-enhanced ul ul,
-.markdown-preview-enhanced ul ol,
-.markdown-preview-enhanced ol ol,
-.markdown-preview-enhanced ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced li.task-list-item {
-  list-style: none;
-}
-.markdown-preview-enhanced li > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced .task-list-item-checkbox {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
-}
-.markdown-preview-enhanced .task-list-item-checkbox:hover {
-  cursor: pointer;
-}
-.markdown-preview-enhanced blockquote {
-  margin: 16px 0;
-  font-size: inherit;
-  padding: 0 15px;
-  color: #5c5c5c;
-  border-left: 4px solid #d6d6d6;
-}
-.markdown-preview-enhanced blockquote > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-enhanced blockquote > :last-child {
-  margin-bottom: 0;
-}
-.markdown-preview-enhanced hr {
-  height: 4px;
-  margin: 32px 0;
-  background-color: #d6d6d6;
-  border: 0 none;
-}
-.markdown-preview-enhanced table {
-  margin: 10px 0 15px 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-preview-enhanced table th {
-  font-weight: bold;
-  color: #000000;
-}
-.markdown-preview-enhanced table td,
-.markdown-preview-enhanced table th {
-  border: 1px solid #d6d6d6;
-  padding: 6px 13px;
-}
-.markdown-preview-enhanced dl {
-  padding: 0;
-}
-.markdown-preview-enhanced dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown-preview-enhanced dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced code {
+      <style> 
+      pre {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 0.85em !important;
-  color: #000000;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  padding: 0.2em 0;
-}
-.markdown-preview-enhanced code::before,
-.markdown-preview-enhanced code::after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-.markdown-preview-enhanced pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 0.85em !important;
-  word-break: normal;
+  direction: ltr;
+  text-align: left;
   white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced .highlight {
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced .highlight pre,
-.markdown-preview-enhanced pre {
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  padding: 16px;
+  word-spacing: normal;
+  word-break: normal;
+  padding: 1em;
+  margin: .5em 0;
   overflow: auto;
-  font-size: 0.85em !important;
-  line-height: 1.45;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
   color: #EEFFFF;
   background-color: #2e3d44 !important;
-  border: #d6d6d6;
+  border: #475d69;
   border-radius: 3px;
 }
-.markdown-preview-enhanced .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
+pre[class*="language-"] {
+  padding: 1em;
 }
-.markdown-preview-enhanced pre {
-  word-wrap: break-word;
-  white-space: normal;
-  word-break: break-all;
-}
-.markdown-preview-enhanced pre .section {
-  opacity: 1;
-}
-.markdown-preview-enhanced pre code,
-.markdown-preview-enhanced pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-.markdown-preview-enhanced pre code:before,
-.markdown-preview-enhanced pre tt:before,
-.markdown-preview-enhanced pre code:after,
-.markdown-preview-enhanced pre tt:after {
-  content: normal;
-}
-.markdown-preview-enhanced p,
-.markdown-preview-enhanced blockquote,
-.markdown-preview-enhanced ul,
-.markdown-preview-enhanced ol,
-.markdown-preview-enhanced dl,
-.markdown-preview-enhanced pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.markdown-preview-enhanced kbd {
-  color: #000000;
-  border: 1px solid #d6d6d6;
-  border-bottom: 2px solid #c7c7c7;
-  padding: 2px 4px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-}
-.markdown-preview-enhanced .pagebreak,
-.markdown-preview-enhanced .newpage {
-  page-break-before: always;
-}
-@media screen and (min-width: 914px) {
-  .markdown-preview-enhanced {
-    width: 980px;
-    margin: 10px auto;
-    background: #fff;
+code[class*="language-"],
+pre[class*="language-"] {
+  /*
+&.line-numbers {
+  .line-numbers-rows>span:before {
   }
 }
-@media screen and (max-width: 400px) {
-  .markdown-preview-enhanced {
-    font-size: 14px;
-    margin: 0 auto;
-    padding: 15px;
-  }
+*/
 }
-@media print {
-  .markdown-preview-enhanced {
-    background-color: #fff;
-    /*table,*/
-  }
-  .markdown-preview-enhanced h1,
-  .markdown-preview-enhanced h2,
-  .markdown-preview-enhanced h3,
-  .markdown-preview-enhanced h4,
-  .markdown-preview-enhanced h5,
-  .markdown-preview-enhanced h6 {
-    color: #000000;
-    page-break-after: avoid;
-  }
-  .markdown-preview-enhanced blockquote {
-    color: #5c5c5c;
-  }
-  .markdown-preview-enhanced pre {
-    page-break-inside: avoid;
-  }
-  .markdown-preview-enhanced table {
-    display: table;
-  }
-  .markdown-preview-enhanced img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .markdown-preview-enhanced pre,
-  .markdown-preview-enhanced code {
-    word-wrap: break-word;
-    white-space: normal;
-  }
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #4f6875;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk {
-  position: relative;
+code[class*="language-"] .token.punctuation,
+pre[class*="language-"] .token.punctuation {
+  color: #82AAFF;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div {
-  overflow-x: auto;
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: .7;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .output-div svg {
-  display: block;
+code[class*="language-"] .token.constant,
+pre[class*="language-"] .token.constant {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk pre {
-  cursor: text;
+code[class*="language-"] .token.property,
+pre[class*="language-"] .token.property {
+  color: #73d1c8;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #F78C6A;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn {
-  float: right;
-  margin-left: 4px;
-  border-radius: 3px;
-  font-size: 0.8em;
-  color: #eee;
-  background-color: #528bff;
-  background-image: none;
-  border: none;
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .btn-group .run-all-btn:hover {
-  background-color: #4b7fe8;
-  cursor: pointer;
+code[class*="language-"] .token.deleted,
+pre[class*="language-"] .token.deleted {
+  color: #F07178;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk:hover .btn-group {
-  display: block;
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk .status {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 0.85em;
-  color: inherit;
-  padding: 2px 6px;
-  background-color: rgba(0, 0, 0, 0.04);
-  display: none;
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .btn-group {
-  display: none;
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #C792EA;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .code-chunk.running .status {
-  display: block;
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"] .refresh-btn {
-  position: fixed;
-  display: none;
-  right: 24px;
-  top: 54px;
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #373b41;
 }
-.markdown-preview-enhanced[is="space-pen-div"] .back-to-top-btn {
-  right: 72px;
+code[class*="language-"] .token.builtin,
+pre[class*="language-"] .token.builtin,
+code[class*="language-"] .token.inserted,
+pre[class*="language-"] .token.inserted {
+  color: #C3E88D;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn {
-  display: block;
-  opacity: 0.4;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced[is="space-pen-div"]:hover .back-to-top-btn:hover,
-.markdown-preview-enhanced[is="space-pen-div"]:hover .refresh-btn:hover {
-  opacity: 1.0;
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #FFCB6B;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .btn-group {
-  display: none;
+code[class*="language-"] .token.operator,
+pre[class*="language-"] .token.operator {
+  color: #89DDF3;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .code-chunk .status {
-  display: none;
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value,
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #C792EA;
 }
-.markdown-preview-enhanced:not([is="space-pen-div"]) .back-to-top-btn {
-  display: none;
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #82AAFF;
 }
-/*
- * Reveal.js styles
- */
-[data-presentation-preview-mode] {
-  background-color: #f4f4f4;
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  color: #FFCB6B;
 }
-[data-presentation-preview-mode] .preview-slides {
-  width: 100%;
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex,
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #89DDF3;
 }
-[data-presentation-preview-mode] .preview-slides .slide {
-  position: relative;
-  background-color: #fff;
-  padding: 2em !important;
-  margin-bottom: 12px;
-  text-align: left !important;
-  display: flex;
-  align-items: center;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0px 0px 16px 4px #eeeeee;
-  font-size: 24px;
-}
-[data-presentation-preview-mode] .preview-slides .slide h1,
-[data-presentation-preview-mode] .preview-slides .slide h2,
-[data-presentation-preview-mode] .preview-slides .slide h3,
-[data-presentation-preview-mode] .preview-slides .slide h4,
-[data-presentation-preview-mode] .preview-slides .slide h5,
-[data-presentation-preview-mode] .preview-slides .slide h6 {
-  margin-top: 0;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border: none;
-  z-index: 1;
-}
-[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
-  z-index: 2;
-}
-[data-presentation-preview-mode] section {
-  display: block;
-  width: 100%;
-  transform-style: preserve-3d;
-  font-size: 100%;
-  font: inherit;
-  z-index: 100;
-}
-.markdown-preview-enhanced[data-presentation-mode] {
-  font-size: 24px;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] h1,
-.markdown-preview-enhanced[data-presentation-mode] h2,
-.markdown-preview-enhanced[data-presentation-mode] h3,
-.markdown-preview-enhanced[data-presentation-mode] h4,
-.markdown-preview-enhanced[data-presentation-mode] h5,
-.markdown-preview-enhanced[data-presentation-mode] h6 {
-  margin-top: 0;
-}
-.markdown-preview-enhanced[data-presentation-mode] strong {
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
   font-weight: bold;
 }
-.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
-  display: none;
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
 }
-.markdown-preview-enhanced .slides {
-  text-align: left !important;
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
 }
-
-    /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
-/*
- * Examples
- * (To see them, uncomment and save)
- */
-
-    </style>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-
-    
-  </head>
-  <body class="markdown-preview-enhanced   ">
-
-  <h1 id="cs163-at-ccut-week-2-linear-linked-lists">CS163 at CCUT Week 2: Linear Linked Lists</h1>
+html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+       
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1>CS163 at CCUT Week 2: Linear Linked Lists</h1>
 <p>David Lu<br>
 4/22/17</p>
 <p><img src="watchLinks.jpg" alt="Links"></p>
-<h2 id="data-structures">Data Structures</h2>
+<h2 class="mume-header" id="data-structures">Data Structures</h2>
+
 <p>In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently.</p>
-<p>This week, we will look at the linear linked list data structure</p>
-<p>Topics to cover: <a id="index"></a></p>
+<p>Over the next few weeks, we will look at the some basic data structures: the linear linked list and the binary search tree.</p>
+<p>Topics to cover: <a id="index" href=""></a></p>
 <ul>
-<li><p><a href="#list">Lists</a>
+<li><a href="#intro">Introduction</a>
 <ul>
-<li><p><a href="#LLL">Linear Linked Lists</a>
-<ul>
-<li><p><a href="#arrays">Compare to arrays</a></p></li>
-<li><p><a href="#complexity">Complexity</a></p></li>
-<li><p><a href="#ops">Basic operations:</a>
-<ul>
-<li><p><a href="#insert">Insert</a></p></li>
-<li><p><a href="#delete">Delete</a></p></li>
-</ul></p></li>
-<li><p><a href="traverse">Traversal</a></p></li>
-<li><p><a href="#recursion">Recursion</a></p></li>
-<li><p><a href="#search">Searching</a></p></li>
-<li><p><a href="#sort">Sorting (if we have time)</a></p></li>
-</ul></p></li>
-</ul></p></li>
-<li><p><a href="#practice">Practice Programming!</a></p></li>
-<li><p><a href="#exercises">Practice Exercises</a></p></li>
+<li><a href="#bigO">Run Time Complexity</a></li>
 </ul>
-<h2 id="lists-a-idlista">Lists  <a id="list"></a></h2>
+</li>
+<li><a href="#list">Lists</a>
+<ul>
+<li><a href="#LLL">Linear Linked Lists</a>
+<ul>
+<li><a href="#arrays">Compare to arrays</a></li>
+<li><a href="#complexity">Complexity</a></li>
+<li><a href="#ops">Basic operations:</a>
+<ul>
+<li><a href="#insert">Insert</a></li>
+<li><a href="#delete">Delete</a></li>
+</ul>
+</li>
+<li><a href="traverse">Traversal</a></li>
+<li><a href="#recursion">Recursion</a></li>
+<li><a href="#search">Searching</a></li>
+<li><a href="#sort">Sorting (if we have time)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#practice">Practice Programming!</a></li>
+<li><a href="#exercises">Practice Exercises</a></li>
+</ul>
+<h2 class="mume-header" id="introduction-a-idintroa">Introduction <a id="intro" href=""></a></h2>
+
+<p>In 1976 Swiss computer scientist Niklaus Wirth (chief designer of the programming language Pascal) wrote an influential book titled <em>Algorithms + Data Structures = Programs</em>.</p>
+<p><img src="Programs.jpeg" alt="Algorithms + Data Structures = Programs"></p>
+<p>Algorithms and data structures are two fundamental topics in programming and they are closely related. We cannot learn about one without the other.</p>
+<h4 class="mume-header" id="run-time-complexity-a-idbigoa">Run Time Complexity <a id="bigO" href=""></a></h4>
+
+<p>Any time we discuss and algorithm, we should also discuss its run time complexity. Generally we want to choose the most efficient algorithm.</p>
+<p><em>Big O</em> is a special notation that allows us to express how quickly an algorithm grows.</p>
+<p>Imagine we are writing a search algorithm to help a drone calculate where to land. Suppose we are trying to decide between a simple search and a binary search. The algorithm needs to be both correct and fast. Perhaps we only have 10 seconds to figure out where to land, otherwise the drone will be off course.</p>
+<p>On one hand, binary search is faster. We know this. On the other hand, simple search is easier to write and there is less chance of bugs. How might we decide whether it’s okay to go with simple search?</p>
+<p>We might time both methods and see how they differ. So suppose we time both algorithms with a list of 100 elements. Assume it takes 1 millisecond to check one element. With simple search, we must check 100 elements in the worst case, so the search takes 100ms in the worst case. On the other hand, binary search only has to check 7 elements (log_2 100 is about 7), so the search takes 7ms.</p>
+<p>More realistically, the search space might have a billion elements (1,000,000,000). How long will simple search take? And how long will binary search take?</p>
+<p>Binary search on a billion elements takes about 32ms. (What’s log_2 1,000,000,000?) How long do you think simple search will take?</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Elements</th>
+<th style="text-align:left">Simple cearch</th>
+<th style="text-align:left">Binary search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100</td>
+<td style="text-align:left">100ms</td>
+<td style="text-align:left">7ms</td>
+</tr>
+<tr>
+<td style="text-align:left">10,000</td>
+<td style="text-align:left">10 seconds</td>
+<td style="text-align:left">14ms</td>
+</tr>
+<tr>
+<td style="text-align:left">1,000,000,000</td>
+<td style="text-align:left">11 days</td>
+<td style="text-align:left">32ms</td>
+</tr>
+</tbody>
+</table>
+<p>As the size of the search space increases, the time it takes simple search increases faster than binary search!</p>
+<hr>
+<h2 class="mume-header" id="lists-a-idlista">Lists  <a id="list" href=""></a></h2>
+
 <p>In computer science, a list or sequence is an abstract data type that represents a <strong>countable</strong> number of <strong>ordered</strong> values, where the same value may occur more than once.</p>
 <p>An <em>instance</em> of a list is a computer representation of the mathematical concept of a finite sequence.</p>
 <p>A list can also be defined inductively:</p>
@@ -944,7 +257,8 @@
 <p>A list is either empty or it is an item followed by a list.</p>
 </blockquote>
 <hr>
-<h2 id="linear-linked-list-a-idllla">Linear Linked List <a id="LLL"></a></h2>
+<h2 class="mume-header" id="linear-linked-list-a-idllla">Linear Linked List <a id="LLL" href=""></a></h2>
+
 <p>In computer science, a linked list is a linear collection of data elements, called <em>nodes</em>, each pointing to the next node by means of a pointer.</p>
 <p>It is a data structure consisting of a group of nodes which together represent a sequence.</p>
 <p>In a simple linear linked list, each node is composed of a piece of data and a reference (in other words, a link) to the next node in the sequence.</p>
@@ -952,132 +266,269 @@
 <p>Linked Lists are among the simplest and most common data structures because it allows for efficient insertion or removal of elements from any position in the sequence.</p>
 <p><a href="#index">Back to Index</a></p>
 <hr>
-<h4 id="compare-to-arrays-a-idarraysa">Compare to Arrays <a id="arrays"></a></h4>
+<h4 class="mume-header" id="compare-to-arrays-a-idarraysa">Compare to Arrays <a id="arrays" href=""></a></h4>
+
 <p>It is important to understand that a linked list is different than an array. Linked lists are not indexed and does not support arbitrary access.</p>
 <p>Do you recall what an array is and how arrays work?</p>
+<p>What are the benefits of arrays versus linked lists?</p>
+<p>What are the benefits of linked lists versus arrays?</p>
 <hr>
-<h3 id="time-complexity-a-idcomplexitya">Time Complexity <a id="complexity"></a></h3>
-<p>Average for Linear Linked List:</p>
+<h3 class="mume-header" id="time-complexity-a-idcomplexitya">Time Complexity <a id="complexity" href=""></a></h3>
+
+<p>Time complexity for Linear Linked List:</p>
 <table>
 <thead>
-<tr><th style="text-align:left">Access</th><th style="text-align:left">Search</th><th style="text-align:left">Insert</th><th style="text-align:left">Delete</th></tr>
+<tr>
+<th style="text-align:left">Access</th>
+<th style="text-align:left">Search</th>
+<th style="text-align:left">Insert</th>
+<th style="text-align:left">Delete</th>
+</tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></td><td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></td></tr>
+<tr>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></td>
+</tr>
 </tbody>
 </table>
 <hr>
-<h3 id="basic-operations-a-idopsa">Basic Operations <a id="ops"></a></h3>
+<h3 class="mume-header" id="basic-operations-a-idopsa">Basic Operations <a id="ops" href=""></a></h3>
+
 <p>Abstract Data Type (ADT)</p>
 <ul>
-<li><p>A constructor for creating an empty list</p></li>
-<li><p>A test to see if a list is empty</p></li>
-<li><p>A way to insert an item in front of the list</p></li>
-<li><p>A way to insert an item at the back of the list</p></li>
-<li><p>Search for a particular item</p></li>
-<li><p>What else?</p></li>
+<li>A constructor for creating an empty list</li>
+<li>A test to see if a list is empty</li>
+<li>A way to insert an item in front of the list</li>
+<li>A way to insert an item at the back of the list</li>
+<li>Search for a particular item</li>
+<li>What else?</li>
 </ul>
-<h5 id="code-basics">Code Basics</h5>
+<h5 class="mume-header" id="code-basics">Code Basics</h5>
+
 <p>To implement a linear linked list in C++, we need to understand a few C++ concepts.</p>
 <p>We can use a struct or a class to define each node inductively.</p>
-<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--class-struct-block mpe-syntax--cpp"><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--cpp"><span>struct</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--type mpe-syntax--cpp"><span>node</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--class-struct-block mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--begin mpe-syntax--bracket mpe-syntax--curly mpe-syntax--cpp"><span>{</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--class-struct-block mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--c"><span>int</span></span><span>&nbsp;data;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--class-struct-block mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;node</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>*</span></span><span>&nbsp;next;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--class-struct-block mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--end mpe-syntax--bracket mpe-syntax--curly mpe-syntax--cpp"><span>}</span></span></span><span>;</span></span></div></pre>
+<pre class="language-C++">  <span class="token keyword">struct</span> node
+  <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> data<span class="token punctuation">;</span>
+    node<span class="token operator">*</span> next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre>
 <p><a href="#index">Back to Index</a></p>
 <hr>
-<h3 id="insertion-a-idinserta">Insertion <a id="insert"></a></h3>
+<h3 class="mume-header" id="insertion-a-idinserta">Insertion <a id="insert" href=""></a></h3>
+
 <p>Let’s keep things simple and consider linear linked lists of integers.</p>
 <p>A basic operation for lists is to put something on the list. If our list is written on paper, we just find a place to write our item down. If our list is in markdown, we can do this:</p>
 <ol>
-<li><p>First item</p></li>
-<li><p>Second item</p></li>
+<li>First item</li>
+<li>Second item</li>
 </ol>
 <p>What is the algorithm for insertion in a linear linked list?</p>
-<pre class="editor-colors lang-python"><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--python"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--function mpe-syntax--python"><span>def</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--python"><span>insert</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--parameters mpe-syntax--python"><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>head</span></span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--parameters mpe-syntax--python"><span>,</span></span><span>&nbsp;</span><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>data</span></span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--end mpe-syntax--python"><span>)</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--function mpe-syntax--begin mpe-syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>if</span></span><span>&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--logical mpe-syntax--python"><span>is</span></span><span>&nbsp;</span><span>empty</span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>data</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>else</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>insert</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>head</span><span>.</span><span>next</span><span>,&nbsp;</span><span>data</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div></pre>
+<pre class="language-python">  <span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>head<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> head <span class="token keyword">is</span> empty<span class="token punctuation">:</span>
+      head <span class="token operator">&lt;</span><span class="token operator">-</span> data
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      insert<span class="token punctuation">(</span>head<span class="token punctuation">.</span>next<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+</pre>
 <p>What will this do?</p>
-<h4 id="insertion-location">Insertion location</h4>
+<h4 class="mume-header" id="insertion-location">Insertion location</h4>
+
 <p>Should we insert at the front, back, or middle of the list?</p>
 <p>What are the algorithms to do these?</p>
-<h4 id="deletion-a-iddeletea">Deletion <a id="delete"></a></h4>
+<h4 class="mume-header" id="deletion-a-iddeletea">Deletion <a id="delete" href=""></a></h4>
+
 <p>Another basic operation is to remove something from the list. Remember in C++ we need to free the memory that we allocated.</p>
 <p><a href="#index">Back to Index</a></p>
 <hr>
-<h3 id="traversal-a-idtraversea">Traversal <a id="traverse"></a></h3>
+<h3 class="mume-header" id="traversal-a-idtraversea">Traversal <a id="traverse" href=""></a></h3>
+
 <p>You should have seen how to traverse the linear linked list by looping. Perhaps you’ve seen code that looks like this:</p>
-<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;node</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>*</span></span><span>&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;head;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--c"><span>while</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span>temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--c"><span>!=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--c"><span>NULL</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--begin mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>Do&nbsp;stuff</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;temp</span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--pointer-access mpe-syntax--c"><span>-&gt;</span></span><span class="mpe-syntax--variable mpe-syntax--other mpe-syntax--member mpe-syntax--c"><span>next</span></span><span>;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--end mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>}</span></span></span></span></div></pre>
-<h3 id="recursion-a-idrecursiona">Recursion <a id="recursion"></a></h3>
+<pre class="language-c++">  node<span class="token operator">*</span> temp <span class="token operator">=</span> head<span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>temp <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//Do stuff</span>
+    temp <span class="token operator">=</span> temp<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</pre>
+<h3 class="mume-header" id="recursion-a-idrecursiona">Recursion <a id="recursion" href=""></a></h3>
+
 <p>Since a list is a recursive data type, it makes sense to make use of recursion in programming operations on lists.</p>
 <p>Recursion is a tool a programmer can use to invoke a function call on itself.</p>
 <p>Recursive programming is directly related to mathematical induction.<br>
 In recursive programming we need two things:</p>
 <ul>
-<li><p><strong>A base case</strong></p></li>
-<li><p><strong>A recursive case</strong></p></li>
+<li><strong>A base case</strong></li>
+<li><strong>A recursive case</strong></li>
 </ul>
 <p>Consider the pseudocode to add an item at the end of a linear linked list.</p>
 <p><em>Iteratively</em></p>
-<pre class="editor-colors lang-python"><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--python"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--function mpe-syntax--python"><span>def</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--python"><span>addLast</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--parameters mpe-syntax--python"><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>item</span></span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--end mpe-syntax--python"><span>)</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--function mpe-syntax--begin mpe-syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>if</span></span><span>&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--python"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>else</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>node</span><span>&nbsp;</span><span>temp</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>head</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--repeat mpe-syntax--python"><span>while</span></span><span>&nbsp;</span><span>temp</span><span>.</span><span>next</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>!=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>temp</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>temp</span><span>.</span><span>next</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>temp</span><span>.</span><span>next</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div></pre>
+<pre class="language-python">  <span class="token keyword">def</span> <span class="token function">addLast</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> head <span class="token operator">=</span> None<span class="token punctuation">:</span>
+      head <span class="token operator">&lt;</span><span class="token operator">-</span> new node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      node temp <span class="token operator">&lt;</span><span class="token operator">-</span> head
+      <span class="token keyword">while</span> temp<span class="token punctuation">.</span>next <span class="token operator">!=</span> None<span class="token punctuation">:</span>
+        temp <span class="token operator">&lt;</span><span class="token operator">-</span> temp<span class="token punctuation">.</span>next
+      temp<span class="token punctuation">.</span>next <span class="token operator">&lt;</span><span class="token operator">-</span> new node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+</pre>
 <p><em>Recursively</em></p>
-<pre class="editor-colors lang-python"><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--python"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--function mpe-syntax--python"><span>def</span></span><span>&nbsp;</span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--python"><span>addLast</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--parameters mpe-syntax--python"><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>head</span></span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--parameters mpe-syntax--python"><span>,</span></span><span>&nbsp;</span><span class="mpe-syntax--variable mpe-syntax--parameter mpe-syntax--function mpe-syntax--python"><span>item</span></span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--parameters mpe-syntax--end mpe-syntax--python"><span>)</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--function mpe-syntax--begin mpe-syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>if</span></span><span>&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--python"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--python"><span>None</span></span><span>:</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>head</span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&lt;</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span>&nbsp;</span><span>new</span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>node</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--conditional mpe-syntax--python"><span>else</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--python"><span>addLast</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--begin mpe-syntax--python"><span>(</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--arguments mpe-syntax--python"><span>head</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--arithmetic mpe-syntax--python"><span>-</span></span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--python"><span>&gt;</span></span><span class="mpe-syntax--support mpe-syntax--function mpe-syntax--builtin mpe-syntax--python"><span>next</span></span><span>,&nbsp;</span><span>item</span></span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--arguments mpe-syntax--end mpe-syntax--python"><span>)</span></span></span></span></div></pre>
+<pre class="language-python">  <span class="token keyword">def</span> <span class="token function">addLast</span><span class="token punctuation">(</span>head<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> head <span class="token operator">=</span> None<span class="token punctuation">:</span>
+      head <span class="token operator">&lt;</span><span class="token operator">-</span> new node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token keyword">else</span>
+      addLast<span class="token punctuation">(</span>head<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">,</span> item<span class="token punctuation">)</span>
+</pre>
 <p>Let’s try in C++ together.</p>
 <p><a href="#index">Back to Index</a></p>
 <hr>
-<h3 id="searching-a-idsearcha">Searching <a id="search"></a></h3>
+<h3 class="mume-header" id="searching-a-idsearcha">Searching <a id="search" href=""></a></h3>
+
 <p>An operation we may be interested in doing on lists is to find whether an item is in a list or not. This is called <em>search</em>.</p>
 <p><a href="#index">Back to Index</a></p>
 <hr>
-<h3 id="sorting-a-idsorta">Sorting <a id="sort"></a></h3>
+<h3 class="mume-header" id="sorting-a-idsorta">Sorting <a id="sort" href=""></a></h3>
+
 <p>Another operation we may be interested in performing on lists is to sort it. We called this <em>sort</em>.</p>
 <p><a href="#index">Back to Index</a><br>
 <br></p>
-<h1 id="practice-programming-a-idpracticea">Practice Programming <a id="practice"></a></h1>
+<h1>Practice Programming <a id="practice" href=""></a></h1>
 <p>If you want to learn how to program, you must practice. Programming is a skill, not something that can just be memorized. Like any skill, you must practice to get good.</p>
 <p>There are many websites that have environments set up so that you can practice programming.</p>
 <p>Here are two examples that you can try:<br>
 <a href="https://www.pdx.edu/cecs/changchun-partnership-22-programs">Codefights</a><br>
 <a href="https://www.hackerrank.com/">HackerRank</a></p>
-<h2 id="populating-a-random-list-to-practice-with-in-c">Populating a random list to practice with in C++</h2>
+<h2>Populating a random list to practice with in C++</h2>
 <p>Alternatively, you can program from scratch and practice.</p>
 <p>There are some useful functions in the C++ standard library to generate random numbers.<br>
 We will need to include two libraries: ctime and cstdlib.</p>
 <p>We need the ctime library to “seed” the peudo random number generator. The cstdlib library contains a pseudo random number generator function.</p>
-<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--preprocessor mpe-syntax--include mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--directive mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--directive mpe-syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="mpe-syntax--string mpe-syntax--quoted mpe-syntax--other mpe-syntax--lt-gt mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--begin mpe-syntax--c"><span>&lt;</span></span><span>ctime</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--end mpe-syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--preprocessor mpe-syntax--include mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--directive mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--directive mpe-syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="mpe-syntax--string mpe-syntax--quoted mpe-syntax--other mpe-syntax--lt-gt mpe-syntax--include mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--begin mpe-syntax--c"><span>&lt;</span></span><span>cstdlib</span><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--string mpe-syntax--end mpe-syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;...</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;To&nbsp;seed&nbsp;the&nbsp;PRNG:</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--c"><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>srand</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>time</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--constant mpe-syntax--language mpe-syntax--c"><span>NULL</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span><span>)</span></span></span><span>;&nbsp;</span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;Do&nbsp;this&nbsp;only&nbsp;once!</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;</span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;To&nbsp;get&nbsp;a&nbsp;random&nbsp;number&nbsp;from&nbsp;0&nbsp;to&nbsp;100:</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--c"><span>int</span></span><span>&nbsp;num&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--function mpe-syntax--c"><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>rand</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>%</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--numeric mpe-syntax--c"><span>101</span></span><span>;</span></span></div></pre>
+<pre class="language-C++">  <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
+  <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
+
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+  <span class="token comment" spellcheck="true">// To seed the PRNG:</span>
+  <span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Do this only once!</span>
+
+  <span class="token comment" spellcheck="true">// To get a random number from 0 to 100:</span>
+  <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">101</span><span class="token punctuation">;</span>
+</pre>
 <p>So we may have a loop to insert some number of random numbers into our list to practice with.<br>
 For example:</p>
-<pre class="editor-colors lang-c++"><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--control mpe-syntax--c"><span>for</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--storage mpe-syntax--type mpe-syntax--c"><span>int</span></span><span>&nbsp;i&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--assignment mpe-syntax--c"><span>=</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--numeric mpe-syntax--c"><span>0</span></span><span>;&nbsp;i&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--comparison mpe-syntax--c"><span>&lt;</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--numeric mpe-syntax--c"><span>10</span></span><span>;&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--increment mpe-syntax--c"><span>++</span></span><span>i</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--parens mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--begin mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;&nbsp;&nbsp;list</span><span class="mpe-syntax--punctuation mpe-syntax--separator mpe-syntax--dot-access mpe-syntax--c"><span>.</span></span><span class="mpe-syntax--meta mpe-syntax--function-call mpe-syntax--c"><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>insert</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--entity mpe-syntax--name mpe-syntax--function mpe-syntax--c"><span>rand</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--begin mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>(</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span><span>&nbsp;</span><span class="mpe-syntax--keyword mpe-syntax--operator mpe-syntax--c"><span>%</span></span><span>&nbsp;</span><span class="mpe-syntax--constant mpe-syntax--numeric mpe-syntax--c"><span>101</span></span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--arguments mpe-syntax--end mpe-syntax--bracket mpe-syntax--round mpe-syntax--c"><span>)</span></span></span><span>;</span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span class="mpe-syntax--punctuation mpe-syntax--whitespace mpe-syntax--comment mpe-syntax--leading mpe-syntax--cpp"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="mpe-syntax--comment mpe-syntax--line mpe-syntax--double-slash mpe-syntax--cpp"><span class="mpe-syntax--punctuation mpe-syntax--definition mpe-syntax--comment mpe-syntax--cpp"><span>//</span></span><span>&nbsp;Or&nbsp;insert(head,&nbsp;rand()&nbsp;%&nbsp;101);&nbsp;if&nbsp;we&nbsp;do&nbsp;not&nbsp;have&nbsp;a&nbsp;class.</span></span></span></span></div><div class="line"><span class="mpe-syntax--source mpe-syntax--cpp"><span class="mpe-syntax--meta mpe-syntax--block mpe-syntax--c"><span>&nbsp;&nbsp;</span><span class="mpe-syntax--punctuation mpe-syntax--section mpe-syntax--block mpe-syntax--end mpe-syntax--bracket mpe-syntax--curly mpe-syntax--c"><span>}</span></span></span></span></div></pre>
+<pre class="language-c++">  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+    list<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Or insert(head, rand() % 101); if we do not have a class.</span>
+  <span class="token punctuation">}</span>
+</pre>
 <p><a href="#index">Back to Index</a></p>
-<h2 id="practice-with-linear-linked-lists-a-idexercisesa">Practice with Linear Linked Lists <a id="exercises"></a></h2>
-<h4 id="print-a-list-in-reverse">Print a list in reverse</h4>
+<h2>Practice with Linear Linked Lists <a id="exercises" href=""></a></h2>
+<h4 class="mume-header" id="print-a-list-in-reverse">Print a list in reverse</h4>
+
 <blockquote>
-<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> print <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> in reverse order.</p>
-<p>Example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> = 3-&gt;2-&gt;4-&gt;5<br>
-Output of print(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>): 5-&gt;4-&gt;2-&gt;3</p>
+<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> print <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> in reverse order.</p>
+<p>Example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> = 3-&gt;2-&gt;4-&gt;5<br>
+Output of print(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span>): 5-&gt;4-&gt;2-&gt;3</p>
 </blockquote>
-<h4 id="compare-two-lists">Compare two Lists</h4>
+<h4 class="mume-header" id="compare-two-lists">Compare two Lists</h4>
+
 <blockquote>
-<p>Given two linear linked lists <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>, return true if they are the same list. (Order and values matter)</p>
+<p>Given two linear linked lists <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span></span></span></span>, return true if they are the same list. (Order and values matter)</p>
 </blockquote>
-<h4 id="reverse-a-linear-linked-list">Reverse a linear linked list</h4>
+<h4 class="mume-header" id="reverse-a-linear-linked-list">Reverse a linear linked list</h4>
+
 <blockquote>
-<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> return <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> with its items in reverse order</p>
+<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> return <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> with its items in reverse order</p>
 </blockquote>
-<h4 id="sorted-copy">Sorted copy</h4>
+<h4 class="mume-header" id="sorted-copy">Sorted copy</h4>
+
 <blockquote>
-<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>, return a sorted list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span></span></span></span> such taht <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span></span></span></span> contains the same values as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span></p>
+<p>Given a linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span>, return a sorted list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">s</span></span></span></span> such taht <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">s</span></span></span></span> contains the same values as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span></p>
 <p>Example: Given 4-&gt;9-&gt;2-&gt;3-&gt;2, return 2-&gt;2-&gt;3-&gt;4-&gt;9</p>
 </blockquote>
-<h4 id="delete-duplicate">Delete duplicate</h4>
+<h4 class="mume-header" id="delete-duplicate">Delete duplicate</h4>
+
 <blockquote>
 <p>Given a sorted linear linked list, delete duplicates from the list.</p>
 <p>For example, if given 1-&gt;2-&gt;2-&gt;3-&gt;3-&gt;3-&gt;4, the resulting list should be 1-&gt;2-&gt;3-&gt;4.</p>
 </blockquote>
-<h4 id="merge-two-sorted-linear-linked-lists">Merge two sorted linear linked lists</h4>
+<h4 class="mume-header" id="merge-two-sorted-linear-linked-lists">Merge two sorted linear linked lists</h4>
+
 <blockquote>
-<p>Given sorted linear linked lists <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>, return a sorted linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> that contains all elements from <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span></p>
-<p>Example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> = 2-&gt;3-&gt;4-&gt;6, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span> = 1-&gt;3-&gt;7<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> = 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;6-&gt;7</p>
+<p>Given sorted linear linked lists <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span></span></span></span>, return a sorted linear linked list <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">c</span></span></span></span> that contains all elements from <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span></span></span></span></p>
+<p>Example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span> = 2-&gt;3-&gt;4-&gt;6, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span></span></span></span> = 1-&gt;3-&gt;7<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">c</span></span></span></span> = 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;6-&gt;7</p>
 </blockquote>
 <p><a href="#index">Back to Top</a></p>
 
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#data-structures">Data Structures</a></li>
+<li><a href="#introduction-a-idintroa">Introduction </a><br>
+* <a href="#run-time-complexity-a-idbigoa">Run Time Complexity </a></li>
+<li><a href="#lists-a-idlista">Lists  </a></li>
+<li><a href="#linear-linked-list-a-idllla">Linear Linked List </a><br>
+* <a href="#compare-to-arrays-a-idarraysa">Compare to Arrays </a>
+<ul>
+<li><a href="#time-complexity-a-idcomplexitya">Time Complexity </a></li>
+<li><a href="#basic-operations-a-idopsa">Basic Operations </a><br>
+* <a href="#code-basics">Code Basics</a></li>
+<li><a href="#insertion-a-idinserta">Insertion </a>
+<ul>
+<li><a href="#insertion-location">Insertion location</a></li>
+<li><a href="#deletion-a-iddeletea">Deletion </a></li>
+</ul>
+</li>
+<li><a href="#traversal-a-idtraversea">Traversal </a></li>
+<li><a href="#recursion-a-idrecursiona">Recursion </a></li>
+<li><a href="#searching-a-idsearcha">Searching </a></li>
+<li><a href="#sorting-a-idsorta">Sorting </a>
+<ul>
+<li><a href="#print-a-list-in-reverse">Print a list in reverse</a></li>
+<li><a href="#compare-two-lists">Compare two Lists</a></li>
+<li><a href="#reverse-a-linear-linked-list">Reverse a linear linked list</a></li>
+<li><a href="#sorted-copy">Sorted copy</a></li>
+<li><a href="#delete-duplicate">Delete duplicate</a></li>
+<li><a href="#merge-two-sorted-linear-linked-lists">Merge two sorted linear linked lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
 
-  </body>
-  
-</html>
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>

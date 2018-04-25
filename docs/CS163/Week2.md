@@ -8,9 +8,11 @@ David Lu
 ## Data Structures
 In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently.
 
-This week, we will look at the linear linked list data structure
+Over the next few weeks, we will look at the some basic data structures: the linear linked list and the binary search tree.
 
   Topics to cover: <a id="index"></a>
+  * [Introduction](#intro)
+    * [Run Time Complexity](#bigO)
   * [Lists](#list)
     * [Linear Linked Lists](#LLL)
       * [Compare to arrays](#arrays)
@@ -24,6 +26,38 @@ This week, we will look at the linear linked list data structure
       * [Sorting (if we have time)](#sort)
   * [Practice Programming!](#practice)
   * [Practice Exercises](#exercises)
+
+## Introduction <a id="intro"></a>
+In 1976 Swiss computer scientist Niklaus Wirth (chief designer of the programming language Pascal) wrote an influential book titled *Algorithms + Data Structures = Programs*.
+
+![Algorithms + Data Structures = Programs](Programs.jpeg)
+
+Algorithms and data structures are two fundamental topics in programming and they are closely related. We cannot learn about one without the other.
+
+#### Run Time Complexity <a id="bigO"></a>
+Any time we discuss and algorithm, we should also discuss its run time complexity. Generally we want to choose the most efficient algorithm.
+
+*Big O* is a special notation that allows us to express how quickly an algorithm grows.
+
+Imagine we are writing a search algorithm to help a drone calculate where to land. Suppose we are trying to decide between a simple search and a binary search. The algorithm needs to be both correct and fast. Perhaps we only have 10 seconds to figure out where to land, otherwise the drone will be off course.
+
+On one hand, binary search is faster. We know this. On the other hand, simple search is easier to write and there is less chance of bugs. How might we decide whether it's okay to go with simple search?
+
+We might time both methods and see how they differ. So suppose we time both algorithms with a list of 100 elements. Assume it takes 1 millisecond to check one element. With simple search, we must check 100 elements in the worst case, so the search takes 100ms in the worst case. On the other hand, binary search only has to check 7 elements (log_2 100 is about 7), so the search takes 7ms.
+
+More realistically, the search space might have a billion elements (1,000,000,000). How long will simple search take? And how long will binary search take?
+
+Binary search on a billion elements takes about 32ms. (What's log_2 1,000,000,000?) How long do you think simple search will take?
+
+Elements | Simple cearch | Binary search
+:--|:-- |:--
+100 | 100ms | 7ms
+10,000 | 10 seconds | 14ms
+1,000,000,000 | 11 days | 32ms
+
+As the size of the search space increases, the time it takes simple search increases faster than binary search!
+
+-------
 
 ## Lists  <a id="list"></a>
 In computer science, a list or sequence is an abstract data type that represents a **countable** number of **ordered** values, where the same value may occur more than once.
@@ -53,10 +87,14 @@ It is important to understand that a linked list is different than an array. Lin
 
 Do you recall what an array is and how arrays work?
 
+What are the benefits of arrays versus linked lists?
+
+What are the benefits of linked lists versus arrays?
+
 ---------------------
 ### Time Complexity <a id="complexity"></a>
 
-Average for Linear Linked List:
+Time complexity for Linear Linked List:
 |Access |Search |Insert |Delete|
 |:-- |:-- |:-- |:-- |
 |$\mathcal{O}(n)$ |$\mathcal{O}(n)$ |$\mathcal{O}(1)$ |$\mathcal{O}(1)$ |
