@@ -1,5 +1,5 @@
 # CS251 at CCUT Week 3: Arguments in Propositional Logic
-4/26/17
+
 
 ![keyboard](keyboard.jpg)
 
