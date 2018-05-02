@@ -1,7 +1,7 @@
 CS163 at CCUT Week 4: Final Week!
 ======
 David Lu
-5/5/17
+
 
 ![Code](code-blur.jpg)
 
@@ -36,29 +36,6 @@ void sortedInsert(node *&head, int data)
         else              // Recursive case
             sortedInsert(head->next, data);
     }
-}
-```
-
-#### An Error in Our Code!
-We ended class before we could finish debugging the code for a function which takes a linear linked list and an int $n$, and deletes all occurrences of $n$ from the list recursively. Here is that code. Try to find our mistake and correct it! Think about whether we want a bool return. Think about what we need to do with our recursive call.
-
-```c++
-bool deleteAllN(node *&head, int N)
-{
-    if(!head)
-        return false;
-    else
-    {
-        if(N == head->data)
-        {
-            node * temp = head->next;
-            delete head;
-            head = NULL;
-            head = temp;
-        }
-        deleteAllN(head->next, N);
-    }
-    return true;
 }
 ```
 

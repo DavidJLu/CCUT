@@ -1,7 +1,7 @@
 CS163 at CCUT Week 2: Linear Linked Lists
 ============
 David Lu
-4/22/17
+
 
 ![Links](watchLinks.jpg)
 

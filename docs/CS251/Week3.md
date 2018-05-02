@@ -191,8 +191,10 @@ How many rows does our table need if there are 3 atomic proposition letters? Wha
 
 ## Natural Deduction <a id="natural"></a>
 
-
 [Natural Deduction Rules](NDrules.pdf)
+
+The goal of a natural deduction system is to show that arguments are valid in a way that allows us to understand and display the underlying reasoning. A natural deduction system for PL is a set of *inference rules* that allow us to *deduce* the conclusion from the premises of any valid argument in PL.
+
 [Back to the Top](#index)
 
 # Sentence Forms <a id="sentence"></a>
