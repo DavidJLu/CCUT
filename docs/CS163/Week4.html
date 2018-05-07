@@ -181,19 +181,18 @@ html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-
 <li><a href="#BST">Binary Search Trees</a></li>
 </ul>
 <h2>Last Week <a id="LastWeek" href=""></a></h2>
-<p>Last week we implemented a number of linear linked list functions together. For instance here is our sortedInsert function:</p>
+<p>Last week we implemented a few linear linked list functions together. We left off trying to implement a function to insert items into the list in sorted order.</p>
 <pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword">void</span> <span class="token function">sortedInsert</span><span class="token punctuation">(</span>node <span class="token operator">*</span><span class="token operator">&amp;</span>head<span class="token punctuation">,</span> <span class="token keyword">int</span> data<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>   <span class="token comment">// Pass head by reference because head might change</span>
+    node<span class="token operator">*</span> temp <span class="token operator">=</span> <span class="token keyword">new</span> node<span class="token punctuation">;</span>
+    temp<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>head<span class="token punctuation">)</span>             <span class="token comment">// Base case</span>
     <span class="token punctuation">{</span>
-        head <span class="token operator">=</span> <span class="token keyword">new</span> node<span class="token punctuation">;</span>
-        head<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+        head <span class="token operator">=</span> temp<span class="token punctuation">;</span>
         head<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">else</span>
     <span class="token punctuation">{</span>
-        node <span class="token operator">*</span> temp <span class="token operator">=</span> <span class="token keyword">new</span> node<span class="token punctuation">;</span>
-        temp<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>data <span class="token operator">&lt;</span> head<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
             temp<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> head<span class="token punctuation">;</span>
@@ -263,92 +262,7 @@ html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-
     ???
   <span class="token keyword">else</span><span class="token punctuation">:</span>
     ???
-</pre><p>Now try it in C++.</p>
-<p>This is what we saw in class. There was a segfault in one of our test cases. Can you find the bug?</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword">void</span> <span class="token function">helperDelete</span><span class="token punctuation">(</span>node <span class="token operator">*</span><span class="token operator">&amp;</span>root<span class="token punctuation">,</span> <span class="token keyword">int</span> data<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>root<span class="token punctuation">)</span>   <span class="token comment">// Base case</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">==</span> data<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">&amp;&amp;</span> root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">)</span>   <span class="token comment">// If node has two children</span>
-        <span class="token punctuation">{</span>
-            node <span class="token operator">*</span> curr <span class="token operator">=</span> root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-            node <span class="token operator">*</span> prev <span class="token operator">=</span> root<span class="token punctuation">;</span>
-            <span class="token keyword">while</span><span class="token punctuation">(</span>curr<span class="token operator">-</span><span class="token operator">></span>left<span class="token punctuation">)</span>   <span class="token comment">// Find inorder successor</span>
-            <span class="token punctuation">{</span>
-                prev <span class="token operator">=</span> curr<span class="token punctuation">;</span>
-                curr <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>left<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            root<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">;</span>  <span class="token comment">// Swap inorder successor with root</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>prev <span class="token operator">==</span> root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">)</span>   <span class="token comment">// Keep rest of subtree</span>
-                prev<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-            <span class="token keyword">else</span>
-                prev<span class="token operator">-</span><span class="token operator">></span>right <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-            <span class="token keyword">delete</span> curr<span class="token punctuation">;</span>    <span class="token comment">// Delete that node</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">||</span> root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>   <span class="token comment">// Node has only one child</span>
-            node <span class="token operator">*</span> temp <span class="token operator">=</span> root<span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>left<span class="token punctuation">)</span>  <span class="token comment">// It's the left child</span>
-                root <span class="token operator">=</span> root<span class="token operator">-</span><span class="token operator">></span>left<span class="token punctuation">;</span>
-            <span class="token keyword">else</span>            <span class="token comment">// It's the right child</span>
-                root <span class="token operator">=</span> root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-            <span class="token keyword">delete</span> temp<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>      
-        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>root<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>   <span class="token comment">// If node is a leaf with no children</span>
-            <span class="token keyword">delete</span> root<span class="token punctuation">;</span>
-            root <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span>
-    <span class="token punctuation">{</span>   <span class="token comment">// If data not found here, then check appropriately</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>data <span class="token operator">&lt;</span> root<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span>
-            <span class="token function">helperDelete</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>left<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span>
-            <span class="token function">helperDelete</span><span class="token punctuation">(</span>root<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</pre><p>The bug was inside the case where root has two children. Here is the fixed portion of that code:</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword">if</span><span class="token punctuation">(</span>prev <span class="token operator">==</span> root<span class="token punctuation">)</span>   <span class="token comment">// Keep rest of subtree</span>
-    prev<span class="token operator">-</span><span class="token operator">></span>right <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-<span class="token keyword">else</span>
-    prev<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">=</span> curr<span class="token operator">-</span><span class="token operator">></span>right<span class="token punctuation">;</span>
-<span class="token keyword">delete</span> curr<span class="token punctuation">;</span>    <span class="token comment">// Delete that node</span>
-</pre><h2>BST Complexity</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Algorithm</th>
-<th style="text-align:center">Average</th>
-<th style="text-align:center">Worst Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Space</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-</tr>
-<tr>
-<td style="text-align:left">Search</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-</tr>
-<tr>
-<td style="text-align:left">Insert</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-</tr>
-<tr>
-<td style="text-align:left">Delete</td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></td>
-</tr>
-</tbody>
-</table>
-<h2>More Practice Problems</h2>
+</pre><h2>Practice Problem Ideas</h2>
 <ul>
 <li>Find an item in the tree</li>
 <li>Delete an entire tree and free the memory</li>

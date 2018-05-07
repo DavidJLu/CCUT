@@ -13,21 +13,20 @@ Contents <a id="Index"></a>
 
 Last Week <a id="LastWeek"></a>
 -----
-Last week we implemented a number of linear linked list functions together. For instance here is our sortedInsert function:
+Last week we implemented a few linear linked list functions together. We left off trying to implement a function to insert items into the list in sorted order.
 
 ```c++
 void sortedInsert(node *&head, int data)
 {   // Pass head by reference because head might change
+    node* temp = new node;
+    temp->data = data;
     if(!head)             // Base case
     {
-        head = new node;
-        head->data = data;
+        head = temp;
         head->next = NULL;
     }
     else
     {
-        node * temp = new node;
-        temp->data = data;
         if(data < head->data)
         {
             temp->next = head;
@@ -119,6 +118,7 @@ def delete(root, data):
     ???
 ```
 
+<!---
 Now try it in C++.
 
 This is what we saw in class. There was a segfault in one of our test cases. Can you find the bug?
@@ -191,7 +191,9 @@ Search	|	$\mathcal{O}(\log n)$  |$\mathcal{O}(n)$
 Insert	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
 Delete	|	$\mathcal{O}(\log n)$	|$\mathcal{O}(n)$  
 
-More Practice Problems
+--->
+
+Practice Problem Ideas
 -----
 * Find an item in the tree
 * Delete an entire tree and free the memory
