@@ -1,7 +1,7 @@
 CS251 at CCUT Week 4: The Predicate Calculus
 =======
 David Lu
-5/8/17
+
 
 
 ![Matrix](matrix.jpg)
