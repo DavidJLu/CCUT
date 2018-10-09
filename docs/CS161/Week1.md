@@ -12,6 +12,8 @@ Some facts about me:
 * Worked on a PhD in Philosophy at [Syracuse University](https://www.syracuse.edu/) (also located in upstate NY - central), specializing in metaphysics and philosophical methodology
 * Taught philosophy courses on ethics, metaphysics and epistemology, critical thinking, and formal logic at Syracuse University
 
+![Map of US](USA.jpg)
+
 Here are some pictures of SU:
 
 ![Syracuse University Panoramic](SUPan.jpg)
@@ -22,12 +24,35 @@ The building housing the philosophy department:
 
 * Now I teach discrete math, introduction to C++, and ethics at Portland State University
 
+Here are some pictures of PSU and Portland
+
+PSU Library:
 ![PSU Library](PSUlibrary.jpg)
 
+PSU location in downtown Portland:
 ![PSU Overhead](PSUiso.jpg)
 
-* This is my 3rd year participating in the PSU--CCUT partnership program
-* Oldest of three: one younger brother and one younger sister
+Portland from the east side, looking west to downtown:
+![Portland](Portland.jpg)
+
+Portland steel bridge:
+![Portland in the Fall](PdxFall18.jpg)
+
+Mount Hood in the distance view from PSU:
+![Mount Hood](MtHood.jpg)
+
+Columbia River that separates Oregon state from Washington state:
+![Columbia River](Columbia.jpg)
+
+Willamette River that separates east from west Portland:
+![Willamette River](Willamette.jpg)
+
+Willamette River:
+![Willamette River](Willamette2.jpg)
+
+* This is my 4th year participating in the PSU--CCUT partnership program
+
+* I am the eldest of three: one younger brother and one younger sister
 
 ### Course Purpose and Goals
 The goal of CS161 is to introduce students to programming concepts and practices.
