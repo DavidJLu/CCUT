@@ -200,7 +200,11 @@ If $X = \{0, 1\}$ and $Y = \{1, a, b\}$ what is $X \times Y$?
 
 **Theorem 1** If $X$ has $n$ elements and $Y$ has $m$ elements, then $X \times Y$ has $n \cdot m$ elements.
 
-*Proof*: For every element $x$ in X, there are $m$ elements of the form $⟨x,y⟩∈X×Y$.
+Why is this the case?
+
+<details><summary>Proof</summary>
+
+For every element $x$ in X, there are $m$ elements of the form $⟨x,y⟩∈X×Y$.
 Let $Y_x = {⟨x,y⟩:y∈Y}$.
 Since whenever $x_1 \neq 􏰁x_2, ⟨x_1,y⟩ \neq 􏰁 ⟨x_2,y⟩$, $Y_{x_1} \cap Y_{x_2} = ∅$.
 But if $X = {x_1,...,x_n}$, then $X×Y=Y_{x_1} ∪···∪Y_{x_n}$, and so has $n·m$ elements.
@@ -212,14 +216,15 @@ $Y_{x_2} = \{⟨x_2,y_1⟩ ⟨x_2,y_2⟩ ... ⟨x_2,y_m⟩\}$
 $Y_{x_n} = \{⟨x_n,y_1⟩ ⟨x_n,y_2⟩ ... ⟨x_n,y_m⟩\}$
 
 Since the $x_i$ are all different, and the $y_j$ are all different, no two of the pairs in this grid are the same, and there are $n · m$ of them.
+</details>
 
 **Russell's Paradox**
 In a village, the barber shaves everyone who does not shave themselves, and no one else.
 
 The question that prompts the paradox is this: Does the barber shave himself?
 
-**1.3 Informal proof**:
-If $X$ has $n$ elements then $\mathscr{P}(X)$ has 2^n elements.
+**Another Informal proof**:
+If $X$ has $n$ elements then $\mathscr{P}(X)$ has $2^n$ elements.
 Given an element $x$ of $S$, each subset of $S$ either includes $x$ or does not include $x$ (by definition of set), which gives us two possibilities.
 The same reasoning holds for any element of $S$.
-We can see that this means there are 2 * 2 * … * 2 = 2^|$S$| total possible combinations of elements of $S$.
+We can see that this means there are 2 * 2 * … * 2 = $2^{|S|}$ total possible combinations of elements of $S$.
