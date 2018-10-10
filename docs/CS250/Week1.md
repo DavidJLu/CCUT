@@ -228,3 +228,68 @@ If $X$ has $n$ elements then $\mathscr{P}(X)$ has $2^n$ elements.
 Given an element $x$ of $S$, each subset of $S$ either includes $x$ or does not include $x$ (by definition of set), which gives us two possibilities.
 The same reasoning holds for any element of $S$.
 We can see that this means there are 2 * 2 * … * 2 = $2^{|S|}$ total possible combinations of elements of $S$.
+
+----------
+
+# Set Theory Exercises
+1. Which of these sets are equal?
+  {$x, y, z$}, {$z, y, z, x$}, {$y, x, y, z$}, {$y, z, x, y$}
+<!--- They're all equal --->
+<br>
+
+2. List the elements of each set where $\mathbb{N}$ = {$1, 2, 3, ...$}.
+  (a) $A =$ { $x \in \mathbb{N}$ | $3 < x < 9$}
+  (b) $B =$ { $x \in \mathbb{N}$ | $x$ is even, $x < 11$}
+<!---(a) The positive integers between 3 and 9. (b) The even positive integers less than 11. --->
+<br>
+
+3. Prove that $B \setminus A = B \cap \overline{A}$  
+(The complement of a set $X$, $\overline{X}$  = {$x$ | $x \in \mathbb{U}$ and $x \notin X$})
+<!--- Strategy B\A = {x|x \in B and x \notin A} is equal to {x|x \in B and x \in completment of A} which is to say B intersect complement A -->
+<br>
+
+4. Give some example sets that make the following statements true:
+  (a) $A \cap B = A \cap C$ and $B \neq C$
+  (b) $$D \cup E = D \cup F$ and $E = F$
+  <!--- A = {1, 2}, B = {2, 3}, C = {2, 4}.
+        D = {1, 2}, E = {1, 3}, F = {2, 3}--->
+<br>
+
+5. Prove that $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$  (Set distributivity law)
+<!--- Strategy A \cap (B \cup C) = {x |x \in A and x \in (B \cup C), which is equivalent to {x|x \in A and x \in B, or x \in A and \x in C}
+      That's to say, (A \cap B) \cup (A \cap C)  -->
+<br>
+
+6. Determine the validity of the following argument, using a Venn diagram:
+  * All my friends are musicians.
+  * Link is my friend.
+  * None of my neighbors are musicians.
+  Therefore Link is not my neighbor.
+  <!-- Valid -->
+<br>
+
+7. Which of the following sets are identical?
+
+$A = \{x | x^2 - 4x + 3 = 0\}$
+
+$B = \{x | x^2 - 3x + 2 = 0\}$
+
+$C = \{x | x \in \mathbb{N}, x < 3\}$
+
+$D = \{x | x \in \mathbb{N}, x$ is odd, $x < 5\}$
+
+$E = \{1, 2\}$
+
+$F = \{1, 2, 1\}$
+
+$G = \{3, 1\}$
+
+$H = \{1, 1, 3\}$
+
+<!-- B = C = E = F and A = D = G = H -->
+<br>
+
+8. Find the power set $\mathscr{P}(A)$ of $A = \{\{a, b\}, \{c\}, \{d, e, f\}\}$
+
+<!--- A has 3 elements, so the powerset of A has 2^3=8 elements: $\{A | \{\{a, b\}, \{c\}\} | \{\{a, b\}, \{d, e, f\}\} | \{\{c\}, \{d, e, f\}\} | \{\{a, b\}\} | \{\{c\}\} | \{\{d, e, f\}\} | 0\}$ -->
+<br>
