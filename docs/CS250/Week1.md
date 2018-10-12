@@ -66,7 +66,7 @@ The goals of the course are listed below:
 -------
 ![Intersection](SetTheory.png)
 
-## Review of Basic Set Theory Ideas
+## Review of Basic Set Theory
 You should have had an introduction to set theory by now. Let's do a little review before we take a look at our next topic.
 
 Basic definitions for set theory.
