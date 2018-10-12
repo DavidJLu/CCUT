@@ -225,9 +225,12 @@ The question that prompts the paradox is this: Does the barber shave himself?
 
 **Another Informal proof**:
 If $X$ has $n$ elements then $\mathscr{P}(X)$ has $2^n$ elements.
+
+<details><summary>proof</summary>
 Given an element $x$ of $S$, each subset of $S$ either includes $x$ or does not include $x$ (by definition of set), which gives us two possibilities.
 The same reasoning holds for any element of $S$.
 We can see that this means there are 2 * 2 * … * 2 = $2^{|S|}$ total possible combinations of elements of $S$.
+</details>
 
 ----------
 
@@ -250,7 +253,7 @@ We can see that this means there are 2 * 2 * … * 2 = $2^{|S|}$ total possible 
 
 4. Give some example sets that make the following statements true:
   (a) $A \cap B = A \cap C$ and $B \neq C$
-  (b) $$D \cup E = D \cup F$ and $E = F$
+  (b) $D \cup E = D \cup F$ and $E = F$
   <!--- A = {1, 2}, B = {2, 3}, C = {2, 4}.
         D = {1, 2}, E = {1, 3}, F = {2, 3}--->
 <br>
