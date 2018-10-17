@@ -27,7 +27,7 @@ What do you think the following bit of code does?
 import turtle
 
 t = turtle.Turtle()
-turtle.bgcolor('black')
+turtle.bgcolor('white')
 t.color('red')
 
 t.forward(100)  # Draw foward 100 pixels
