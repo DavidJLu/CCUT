@@ -161,17 +161,26 @@ A function is bijective (one-to-one and onto or one-to-one correspondence) if ea
 Prove the following:
 (a) if $f$ and $g$ are injective (one-to-one), then the composition function $g \circ f$ is injective (one-to-one)$.
 
-<!---  Suppose $(g \circ f)(x) = (g \circ f)(y), then $g(f(x)) = g(f(y)). So $f(x) = f(y)$ because g is injective. Further, x = y since $f$ is injective. Thus, $g \circ f$ is injective. --->
+<details><summary>Proof:</summary>
+
+Suppose $(g \circ f)(x) = (g \circ f)(y)$, then $g(f(x)) = g(f(y))$. So $f(x) = f(y)$ because $g$ is injective. Further, $x = y$ since $f$ is injective. Thus, $g \circ f$ is injective. </details>
 
 (b) if $f$ and $g$ are surjective (onto) functions, then $g \circ f$ is an surjective (onto) function.
-<!---  Let $c$ be an arbitrary element of $C$. Since $g$ is surjective, there exists a $b \in B$ such that $g(b) = c$. Since $f$ is surjective, there exists an $a \in A$ such that $f(a) = b$. But also $(g \circ f)(a) = g(f(a)) = g(b) = c$. Hence, each $c \in C$ is the mapping of some element $a \in A$. Therefore, $g \circ f$ is a surjective function.  -->
+
+<details><summary>Proof:</summary>
+
+Let $c$ be an arbitrary element of $C$. Since $g$ is surjective, there exists a $b \in B$ such that $g(b) = c$. Since $f$ is surjective, there exists an $a \in A$ such that $f(a) = b$. But also $(g \circ f)(a) = g(f(a)) = g(b) = c$. Hence, each $c \in C$ is the mapping of some element $a \in A$. Therefore, $g \circ f$ is a surjective function.
+</details>
 
 2. Determine if each function is injective (one-to-one):
 (c) To each person on the earth, assign the number which corresponds to her or his age.
 (d) To each country in the world, assign the latitude and longitude of its capital.
 (e) To each book written by only one author, assign the author.
 (f) To each country in the world which has a prime minister, assign its prime minister.
- <!-- no, yes, no, yes -->
+
+<details><summary>Answers:</summary>
+ no, yes, no, yes
+ </details>
 
 
 
