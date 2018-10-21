@@ -1,4 +1,4 @@
-import turtle
+#import turtle
 from shapes import *
 
 pen = turtle.Turtle()

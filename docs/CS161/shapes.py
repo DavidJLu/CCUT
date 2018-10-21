@@ -16,14 +16,13 @@ def drawCloud(pen,x,y):
   pen.penup()
   pen.goto(x,y)
   pen.pendown()
-  pen.begin_fill()
-
   pen.color("white")
   for x in range(10):
-    pen.circle(20)
+    pen.begin_fill()
+    pen.circle(25)
+    pen.end_fill()
     pen.right(36)
-    pen.forward(10)
-  pen.end_fill()
+    pen.forward(1)
   pen.setheading(90)  
  
  
@@ -49,14 +48,14 @@ def drawBush(pen,x,y):
   pen.penup()
   pen.goto(x,y)
   pen.pendown()
-  pen.begin_fill()
 
   pen.color("darkgreen")
   for x in range(10):
-    pen.circle(15)
+    pen.begin_fill()
+    pen.circle(22)
     pen.right(36)
-    pen.forward(10)
-  pen.end_fill()
+    pen.forward(1)
+    pen.end_fill()
   pen.setheading(90)    
 
 
@@ -231,4 +230,3 @@ def drawWindow(pen,x,y,shape):
       pen.forward(20)
       pen.right(90)
 
-#turtle.exitonclick()
