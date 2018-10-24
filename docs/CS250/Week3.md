@@ -1,11 +1,11 @@
 #CS250 at CCUT Week 3: Theory of Computation Introduction
 
-[Click here to see this week's lecture notes](TOCNotes.pdf)
+##[Click here to see this week's lecture notes](TOCNotes.pdf)
 
 
-
+-----
 # DFA Exercises
-----
+
 
 Prove that the following languages are regular by constructing a DFA that recognizes them.
 
