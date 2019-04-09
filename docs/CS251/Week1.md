@@ -33,7 +33,7 @@ In this course, we study a language which we can use to express and investigate 
 In the preface of Daniel Velleman's excellent book, *How to Prove It: A Structured Approach* he writes:
 >‘Students... often have trouble the ﬁrst time that they’re asked to work seriously with mathematical proofs, because they don’t know ‘the rules of the game’. What is expected of you if you are asked to prove something? What distinguishes a correct proof from an incorrect one?
 
-This class is the first step toward learning how correct proofs are constructed.
+This class is a step toward learning how correct proofs are constructed.
 
 
 #### Arguments
@@ -49,5 +49,17 @@ An argument is a series of sentences, one of which is a conclusion and the other
 
 We shall specify every argument has one conclusion and zero or more premises. Let's look at some more examples of arguments.
 
+#### Logic and Computer Science
+Logic and computer science are closely related in many areas.
+* Research into logic that are guided by applications in computer science.
+  * Example: Rewriting systems, Combinatory logic, and Abstract interpretation (used in static analysis, compile time optimization, and debugging);
+* Fundamental concepts in computer science that are naturally expressible in logical form.
+  * Example: Type theory (used in type systems), Formal semantics of programming languages, Hoare logic, and Logic programming;
+* Applications of fundamental concepts derived from the theory of computation that cast light on questions of pure logic.
+  * Example: Curry-Howard correspondence and Game semantics;
+* Tools for logicians considered as applied computer science.
+  * Example: Automated theorem proving and Model checking.
+
+
 #### Exercises
-Let's look at some of the exercises in the book and practice translating them into Chinese, identifying the premises and conclusions, and deciding whether they are good or bad arguments. 
+Let's look at some of the exercises in the book and practice translating them into Chinese, identifying the premises and conclusions, and deciding whether they are good or bad arguments.

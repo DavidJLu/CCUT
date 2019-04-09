@@ -77,7 +77,7 @@ These are called, in order from left to right, "negation," "conjunction," "disju
 
 Atomic Sentences: Uppercase letters: A, B, C, ... P, Q, R
 
-Sentence Schema (sentence variables): lowercase letters: \textit{p, q, r}
+Sentence Schema (sentence variables): lowercase letters: $\textit{p, q, r}$
 
 Parentheses: ( ), [ ], \{ \}
 
@@ -253,6 +253,54 @@ Examples
 
 [Back to Top](#index)
 <br>
+
+--------
+
+### A Logic Puzzle
+Four men and four women were nominated for two positions on the school board. One man and one woman were eleted to the positions. Suppose the men are named $A$, $B$, $C$, and $D$ and the women are named $E$, $F$, $G$, and $H$. Further, suppose that the following four statements are true:
+
+
+* If neither $A$ nor $E$ won a position, then $G$ won a position.
+* If neither $A$ nor $F$ won a position, then $B$ won a position.
+* If neither $B$ nor $G$ won a position, then $C$ won a position.
+* If neither $C$ nor $F$ won a position, then $E$ won a position.
+
+Who were the two people elected to the school board?
+
+<details><summary>Hint:</summary>
+
+Let the capital $A$, $B$, $C$, and so on stand for the statements "$A$ was elected," "$B$ was elected, "$C$ was elected" and so on.
+
+
+We know that one man and one woman were elected. In other words, we know that some long sentence of the form $(A \wedge E) \vee (A \wedge F) \vee (A \wedge G) \vee (A \wedge H) \vee (B \wedge E) \vee (B \wedge F) ...$ is true. *In particular*, we know that one of those disjuncts is true and the others are false.
+
+We are given that (symbolizing 1-4 and finding some equivalences):
+* $\neg (A \vee E) \rightarrow G \equiv A \vee E \vee G$
+* $\neg (A \vee F) \rightarrow B \equiv A \vee F \vee B$
+* $\neg (B \vee G) \rightarrow C \equiv B \vee G \vee C$
+* $\neg (C \vee F) \rightarrow E \equiv C \vee F \vee E$
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<details><summary>Solution:</summary>
+
+So we can find the two people elected to the school board by determining which disjunct from our long sentence satisfies (or makes true) 1--4. Only $(B \wedge E)$ satisfies 1-4.
+
+So $B$ and $E$ were the two people elected to the school board.
+</details>
 
 ----------------------------
 # Exercises <a id="exercises"></a>

@@ -191,11 +191,9 @@ How many rows does our table need if there are 3 atomic proposition letters? Wha
 
 ## Natural Deduction <a id="natural"></a>
 
-[Natural Deduction Rules](NDrules.pdf)
-
 The goal of a natural deduction system is to show that arguments are valid in a way that allows us to understand and display the underlying reasoning. A natural deduction system for PL is a set of *inference rules* that allow us to *deduce* the conclusion from the premises of any valid argument in PL.
 
-There are many different sets of inference rules that can accomplish this. One set is linked above. In this set, there are two types of rules: Implication rules and Equivalence rules.
+There are many different sets of inference rules that can accomplish this. One set can be found in Appendix C of the textbook. 
 
 These rules allow us to construct proofs. The style of proofs we will discuss are called *Fitch style* proofs. They are also called 3 column natural deduction proofs. We can use proofs to show a number of properties: validity, tautology, contradiction, equivalence, and inconsistency.
 
