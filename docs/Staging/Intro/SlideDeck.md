@@ -43,7 +43,7 @@ if "apple" in thislist:
   print("Yes, 'apple' is in the list")
 ```
 <!-- slide -->
-Math rendering is powered by LaTeX
+Math rendering is powered by KaTeX
 $L' = {L}{\sqrt{1-\frac{v^2}{c^2}}}$
 
 $(A \land B) \to (C \lor \neg D)$
