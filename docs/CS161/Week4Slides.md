@@ -10,6 +10,7 @@ presentation:
 
 <!-- slide data-background-video="../Portlandia.mp4" -->
 
+
 <!-- slide -->
 # CS161 at CCUT Week 4:
 
@@ -59,7 +60,7 @@ def isEven(value):
   else:
     return False
 ```
-And perhaps antoher question to ask is: (3) is it easy to understand?
+And perhaps another question to ask is: (3) is it easy to understand?
 
 <!-- slide -->
 One of your classmates suggested we use the modulo operator `%` for a better solution.

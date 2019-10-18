@@ -204,9 +204,9 @@ Why is this the case?
 
 <details><summary>Proof</summary>
 
-For every element $x$ in X, there are $m$ elements of the form $⟨x,y⟩∈X×Y$.
+For every element $x$ in $X$, there are $m$ elements of the form $⟨x,y⟩∈X×Y$.
 Let $Y_x = {⟨x,y⟩:y∈Y}$.
-Since whenever $x_1 \neq 􏰁x_2, ⟨x_1,y⟩ \neq 􏰁 ⟨x_2,y⟩$, $Y_{x_1} \cap Y_{x_2} = ∅$.
+Since whenever $x_1 \neq x_2, ⟨x_1,y⟩ \neq ⟨x_2,y⟩$, $Y_{x_1} \cap Y_{x_2} = ∅$.
 But if $X = {x_1,...,x_n}$, then $X×Y=Y_{x_1} ∪···∪Y_{x_n}$, and so has $n·m$ elements.
 
 To visualize this, arrange the elements of $X×Y$ in a grid:
@@ -227,6 +227,7 @@ The question that prompts the paradox is this: Does the barber shave himself?
 If $X$ has $n$ elements then $\mathscr{P}(X)$ has $2^n$ elements.
 
 <details><summary>proof</summary>
+
 Given an element $x$ of $S$, each subset of $S$ either includes $x$ or does not include $x$ (by definition of set), which gives us two possibilities.
 The same reasoning holds for any element of $S$.
 We can see that this means there are 2 * 2 * … * 2 = $2^{|S|}$ total possible combinations of elements of $S$.
