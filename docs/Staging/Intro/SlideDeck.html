@@ -1609,11 +1609,250 @@ body {
       
       
       
-      
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.7.0/flowchart.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script type="text/javascript" src="https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
 
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#555;background-color:#f0f0f0 !important;border:#d6d6d6;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#999988;font-style:italic}code[class*="language-"] .token.punctuation,pre[class*="language-"] .token.punctuation{color:#920B2D}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.property,pre[class*="language-"] .token.property{font-weight:bold;color:#333}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#D14}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#D14}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#990073}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#008080}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#458;font-weight:bold}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#D14}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#606aa1}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#888}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#222;font-weight:bold}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#900}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{text-decoration:underline;color:#606aa1}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#008080}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
@@ -1628,14 +1867,172 @@ body {
         <section lineno="11" class="slide " data-line="11" data-h="0" data-v="0">
 <h1 class="mume-header" id="an-example-revealjs-slide-deck">An example reveal.js slide deck</h1>
 
-</section><section data-background-video="Languages.mp4" data-background-video-loop="true" lineno="14" class="slide " data-line="14" data-h="1" data-v="0">
-</section><section lineno="16" class="slide " data-line="16" data-h="2" data-v="0">
-<div theme_hand="true" class="sequence">Ann-&gt;Bob: Says Hello
-Note Right of Bob: Bob thinks\nabout it
-Bob--&gt;Ann: How are you?
-Ann--&gt;&gt;Bob: I&apos;m good, thanks.
+</section><section lineno="14" class="slide " data-line="14" data-h="1" data-v="0">
+<h3 class="mume-header" id="markdown-basics">Markdown Basics</h3>
 
-</div></section>
+<p><code>All</code> <sub>the</sub> <em>regular</em> <strong>markdown</strong> <s>stuffs</s> <sup>work</sup></p>
+</section><section lineno="18" class="slide " data-line="18" data-h="2" data-v="0">
+<p>Fragments also work:</p>
+<ul>
+<li class="fragment" data-fragment-index="3">And here&#x2019;s a third one <!-- .element: class="fragment" data-fragment-index="3" --></li>
+<li class="fragment" data-fragment-index="1">Here&#x2019;s the first one <!-- .element: class="fragment" data-fragment-index="1" --></li>
+<li class="fragment" data-fragment-index="2">Here&#x2019;s a second one <!-- .element: class="fragment" data-fragment-index="2" --></li>
+</ul>
+</section><section lineno="25" class="slide " data-line="25" data-h="3" data-v="0">
+<p>Here&#x2019;s a markdown table</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+</tr>
+</tbody>
+</table>
+</section><section lineno="33" class="slide " data-line="33" data-h="4" data-v="0">
+<p>Images are easy<br>
+<img src="PdxFall18.jpg" alt="Portland"></p>
+</section><section lineno="37" class="slide " data-line="37" data-h="5" data-v="0">
+<p>Here&#x2019;s a code block with syntax highlighting:</p>
+<pre data-role="codeBlock" data-info="py {.line-numbers}" class="language-python line-numbers">thislist <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;apple&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;banana&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;cherry&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">if</span> <span class="token string">&quot;apple&quot;</span> <span class="token keyword">in</span> thislist<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Yes, &apos;apple&apos; is in the list&quot;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre></section><section lineno="44" class="slide " data-line="44" data-h="6" data-v="0">
+<p>Math rendering is powered by LaTeX<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mo mathvariant="normal">&#x2032;</mo></msup><mo>=</mo><mi>L</mi><msqrt><mrow><mn>1</mn><mo>&#x2212;</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">L&apos; = {L}{\sqrt{1-\frac{v^2}{c^2}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.751892em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2032;</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5692900000000001em;"></span><span class="mord"><span class="mord mathdefault">L</span></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.27071em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.91642em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2307099999999997em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width="400em" height="1.8800000000000001em" viewBox="0 0 400000 1944" preserveAspectRatio="xMinYMin slice"><path d="M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
+572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
+-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
+c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
+s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
+-658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
+M1001 80H400000v40H1013z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.5692900000000001em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>&#x2227;</mo><mi>B</mi><mo stretchy="false">)</mo><mo>&#x2192;</mo><mo stretchy="false">(</mo><mi>C</mi><mo>&#x2228;</mo><mi mathvariant="normal">&#xAC;</mi><mi>D</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(A \land B) \to (C \lor \neg D)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2227;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2228;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">&#xAC;</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span></span></p>
+</section><section lineno="50" class="slide " data-line="50" data-h="7" data-v="0">
+<p>Next is a video in the background with sound</p>
+</section><section data-background-video="Languages.mp4" data-background-video-loop="true" lineno="53" class="slide " data-line="53" data-h="8" data-v="0">
+</section><section lineno="55" class="slide " data-line="55" data-h="9" data-v="0">
+<p>Flow charts are powered by <a href="http://flowchart.js.org/">flowchart.js</a></p>
+<div class="flow">st=&gt;start: Start:&gt;http://www.google.com[blank]
+e=&gt;end:&gt;http://www.google.com
+op1=&gt;operation: My Operation
+sub1=&gt;subroutine: My Subroutine
+cond=&gt;condition: Yes
+or No?:&gt;http://www.google.com
+io=&gt;inputoutput: catch something...
+para=&gt;parallel: parallel tasks
+
+st-&gt;op1-&gt;cond
+cond(yes)-&gt;io-&gt;e
+cond(no)-&gt;para
+para(path1, bottom)-&gt;sub1(right)-&gt;op1
+para(path2, top)-&gt;op1
+</div></section><section lineno="74" class="slide " data-line="74" data-h="10" data-v="0">
+<p>Sequence diagrams are powered by <a href="https://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a>.</p>
+<div theme="hand" class="sequence">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+note right of C: This is to\nthe right of C
+</div></section><section lineno="85" class="slide " data-line="85" data-h="11" data-v="0">
+<p>Graph rendering with <a href="https://github.com/mdaines/viz.js">vis.js</a></p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="134pt" height="260pt" viewBox="0.00 0.00 134.00 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 130,-256 130,4 -4,4"/>
+<!-- A -->
+<g id="node1" class="node">
+<title>A</title>
+<ellipse fill="none" stroke="#000000" cx="62" cy="-234" rx="27" ry="18"/>
+<text text-anchor="middle" x="62" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">A</text>
+</g>
+<!-- B -->
+<g id="node2" class="node">
+<title>B</title>
+<ellipse fill="none" stroke="#000000" cx="31" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="31" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">B</text>
+</g>
+<!-- A&#45;&gt;B -->
+<g id="edge1" class="edge">
+<title>A-&gt;B</title>
+<path fill="none" stroke="#000000" d="M54.4958,-216.5708C50.905,-208.2309 46.5258,-198.0598 42.5254,-188.7686"/>
+<polygon fill="#000000" stroke="#000000" points="45.7119,-187.319 38.5426,-179.5182 39.2825,-190.0872 45.7119,-187.319"/>
+</g>
+<!-- D -->
+<g id="node3" class="node">
+<title>D</title>
+<ellipse fill="none" stroke="#000000" cx="99" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="99" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">D</text>
+</g>
+<!-- A&#45;&gt;D -->
+<g id="edge2" class="edge">
+<title>A-&gt;D</title>
+<path fill="none" stroke="#000000" d="M66.6113,-216.0535C72.926,-191.4774 84.3283,-147.1008 91.7805,-118.0974"/>
+<polygon fill="#000000" stroke="#000000" points="95.2318,-118.7291 94.3306,-108.1727 88.4521,-116.9871 95.2318,-118.7291"/>
+</g>
+<!-- C -->
+<g id="node4" class="node">
+<title>C</title>
+<ellipse fill="none" stroke="#000000" cx="27" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="27" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">C</text>
+</g>
+<!-- B&#45;&gt;C -->
+<g id="edge3" class="edge">
+<title>B-&gt;C</title>
+<path fill="none" stroke="#000000" d="M29.9906,-143.8314C29.5628,-136.131 29.0541,-126.9743 28.5787,-118.4166"/>
+<polygon fill="#000000" stroke="#000000" points="32.0724,-118.2037 28.023,-108.4133 25.0831,-118.592 32.0724,-118.2037"/>
+</g>
+<!-- F -->
+<g id="node6" class="node">
+<title>F</title>
+<ellipse fill="none" stroke="#000000" cx="99" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="99" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">F</text>
+</g>
+<!-- D&#45;&gt;F -->
+<g id="edge6" class="edge">
+<title>D-&gt;F</title>
+<path fill="none" stroke="#000000" d="M99,-71.8314C99,-64.131 99,-54.9743 99,-46.4166"/>
+<polygon fill="#000000" stroke="#000000" points="102.5001,-46.4132 99,-36.4133 95.5001,-46.4133 102.5001,-46.4132"/>
+</g>
+<!-- E -->
+<g id="node5" class="node">
+<title>E</title>
+<ellipse fill="none" stroke="#000000" cx="27" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="27" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">E</text>
+</g>
+<!-- C&#45;&gt;E -->
+<g id="edge4" class="edge">
+<title>C-&gt;E</title>
+<path fill="none" stroke="#000000" d="M27,-71.8314C27,-64.131 27,-54.9743 27,-46.4166"/>
+<polygon fill="#000000" stroke="#000000" points="30.5001,-46.4132 27,-36.4133 23.5001,-46.4133 30.5001,-46.4132"/>
+</g>
+<!-- C&#45;&gt;F -->
+<g id="edge5" class="edge">
+<title>C-&gt;F</title>
+<path fill="none" stroke="#000000" d="M42.2693,-74.7307C52.197,-64.803 65.3153,-51.6847 76.4363,-40.5637"/>
+<polygon fill="#000000" stroke="#000000" points="79.1564,-42.7933 83.7527,-33.2473 74.2067,-37.8436 79.1564,-42.7933"/>
+</g>
+</g>
+</svg>
+</p></section><section lineno="99" class="slide " data-line="99" data-h="12" data-v="0">
+<p><a href="https://vega.github.io/vega/">Vega</a> and <a href="https://vega.github.io/vega-lite/">vega-lite</a> are supported</p>
+<p><!--?xml version="1.0" encoding="utf-8"?-->
+
+<svg class="marks" width="239" height="247" viewBox="0 0 239 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g transform="translate(33,10)"><g class="mark-group role-frame root"><g transform="translate(0,0)"><path class="background" d="M0.5,0.5h200v200h-200Z" style="fill: none; stroke: #ddd;"/><g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(0,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(29,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(57,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(86,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(114,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(143,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(171,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(200,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(0,200)" x2="200" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,150)" x2="200" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,100)" x2="200" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,50)" x2="200" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,0)" x2="200" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g></g></g><g class="mark-rect role-mark marks"><path d="M28.571428571428577,150h14.285714285714278v50h-14.285714285714278Z" style="fill: #4c78a8;"/><path d="M57.14285714285715,150h14.285714285714278v50h-14.285714285714278Z" style="fill: #4c78a8;"/><path d="M85.71428571428571,0h14.285714285714292v200h-14.285714285714292Z" style="fill: #4c78a8;"/><path d="M114.2857142857143,100h14.28571428571425v100h-14.28571428571425Z" style="fill: #4c78a8;"/><path d="M142.85714285714286,150h14.285714285714278v50h-14.285714285714278Z" style="fill: #4c78a8;"/><path d="M157.14285714285714,100h14.285714285714278v100h-14.285714285714278Z" style="fill: #4c78a8;"/></g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(0,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(29,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(57,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(86,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(114,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(143,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(171,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(200,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="start" transform="translate(0,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0.001</text><text text-anchor="middle" transform="translate(28.571428571428577,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 0;">0.01</text><text text-anchor="middle" transform="translate(57.14285714285715,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0.1</text><text text-anchor="middle" transform="translate(85.71428571428571,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1</text><text text-anchor="middle" transform="translate(114.2857142857143,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">10</text><text text-anchor="middle" transform="translate(142.85714285714286,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">100</text><text text-anchor="middle" transform="translate(171.42857142857142,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1,000</text><text text-anchor="end" transform="translate(200,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 0;">10,000</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,0)" x2="200" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(100,30)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">x1, x2</text></g></g></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(0,200)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,150)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,100)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,50)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,0)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="end" transform="translate(-7,203)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0</text><text text-anchor="end" transform="translate(-7,153)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1</text><text text-anchor="end" transform="translate(-7,103)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2</text><text text-anchor="end" transform="translate(-7,53)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">3</text><text text-anchor="end" transform="translate(-7,3)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">4</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,200)" x2="0" y2="-200" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(-16.5615234375,100) rotate(-90) translate(0,-2)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Count of Records</text></g></g></g></g></g></g></g></g></svg></p></section>
       </div>
     </div>
     
@@ -1651,7 +2048,20 @@ Ann--&gt;&gt;Bob: I&apos;m good, thanks.
     
     
     
-    
+    <script>
+var flowcharts = document.getElementsByClassName('flow')
+for (var i = 0; i < flowcharts.length; i++) {
+  var flow = flowcharts[i]
+  try {
+    var diagram = flowchart.parse(flow.textContent)
+    flow.id = 'flow_' + i
+    flow.innerHTML = ''
+    diagram.drawSVG(flow.id)
+  } catch (error) {
+    flow.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+  }
+}
+</script>
     <script>
       var sequenceDiagrams = document.getElementsByClassName('sequence')
       for (var i = 0; i < sequenceDiagrams.length; i++) {
