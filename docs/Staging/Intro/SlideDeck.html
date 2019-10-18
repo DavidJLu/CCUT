@@ -1609,7 +1609,7 @@ body {
       
       
       
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.7.0/flowchart.min.js"></script>
+      
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script type="text/javascript" src="https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
 
       <style>
@@ -1919,23 +1919,7 @@ M1001 80H400000v40H1013z"/></svg></span></span></span><span class="vlist-s">&#x2
 </section><section lineno="50" class="slide " data-line="50" data-h="7" data-v="0">
 <p>Next is a video in the background with sound</p>
 </section><section data-background-video="Languages.mp4" data-background-video-loop="true" lineno="53" class="slide " data-line="53" data-h="8" data-v="0">
-</section><section lineno="55" class="slide " data-line="55" data-h="9" data-v="0">
-<p>Flow charts are powered by <a href="http://flowchart.js.org/">flowchart.js</a></p>
-<div class="flow">st=&gt;start: Start:&gt;http://www.google.com[blank]
-e=&gt;end:&gt;http://www.google.com
-op1=&gt;operation: My Operation
-sub1=&gt;subroutine: My Subroutine
-cond=&gt;condition: Yes
-or No?:&gt;http://www.google.com
-io=&gt;inputoutput: catch something...
-para=&gt;parallel: parallel tasks
-
-st-&gt;op1-&gt;cond
-cond(yes)-&gt;io-&gt;e
-cond(no)-&gt;para
-para(path1, bottom)-&gt;sub1(right)-&gt;op1
-para(path2, top)-&gt;op1
-</div></section><section lineno="74" class="slide " data-line="74" data-h="10" data-v="0">
+</section><section lineno="56" class="slide " data-line="56" data-h="9" data-v="0">
 <p>Sequence diagrams are powered by <a href="https://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a>.</p>
 <div theme="hand" class="sequence">Title: Here is a title
 A-&gt;B: Normal line
@@ -1943,7 +1927,7 @@ B--&gt;C: Dashed line
 C-&gt;&gt;D: Open arrow
 D--&gt;&gt;A: Dashed open arrow
 note right of C: This is to\nthe right of C
-</div></section><section lineno="85" class="slide " data-line="85" data-h="11" data-v="0">
+</div></section><section lineno="67" class="slide " data-line="67" data-h="10" data-v="0">
 <p>Graph rendering with <a href="https://github.com/mdaines/viz.js">vis.js</a></p>
 <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
 
@@ -2028,7 +2012,7 @@ note right of C: This is to\nthe right of C
 </g>
 </g>
 </svg>
-</p></section><section lineno="99" class="slide " data-line="99" data-h="12" data-v="0">
+</p></section><section lineno="81" class="slide " data-line="81" data-h="11" data-v="0">
 <p><a href="https://vega.github.io/vega/">Vega</a> and <a href="https://vega.github.io/vega-lite/">vega-lite</a> are supported</p>
 <p><!--?xml version="1.0" encoding="utf-8"?-->
 
@@ -2048,20 +2032,7 @@ note right of C: This is to\nthe right of C
     
     
     
-    <script>
-var flowcharts = document.getElementsByClassName('flow')
-for (var i = 0; i < flowcharts.length; i++) {
-  var flow = flowcharts[i]
-  try {
-    var diagram = flowchart.parse(flow.textContent)
-    flow.id = 'flow_' + i
-    flow.innerHTML = ''
-    diagram.drawSVG(flow.id)
-  } catch (error) {
-    flow.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
-  }
-}
-</script>
+    
     <script>
       var sequenceDiagrams = document.getElementsByClassName('sequence')
       for (var i = 0; i < sequenceDiagrams.length; i++) {
