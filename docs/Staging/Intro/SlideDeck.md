@@ -144,7 +144,7 @@ D -> F
 Creating slides is easy!
 
 Syntax to create a couple of slides
-```
+```markdown
 <!-- slide -->
 Here's my slide
 <!-- slide -->
