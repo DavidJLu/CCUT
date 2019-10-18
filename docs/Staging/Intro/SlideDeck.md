@@ -130,3 +130,15 @@ D -> F
   }
 }
 ```
+
+<!-- slide -->
+Creating slides is easy!
+
+Syntax to create a couple of slides
+```
+<!-- slide -->
+Here's my slide
+<!-- slide -->
+Here's a second slide
+```
+Try it out
