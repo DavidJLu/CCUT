@@ -7,6 +7,7 @@ presentation:
   height: 740
   transition: 'slide'
   theme: "sky.css"
+  embedded: true
 ---
 
 <!-- slide -->
@@ -44,18 +45,18 @@ if "apple" in thislist:
 ```
 <!-- slide -->
 Math rendering is powered by KaTeX
-$L' = {L}{\sqrt{1-\frac{v^2}{c^2}}}$
+* $L' = {L}{\sqrt{1-\frac{v^2}{c^2}}}$
 
-$\lim_{x\to 0}{\frac{e^x-1}{2x}}
+* $\lim_{x\to 0}{\frac{e^x-1}{2x}}
  \overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
  \lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}$
 
- $z = \overbrace{
+ * $z = \overbrace{
    \underbrace{x}_\text{real} + i
    \underbrace{y}_\text{imaginary}
   }^\text{complex number}$
 
-$(A \land B) \to (C \lor \neg D)$
+* $(A \land B) \to (C \lor \neg D)$
 
 <!-- slide -->
 Next is a video in the background with sound
